@@ -1,0 +1,91 @@
+// !$*UTF8*$!
+{
+	E1333D37142A767000E8DB45 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	E1333D38142A767000E8DB45 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	E13A3FF1142A79C700D7EA2A /* Ghost in the Machine */ = {
+		activeExec = 0;
+		executables = (
+			E15A0DC9142A79EA008BAA86 /* Ghost in the Machine */,
+		);
+	};
+	E13A4012142A79C800D7EA2A /* Ghost in the MachineTests */ = {
+		activeExec = 0;
+	};
+	E15A0DC9142A79EA008BAA86 /* Ghost in the Machine */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = "Ghost in the Machine";
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+	};
+	E1C4C918142A751A004E4ACD /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = E15A0DC9142A79EA008BAA86 /* Ghost in the Machine */;
+		activeTarget = E13A3FF1142A79C700D7EA2A /* Ghost in the Machine */;
+		codeSenseManager = E1333D38142A767000E8DB45 /* Code sense */;
+		executables = (
+			E15A0DC9142A79EA008BAA86 /* Ghost in the Machine */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					341,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 338328042;
+			PBXWorkspaceStateSaveDate = 338328042;
+		};
+		sourceControlManager = E1333D37142A767000E8DB45 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+}

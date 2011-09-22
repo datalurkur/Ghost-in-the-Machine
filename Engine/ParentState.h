@@ -2,6 +2,7 @@
 #define PARENTSTATE_H
 
 #include <Engine/State.h>
+#include <stack>
 
 class ParentState: public State {
 public:
@@ -13,6 +14,13 @@ public:
     State *activeState();
 
     void flushStates();
+
+    virtual void update(int elapsed);
+    virtual void render();
+
+protected:
+	virtual void setup() {}
+	virtual void teardown() {}
 
 private:
     std::stack <State*> _stateStack;

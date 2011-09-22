@@ -1,8 +1,7 @@
 #ifndef CORE_H
 #define CORE_H
 
-#include <Engine/State.h>
-#include <stack>
+#include <Engine/ParentState.h>
 
 class Core: public ParentState {
 public:

@@ -1,4 +1,5 @@
 #include <Engine/Core.h>
+#include <SDL.h>
 
 Core::Core(): _running(false) {
 }
@@ -32,6 +33,5 @@ void Core::stop() {
 }
 
 int Core::getTime() {
-    // FIXME
-    return 0;
+    return SDL_GetTicks();
 }

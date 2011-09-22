@@ -36,15 +36,18 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LibraryPath>C:\GitM\Win7\sdl\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>C:\GitM;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\GitM\Win7\sdl\include;C:\GitM;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>SDL.lib;SDLmain.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -62,12 +65,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\Engine\Core.cpp" />
+    <ClCompile Include="..\Engine\ParentState.cpp" />
     <ClCompile Include="..\Engine\State.cpp" />
     <ClCompile Include="..\GitM\GameState.cpp" />
     <ClCompile Include="..\GitM\main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Engine\Core.h" />
+    <ClInclude Include="..\Engine\ParentState.h" />
     <ClInclude Include="..\Engine\State.h" />
     <ClInclude Include="..\GitM\GameState.h" />
   </ItemGroup>

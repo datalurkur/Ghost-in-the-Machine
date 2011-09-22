@@ -8,13 +8,15 @@ public:
     State();
     virtual ~State();
 
-    virtual void setup() = 0;
-    virtual void teardown() = 0;
-
     virtual void update(int elapsed) = 0;
     virtual void render() = 0;
 
-private:
+protected:
+    virtual void setup() = 0;
+    virtual void teardown() = 0;
+
+protected:
+	friend class ParentState;
     ParentState *_parent;
 };
 

@@ -25,6 +25,9 @@
     <ClCompile Include="..\GitM\main.cpp">
       <Filter>GitM</Filter>
     </ClCompile>
+    <ClCompile Include="..\Engine\ParentState.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Engine\Core.h">
@@ -35,6 +38,9 @@
     </ClInclude>
     <ClInclude Include="..\GitM\GameState.h">
       <Filter>GitM</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\ParentState.h">
+      <Filter>Engine</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

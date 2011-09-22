@@ -7,31 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E121B0B9142BD0F500719A82 /* ParentState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E121B0B7142BD0F500719A82 /* ParentState.cpp */; };
-		E121B0BF142BD11800719A82 /* Entity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E121B0BB142BD11800719A82 /* Entity.cpp */; };
-		E121B0C0142BD11800719A82 /* SceneManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E121B0BD142BD11800719A82 /* SceneManager.cpp */; };
-		E13A3FF7142A79C700D7EA2A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E13A3FF6142A79C700D7EA2A /* Cocoa.framework */; };
-		E13A4001142A79C700D7EA2A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E13A3FFF142A79C700D7EA2A /* InfoPlist.strings */; };
-		E13A4004142A79C700D7EA2A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E13A4003142A79C700D7EA2A /* main.m */; };
-		E13A4007142A79C700D7EA2A /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = E13A4005142A79C700D7EA2A /* Credits.rtf */; };
-		E13A400A142A79C700D7EA2A /* Ghost_in_the_MachineAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E13A4009142A79C700D7EA2A /* Ghost_in_the_MachineAppDelegate.m */; };
-		E13A400D142A79C800D7EA2A /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = E13A400B142A79C800D7EA2A /* MainMenu.xib */; };
-		E13A4014142A79C800D7EA2A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E13A3FF6142A79C700D7EA2A /* Cocoa.framework */; };
-		E13A401C142A79C800D7EA2A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E13A401A142A79C800D7EA2A /* InfoPlist.strings */; };
-		E13A401F142A79C800D7EA2A /* Ghost_in_the_MachineTests.h in Resources */ = {isa = PBXBuildFile; fileRef = E13A401E142A79C800D7EA2A /* Ghost_in_the_MachineTests.h */; };
-		E13A4021142A79C800D7EA2A /* Ghost_in_the_MachineTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E13A4020142A79C800D7EA2A /* Ghost_in_the_MachineTests.m */; };
-		E1C93020142BA1D300111570 /* SDL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1C9301F142BA1D300111570 /* SDL.framework */; };
+		E15D98BA142BD3A800E878B1 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E13A3FF6142A79C700D7EA2A /* Cocoa.framework */; };
+		E15D98C0142BD3A800E878B1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E15D98BE142BD3A800E878B1 /* InfoPlist.strings */; };
+		E15D98C3142BD3A800E878B1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E15D98C2142BD3A800E878B1 /* main.m */; };
+		E15D98C6142BD3A800E878B1 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = E15D98C4142BD3A800E878B1 /* Credits.rtf */; };
+		E15D98C9142BD3A800E878B1 /* GitMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E15D98C8142BD3A800E878B1 /* GitMAppDelegate.m */; };
+		E15D98CC142BD3A800E878B1 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = E15D98CA142BD3A800E878B1 /* MainMenu.xib */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		E13A4015142A79C800D7EA2A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E1C4C918142A751A004E4ACD /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E13A3FF1142A79C700D7EA2A;
-			remoteInfo = "Ghost in the Machine";
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		E121B0B7142BD0F500719A82 /* ParentState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ParentState.cpp; path = ../Engine/ParentState.cpp; sourceTree = "<group>"; };
@@ -47,7 +29,6 @@
 		E13A3FE3142A76DC00D7EA2A /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = ../GitM/main.cpp; sourceTree = "<group>"; };
 		E13A3FE4142A76DC00D7EA2A /* GameState.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GameState.h; path = ../GitM/GameState.h; sourceTree = "<group>"; };
 		E13A3FE5142A76DC00D7EA2A /* GameState.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = GameState.cpp; path = ../GitM/GameState.cpp; sourceTree = "<group>"; };
-		E13A3FF2142A79C700D7EA2A /* Ghost in the Machine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ghost in the Machine.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E13A3FF6142A79C700D7EA2A /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		E13A3FF9142A79C700D7EA2A /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		E13A3FFA142A79C700D7EA2A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -60,30 +41,29 @@
 		E13A4008142A79C700D7EA2A /* Ghost_in_the_MachineAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Ghost_in_the_MachineAppDelegate.h; sourceTree = "<group>"; };
 		E13A4009142A79C700D7EA2A /* Ghost_in_the_MachineAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Ghost_in_the_MachineAppDelegate.m; sourceTree = "<group>"; };
 		E13A400C142A79C800D7EA2A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		E13A4013142A79C800D7EA2A /* Ghost in the MachineTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Ghost in the MachineTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E13A4019142A79C800D7EA2A /* Ghost in the MachineTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Ghost in the MachineTests-Info.plist"; sourceTree = "<group>"; };
 		E13A401B142A79C800D7EA2A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E13A401D142A79C800D7EA2A /* Ghost in the MachineTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Ghost in the MachineTests-Prefix.pch"; sourceTree = "<group>"; };
 		E13A401E142A79C800D7EA2A /* Ghost_in_the_MachineTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Ghost_in_the_MachineTests.h; sourceTree = "<group>"; };
 		E13A4020142A79C800D7EA2A /* Ghost_in_the_MachineTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Ghost_in_the_MachineTests.m; sourceTree = "<group>"; };
+		E15D98B8142BD3A800E878B1 /* GitM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitM.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E15D98BD142BD3A800E878B1 /* GitM-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GitM-Info.plist"; sourceTree = "<group>"; };
+		E15D98BF142BD3A800E878B1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E15D98C1142BD3A800E878B1 /* GitM-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GitM-Prefix.pch"; sourceTree = "<group>"; };
+		E15D98C2142BD3A800E878B1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E15D98C5142BD3A800E878B1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		E15D98C7142BD3A800E878B1 /* GitMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GitMAppDelegate.h; sourceTree = "<group>"; };
+		E15D98C8142BD3A800E878B1 /* GitMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GitMAppDelegate.m; sourceTree = "<group>"; };
+		E15D98CB142BD3A800E878B1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		E1C9301F142BA1D300111570 /* SDL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SDL.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		E13A3FEF142A79C700D7EA2A /* Frameworks */ = {
+		E15D98B5142BD3A800E878B1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E13A3FF7142A79C700D7EA2A /* Cocoa.framework in Frameworks */,
-				E1C93020142BA1D300111570 /* SDL.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E13A400F142A79C800D7EA2A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E13A4014142A79C800D7EA2A /* Cocoa.framework in Frameworks */,
+				E15D98BA142BD3A800E878B1 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,8 +103,7 @@
 		E13A3FF3142A79C700D7EA2A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E13A3FF2142A79C700D7EA2A /* Ghost in the Machine.app */,
-				E13A4013142A79C800D7EA2A /* Ghost in the MachineTests.octest */,
+				E15D98B8142BD3A800E878B1 /* GitM.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -192,6 +171,29 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		E15D98BB142BD3A800E878B1 /* GitM */ = {
+			isa = PBXGroup;
+			children = (
+				E15D98C7142BD3A800E878B1 /* GitMAppDelegate.h */,
+				E15D98C8142BD3A800E878B1 /* GitMAppDelegate.m */,
+				E15D98CA142BD3A800E878B1 /* MainMenu.xib */,
+				E15D98BC142BD3A800E878B1 /* Supporting Files */,
+			);
+			path = GitM;
+			sourceTree = "<group>";
+		};
+		E15D98BC142BD3A800E878B1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E15D98BD142BD3A800E878B1 /* GitM-Info.plist */,
+				E15D98BE142BD3A800E878B1 /* InfoPlist.strings */,
+				E15D98C1142BD3A800E878B1 /* GitM-Prefix.pch */,
+				E15D98C2142BD3A800E878B1 /* main.m */,
+				E15D98C4142BD3A800E878B1 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		E1C4C916142A751A004E4ACD = {
 			isa = PBXGroup;
 			children = (
@@ -199,6 +201,7 @@
 				E13A3FDD142A76AD00D7EA2A /* Engine */,
 				E13A3FFC142A79C700D7EA2A /* Ghost in the Machine */,
 				E13A4017142A79C800D7EA2A /* Ghost in the MachineTests */,
+				E15D98BB142BD3A800E878B1 /* GitM */,
 				E13A3FF5142A79C700D7EA2A /* Frameworks */,
 				E13A3FF3142A79C700D7EA2A /* Products */,
 			);
@@ -220,41 +223,22 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E13A3FF1142A79C700D7EA2A /* Ghost in the Machine */ = {
+		E15D98B7142BD3A800E878B1 /* GitM */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E13A4022142A79C800D7EA2A /* Build configuration list for PBXNativeTarget "Ghost in the Machine" */;
+			buildConfigurationList = E15D98CD142BD3A800E878B1 /* Build configuration list for PBXNativeTarget "GitM" */;
 			buildPhases = (
-				E13A3FEE142A79C700D7EA2A /* Sources */,
-				E13A3FEF142A79C700D7EA2A /* Frameworks */,
-				E13A3FF0142A79C700D7EA2A /* Resources */,
+				E15D98B4142BD3A800E878B1 /* Sources */,
+				E15D98B5142BD3A800E878B1 /* Frameworks */,
+				E15D98B6142BD3A800E878B1 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Ghost in the Machine";
-			productName = "Ghost in the Machine";
-			productReference = E13A3FF2142A79C700D7EA2A /* Ghost in the Machine.app */;
+			name = GitM;
+			productName = GitM;
+			productReference = E15D98B8142BD3A800E878B1 /* GitM.app */;
 			productType = "com.apple.product-type.application";
-		};
-		E13A4012142A79C800D7EA2A /* Ghost in the MachineTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = E13A4025142A79C800D7EA2A /* Build configuration list for PBXNativeTarget "Ghost in the MachineTests" */;
-			buildPhases = (
-				E13A400E142A79C800D7EA2A /* Sources */,
-				E13A400F142A79C800D7EA2A /* Frameworks */,
-				E13A4010142A79C800D7EA2A /* Resources */,
-				E13A4011142A79C800D7EA2A /* ShellScript */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				E13A4016142A79C800D7EA2A /* PBXTargetDependency */,
-			);
-			name = "Ghost in the MachineTests";
-			productName = "Ghost in the MachineTests";
-			productReference = E13A4013142A79C800D7EA2A /* Ghost in the MachineTests.octest */;
-			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
 
@@ -273,80 +257,35 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E13A3FF1142A79C700D7EA2A /* Ghost in the Machine */,
-				E13A4012142A79C800D7EA2A /* Ghost in the MachineTests */,
+				E15D98B7142BD3A800E878B1 /* GitM */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		E13A3FF0142A79C700D7EA2A /* Resources */ = {
+		E15D98B6142BD3A800E878B1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E13A4001142A79C700D7EA2A /* InfoPlist.strings in Resources */,
-				E13A4007142A79C700D7EA2A /* Credits.rtf in Resources */,
-				E13A400D142A79C800D7EA2A /* MainMenu.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E13A4010142A79C800D7EA2A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E13A401C142A79C800D7EA2A /* InfoPlist.strings in Resources */,
-				E13A401F142A79C800D7EA2A /* Ghost_in_the_MachineTests.h in Resources */,
+				E15D98C0142BD3A800E878B1 /* InfoPlist.strings in Resources */,
+				E15D98C6142BD3A800E878B1 /* Credits.rtf in Resources */,
+				E15D98CC142BD3A800E878B1 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		E13A4011142A79C800D7EA2A /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		E13A3FEE142A79C700D7EA2A /* Sources */ = {
+		E15D98B4142BD3A800E878B1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E13A4004142A79C700D7EA2A /* main.m in Sources */,
-				E13A400A142A79C700D7EA2A /* Ghost_in_the_MachineAppDelegate.m in Sources */,
-				E121B0B9142BD0F500719A82 /* ParentState.cpp in Sources */,
-				E121B0BF142BD11800719A82 /* Entity.cpp in Sources */,
-				E121B0C0142BD11800719A82 /* SceneManager.cpp in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E13A400E142A79C800D7EA2A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E13A4021142A79C800D7EA2A /* Ghost_in_the_MachineTests.m in Sources */,
+				E15D98C3142BD3A800E878B1 /* main.m in Sources */,
+				E15D98C9142BD3A800E878B1 /* GitMAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		E13A4016142A79C800D7EA2A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = E13A3FF1142A79C700D7EA2A /* Ghost in the Machine */;
-			targetProxy = E13A4015142A79C800D7EA2A /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		E13A3FFF142A79C700D7EA2A /* InfoPlist.strings */ = {
@@ -381,34 +320,52 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
+		E15D98BE142BD3A800E878B1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E15D98BF142BD3A800E878B1 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		E15D98C4142BD3A800E878B1 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E15D98C5142BD3A800E878B1 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		E15D98CA142BD3A800E878B1 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E15D98CB142BD3A800E878B1 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		E13A4023142A79C800D7EA2A /* Debug */ = {
+		E15D98CE142BD3A800E878B1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				COPY_PHASE_STRIP = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)\"",
-				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Ghost in the Machine/Ghost in the Machine-Prefix.pch";
+				GCC_PREFIX_HEADER = "GitM/GitM-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = "$(SRCROOT)/..";
-				INFOPLIST_FILE = "Ghost in the Machine/Ghost in the Machine-Info.plist";
-				LIBRARY_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "GitM/GitM-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -417,96 +374,26 @@
 			};
 			name = Debug;
 		};
-		E13A4024142A79C800D7EA2A /* Release */ = {
+		E15D98CF142BD3A800E878B1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)\"",
-				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Ghost in the Machine/Ghost in the Machine-Prefix.pch";
+				GCC_PREFIX_HEADER = "GitM/GitM-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = "$(SRCROOT)/..";
-				INFOPLIST_FILE = "Ghost in the Machine/Ghost in the Machine-Info.plist";
-				LIBRARY_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "GitM/GitM-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
-		E13A4026142A79C800D7EA2A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Ghost in the Machine.app/Contents/MacOS/Ghost in the Machine";
-				COPY_PHASE_STRIP = NO;
-				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Ghost in the MachineTests/Ghost in the MachineTests-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "Ghost in the MachineTests/Ghost in the MachineTests-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
-				ONLY_ACTIVE_ARCH = YES;
-				OTHER_LDFLAGS = (
-					"-framework",
-					SenTestingKit,
-				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Debug;
-		};
-		E13A4027142A79C800D7EA2A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Ghost in the Machine.app/Contents/MacOS/Ghost in the Machine";
-				COPY_PHASE_STRIP = YES;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Ghost in the MachineTests/Ghost in the MachineTests-Prefix.pch";
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "Ghost in the MachineTests/Ghost in the MachineTests-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
-				OTHER_LDFLAGS = (
-					"-framework",
-					SenTestingKit,
-				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};
@@ -527,23 +414,13 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E13A4022142A79C800D7EA2A /* Build configuration list for PBXNativeTarget "Ghost in the Machine" */ = {
+		E15D98CD142BD3A800E878B1 /* Build configuration list for PBXNativeTarget "GitM" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E13A4023142A79C800D7EA2A /* Debug */,
-				E13A4024142A79C800D7EA2A /* Release */,
+				E15D98CE142BD3A800E878B1 /* Debug */,
+				E15D98CF142BD3A800E878B1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		E13A4025142A79C800D7EA2A /* Build configuration list for PBXNativeTarget "Ghost in the MachineTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E13A4026142A79C800D7EA2A /* Debug */,
-				E13A4027142A79C800D7EA2A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 		E1C4C91B142A751A004E4ACD /* Build configuration list for PBXProject "GitM" */ = {
 			isa = XCConfigurationList;

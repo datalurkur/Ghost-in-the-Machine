@@ -7,9 +7,10 @@
 class ParentState: public State {
 public:
     ParentState();
-    ~ParentState();
+    virtual ~ParentState();
 
-    void pushState(State *state);
+    void setState(State *state, va_list args);
+    void pushState(State *state, va_list args);
     State *popState();
     State *activeState();
 
@@ -19,7 +20,7 @@ public:
     virtual void render();
 
 protected:
-	virtual void setup() {}
+	virtual void setup(va_list args) {}
 	virtual void teardown() {}
 
 private:

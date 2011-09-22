@@ -8,7 +8,7 @@ public:
     GameState();
     ~GameState();
 
-    void setup();
+    void setup(va_list args);
     void teardown();
 
     void update(int elapsed);

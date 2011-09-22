@@ -1,6 +1,8 @@
 #ifndef STATE_H
 #define STATE_H
 
+#include <stdarg.h>
+
 class ParentState;
 
 class State {
@@ -12,8 +14,10 @@ public:
     virtual void render() = 0;
 
 protected:
-    virtual void setup() = 0;
+    virtual void setup(va_list args) = 0;
     virtual void teardown() = 0;
+
+    void setParent(ParentState *parent);
 
 protected:
 	friend class ParentState;

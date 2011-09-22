@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E121B0B9142BD0F500719A82 /* ParentState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E121B0B7142BD0F500719A82 /* ParentState.cpp */; };
+		E121B0BF142BD11800719A82 /* Entity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E121B0BB142BD11800719A82 /* Entity.cpp */; };
+		E121B0C0142BD11800719A82 /* SceneManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E121B0BD142BD11800719A82 /* SceneManager.cpp */; };
 		E13A3FF7142A79C700D7EA2A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E13A3FF6142A79C700D7EA2A /* Cocoa.framework */; };
 		E13A4001142A79C700D7EA2A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E13A3FFF142A79C700D7EA2A /* InfoPlist.strings */; };
 		E13A4004142A79C700D7EA2A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E13A4003142A79C700D7EA2A /* main.m */; };
@@ -31,6 +34,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E121B0B7142BD0F500719A82 /* ParentState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ParentState.cpp; path = ../Engine/ParentState.cpp; sourceTree = "<group>"; };
+		E121B0B8142BD0F500719A82 /* ParentState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ParentState.h; path = ../Engine/ParentState.h; sourceTree = "<group>"; };
+		E121B0BB142BD11800719A82 /* Entity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Entity.cpp; path = ../Engine/Entity.cpp; sourceTree = "<group>"; };
+		E121B0BC142BD11800719A82 /* Entity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Entity.h; path = ../Engine/Entity.h; sourceTree = "<group>"; };
+		E121B0BD142BD11800719A82 /* SceneManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SceneManager.cpp; path = ../Engine/SceneManager.cpp; sourceTree = "<group>"; };
+		E121B0BE142BD11800719A82 /* SceneManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SceneManager.h; path = ../Engine/SceneManager.h; sourceTree = "<group>"; };
 		E13A3FDE142A76C000D7EA2A /* State.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = State.h; path = ../Engine/State.h; sourceTree = "<group>"; };
 		E13A3FDF142A76C000D7EA2A /* State.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = State.cpp; path = ../Engine/State.cpp; sourceTree = "<group>"; };
 		E13A3FE0142A76C000D7EA2A /* Core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Core.h; path = ../Engine/Core.h; sourceTree = "<group>"; };
@@ -81,13 +90,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E121B0BA142BD10B00719A82 /* Scene Management */ = {
+			isa = PBXGroup;
+			children = (
+				E121B0BB142BD11800719A82 /* Entity.cpp */,
+				E121B0BC142BD11800719A82 /* Entity.h */,
+				E121B0BD142BD11800719A82 /* SceneManager.cpp */,
+				E121B0BE142BD11800719A82 /* SceneManager.h */,
+			);
+			name = "Scene Management";
+			sourceTree = "<group>";
+		};
 		E13A3FDD142A76AD00D7EA2A /* Engine */ = {
 			isa = PBXGroup;
 			children = (
-				E13A3FE0142A76C000D7EA2A /* Core.h */,
-				E13A3FE1142A76C000D7EA2A /* Core.cpp */,
-				E13A3FDE142A76C000D7EA2A /* State.h */,
-				E13A3FDF142A76C000D7EA2A /* State.cpp */,
+				E121B0BA142BD10B00719A82 /* Scene Management */,
+				E1C8D2BB142BD06D00AB41E6 /* State Maintenance */,
 			);
 			name = Engine;
 			sourceTree = "<group>";
@@ -184,6 +202,19 @@
 				E13A3FF5142A79C700D7EA2A /* Frameworks */,
 				E13A3FF3142A79C700D7EA2A /* Products */,
 			);
+			sourceTree = "<group>";
+		};
+		E1C8D2BB142BD06D00AB41E6 /* State Maintenance */ = {
+			isa = PBXGroup;
+			children = (
+				E13A3FE0142A76C000D7EA2A /* Core.h */,
+				E13A3FE1142A76C000D7EA2A /* Core.cpp */,
+				E121B0B8142BD0F500719A82 /* ParentState.h */,
+				E121B0B7142BD0F500719A82 /* ParentState.cpp */,
+				E13A3FDE142A76C000D7EA2A /* State.h */,
+				E13A3FDF142A76C000D7EA2A /* State.cpp */,
+			);
+			name = "State Maintenance";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,6 +324,9 @@
 			files = (
 				E13A4004142A79C700D7EA2A /* main.m in Sources */,
 				E13A400A142A79C700D7EA2A /* Ghost_in_the_MachineAppDelegate.m in Sources */,
+				E121B0B9142BD0F500719A82 /* ParentState.cpp in Sources */,
+				E121B0BF142BD11800719A82 /* Entity.cpp in Sources */,
+				E121B0C0142BD11800719A82 /* SceneManager.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,7 +392,6 @@
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/sdl\"",
 					"\"$(SRCROOT)\"",
 				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -373,7 +406,9 @@
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/..";
 				INFOPLIST_FILE = "Ghost in the Machine/Ghost in the Machine-Info.plist";
+				LIBRARY_SEARCH_PATHS = "";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -391,7 +426,6 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/sdl\"",
 					"\"$(SRCROOT)\"",
 				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -402,7 +436,9 @@
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/..";
 				INFOPLIST_FILE = "Ghost in the Machine/Ghost in the Machine-Info.plist";
+				LIBRARY_SEARCH_PATHS = "";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
@@ -477,12 +513,14 @@
 		E1C4C91D142A751A004E4ACD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/..";
 			};
 			name = Debug;
 		};
 		E1C4C91E142A751A004E4ACD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/..";
 			};
 			name = Release;
 		};

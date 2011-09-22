@@ -6,8 +6,14 @@ ParentState::ParentState() {
 ParentState::~ParentState() {
 }
 
-void ParentState::pushState(State *state) {
-    state->setup();
+void ParentState::setState(State *state, va_list args) {
+    flushStates();
+    pushState(state, args);
+}
+
+void ParentState::pushState(State *state, va_list args) {
+    state->setParent(this);
+    state->setup(args);
     _stateStack.push(state);
 }
 
@@ -17,6 +23,7 @@ State* ParentState::popState() {
     if(state) {
         _stateStack.pop();
         state->teardown();
+        state->setParent(NULL);
 
         return state;
     } else {
@@ -32,10 +39,19 @@ State* ParentState::activeState() {
     }
 }
 
-void ParentState::update(int elapsed) { activeState()->update(elapsed); }
-void ParentState::render()            { activeState()->render();        }
-
 void ParentState::flushStates() {
     State *last;
     while((last = popState())) {}
+}
+
+void ParentState::update(int elapsed) {
+    if(activeState()) {
+        activeState()->update(elapsed);
+    }
+}
+
+void ParentState::render() {
+    if(activeState()) {
+        activeState()->render();
+    }
 }

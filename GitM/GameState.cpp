@@ -6,7 +6,7 @@ GameState::GameState() {
 GameState::~GameState() {
 }
 
-void GameState::setup() {
+void GameState::setup(va_list args) {
 }
 
 void GameState::teardown() {

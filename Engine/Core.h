@@ -4,22 +4,19 @@
 #include <Engine/State.h>
 #include <stack>
 
-class Core {
+class Core: public ParentState {
 public:
     Core();
     ~Core();
 
-    void pushState(State *state);
-    State *popState();
-    State *activeState();
+    void start();
+    void stop();
 
-    void update(int elapsed);
-    void render();
-
-    void finish();
+protected:
+    int getTime();
 
 private:
-    std::stack <State*> _stateStack;
+    bool _running;
 };
 
 #endif

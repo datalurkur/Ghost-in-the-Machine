@@ -1,42 +1,37 @@
 #include <Engine/Core.h>
 
-Core::Core() {}
+Core::Core(): _running(false) {
+}
+
 Core::~Core() {
-    finish();
 }
 
-void Core::pushState(State *state) {
-    state->setup();
-    _stateStack.push(state);
-}
+void Core::start() {
+    int lastTime, elapsedTime;
 
-State* Core::popState() {
-    State *topState = _stateStack.top();
+    lastTime = getTime();
+    _running = true;
 
-    if(topState) {
-        _stateStack.pop();
-        topState->teardown();
+    while(_running) {
+        int currentTime = getTime();
+        elapsedTime = currentTime - lastTime;
 
-        return topState;
-    } else {
-        return NULL;
+        // FIXME - Handle events here
+
+        update(elapsedTime);
+        render();
+
+        lastTime = currentTime;
     }
+
+    // Cleanup
 }
 
-State* Core::activeState() {
-    if(_stateStack.empty()) {
-        return NULL;
-    } else {
-        return _stateStack.top();
-    }
+void Core::stop() {
+    _running = false;
 }
 
-void Core::update(int elapsed) { activeState()->update(elapsed); }
-void Core::render()            { activeState()->render();        }
-
-void Core::finish() {
-    State *last;
-    while((last = popState())) {
-        delete last;
-    }
+int Core::getTime() {
+    // FIXME
+    return 0;
 }

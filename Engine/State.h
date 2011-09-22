@@ -1,7 +1,7 @@
 #ifndef STATE_H
 #define STATE_H
 
-class Core;
+class ParentState;
 
 class State {
 public:
@@ -15,7 +15,7 @@ public:
     virtual void render() = 0;
 
 private:
-    Core *_parent;
+    ParentState *_parent;
 };
 
 #endif

@@ -1,4 +1,4 @@
-#include <GameState.h>
+#include <GitM/GameState.h>
 
 GameState::GameState() {
 }

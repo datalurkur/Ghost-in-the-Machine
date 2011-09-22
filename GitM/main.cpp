@@ -1,5 +1,5 @@
 #include <Engine/Core.h>
-#include <GameState.h>
+#include <GitM/GameState.h>
 
 int main(int argc, char *argv[]) {
     Core *_ghostCore = new Core();

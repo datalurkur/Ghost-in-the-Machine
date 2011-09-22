@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Engine">
+      <UniqueIdentifier>{03685c9d-09be-4953-9d90-3166e4bcd083}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GitM">
+      <UniqueIdentifier>{d72d2403-c03b-4437-ba43-b69cfcfd30a7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Engine\Core.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\State.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\GitM\GameState.cpp">
+      <Filter>GitM</Filter>
+    </ClCompile>
+    <ClCompile Include="..\GitM\main.cpp">
+      <Filter>GitM</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Engine\Core.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\State.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GitM\GameState.h">
+      <Filter>GitM</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

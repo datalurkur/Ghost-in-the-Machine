@@ -7,12 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E15D98BA142BD3A800E878B1 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E13A3FF6142A79C700D7EA2A /* Cocoa.framework */; };
-		E15D98C0142BD3A800E878B1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E15D98BE142BD3A800E878B1 /* InfoPlist.strings */; };
-		E15D98C3142BD3A800E878B1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E15D98C2142BD3A800E878B1 /* main.m */; };
-		E15D98C6142BD3A800E878B1 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = E15D98C4142BD3A800E878B1 /* Credits.rtf */; };
-		E15D98C9142BD3A800E878B1 /* GitMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E15D98C8142BD3A800E878B1 /* GitMAppDelegate.m */; };
-		E15D98CC142BD3A800E878B1 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = E15D98CA142BD3A800E878B1 /* MainMenu.xib */; };
+		E15FA1EA142BDF1C00CC6CE2 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E13A3FF6142A79C700D7EA2A /* Cocoa.framework */; };
+		E1A471BA142BDF5B0062C09B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E13A3FE3142A76DC00D7EA2A /* main.cpp */; };
+		E1A471BB142BDF5B0062C09B /* GameState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E13A3FE5142A76DC00D7EA2A /* GameState.cpp */; };
+		E1A471C4142BE5130062C09B /* Entity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E121B0BB142BD11800719A82 /* Entity.cpp */; };
+		E1A471C5142BE5130062C09B /* SceneManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E121B0BD142BD11800719A82 /* SceneManager.cpp */; };
+		E1A471C6142BE5130062C09B /* Core.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E13A3FE1142A76C000D7EA2A /* Core.cpp */; };
+		E1A471C7142BE5130062C09B /* ParentState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E121B0B7142BD0F500719A82 /* ParentState.cpp */; };
+		E1A471C8142BE5130062C09B /* State.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E13A3FDF142A76C000D7EA2A /* State.cpp */; };
+		E1A471CB142BE5330062C09B /* SDL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1A471CA142BE5330062C09B /* SDL.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,37 +36,18 @@
 		E13A3FF9142A79C700D7EA2A /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		E13A3FFA142A79C700D7EA2A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		E13A3FFB142A79C700D7EA2A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		E13A3FFE142A79C700D7EA2A /* Ghost in the Machine-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Ghost in the Machine-Info.plist"; sourceTree = "<group>"; };
-		E13A4000142A79C700D7EA2A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		E13A4002142A79C700D7EA2A /* Ghost in the Machine-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Ghost in the Machine-Prefix.pch"; sourceTree = "<group>"; };
-		E13A4003142A79C700D7EA2A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		E13A4006142A79C700D7EA2A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		E13A4008142A79C700D7EA2A /* Ghost_in_the_MachineAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Ghost_in_the_MachineAppDelegate.h; sourceTree = "<group>"; };
-		E13A4009142A79C700D7EA2A /* Ghost_in_the_MachineAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Ghost_in_the_MachineAppDelegate.m; sourceTree = "<group>"; };
-		E13A400C142A79C800D7EA2A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		E13A4019142A79C800D7EA2A /* Ghost in the MachineTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Ghost in the MachineTests-Info.plist"; sourceTree = "<group>"; };
-		E13A401B142A79C800D7EA2A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		E13A401D142A79C800D7EA2A /* Ghost in the MachineTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Ghost in the MachineTests-Prefix.pch"; sourceTree = "<group>"; };
-		E13A401E142A79C800D7EA2A /* Ghost_in_the_MachineTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Ghost_in_the_MachineTests.h; sourceTree = "<group>"; };
-		E13A4020142A79C800D7EA2A /* Ghost_in_the_MachineTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Ghost_in_the_MachineTests.m; sourceTree = "<group>"; };
-		E15D98B8142BD3A800E878B1 /* GitM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitM.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		E15D98BD142BD3A800E878B1 /* GitM-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GitM-Info.plist"; sourceTree = "<group>"; };
-		E15D98BF142BD3A800E878B1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		E15D98C1142BD3A800E878B1 /* GitM-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GitM-Prefix.pch"; sourceTree = "<group>"; };
-		E15D98C2142BD3A800E878B1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		E15D98C5142BD3A800E878B1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		E15D98C7142BD3A800E878B1 /* GitMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GitMAppDelegate.h; sourceTree = "<group>"; };
-		E15D98C8142BD3A800E878B1 /* GitMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GitMAppDelegate.m; sourceTree = "<group>"; };
-		E15D98CB142BD3A800E878B1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		E15FA1E8142BDF1C00CC6CE2 /* GitM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitM.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1A471CA142BE5330062C09B /* SDL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL.framework; path = SDKs/MacOSX10.6.sdk/Library/Frameworks/SDL.framework; sourceTree = DEVELOPER_DIR; };
 		E1C9301F142BA1D300111570 /* SDL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SDL.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		E15D98B5142BD3A800E878B1 /* Frameworks */ = {
+		E15FA1E5142BDF1C00CC6CE2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E15D98BA142BD3A800E878B1 /* Cocoa.framework in Frameworks */,
+				E1A471CB142BE5330062C09B /* SDL.framework in Frameworks */,
+				E15FA1EA142BDF1C00CC6CE2 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,7 +87,7 @@
 		E13A3FF3142A79C700D7EA2A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E15D98B8142BD3A800E878B1 /* GitM.app */,
+				E15FA1E8142BDF1C00CC6CE2 /* GitM.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -128,80 +112,12 @@
 			name = "Other Frameworks";
 			sourceTree = "<group>";
 		};
-		E13A3FFC142A79C700D7EA2A /* Ghost in the Machine */ = {
-			isa = PBXGroup;
-			children = (
-				E13A4008142A79C700D7EA2A /* Ghost_in_the_MachineAppDelegate.h */,
-				E13A4009142A79C700D7EA2A /* Ghost_in_the_MachineAppDelegate.m */,
-				E13A400B142A79C800D7EA2A /* MainMenu.xib */,
-				E13A3FFD142A79C700D7EA2A /* Supporting Files */,
-			);
-			path = "Ghost in the Machine";
-			sourceTree = "<group>";
-		};
-		E13A3FFD142A79C700D7EA2A /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				E13A3FFE142A79C700D7EA2A /* Ghost in the Machine-Info.plist */,
-				E13A3FFF142A79C700D7EA2A /* InfoPlist.strings */,
-				E13A4002142A79C700D7EA2A /* Ghost in the Machine-Prefix.pch */,
-				E13A4003142A79C700D7EA2A /* main.m */,
-				E13A4005142A79C700D7EA2A /* Credits.rtf */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		E13A4017142A79C800D7EA2A /* Ghost in the MachineTests */ = {
-			isa = PBXGroup;
-			children = (
-				E13A401E142A79C800D7EA2A /* Ghost_in_the_MachineTests.h */,
-				E13A4020142A79C800D7EA2A /* Ghost_in_the_MachineTests.m */,
-				E13A4018142A79C800D7EA2A /* Supporting Files */,
-			);
-			path = "Ghost in the MachineTests";
-			sourceTree = "<group>";
-		};
-		E13A4018142A79C800D7EA2A /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				E13A4019142A79C800D7EA2A /* Ghost in the MachineTests-Info.plist */,
-				E13A401A142A79C800D7EA2A /* InfoPlist.strings */,
-				E13A401D142A79C800D7EA2A /* Ghost in the MachineTests-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		E15D98BB142BD3A800E878B1 /* GitM */ = {
-			isa = PBXGroup;
-			children = (
-				E15D98C7142BD3A800E878B1 /* GitMAppDelegate.h */,
-				E15D98C8142BD3A800E878B1 /* GitMAppDelegate.m */,
-				E15D98CA142BD3A800E878B1 /* MainMenu.xib */,
-				E15D98BC142BD3A800E878B1 /* Supporting Files */,
-			);
-			path = GitM;
-			sourceTree = "<group>";
-		};
-		E15D98BC142BD3A800E878B1 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				E15D98BD142BD3A800E878B1 /* GitM-Info.plist */,
-				E15D98BE142BD3A800E878B1 /* InfoPlist.strings */,
-				E15D98C1142BD3A800E878B1 /* GitM-Prefix.pch */,
-				E15D98C2142BD3A800E878B1 /* main.m */,
-				E15D98C4142BD3A800E878B1 /* Credits.rtf */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		E1C4C916142A751A004E4ACD = {
 			isa = PBXGroup;
 			children = (
+				E1A471CA142BE5330062C09B /* SDL.framework */,
 				E13A3FE2142A76CF00D7EA2A /* GitM */,
 				E13A3FDD142A76AD00D7EA2A /* Engine */,
-				E13A3FFC142A79C700D7EA2A /* Ghost in the Machine */,
-				E13A4017142A79C800D7EA2A /* Ghost in the MachineTests */,
-				E15D98BB142BD3A800E878B1 /* GitM */,
 				E13A3FF5142A79C700D7EA2A /* Frameworks */,
 				E13A3FF3142A79C700D7EA2A /* Products */,
 			);
@@ -223,13 +139,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E15D98B7142BD3A800E878B1 /* GitM */ = {
+		E15FA1E7142BDF1C00CC6CE2 /* GitM */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E15D98CD142BD3A800E878B1 /* Build configuration list for PBXNativeTarget "GitM" */;
+			buildConfigurationList = E15FA1FF142BDF1C00CC6CE2 /* Build configuration list for PBXNativeTarget "GitM" */;
 			buildPhases = (
-				E15D98B4142BD3A800E878B1 /* Sources */,
-				E15D98B5142BD3A800E878B1 /* Frameworks */,
-				E15D98B6142BD3A800E878B1 /* Resources */,
+				E15FA1E4142BDF1C00CC6CE2 /* Sources */,
+				E15FA1E5142BDF1C00CC6CE2 /* Frameworks */,
+				E15FA1E6142BDF1C00CC6CE2 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -237,7 +153,7 @@
 			);
 			name = GitM;
 			productName = GitM;
-			productReference = E15D98B8142BD3A800E878B1 /* GitM.app */;
+			productReference = E15FA1E8142BDF1C00CC6CE2 /* GitM.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -257,97 +173,40 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E15D98B7142BD3A800E878B1 /* GitM */,
+				E15FA1E7142BDF1C00CC6CE2 /* GitM */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		E15D98B6142BD3A800E878B1 /* Resources */ = {
+		E15FA1E6142BDF1C00CC6CE2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E15D98C0142BD3A800E878B1 /* InfoPlist.strings in Resources */,
-				E15D98C6142BD3A800E878B1 /* Credits.rtf in Resources */,
-				E15D98CC142BD3A800E878B1 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		E15D98B4142BD3A800E878B1 /* Sources */ = {
+		E15FA1E4142BDF1C00CC6CE2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E15D98C3142BD3A800E878B1 /* main.m in Sources */,
-				E15D98C9142BD3A800E878B1 /* GitMAppDelegate.m in Sources */,
+				E1A471C4142BE5130062C09B /* Entity.cpp in Sources */,
+				E1A471C5142BE5130062C09B /* SceneManager.cpp in Sources */,
+				E1A471C6142BE5130062C09B /* Core.cpp in Sources */,
+				E1A471C7142BE5130062C09B /* ParentState.cpp in Sources */,
+				E1A471C8142BE5130062C09B /* State.cpp in Sources */,
+				E1A471BA142BDF5B0062C09B /* main.cpp in Sources */,
+				E1A471BB142BDF5B0062C09B /* GameState.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVariantGroup section */
-		E13A3FFF142A79C700D7EA2A /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E13A4000142A79C700D7EA2A /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		E13A4005142A79C700D7EA2A /* Credits.rtf */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E13A4006142A79C700D7EA2A /* en */,
-			);
-			name = Credits.rtf;
-			sourceTree = "<group>";
-		};
-		E13A400B142A79C800D7EA2A /* MainMenu.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E13A400C142A79C800D7EA2A /* en */,
-			);
-			name = MainMenu.xib;
-			sourceTree = "<group>";
-		};
-		E13A401A142A79C800D7EA2A /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E13A401B142A79C800D7EA2A /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		E15D98BE142BD3A800E878B1 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E15D98BF142BD3A800E878B1 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		E15D98C4142BD3A800E878B1 /* Credits.rtf */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E15D98C5142BD3A800E878B1 /* en */,
-			);
-			name = Credits.rtf;
-			sourceTree = "<group>";
-		};
-		E15D98CA142BD3A800E878B1 /* MainMenu.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E15D98CB142BD3A800E878B1 /* en */,
-			);
-			name = MainMenu.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
-		E15D98CE142BD3A800E878B1 /* Debug */ = {
+		E15FA1FD142BDF1C00CC6CE2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -358,14 +217,15 @@
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "GitM/GitM-Prefix.pch";
+				GCC_PREFIX_HEADER = "";
 				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "GitM/GitM-Info.plist";
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/../**";
+				INFOPLIST_FILE = "../GitM/GitM-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -374,7 +234,7 @@
 			};
 			name = Debug;
 		};
-		E15D98CF142BD3A800E878B1 /* Release */ = {
+		E15FA1FE142BDF1C00CC6CE2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -384,12 +244,13 @@
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "GitM/GitM-Prefix.pch";
+				GCC_PREFIX_HEADER = "";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "GitM/GitM-Info.plist";
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/../**";
+				INFOPLIST_FILE = "../GitM/GitM-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
@@ -400,27 +261,34 @@
 		E1C4C91D142A751A004E4ACD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				HEADER_SEARCH_PATHS = "$(SRCROOT)/..";
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/..",
+					"$(SRCROOT)",
+				);
 			};
 			name = Debug;
 		};
 		E1C4C91E142A751A004E4ACD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				HEADER_SEARCH_PATHS = "$(SRCROOT)/..";
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/..",
+					"$(SRCROOT)",
+				);
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E15D98CD142BD3A800E878B1 /* Build configuration list for PBXNativeTarget "GitM" */ = {
+		E15FA1FF142BDF1C00CC6CE2 /* Build configuration list for PBXNativeTarget "GitM" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E15D98CE142BD3A800E878B1 /* Debug */,
-				E15D98CF142BD3A800E878B1 /* Release */,
+				E15FA1FD142BDF1C00CC6CE2 /* Debug */,
+				E15FA1FE142BDF1C00CC6CE2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E1C4C91B142A751A004E4ACD /* Build configuration list for PBXProject "GitM" */ = {
 			isa = XCConfigurationList;

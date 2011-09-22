@@ -6,9 +6,23 @@ ParentState::ParentState() {
 ParentState::~ParentState() {
 }
 
+void ParentState::setState(State *state, ...) {
+    va_list args;
+    va_start(args, state);
+    setState(state, args);
+    va_end(args);
+}
+
 void ParentState::setState(State *state, va_list args) {
     flushStates();
     pushState(state, args);
+}
+
+void ParentState::pushState(State *state, ...) {
+    va_list args;
+    va_start(args, state);
+    pushState(state, args);
+    va_end(args);
 }
 
 void ParentState::pushState(State *state, va_list args) {

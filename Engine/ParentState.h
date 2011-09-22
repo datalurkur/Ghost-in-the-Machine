@@ -9,7 +9,9 @@ public:
     ParentState();
     virtual ~ParentState();
 
+    void setState(State *state, ...);
     void setState(State *state, va_list args);
+    void pushState(State *state, ...);
     void pushState(State *state, va_list args);
     State *popState();
     State *activeState();

@@ -17,6 +17,7 @@
 		E13A401C142A79C800D7EA2A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E13A401A142A79C800D7EA2A /* InfoPlist.strings */; };
 		E13A401F142A79C800D7EA2A /* Ghost_in_the_MachineTests.h in Resources */ = {isa = PBXBuildFile; fileRef = E13A401E142A79C800D7EA2A /* Ghost_in_the_MachineTests.h */; };
 		E13A4021142A79C800D7EA2A /* Ghost_in_the_MachineTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E13A4020142A79C800D7EA2A /* Ghost_in_the_MachineTests.m */; };
+		E1C93020142BA1D300111570 /* SDL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1C9301F142BA1D300111570 /* SDL.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		E13A401D142A79C800D7EA2A /* Ghost in the MachineTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Ghost in the MachineTests-Prefix.pch"; sourceTree = "<group>"; };
 		E13A401E142A79C800D7EA2A /* Ghost_in_the_MachineTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Ghost_in_the_MachineTests.h; sourceTree = "<group>"; };
 		E13A4020142A79C800D7EA2A /* Ghost_in_the_MachineTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Ghost_in_the_MachineTests.m; sourceTree = "<group>"; };
+		E1C9301F142BA1D300111570 /* SDL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SDL.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E13A3FF7142A79C700D7EA2A /* Cocoa.framework in Frameworks */,
+				E1C93020142BA1D300111570 /* SDL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,6 +114,7 @@
 		E13A3FF5142A79C700D7EA2A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E1C9301F142BA1D300111570 /* SDL.framework */,
 				E13A3FF6142A79C700D7EA2A /* Cocoa.framework */,
 				E13A3FF8142A79C700D7EA2A /* Other Frameworks */,
 			);
@@ -352,6 +356,11 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/sdl\"",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -380,6 +389,11 @@
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/sdl\"",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;

@@ -11,14 +11,14 @@
     <Filter Include="GitM">
       <UniqueIdentifier>{d72d2403-c03b-4437-ba43-b69cfcfd30a7}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Engine\State Management">
+      <UniqueIdentifier>{e8196291-1b6b-42d0-bf93-4ff8685ec082}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Scene Management">
+      <UniqueIdentifier>{039b222d-0a1e-46cc-9201-2c9e94946936}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\Engine\Core.cpp">
-      <Filter>Engine</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Engine\State.cpp">
-      <Filter>Engine</Filter>
-    </ClCompile>
     <ClCompile Include="..\GitM\GameState.cpp">
       <Filter>GitM</Filter>
     </ClCompile>
@@ -26,21 +26,39 @@
       <Filter>GitM</Filter>
     </ClCompile>
     <ClCompile Include="..\Engine\ParentState.cpp">
-      <Filter>Engine</Filter>
+      <Filter>Engine\State Management</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\Core.cpp">
+      <Filter>Engine\State Management</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\State.cpp">
+      <Filter>Engine\State Management</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\Entity.cpp">
+      <Filter>Engine\Scene Management</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\SceneManager.cpp">
+      <Filter>Engine\Scene Management</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\Engine\Core.h">
-      <Filter>Engine</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Engine\State.h">
-      <Filter>Engine</Filter>
-    </ClInclude>
     <ClInclude Include="..\GitM\GameState.h">
       <Filter>GitM</Filter>
     </ClInclude>
     <ClInclude Include="..\Engine\ParentState.h">
-      <Filter>Engine</Filter>
+      <Filter>Engine\State Management</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\Core.h">
+      <Filter>Engine\State Management</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\State.h">
+      <Filter>Engine\State Management</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\SceneManager.h">
+      <Filter>Engine\Scene Management</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\Entity.h">
+      <Filter>Engine\Scene Management</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -17,6 +17,12 @@
     <Filter Include="Engine\Scene Management">
       <UniqueIdentifier>{039b222d-0a1e-46cc-9201-2c9e94946936}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Base">
+      <UniqueIdentifier>{0398eccb-ac26-409f-acb8-a84674443e2d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Render">
+      <UniqueIdentifier>{367c79f7-652d-4d6c-9a1b-347167ba9d3e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\GitM\GameState.cpp">
@@ -40,6 +46,15 @@
     <ClCompile Include="..\Engine\SceneManager.cpp">
       <Filter>Engine\Scene Management</Filter>
     </ClCompile>
+    <ClCompile Include="..\Render\RenderContext.cpp">
+      <Filter>Render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\GitM\QuadTreeSceneManager.cpp">
+      <Filter>GitM</Filter>
+    </ClCompile>
+    <ClCompile Include="..\GitM\World.cpp">
+      <Filter>GitM</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\GitM\GameState.h">
@@ -59,6 +74,18 @@
     </ClInclude>
     <ClInclude Include="..\Engine\Entity.h">
       <Filter>Engine\Scene Management</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Render\RenderContext.h">
+      <Filter>Render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GitM\QuadTreeSceneManager.h">
+      <Filter>GitM</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GitM\World.h">
+      <Filter>GitM</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Base\Base.h">
+      <Filter>Base</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

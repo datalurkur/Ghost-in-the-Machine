@@ -2,6 +2,7 @@
 #define GAMESTATE_H
 
 #include <Engine/State.h>
+#include <GitM/World.h>
 
 class GameState: public State {
 public:
@@ -15,6 +16,7 @@ public:
     void render();
 
 private:
+	World *_world;
 };
 
 #endif

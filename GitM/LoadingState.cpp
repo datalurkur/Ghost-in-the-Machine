@@ -20,7 +20,7 @@ void LoadingState::render() {
 
 void LoadingState::setup(va_list args) {
     _world = new World();
-    _world->load(va_arg(args, std::string));
+    _world->load(*va_arg(args, std::string*));
 }
 
 void LoadingState::teardown() {

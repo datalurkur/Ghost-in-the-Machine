@@ -1,7 +1,9 @@
 #include <Engine/Core.h>
+#include <Base/Log.h>
 #include <SDL.h>
 
 Core::Core(): _running(false) {
+    Log::enableAllChannels();
 }
 
 Core::~Core() {
@@ -13,6 +15,7 @@ void Core::start() {
     lastTime = getTime();
     _running = true;
 
+    Info("Main loop starting.");
     while(_running) {
         int currentTime = getTime();
         elapsedTime = currentTime - lastTime;
@@ -26,6 +29,7 @@ void Core::start() {
     }
 
     // Cleanup
+    Info("Main loop halted, exiting.");
 }
 
 void Core::stop() {

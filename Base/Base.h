@@ -4,6 +4,8 @@
 #include <string>
 #include <stdarg.h>
 #include <stdlib.h>
+#include <stdio.h>
+#include <iostream>
 
 #include <stack>
 

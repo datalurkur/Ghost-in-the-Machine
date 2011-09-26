@@ -22,16 +22,16 @@ inline void Vector<type,size>::allocate() {
 }
 
 template <typename type, int size>
-Vector<type,size>& Vector<type,size>::operator+(const Vector &other) {
+Vector<type,size>& Vector<type,size>::operator+(const Vector &rhs) {
 	for(int i = 0; i < size; i++) {
-		_data[i] += other[i];
+		_data[i] += rhs[i];
 	}
 }
 
 template <typename type, int size>
-Vector<type,size>& Vector<type,size>::operator-(const Vector &other) {
+Vector<type,size>& Vector<type,size>::operator-(const Vector &rhs) {
 	for(int i = 0; i < size; i++) {
-		_data[i] -= other[i];
+		_data[i] -= rhs[i];
 	}
 }
 

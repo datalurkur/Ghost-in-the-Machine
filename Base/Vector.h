@@ -10,8 +10,8 @@ public:
 	Vector(const type *other);
 	virtual ~Vector();
 
-	Vector& operator+(const Vector &other);
-	Vector& operator-(const Vector &other);
+	Vector& operator+(const Vector &rhs);
+	Vector& operator-(const Vector &rhs);
 
 protected:
 	inline void allocate();

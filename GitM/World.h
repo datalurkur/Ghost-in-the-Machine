@@ -12,7 +12,7 @@ public:
 	virtual ~World();
 
 	// Loads the world data from disk / cache
-	void load(const std::string &id);
+	void load(const std::string &map);
 
 	// Empties the world of loaded world data
 	void unload();

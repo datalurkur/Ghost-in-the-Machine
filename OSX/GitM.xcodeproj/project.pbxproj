@@ -16,6 +16,16 @@
 		E1A471C7142BE5130062C09B /* ParentState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E121B0B7142BD0F500719A82 /* ParentState.cpp */; };
 		E1A471C8142BE5130062C09B /* State.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E13A3FDF142A76C000D7EA2A /* State.cpp */; };
 		E1A471CB142BE5330062C09B /* SDL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1A471CA142BE5330062C09B /* SDL.framework */; };
+		E1B4F3161430D66800A87C70 /* Vector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1B4F3141430D66800A87C70 /* Vector.cpp */; };
+		E1B4F31D1430D67A00A87C70 /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1B4F3171430D67A00A87C70 /* Player.cpp */; };
+		E1B4F31E1430D67A00A87C70 /* QuadTreeSceneManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1B4F3191430D67A00A87C70 /* QuadTreeSceneManager.cpp */; };
+		E1B4F31F1430D67A00A87C70 /* World.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1B4F31B1430D67A00A87C70 /* World.cpp */; };
+		E1B4F3271430D69200A87C70 /* Renderable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1B4F3211430D69200A87C70 /* Renderable.cpp */; };
+		E1B4F3281430D69200A87C70 /* RenderContext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1B4F3231430D69200A87C70 /* RenderContext.cpp */; };
+		E1B4F3291430D69200A87C70 /* RenderQueue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1B4F3251430D69200A87C70 /* RenderQueue.cpp */; };
+		E1B4F32C1430D6E300A87C70 /* SceneNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1B4F32A1430D6E300A87C70 /* SceneNode.cpp */; };
+		E1B4F32F1430D91400A87C70 /* LoadingState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1B4F32D1430D91400A87C70 /* LoadingState.cpp */; };
+		E1B4F3321430DC7F00A87C70 /* PlayingState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1B4F3301430DC7F00A87C70 /* PlayingState.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +48,27 @@
 		E13A3FFB142A79C700D7EA2A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E15FA1E8142BDF1C00CC6CE2 /* GitM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1A471CA142BE5330062C09B /* SDL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL.framework; path = SDKs/MacOSX10.6.sdk/Library/Frameworks/SDL.framework; sourceTree = DEVELOPER_DIR; };
+		E1B4F3131430D66800A87C70 /* Base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Base.h; path = ../Base/Base.h; sourceTree = "<group>"; };
+		E1B4F3141430D66800A87C70 /* Vector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Vector.cpp; path = ../Base/Vector.cpp; sourceTree = "<group>"; };
+		E1B4F3151430D66800A87C70 /* Vector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Vector.h; path = ../Base/Vector.h; sourceTree = "<group>"; };
+		E1B4F3171430D67A00A87C70 /* Player.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Player.cpp; path = ../GitM/Player.cpp; sourceTree = "<group>"; };
+		E1B4F3181430D67A00A87C70 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Player.h; path = ../GitM/Player.h; sourceTree = "<group>"; };
+		E1B4F3191430D67A00A87C70 /* QuadTreeSceneManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = QuadTreeSceneManager.cpp; path = ../GitM/QuadTreeSceneManager.cpp; sourceTree = "<group>"; };
+		E1B4F31A1430D67A00A87C70 /* QuadTreeSceneManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuadTreeSceneManager.h; path = ../GitM/QuadTreeSceneManager.h; sourceTree = "<group>"; };
+		E1B4F31B1430D67A00A87C70 /* World.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = World.cpp; path = ../GitM/World.cpp; sourceTree = "<group>"; };
+		E1B4F31C1430D67A00A87C70 /* World.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = World.h; path = ../GitM/World.h; sourceTree = "<group>"; };
+		E1B4F3211430D69200A87C70 /* Renderable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Renderable.cpp; path = ../Render/Renderable.cpp; sourceTree = "<group>"; };
+		E1B4F3221430D69200A87C70 /* Renderable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Renderable.h; path = ../Render/Renderable.h; sourceTree = "<group>"; };
+		E1B4F3231430D69200A87C70 /* RenderContext.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = RenderContext.cpp; path = ../Render/RenderContext.cpp; sourceTree = "<group>"; };
+		E1B4F3241430D69200A87C70 /* RenderContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RenderContext.h; path = ../Render/RenderContext.h; sourceTree = "<group>"; };
+		E1B4F3251430D69200A87C70 /* RenderQueue.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = RenderQueue.cpp; path = ../Render/RenderQueue.cpp; sourceTree = "<group>"; };
+		E1B4F3261430D69200A87C70 /* RenderQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RenderQueue.h; path = ../Render/RenderQueue.h; sourceTree = "<group>"; };
+		E1B4F32A1430D6E300A87C70 /* SceneNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SceneNode.cpp; path = ../Engine/SceneNode.cpp; sourceTree = "<group>"; };
+		E1B4F32B1430D6E300A87C70 /* SceneNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SceneNode.h; path = ../Engine/SceneNode.h; sourceTree = "<group>"; };
+		E1B4F32D1430D91400A87C70 /* LoadingState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LoadingState.cpp; path = ../GitM/LoadingState.cpp; sourceTree = "<group>"; };
+		E1B4F32E1430D91400A87C70 /* LoadingState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoadingState.h; path = ../GitM/LoadingState.h; sourceTree = "<group>"; };
+		E1B4F3301430DC7F00A87C70 /* PlayingState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PlayingState.cpp; path = ../GitM/PlayingState.cpp; sourceTree = "<group>"; };
+		E1B4F3311430DC7F00A87C70 /* PlayingState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlayingState.h; path = ../GitM/PlayingState.h; sourceTree = "<group>"; };
 		E1C9301F142BA1D300111570 /* SDL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SDL.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -61,6 +92,8 @@
 				E121B0BC142BD11800719A82 /* Entity.h */,
 				E121B0BD142BD11800719A82 /* SceneManager.cpp */,
 				E121B0BE142BD11800719A82 /* SceneManager.h */,
+				E1B4F32A1430D6E300A87C70 /* SceneNode.cpp */,
+				E1B4F32B1430D6E300A87C70 /* SceneNode.h */,
 			);
 			name = "Scene Management";
 			sourceTree = "<group>";
@@ -77,9 +110,14 @@
 		E13A3FE2142A76CF00D7EA2A /* GitM */ = {
 			isa = PBXGroup;
 			children = (
+				E1B4F3171430D67A00A87C70 /* Player.cpp */,
+				E1B4F3181430D67A00A87C70 /* Player.h */,
+				E1B4F3191430D67A00A87C70 /* QuadTreeSceneManager.cpp */,
+				E1B4F31A1430D67A00A87C70 /* QuadTreeSceneManager.h */,
+				E1B4F31B1430D67A00A87C70 /* World.cpp */,
+				E1B4F31C1430D67A00A87C70 /* World.h */,
+				E1CE8DD3142BE67200BBB30A /* States */,
 				E13A3FE3142A76DC00D7EA2A /* main.cpp */,
-				E13A3FE4142A76DC00D7EA2A /* GameState.h */,
-				E13A3FE5142A76DC00D7EA2A /* GameState.cpp */,
 			);
 			name = GitM;
 			sourceTree = "<group>";
@@ -112,12 +150,37 @@
 			name = "Other Frameworks";
 			sourceTree = "<group>";
 		};
+		E1B4F3111430D65000A87C70 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				E1B4F3131430D66800A87C70 /* Base.h */,
+				E1B4F3141430D66800A87C70 /* Vector.cpp */,
+				E1B4F3151430D66800A87C70 /* Vector.h */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
+		E1B4F3201430D68300A87C70 /* Render */ = {
+			isa = PBXGroup;
+			children = (
+				E1B4F3211430D69200A87C70 /* Renderable.cpp */,
+				E1B4F3221430D69200A87C70 /* Renderable.h */,
+				E1B4F3231430D69200A87C70 /* RenderContext.cpp */,
+				E1B4F3241430D69200A87C70 /* RenderContext.h */,
+				E1B4F3251430D69200A87C70 /* RenderQueue.cpp */,
+				E1B4F3261430D69200A87C70 /* RenderQueue.h */,
+			);
+			name = Render;
+			sourceTree = "<group>";
+		};
 		E1C4C916142A751A004E4ACD = {
 			isa = PBXGroup;
 			children = (
-				E1A471CA142BE5330062C09B /* SDL.framework */,
-				E13A3FE2142A76CF00D7EA2A /* GitM */,
+				E1B4F3111430D65000A87C70 /* Base */,
+				E1B4F3201430D68300A87C70 /* Render */,
 				E13A3FDD142A76AD00D7EA2A /* Engine */,
+				E13A3FE2142A76CF00D7EA2A /* GitM */,
+				E1A471CA142BE5330062C09B /* SDL.framework */,
 				E13A3FF5142A79C700D7EA2A /* Frameworks */,
 				E13A3FF3142A79C700D7EA2A /* Products */,
 			);
@@ -134,6 +197,19 @@
 				E13A3FDF142A76C000D7EA2A /* State.cpp */,
 			);
 			name = "State Maintenance";
+			sourceTree = "<group>";
+		};
+		E1CE8DD3142BE67200BBB30A /* States */ = {
+			isa = PBXGroup;
+			children = (
+				E1B4F3301430DC7F00A87C70 /* PlayingState.cpp */,
+				E1B4F3311430DC7F00A87C70 /* PlayingState.h */,
+				E1B4F32D1430D91400A87C70 /* LoadingState.cpp */,
+				E1B4F32E1430D91400A87C70 /* LoadingState.h */,
+				E13A3FE4142A76DC00D7EA2A /* GameState.h */,
+				E13A3FE5142A76DC00D7EA2A /* GameState.cpp */,
+			);
+			name = States;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,6 +276,16 @@
 				E1A471C8142BE5130062C09B /* State.cpp in Sources */,
 				E1A471BA142BDF5B0062C09B /* main.cpp in Sources */,
 				E1A471BB142BDF5B0062C09B /* GameState.cpp in Sources */,
+				E1B4F3161430D66800A87C70 /* Vector.cpp in Sources */,
+				E1B4F31D1430D67A00A87C70 /* Player.cpp in Sources */,
+				E1B4F31E1430D67A00A87C70 /* QuadTreeSceneManager.cpp in Sources */,
+				E1B4F31F1430D67A00A87C70 /* World.cpp in Sources */,
+				E1B4F3271430D69200A87C70 /* Renderable.cpp in Sources */,
+				E1B4F3281430D69200A87C70 /* RenderContext.cpp in Sources */,
+				E1B4F3291430D69200A87C70 /* RenderQueue.cpp in Sources */,
+				E1B4F32C1430D6E300A87C70 /* SceneNode.cpp in Sources */,
+				E1B4F32F1430D91400A87C70 /* LoadingState.cpp in Sources */,
+				E1B4F3321430DC7F00A87C70 /* PlayingState.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

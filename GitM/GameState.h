@@ -1,10 +1,9 @@
 #ifndef GAMESTATE_H
 #define GAMESTATE_H
 
-#include <Engine/State.h>
-#include <GitM/World.h>
+#include <Engine/ParentState.h>
 
-class GameState: public State {
+class GameState: public ParentState {
 public:
     GameState();
     ~GameState();
@@ -12,11 +11,7 @@ public:
     void setup(va_list args);
     void teardown();
 
-    void update(int elapsed);
-    void render();
-
 private:
-	World *_world;
 };
 
 #endif

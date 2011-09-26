@@ -2,7 +2,6 @@
 #define PARENTSTATE_H
 
 #include <Engine/State.h>
-#include <stack>
 
 class ParentState: public State {
 public:

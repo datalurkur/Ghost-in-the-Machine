@@ -9,6 +9,7 @@ World::~World() {
 }
 
 void World::load(const std::string &id) {
+    printf("Loading world %s", id.c_str());
 }
 
 void World::unload() {

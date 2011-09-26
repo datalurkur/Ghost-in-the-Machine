@@ -1,21 +1,16 @@
 #include <GitM/GameState.h>
+#include <GitM/LoadingState.h>
 
-GameState::GameState(): _world(0) {
+GameState::GameState() {
 }
 
 GameState::~GameState() {
 }
 
 void GameState::setup(va_list args) {
-	_world = new World();
+    std::string map = va_arg(args, std::string);
+    pushState(new LoadingState(), &map);
 }
 
 void GameState::teardown() {
-	if(_world) { delete _world; }
-}
-
-void GameState::update(int elapsed) {
-}
-
-void GameState::render() {
 }

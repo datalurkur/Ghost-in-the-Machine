@@ -31,17 +31,18 @@ void ParentState::pushState(State *state, va_list args) {
     _stateStack.push(state);
 }
 
-State* ParentState::popState() {
+bool ParentState::popState(bool deleteOnPop = true) {
     State *state = _stateStack.top();
 
     if(state) {
         _stateStack.pop();
         state->teardown();
-        state->setParent(NULL);
-
-        return state;
+		if(deleteOnPop) {
+			delete state;
+		}
+        return true;
     } else {
-        return NULL;
+        return false;
     }
 }
 
@@ -54,8 +55,7 @@ State* ParentState::activeState() {
 }
 
 void ParentState::flushStates() {
-    State *last;
-    while((last = popState())) {}
+    while(popState()) {}
 }
 
 void ParentState::update(int elapsed) {

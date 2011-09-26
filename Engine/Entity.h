@@ -1,7 +1,9 @@
 #ifndef ENTITY_H
 #define ENTITY_H
 
-class Entity {
+#include <Engine/SceneNode.h>
+
+class Entity: public SceneNode {
 public:
     Entity();
     ~Entity();

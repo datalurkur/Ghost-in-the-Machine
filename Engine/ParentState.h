@@ -13,7 +13,7 @@ public:
     void setState(State *state, va_list args);
     void pushState(State *state, ...);
     void pushState(State *state, va_list args);
-    State *popState();
+    bool popState(bool deleteOnPop);
     State *activeState();
 
     void flushStates();

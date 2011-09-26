@@ -12,19 +12,22 @@ typedef char LogChannel;
 
 class Log {
 public:
-    static void enableAllChannels();
-    static void disableAllChannels();
+    static void EnableAllChannels();
+    static void DisableAllChannels();
  
-    static void enableChannel(LogChannel channel);
-    static void disableChannel(LogChannel channel);
+    static void EnableChannel(LogChannel channel);
+    static void DisableChannel(LogChannel channel);
 
-    static bool isChannelEnabled(LogChannel channel);
+    static bool IsChannelEnabled(LogChannel channel);
 
-    static Log& getLogStream(LogChannel channel);
+    static Log& GetLogStream(LogChannel channel);
+    static void Flush();
 
 public:
     Log();
     virtual ~Log();
+    
+    void flush();
 
     template <typename T> Log& operator<<(const T &rhs);
 
@@ -43,8 +46,9 @@ template <typename T> Log& Log::operator<<(const T &rhs) {
 
 #define LogToChannel(channel, msg) \
     do { \
-        if(Log::isChannelEnabled(channel)) { \
-            Log::getLogStream(channel) << msg << "\n"; \
+        if(Log::IsChannelEnabled(channel)) { \
+            Log::GetLogStream(channel) << msg << "\n"; \
+            Log::Flush(); \
         } \
     } while(false)
 

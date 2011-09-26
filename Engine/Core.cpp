@@ -3,7 +3,7 @@
 #include <SDL.h>
 
 Core::Core(): _running(false) {
-    Log::enableAllChannels();
+    Log::EnableAllChannels();
 }
 
 Core::~Core() {

@@ -10,29 +10,37 @@ Log::~Log() {
     _outputStream->flush();
 }
 
-void Log::enableAllChannels() {
+void Log::EnableAllChannels() {
     channelState = 0xff;
 }
 
-void Log::disableAllChannels() {
+void Log::DisableAllChannels() {
     channelState = 0x00;
 }
 
-void Log::enableChannel(LogChannel channel) {
+void Log::EnableChannel(LogChannel channel) {
     channelState |= channel;
 }
 
-void Log::disableChannel(LogChannel channel) {
+void Log::DisableChannel(LogChannel channel) {
     channelState &= (0xff - channel);
 }
 
-bool Log::isChannelEnabled(LogChannel channel) {
+bool Log::IsChannelEnabled(LogChannel channel) {
     return (channelState & channel);
 }
 
-Log& Log::getLogStream(LogChannel channel) {
+Log& Log::GetLogStream(LogChannel channel) {
     if(!outputStream) {
         outputStream = new Log();
     }
     return *outputStream;
+}
+
+void Log::Flush() {
+    outputStream->flush();
+}
+
+void Log::flush() {
+    _outputStream->flush();
 }

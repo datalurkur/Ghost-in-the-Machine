@@ -76,7 +76,9 @@
     <ClCompile Include="..\GitM\Player.cpp" />
     <ClCompile Include="..\GitM\QuadTreeSceneManager.cpp" />
     <ClCompile Include="..\GitM\World.cpp" />
+    <ClCompile Include="..\Render\Renderable.cpp" />
     <ClCompile Include="..\Render\RenderContext.cpp" />
+    <ClCompile Include="..\Render\RenderQueue.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Base\Base.h" />
@@ -91,7 +93,9 @@
     <ClInclude Include="..\GitM\Player.h" />
     <ClInclude Include="..\GitM\QuadTreeSceneManager.h" />
     <ClInclude Include="..\GitM\World.h" />
+    <ClInclude Include="..\Render\Renderable.h" />
     <ClInclude Include="..\Render\RenderContext.h" />
+    <ClInclude Include="..\Render\RenderQueue.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

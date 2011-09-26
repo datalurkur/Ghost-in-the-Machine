@@ -64,6 +64,12 @@
     <ClCompile Include="..\Base\Vector.cpp">
       <Filter>Base</Filter>
     </ClCompile>
+    <ClCompile Include="..\Render\Renderable.cpp">
+      <Filter>Render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Render\RenderQueue.cpp">
+      <Filter>Render</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\GitM\GameState.h">
@@ -104,6 +110,12 @@
     </ClInclude>
     <ClInclude Include="..\Base\Vector.h">
       <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Render\Renderable.h">
+      <Filter>Render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Render\RenderQueue.h">
+      <Filter>Render</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

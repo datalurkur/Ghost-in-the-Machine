@@ -1,5 +1,7 @@
 #include <Engine/SceneNode.h>
 
+const std::string SceneNode::NodeType = "SceneNode";
+
 SceneNode::SceneNode(const std::string &name):
 	_position(0,0), _name(name) {
 }
@@ -21,4 +23,13 @@ Vector2 SceneNode::getLocalPosition() const {
 
 const std::string &SceneNode::getName() const {
 	return _name;
+}
+
+const std::string &SceneNode::getType() const {
+	return NodeType;
+}
+
+void SceneNode::addChild(SceneNode *child) {
+	_children[child->getName()] = child;
+	child->_parent = this;
 }

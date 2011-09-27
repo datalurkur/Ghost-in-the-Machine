@@ -3,6 +3,7 @@
 
 #include <Base/Base.h>
 #include <GitM/QuadTreeSceneManager.h>
+#include <GitM/Player.h>
 
 class RenderContext;
 
@@ -25,6 +26,7 @@ public:
 
 private:
 	QuadTreeSceneManager *_scene;
+	Player *_player;
 };
 
 #endif

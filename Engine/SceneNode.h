@@ -3,7 +3,13 @@
 
 #include <Base/Vector.h>
 
+class SceneNode;
+typedef std::map<std::string, SceneNode*> NodeMap;
+
 class SceneNode {
+public:
+	static const std::string NodeType;
+
 public:
 	SceneNode(const std::string &name);
 	virtual ~SceneNode();
@@ -12,6 +18,7 @@ public:
 	Vector2 getLocalPosition() const;
 
 	const std::string &getName() const;
+	const std::string &getType() const;
 
 	void addChild(SceneNode *child);
 
@@ -20,7 +27,7 @@ protected:
 	Vector2 _position;
 
 	SceneNode *_parent;
-	std::map<std::string, SceneNode*> _children;
+	NodeMap _children;
 };
 
 #endif

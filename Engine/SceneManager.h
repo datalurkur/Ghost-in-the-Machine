@@ -19,18 +19,32 @@ public:
 
 private:
 	SceneNode *_root;
+	NodeMap _nodes;
 };
 
 template <typename T>
 void SceneManager::addNode(T *node) {
+	Info("Adding " << node->getName() << " to scene");
+	_root->addChild(node);
 }
 
 template <typename T>
 T* SceneManager::getNode(const std::string &name) const {
+	NodeMap::iterator itr = _nodes.find(name);
+	if(itr != _nodes.end() && itr->second->getType() == T::NodeType) {
+		return static_cast<T*>(itr->second);
+	} else {
+		return 0;
+	}
 }
 
 template <typename T>
 void SceneManager::deleteNode(const std::string &name) {
+	NodeMap::iterator itr = _nodes.find(name);
+	if(itr != _nodes.end() && itr->second->getType() == T::NodeType) {
+		_nodes.erase(itr);
+		delete itr->second;
+	}
 }
 
 #endif

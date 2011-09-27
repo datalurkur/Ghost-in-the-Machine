@@ -1,13 +1,17 @@
 #ifndef PLAYER_H
 #define PLAYER_H
 
-class Player {
+#include <Engine/Entity.h>
+
+class Player: public Entity {
 public:
-	Player();
+	static const std::string NodeType;
+
+public:
+	Player(const std::string &name);
 	virtual ~Player();
 
 private:
-	Entity *_entity;
 };
 
 #endif

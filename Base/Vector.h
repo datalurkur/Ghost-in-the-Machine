@@ -2,6 +2,7 @@
 #define VECTOR_H
 
 #include <Base/Base.h>
+#include <Base/Log.h>
 
 #define VectorData (*static_cast<T*>(this))
 #define ConstVectorData (*static_cast<const T*>(this))

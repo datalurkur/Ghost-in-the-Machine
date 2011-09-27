@@ -23,11 +23,11 @@
     <Filter Include="Render">
       <UniqueIdentifier>{367c79f7-652d-4d6c-9a1b-347167ba9d3e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="GitM\States">
+      <UniqueIdentifier>{93f05665-51dd-4274-b352-3c6371dfd7d7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\GitM\GameState.cpp">
-      <Filter>GitM</Filter>
-    </ClCompile>
     <ClCompile Include="..\GitM\main.cpp">
       <Filter>GitM</Filter>
     </ClCompile>
@@ -70,11 +70,23 @@
     <ClCompile Include="..\Render\RenderQueue.cpp">
       <Filter>Render</Filter>
     </ClCompile>
+    <ClCompile Include="..\Base\Log.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\GitM\GhostCore.cpp">
+      <Filter>GitM</Filter>
+    </ClCompile>
+    <ClCompile Include="..\GitM\GameState.cpp">
+      <Filter>GitM\States</Filter>
+    </ClCompile>
+    <ClCompile Include="..\GitM\LoadingState.cpp">
+      <Filter>GitM\States</Filter>
+    </ClCompile>
+    <ClCompile Include="..\GitM\PlayingState.cpp">
+      <Filter>GitM\States</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\GitM\GameState.h">
-      <Filter>GitM</Filter>
-    </ClInclude>
     <ClInclude Include="..\Engine\ParentState.h">
       <Filter>Engine\State Management</Filter>
     </ClInclude>
@@ -116,6 +128,21 @@
     </ClInclude>
     <ClInclude Include="..\Render\RenderQueue.h">
       <Filter>Render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Base\Log.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GitM\GhostCore.h">
+      <Filter>GitM</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GitM\GameState.h">
+      <Filter>GitM\States</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GitM\LoadingState.h">
+      <Filter>GitM\States</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GitM\PlayingState.h">
+      <Filter>GitM\States</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

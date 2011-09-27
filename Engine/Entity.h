@@ -5,7 +5,7 @@
 
 class Entity: public SceneNode {
 public:
-    Entity();
+    Entity(const std::string &name);
     ~Entity();
 
 private:

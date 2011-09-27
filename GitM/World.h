@@ -20,6 +20,9 @@ public:
 	// Render the world
 	void render(RenderContext *context);
 
+	// Return the scene manager
+	SceneManager *getScene();
+
 private:
 	QuadTreeSceneManager *_scene;
 };

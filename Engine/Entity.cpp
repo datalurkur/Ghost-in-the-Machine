@@ -1,6 +1,6 @@
 #include <Engine/Entity.h>
 
-Entity::Entity() {
+Entity::Entity(const std::string &name): SceneNode(name) {
 }
 
 Entity::~Entity() {

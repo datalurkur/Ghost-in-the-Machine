@@ -29,7 +29,8 @@ public:
     
     void flush();
 
-    template <typename T> Log& operator<<(const T &rhs);
+    template <typename T>
+	Log& operator<<(const T &rhs);
 
 private:
     static Log *outputStream;
@@ -39,7 +40,8 @@ private:
     std::ostream *_outputStream;
 };
 
-template <typename T> Log& Log::operator<<(const T &rhs) {
+template <typename T>
+Log& Log::operator<<(const T &rhs) {
     (*_outputStream) << rhs;
     return *this;
 }

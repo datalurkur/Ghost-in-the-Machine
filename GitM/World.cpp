@@ -18,3 +18,7 @@ void World::unload() {
 
 void World::render(RenderContext *context) {
 }
+
+SceneManager* World::getScene() {
+	return _scene;
+}

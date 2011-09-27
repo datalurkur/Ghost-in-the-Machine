@@ -1,4 +1,4 @@
-﻿Build started 9/26/2011 7:11:11 PM.
+﻿Build started 9/27/2011 1:15:01 AM.
      1>Project "C:\GitM\Win7\GitM.vcxproj" on node 2 (clean target(s)).
      1>_PrepareForClean:
          Deleting file "Debug\GitM.lastbuildstate".
@@ -6,4 +6,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:00.00
+Time Elapsed 00:00:00.01

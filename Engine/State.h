@@ -1,7 +1,7 @@
 #ifndef STATE_H
 #define STATE_H
 
-#include <Base/Base.h>
+#include <Base/Log.h>
 
 class ParentState;
 

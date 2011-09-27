@@ -5,11 +5,22 @@
 
 class SceneNode {
 public:
-	SceneNode();
+	SceneNode(const std::string &name);
 	virtual ~SceneNode();
 
-private:
+	Vector2 getAbsolutePosition() const;
+	Vector2 getLocalPosition() const;
+
+	const std::string &getName() const;
+
+	void addChild(SceneNode *child);
+
+protected:
+	std::string _name;
 	Vector2 _position;
+
+	SceneNode *_parent;
+	std::map<std::string, SceneNode*> _children;
 };
 
 #endif

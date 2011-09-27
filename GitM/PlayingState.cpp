@@ -13,6 +13,7 @@ void PlayingState::render() {
 }
 
 void PlayingState::setup(va_list args) {
+	Info("Setting up PlayingState");
     _world = va_arg(args, World*);
 }
 

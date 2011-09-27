@@ -19,6 +19,7 @@ void LoadingState::render() {
 }
 
 void LoadingState::setup(va_list args) {
+	Info("Setting up LoadingState");
     _world = new World();
     _world->load(*va_arg(args, std::string*));
 }

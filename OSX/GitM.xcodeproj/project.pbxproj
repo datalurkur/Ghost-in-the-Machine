@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		E15FA1EA142BDF1C00CC6CE2 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E13A3FF6142A79C700D7EA2A /* Cocoa.framework */; };
 		E18169D51433B1E40030B8BA /* Vector2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E18169D31433B1E40030B8BA /* Vector2.cpp */; };
+		E18169DB1433BFFF0030B8BA /* ThreadedWorldFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E18169D91433BFFF0030B8BA /* ThreadedWorldFactory.cpp */; };
+		E18169DE1433D0130030B8BA /* ThreadedFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E18169DC1433D0130030B8BA /* ThreadedFactory.cpp */; };
 		E1A471BA142BDF5B0062C09B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E13A3FE3142A76DC00D7EA2A /* main.cpp */; };
 		E1A471BB142BDF5B0062C09B /* GameState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E13A3FE5142A76DC00D7EA2A /* GameState.cpp */; };
 		E1A471C4142BE5130062C09B /* Entity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E121B0BB142BD11800719A82 /* Entity.cpp */; };
@@ -51,6 +53,10 @@
 		E15FA1E8142BDF1C00CC6CE2 /* GitM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E18169D31433B1E40030B8BA /* Vector2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Vector2.cpp; path = ../Base/Vector2.cpp; sourceTree = "<group>"; };
 		E18169D41433B1E40030B8BA /* Vector2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Vector2.h; path = ../Base/Vector2.h; sourceTree = "<group>"; };
+		E18169D91433BFFF0030B8BA /* ThreadedWorldFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ThreadedWorldFactory.cpp; path = ../GitM/ThreadedWorldFactory.cpp; sourceTree = "<group>"; };
+		E18169DA1433BFFF0030B8BA /* ThreadedWorldFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ThreadedWorldFactory.h; path = ../GitM/ThreadedWorldFactory.h; sourceTree = "<group>"; };
+		E18169DC1433D0130030B8BA /* ThreadedFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ThreadedFactory.cpp; path = ../GitM/ThreadedFactory.cpp; sourceTree = "<group>"; };
+		E18169DD1433D0130030B8BA /* ThreadedFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ThreadedFactory.h; path = ../GitM/ThreadedFactory.h; sourceTree = "<group>"; };
 		E1A471CA142BE5330062C09B /* SDL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL.framework; path = SDKs/MacOSX10.6.sdk/Library/Frameworks/SDL.framework; sourceTree = DEVELOPER_DIR; };
 		E1B4F3131430D66800A87C70 /* Base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Base.h; path = ../Base/Base.h; sourceTree = "<group>"; };
 		E1B4F3171430D67A00A87C70 /* Player.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Player.cpp; path = ../GitM/Player.cpp; sourceTree = "<group>"; };
@@ -122,6 +128,10 @@
 				E1B4F3181430D67A00A87C70 /* Player.h */,
 				E1B4F3191430D67A00A87C70 /* QuadTreeSceneManager.cpp */,
 				E1B4F31A1430D67A00A87C70 /* QuadTreeSceneManager.h */,
+				E18169DC1433D0130030B8BA /* ThreadedFactory.cpp */,
+				E18169DD1433D0130030B8BA /* ThreadedFactory.h */,
+				E18169D91433BFFF0030B8BA /* ThreadedWorldFactory.cpp */,
+				E18169DA1433BFFF0030B8BA /* ThreadedWorldFactory.h */,
 				E1B4F31B1430D67A00A87C70 /* World.cpp */,
 				E1B4F31C1430D67A00A87C70 /* World.h */,
 				E1CE8DD3142BE67200BBB30A /* States */,
@@ -298,6 +308,8 @@
 				E1B4F3351431178D00A87C70 /* Log.cpp in Sources */,
 				E1B4F3381431267800A87C70 /* GhostCore.cpp in Sources */,
 				E18169D51433B1E40030B8BA /* Vector2.cpp in Sources */,
+				E18169DB1433BFFF0030B8BA /* ThreadedWorldFactory.cpp in Sources */,
+				E18169DE1433D0130030B8BA /* ThreadedFactory.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

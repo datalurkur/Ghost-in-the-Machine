@@ -18,5 +18,7 @@ void PlayingState::setup(va_list args) {
 }
 
 void PlayingState::teardown() {
-	_world->unload();
+    if(_world) {
+        delete _world;
+    }
 }

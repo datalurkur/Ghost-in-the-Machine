@@ -3,23 +3,15 @@
 #include <Base/Log.h>
 #include <Render/RenderContext.h>
 
-World::World() {
+World::World(): _player(0) {
 	_scene = new QuadTreeSceneManager();
 }
 
 World::~World() {
 	delete _scene;
-}
-
-void World::load(const std::string &map) {
-    Info("Loading map " << map);
-
-	_player = new Player("derpus");
-	_scene->addNode(_player);
-}
-
-void World::unload() {
-	_scene->deleteNode<Player>(_player->getName());
+    if(_player) {
+        delete _player;
+    }
 }
 
 void World::render(RenderContext *context) {

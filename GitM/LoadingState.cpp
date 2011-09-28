@@ -3,6 +3,8 @@
 #include <GitM/LoadingState.h>
 #include <GitM/PlayingState.h>
 
+#include <GitM/ThreadedWorldFactory.h>
+
 LoadingState::LoadingState() {
 }
 
@@ -10,8 +12,10 @@ LoadingState::~LoadingState() {
 }
 
 void LoadingState::update(int elapsed) {
-    if(_doneLoading) {
+    if(ThreadedWorldFactory::IsDone(_world)) {
         _parent->setState(new PlayingState(), _world);
+    } else {
+        //Info("Status: " << ThreadedWorldFactory::Status(_world));
     }
 }
 
@@ -20,8 +24,7 @@ void LoadingState::render() {
 
 void LoadingState::setup(va_list args) {
 	Info("Setting up LoadingState");
-    _world = new World();
-    _world->load(*va_arg(args, std::string*));
+    _world = ThreadedWorldFactory::Load("test_world.wld");
 }
 
 void LoadingState::teardown() {

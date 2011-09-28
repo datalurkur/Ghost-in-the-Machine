@@ -6,17 +6,12 @@
 #include <GitM/Player.h>
 
 class RenderContext;
+class ThreadedWorldFactory;
 
 class World {
 public:
 	World();
 	virtual ~World();
-
-	// Loads the world data from disk / cache
-	void load(const std::string &map);
-
-	// Empties the world of loaded world data
-	void unload();
 
 	// Render the world
 	void render(RenderContext *context);
@@ -24,9 +19,11 @@ public:
 	// Return the scene manager
 	SceneManager *getScene();
 
-private:
+protected:
 	QuadTreeSceneManager *_scene;
 	Player *_player;
+
+    friend class ThreadedWorldFactory;
 };
 
 #endif

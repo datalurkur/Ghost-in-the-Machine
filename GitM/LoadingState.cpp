@@ -13,6 +13,7 @@ LoadingState::~LoadingState() {
 
 void LoadingState::update(int elapsed) {
     if(ThreadedWorldFactory::IsDone(_world)) {
+        ThreadedWorldFactory::Finish(_world);
         _parent->setState(new PlayingState(), _world);
     } else {
         //Info("Status: " << ThreadedWorldFactory::Status(_world));

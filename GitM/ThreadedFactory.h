@@ -17,7 +17,7 @@ struct ThreadInfo {
     ThreadInfo(SDL_Thread *nThread);
 };
 
-template <typename T>
+template <typename T, typename F>
 class ThreadedFactory {
 public:
     static T *Load(const std::string &name);
@@ -44,23 +44,23 @@ protected:
     static std::map<T*,ThreadInfo*> Threads;
 };
 
-template <typename T>
-SDL_mutex* ThreadedFactory<T>::Lock = SDL_CreateMutex();
+template <typename T, typename F>
+SDL_mutex* ThreadedFactory<T,F>::Lock = SDL_CreateMutex();
 
-template <typename T>
-std::map<T*,ThreadInfo*> ThreadedFactory<T>::Threads;
+template <typename T, typename F>
+std::map<T*,ThreadInfo*> ThreadedFactory<T,F>::Threads;
     
-template <typename T>
-T *ThreadedFactory<T>::Load(const std::string &name) {
+template <typename T, typename F>
+T *ThreadedFactory<T,F>::Load(const std::string &name) {
     T *t = new T();
     Info("Forking load thread");
-    ThreadInfo *threadInfo = new ThreadInfo(SDL_CreateThread(ThreadedLoad, t));
-    Threads[t] = threadInfo;
+    Threads[t] = new ThreadInfo;
+    Threads[t]->thread = SDL_CreateThread(F::ThreadedLoad, t);
     return t;
 }
 
-template <typename T>
-void ThreadedFactory<T>::Finish(T *t) {
+template <typename T, typename F>
+void ThreadedFactory<T,F>::Finish(T *t) {
     ThreadInfo *threadInfo;
     if((threadInfo = GetThreadInfo(t))) {
         Threads.erase(t);
@@ -69,8 +69,8 @@ void ThreadedFactory<T>::Finish(T *t) {
     }
 }
 
-template <typename T>
-float ThreadedFactory<T>::Progress(T *t) {
+template <typename T, typename F>
+float ThreadedFactory<T,F>::Progress(T *t) {
     float progress;
     ThreadInfo *threadInfo;
     
@@ -83,8 +83,8 @@ float ThreadedFactory<T>::Progress(T *t) {
     return progress;
 }
 
-template <typename T>
-std::string ThreadedFactory<T>::Status(T *t) {
+template <typename T, typename F>
+std::string ThreadedFactory<T,F>::Status(T *t) {
     std::string status;
     ThreadInfo *threadInfo; 
 
@@ -97,8 +97,8 @@ std::string ThreadedFactory<T>::Status(T *t) {
     return status;
 }
 
-template <typename T>
-bool ThreadedFactory<T>::IsDone(T *t) {
+template <typename T, typename F>
+bool ThreadedFactory<T,F>::IsDone(T *t) {
     bool done;
     ThreadInfo *threadInfo;
 
@@ -111,35 +111,35 @@ bool ThreadedFactory<T>::IsDone(T *t) {
     return done;
 }
 
-template <typename T>
-int ThreadedFactory<T>::ThreadedLoad(void *data) {
+template <typename T, typename F>
+int ThreadedFactory<T,F>::ThreadedLoad(void *data) {
     Error("ThreadedLoad not implemented for default ThreadedFactory");
     return 0;
 }
 
-template <typename T>
-void ThreadedFactory<T>::UpdateProgress(T *t, float progress) {
+template <typename T, typename F>
+void ThreadedFactory<T,F>::UpdateProgress(T *t, float progress) {
     SDL_mutexP(Lock);
     Threads[t]->progress = progress;
     SDL_mutexV(Lock);
 }
 
-template <typename T>
-void ThreadedFactory<T>::UpdateStatus(T *t, const std::string &status) {
+template <typename T, typename F>
+void ThreadedFactory<T,F>::UpdateStatus(T *t, const std::string &status) {
     SDL_mutexP(Lock);
     Threads[t]->status = status;
     SDL_mutexV(Lock);    
 }
 
-template <typename T>
-void ThreadedFactory<T>::Done(T *t) {
+template <typename T, typename F>
+void ThreadedFactory<T,F>::Done(T *t) {
     SDL_mutexP(Lock);
     Threads[t]->done = true;
     SDL_mutexV(Lock);    
 }
 
-template <typename T>
-ThreadInfo* ThreadedFactory<T>::GetThreadInfo(T *t) {
+template <typename T, typename F>
+ThreadInfo* ThreadedFactory<T,F>::GetThreadInfo(T *t) {
     ThreadMapIterator itr = Threads.find(t);
     if(itr != Threads.end()) {
         return itr->second;

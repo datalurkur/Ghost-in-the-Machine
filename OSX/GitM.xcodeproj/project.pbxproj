@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E15FA1EA142BDF1C00CC6CE2 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E13A3FF6142A79C700D7EA2A /* Cocoa.framework */; };
+		E18169D51433B1E40030B8BA /* Vector2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E18169D31433B1E40030B8BA /* Vector2.cpp */; };
 		E1A471BA142BDF5B0062C09B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E13A3FE3142A76DC00D7EA2A /* main.cpp */; };
 		E1A471BB142BDF5B0062C09B /* GameState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E13A3FE5142A76DC00D7EA2A /* GameState.cpp */; };
 		E1A471C4142BE5130062C09B /* Entity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E121B0BB142BD11800719A82 /* Entity.cpp */; };
@@ -16,7 +17,6 @@
 		E1A471C7142BE5130062C09B /* ParentState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E121B0B7142BD0F500719A82 /* ParentState.cpp */; };
 		E1A471C8142BE5130062C09B /* State.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E13A3FDF142A76C000D7EA2A /* State.cpp */; };
 		E1A471CB142BE5330062C09B /* SDL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1A471CA142BE5330062C09B /* SDL.framework */; };
-		E1B4F3161430D66800A87C70 /* Vector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1B4F3141430D66800A87C70 /* Vector.cpp */; };
 		E1B4F31D1430D67A00A87C70 /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1B4F3171430D67A00A87C70 /* Player.cpp */; };
 		E1B4F31E1430D67A00A87C70 /* QuadTreeSceneManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1B4F3191430D67A00A87C70 /* QuadTreeSceneManager.cpp */; };
 		E1B4F31F1430D67A00A87C70 /* World.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1B4F31B1430D67A00A87C70 /* World.cpp */; };
@@ -49,10 +49,10 @@
 		E13A3FFA142A79C700D7EA2A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		E13A3FFB142A79C700D7EA2A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E15FA1E8142BDF1C00CC6CE2 /* GitM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitM.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E18169D31433B1E40030B8BA /* Vector2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Vector2.cpp; path = ../Base/Vector2.cpp; sourceTree = "<group>"; };
+		E18169D41433B1E40030B8BA /* Vector2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Vector2.h; path = ../Base/Vector2.h; sourceTree = "<group>"; };
 		E1A471CA142BE5330062C09B /* SDL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL.framework; path = SDKs/MacOSX10.6.sdk/Library/Frameworks/SDL.framework; sourceTree = DEVELOPER_DIR; };
 		E1B4F3131430D66800A87C70 /* Base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Base.h; path = ../Base/Base.h; sourceTree = "<group>"; };
-		E1B4F3141430D66800A87C70 /* Vector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Vector.cpp; path = ../Base/Vector.cpp; sourceTree = "<group>"; };
-		E1B4F3151430D66800A87C70 /* Vector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Vector.h; path = ../Base/Vector.h; sourceTree = "<group>"; };
 		E1B4F3171430D67A00A87C70 /* Player.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Player.cpp; path = ../GitM/Player.cpp; sourceTree = "<group>"; };
 		E1B4F3181430D67A00A87C70 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Player.h; path = ../GitM/Player.h; sourceTree = "<group>"; };
 		E1B4F3191430D67A00A87C70 /* QuadTreeSceneManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = QuadTreeSceneManager.cpp; path = ../GitM/QuadTreeSceneManager.cpp; sourceTree = "<group>"; };
@@ -161,11 +161,11 @@
 		E1B4F3111430D65000A87C70 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				E18169D31433B1E40030B8BA /* Vector2.cpp */,
+				E18169D41433B1E40030B8BA /* Vector2.h */,
 				E1B4F3131430D66800A87C70 /* Base.h */,
 				E1B4F3331431178D00A87C70 /* Log.cpp */,
 				E1B4F3341431178D00A87C70 /* Log.h */,
-				E1B4F3141430D66800A87C70 /* Vector.cpp */,
-				E1B4F3151430D66800A87C70 /* Vector.h */,
 			);
 			name = Base;
 			sourceTree = "<group>";
@@ -286,7 +286,6 @@
 				E1A471C8142BE5130062C09B /* State.cpp in Sources */,
 				E1A471BA142BDF5B0062C09B /* main.cpp in Sources */,
 				E1A471BB142BDF5B0062C09B /* GameState.cpp in Sources */,
-				E1B4F3161430D66800A87C70 /* Vector.cpp in Sources */,
 				E1B4F31D1430D67A00A87C70 /* Player.cpp in Sources */,
 				E1B4F31E1430D67A00A87C70 /* QuadTreeSceneManager.cpp in Sources */,
 				E1B4F31F1430D67A00A87C70 /* World.cpp in Sources */,
@@ -298,6 +297,7 @@
 				E1B4F3321430DC7F00A87C70 /* PlayingState.cpp in Sources */,
 				E1B4F3351431178D00A87C70 /* Log.cpp in Sources */,
 				E1B4F3381431267800A87C70 /* GhostCore.cpp in Sources */,
+				E18169D51433B1E40030B8BA /* Vector2.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

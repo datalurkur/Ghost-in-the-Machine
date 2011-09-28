@@ -1,7 +1,7 @@
 #ifndef SCENENODE_H
 #define SCENENODE_H
 
-#include <Base/Vector.h>
+#include <Base/Vector2.h>
 
 class SceneNode;
 typedef std::map<std::string, SceneNode*> NodeMap;

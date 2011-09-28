@@ -30,7 +30,7 @@ void SceneManager::addNode(T *node) {
 
 template <typename T>
 T* SceneManager::getNode(const std::string &name) const {
-	NodeMap::iterator itr = _nodes.find(name);
+	NodeMap::const_iterator itr = _nodes.find(name);
 	if(itr != _nodes.end() && itr->second->getType() == T::NodeType) {
 		return static_cast<T*>(itr->second);
 	} else {

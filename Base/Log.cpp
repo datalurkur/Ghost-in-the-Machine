@@ -11,7 +11,7 @@ Log::~Log() {
 }
 
 void Log::EnableAllChannels() {
-    channelState = 0xff;
+    channelState = ~0x00;
 }
 
 void Log::DisableAllChannels() {
@@ -23,11 +23,11 @@ void Log::EnableChannel(LogChannel channel) {
 }
 
 void Log::DisableChannel(LogChannel channel) {
-    channelState &= (0xff - channel);
+    channelState &= ~channel;
 }
 
 bool Log::IsChannelEnabled(LogChannel channel) {
-    return (channelState & channel);
+    return (channelState & channel) != 0;
 }
 
 Log& Log::GetLogStream(LogChannel channel) {

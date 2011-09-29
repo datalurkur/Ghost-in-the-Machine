@@ -10,7 +10,7 @@ class ThreadedWorldFactory: public ThreadedFactory<World, ThreadedWorldFactory> 
 protected:
     static int ThreadedLoad(void *data);
     
-    friend class ThreadedFactory;
+    friend class ThreadedFactory<World, ThreadedWorldFactory>;
 };
 
 #endif

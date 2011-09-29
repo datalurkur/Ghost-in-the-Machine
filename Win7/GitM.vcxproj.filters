@@ -61,9 +61,6 @@
     <ClCompile Include="..\GitM\Player.cpp">
       <Filter>GitM</Filter>
     </ClCompile>
-    <ClCompile Include="..\Base\Vector.cpp">
-      <Filter>Base</Filter>
-    </ClCompile>
     <ClCompile Include="..\Render\Renderable.cpp">
       <Filter>Render</Filter>
     </ClCompile>
@@ -84,6 +81,15 @@
     </ClCompile>
     <ClCompile Include="..\GitM\PlayingState.cpp">
       <Filter>GitM\States</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Base\Vector2.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\GitM\ThreadedFactory.cpp">
+      <Filter>GitM</Filter>
+    </ClCompile>
+    <ClCompile Include="..\GitM\ThreadedWorldFactory.cpp">
+      <Filter>GitM</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -120,9 +126,6 @@
     <ClInclude Include="..\GitM\Player.h">
       <Filter>GitM</Filter>
     </ClInclude>
-    <ClInclude Include="..\Base\Vector.h">
-      <Filter>Base</Filter>
-    </ClInclude>
     <ClInclude Include="..\Render\Renderable.h">
       <Filter>Render</Filter>
     </ClInclude>
@@ -143,6 +146,15 @@
     </ClInclude>
     <ClInclude Include="..\GitM\PlayingState.h">
       <Filter>GitM\States</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Base\Vector2.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GitM\ThreadedFactory.h">
+      <Filter>GitM</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GitM\ThreadedWorldFactory.h">
+      <Filter>GitM</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

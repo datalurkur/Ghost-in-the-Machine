@@ -70,7 +70,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\Base\Log.cpp" />
-    <ClCompile Include="..\Base\Vector.cpp" />
+    <ClCompile Include="..\Base\Vector2.cpp" />
     <ClCompile Include="..\Engine\Core.cpp" />
     <ClCompile Include="..\Engine\Entity.cpp" />
     <ClCompile Include="..\Engine\ParentState.cpp" />
@@ -84,6 +84,8 @@
     <ClCompile Include="..\GitM\Player.cpp" />
     <ClCompile Include="..\GitM\PlayingState.cpp" />
     <ClCompile Include="..\GitM\QuadTreeSceneManager.cpp" />
+    <ClCompile Include="..\GitM\ThreadedFactory.cpp" />
+    <ClCompile Include="..\GitM\ThreadedWorldFactory.cpp" />
     <ClCompile Include="..\GitM\World.cpp" />
     <ClCompile Include="..\Render\Renderable.cpp" />
     <ClCompile Include="..\Render\RenderContext.cpp" />
@@ -92,7 +94,7 @@
   <ItemGroup>
     <ClInclude Include="..\Base\Base.h" />
     <ClInclude Include="..\Base\Log.h" />
-    <ClInclude Include="..\Base\Vector.h" />
+    <ClInclude Include="..\Base\Vector2.h" />
     <ClInclude Include="..\Engine\Core.h" />
     <ClInclude Include="..\Engine\Entity.h" />
     <ClInclude Include="..\Engine\ParentState.h" />
@@ -105,6 +107,8 @@
     <ClInclude Include="..\GitM\Player.h" />
     <ClInclude Include="..\GitM\PlayingState.h" />
     <ClInclude Include="..\GitM\QuadTreeSceneManager.h" />
+    <ClInclude Include="..\GitM\ThreadedFactory.h" />
+    <ClInclude Include="..\GitM\ThreadedWorldFactory.h" />
     <ClInclude Include="..\GitM\World.h" />
     <ClInclude Include="..\Render\Renderable.h" />
     <ClInclude Include="..\Render\RenderContext.h" />

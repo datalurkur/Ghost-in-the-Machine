@@ -24,7 +24,6 @@ void LoadingState::render() {
 }
 
 void LoadingState::setup(va_list args) {
-	Info("Setting up LoadingState");
     _world = ThreadedWorldFactory::Load("test_world.wld");
 }
 

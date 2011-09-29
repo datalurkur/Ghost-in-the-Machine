@@ -53,7 +53,6 @@ std::map<T*,ThreadInfo*> ThreadedFactory<T,F>::Threads;
 template <typename T, typename F>
 T *ThreadedFactory<T,F>::Load(const std::string &name) {
     T *t = new T();
-    Info("Forking load thread");
     Threads[t] = new ThreadInfo;
     Threads[t]->thread = SDL_CreateThread(F::ThreadedLoad, t);
     return t;

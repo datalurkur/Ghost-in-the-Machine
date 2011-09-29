@@ -5,6 +5,7 @@
 Core::Core(): _running(false) {
     Log::EnableAllChannels();
 
+    // FIXME - Set this with an options class
 	_window = new Window(640, 480);
 }
 

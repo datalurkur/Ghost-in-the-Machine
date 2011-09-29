@@ -19,7 +19,7 @@ template <typename T, typename F>
 class ThreadedFactory {
 public:
     static T* Load(const std::string &name);
-	static void Finish(T* t);
+    static void Finish(T* t);
 
     static float Progress(T* t);
     static std::string Status(T* t);
@@ -59,7 +59,7 @@ template <typename T, typename F>
 void ThreadedFactory<T,F>::Finish(T *t) {
     SDL_mutexP(Lock);
     Threads.erase(t);
-	SDL_mutexV(Lock);
+    SDL_mutexV(Lock);
 }
 
 template <typename T, typename F>
@@ -104,7 +104,7 @@ bool ThreadedFactory<T,F>::IsDone(T *t) {
 template <typename T, typename F>
 int ThreadedFactory<T,F>::ThreadedLoad(void* data) {
     Error("ThreadedLoad not implemented for default ThreadedFactory");
-	Finish((T*)data);
+    Finish((T*)data);
     return 0;
 }
 

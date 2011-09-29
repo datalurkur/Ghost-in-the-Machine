@@ -13,7 +13,6 @@ struct ThreadInfo {
     std::string status;
     
     ThreadInfo();
-    ThreadInfo(SDL_Thread *nThread);
 };
 
 template <typename T, typename F>
@@ -58,7 +57,9 @@ T* ThreadedFactory<T,F>::Load(const std::string &name) {
 
 template <typename T, typename F>
 void ThreadedFactory<T,F>::Finish(T *t) {
+    SDL_mutexP(Lock);
     Threads.erase(t);
+	SDL_mutexV(Lock);
 }
 
 template <typename T, typename F>

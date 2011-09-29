@@ -18,6 +18,7 @@ protected:
 private:
     bool _running;
 	Window *_window;
+	RenderContext *_renderContext;
 };
 
 #endif

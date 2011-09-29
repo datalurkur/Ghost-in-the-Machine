@@ -51,7 +51,7 @@
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>SDL.lib;SDLmain.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>SDL.lib;SDLmain.lib;opengl32.lib;glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <SubSystem>Windows</SubSystem>
     </Link>
   </ItemDefinitionGroup>
@@ -79,6 +79,7 @@
     <ClCompile Include="..\Engine\SceneManager.cpp" />
     <ClCompile Include="..\Engine\SceneNode.cpp" />
     <ClCompile Include="..\Engine\State.cpp" />
+    <ClCompile Include="..\Engine\ThreadedFactory.cpp" />
     <ClCompile Include="..\Engine\Window.cpp" />
     <ClCompile Include="..\GitM\GameState.cpp" />
     <ClCompile Include="..\GitM\GhostCore.cpp" />
@@ -87,7 +88,6 @@
     <ClCompile Include="..\GitM\Player.cpp" />
     <ClCompile Include="..\GitM\PlayingState.cpp" />
     <ClCompile Include="..\GitM\QuadTreeSceneManager.cpp" />
-    <ClCompile Include="..\GitM\ThreadedFactory.cpp" />
     <ClCompile Include="..\GitM\ThreadedWorldFactory.cpp" />
     <ClCompile Include="..\GitM\World.cpp" />
     <ClCompile Include="..\Render\Renderable.cpp" />
@@ -103,6 +103,7 @@
     <ClInclude Include="..\Engine\SceneManager.h" />
     <ClInclude Include="..\Engine\SceneNode.h" />
     <ClInclude Include="..\Engine\State.h" />
+    <ClInclude Include="..\Engine\ThreadedFactory.h" />
     <ClInclude Include="..\Engine\Window.h" />
     <ClInclude Include="..\GitM\GameState.h" />
     <ClInclude Include="..\GitM\GhostCore.h" />
@@ -110,7 +111,6 @@
     <ClInclude Include="..\GitM\Player.h" />
     <ClInclude Include="..\GitM\PlayingState.h" />
     <ClInclude Include="..\GitM\QuadTreeSceneManager.h" />
-    <ClInclude Include="..\GitM\ThreadedFactory.h" />
     <ClInclude Include="..\GitM\ThreadedWorldFactory.h" />
     <ClInclude Include="..\GitM\World.h" />
     <ClInclude Include="..\Render\Renderable.h" />

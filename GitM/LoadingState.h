@@ -10,7 +10,7 @@ public:
     virtual ~LoadingState();
 
     void update(int elapsed);
-    void render();
+    void render(RenderContext *renderContext);
 
 protected:
     void setup(va_list args);

@@ -2,6 +2,7 @@
 #define STATE_H
 
 #include <Base/Log.h>
+#include <Render/RenderContext.h>
 
 class ParentState;
 
@@ -11,7 +12,7 @@ public:
     virtual ~State();
 
     virtual void update(int elapsed) = 0;
-    virtual void render() = 0;
+    virtual void render(RenderContext *renderContext) = 0;
 
 protected:
     virtual void setup(va_list args) = 0;

@@ -11,7 +11,7 @@
 #include <map>
 #include <list>
 
-#include <SDL/SDL.h>
+#include <SDL.h>
 
 #define	PLATFORM_APPLE 0
 #define PLATFORM_WIN32 1
@@ -25,10 +25,17 @@
 # define SYS_PLATFORM PLATFORM_LINUX
 #endif
 
-#define ASSERT_FUNCTION __asm__("int $03")
+#if SYS_PLATFORM == PLATFORM_APPLE
+# define ASSERT_FUNCTION __asm__("int $03")
+#else
+# define ASSERT_FUNCTION __asm { int 3 }
+#endif
+
 #define ASSERT(conditional) \
     do { \
-        if(!conditional) { ASSERT_FUNCTION; } \
+        if(!conditional) { \
+			ASSERT_FUNCTION; \
+		} \
     } while(false)
 
 #if SYS_PLATFORM == PLATFORM_WIN32

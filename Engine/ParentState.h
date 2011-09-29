@@ -18,7 +18,7 @@ public:
     void flushStates();
 
     virtual void update(int elapsed);
-    virtual void render();
+    virtual void render(RenderContext *renderContext);
 
 protected:
 	virtual void setup(va_list args) {}

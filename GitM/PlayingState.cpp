@@ -9,7 +9,9 @@ PlayingState::~PlayingState() {
 void PlayingState::update(int elapsed) {
 }
 
-void PlayingState::render() {
+void PlayingState::render(RenderContext *renderContext) {
+	RenderableList list;
+	renderContext->render(list);
 }
 
 void PlayingState::setup(va_list args) {

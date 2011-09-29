@@ -7,12 +7,12 @@ Core::Core(): _running(false) {
 
     // FIXME - Set this with an options class
 	_window = new Window(640, 480);
+	_renderContext = new RenderContext();
 }
 
 Core::~Core() {
-    if(_window) { 
-        delete _window;
-    }
+	delete _renderContext;
+	delete _window;
 }
 
 void Core::start() {
@@ -29,8 +29,8 @@ void Core::start() {
         // FIXME - Handle events here
 
         update(elapsedTime);
-        render();
-        
+		_renderContext->clear();
+        render(_renderContext);
         _window->swapBuffers();
 
         lastTime = currentTime;

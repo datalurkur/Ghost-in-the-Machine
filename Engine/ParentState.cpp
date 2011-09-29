@@ -65,8 +65,8 @@ void ParentState::update(int elapsed) {
     }
 }
 
-void ParentState::render() {
+void ParentState::render(RenderContext *renderContext) {
     if(activeState()) {
-        activeState()->render();
+        activeState()->render(renderContext);
     }
 }

@@ -20,7 +20,7 @@ void LoadingState::update(int elapsed) {
     }
 }
 
-void LoadingState::render() {
+void LoadingState::render(RenderContext *renderContext) {
 }
 
 void LoadingState::setup(va_list args) {

@@ -82,13 +82,13 @@
     <ClCompile Include="..\Base\Vector2.cpp">
       <Filter>Base</Filter>
     </ClCompile>
-    <ClCompile Include="..\GitM\ThreadedFactory.cpp">
-      <Filter>GitM</Filter>
-    </ClCompile>
     <ClCompile Include="..\GitM\ThreadedWorldFactory.cpp">
       <Filter>GitM</Filter>
     </ClCompile>
     <ClCompile Include="..\Engine\Window.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\ThreadedFactory.cpp">
       <Filter>Engine</Filter>
     </ClCompile>
   </ItemGroup>
@@ -147,13 +147,13 @@
     <ClInclude Include="..\Base\Vector2.h">
       <Filter>Base</Filter>
     </ClInclude>
-    <ClInclude Include="..\GitM\ThreadedFactory.h">
-      <Filter>GitM</Filter>
-    </ClInclude>
     <ClInclude Include="..\GitM\ThreadedWorldFactory.h">
       <Filter>GitM</Filter>
     </ClInclude>
     <ClInclude Include="..\Engine\Window.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\ThreadedFactory.h">
       <Filter>Engine</Filter>
     </ClInclude>
   </ItemGroup>

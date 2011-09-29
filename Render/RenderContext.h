@@ -10,7 +10,9 @@ public:
 	RenderContext();
 	virtual ~RenderContext();
 
+	// FIXME - render should take modelview and projection matrices
 	void render(RenderableList &renderables);
+	void clear();
 
 private:
 };

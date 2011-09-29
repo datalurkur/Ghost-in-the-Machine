@@ -10,6 +10,9 @@ Core::Core(): _running(false) {
 }
 
 Core::~Core() {
+    if(_window) { 
+        delete _window;
+    }
 }
 
 void Core::start() {
@@ -27,6 +30,8 @@ void Core::start() {
 
         update(elapsedTime);
         render();
+        
+        _window->swapBuffers();
 
         lastTime = currentTime;
     }

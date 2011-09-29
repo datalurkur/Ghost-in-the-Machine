@@ -9,6 +9,7 @@
 
 #include <stack>
 #include <map>
+#include <list>
 
 enum {
 	PLATFORM_APPLE,

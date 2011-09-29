@@ -2,6 +2,7 @@
 #define CORE_H
 
 #include <Engine/ParentState.h>
+#include <Engine/Window.h>
 
 class Core: public ParentState {
 public:
@@ -16,6 +17,7 @@ protected:
 
 private:
     bool _running;
+	Window *_window;
 };
 
 #endif

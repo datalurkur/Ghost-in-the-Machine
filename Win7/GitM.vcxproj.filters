@@ -64,9 +64,6 @@
     <ClCompile Include="..\Render\Renderable.cpp">
       <Filter>Render</Filter>
     </ClCompile>
-    <ClCompile Include="..\Render\RenderQueue.cpp">
-      <Filter>Render</Filter>
-    </ClCompile>
     <ClCompile Include="..\Base\Log.cpp">
       <Filter>Base</Filter>
     </ClCompile>
@@ -90,6 +87,9 @@
     </ClCompile>
     <ClCompile Include="..\GitM\ThreadedWorldFactory.cpp">
       <Filter>GitM</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\Window.cpp">
+      <Filter>Engine</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -129,9 +129,6 @@
     <ClInclude Include="..\Render\Renderable.h">
       <Filter>Render</Filter>
     </ClInclude>
-    <ClInclude Include="..\Render\RenderQueue.h">
-      <Filter>Render</Filter>
-    </ClInclude>
     <ClInclude Include="..\Base\Log.h">
       <Filter>Base</Filter>
     </ClInclude>
@@ -155,6 +152,9 @@
     </ClInclude>
     <ClInclude Include="..\GitM\ThreadedWorldFactory.h">
       <Filter>GitM</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\Window.h">
+      <Filter>Engine</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

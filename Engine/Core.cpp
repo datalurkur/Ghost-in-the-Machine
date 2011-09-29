@@ -4,6 +4,8 @@
 
 Core::Core(): _running(false) {
     Log::EnableAllChannels();
+
+	_window = new Window(640, 480);
 }
 
 Core::~Core() {

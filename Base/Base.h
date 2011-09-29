@@ -22,6 +22,7 @@ enum {
 #elif defined( __WIN32__ ) || defined( _WIN32 )
 # define SYS_PLATFORM PLATFORM_WIN32
 # include "Windows.h"
+# include "SDL.h"
 # define sleep(seconds) Sleep(seconds*1000)
 #else
 # define SYS_PLATFORM PLATFORM_LINUX

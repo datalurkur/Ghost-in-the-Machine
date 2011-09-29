@@ -13,8 +13,8 @@ Window::~Window() {
 
 void Window::setup() {
 	if(SDL_Init(SDL_INIT_VIDEO) < 0) {
-		// FIXME - Make this an assert
 		Error("SDL Failed to initialize");
+        ASSERT(0);
 	}
 
 	_videoFlags |= SDL_GL_DOUBLEBUFFER;
@@ -34,6 +34,7 @@ void Window::resize(int w, int h) {
 
 	if(!(_frameBuffer = SDL_SetVideoMode(_w, _h, 32, _videoFlags))) {
 		Error("Failed to create frame buffer.");
+        ASSERT(0);
 	}
 }
 

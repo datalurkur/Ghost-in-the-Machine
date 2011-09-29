@@ -13,11 +13,9 @@
 
 #include <SDL/SDL.h>
 
-enum {
-	PLATFORM_APPLE,
-	PLATFORM_WIN32,
-	PLATFORM_LINUX
-};
+#define	PLATFORM_APPLE 0
+#define PLATFORM_WIN32 1
+#define	PLATFORM_LINUX 2
 
 #if defined(__APPLE__) && defined(__MACH__)
 # define SYS_PLATFORM PLATFORM_APPLE
@@ -27,8 +25,13 @@ enum {
 # define SYS_PLATFORM PLATFORM_LINUX
 #endif
 
-#if SYS_PLATFORM == PLATFORM_APPLE
-#elif SYS_PLATFORM == PLATFORM_WIN32
+#define ASSERT_FUNCTION __asm__("int $03")
+#define ASSERT(conditional) \
+    do { \
+        if(!conditional) { ASSERT_FUNCTION; } \
+    } while(false)
+
+#if SYS_PLATFORM == PLATFORM_WIN32
 # include "Windows.h"
 # define sleep(seconds) Sleep(seconds*1000)
 #endif

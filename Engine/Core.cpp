@@ -6,9 +6,10 @@ Core::Core(): _running(false) {
     Log::EnableAllChannels();
 
     // FIXME - Set this with an options class
-	_window = new Window(640, 480);
+	_window = new Window();
 	_renderContext = new RenderContext();
-	_renderContext->setViewport(0, 0, 640, 480);
+    
+    resizeWindow(640, 480);
 }
 
 Core::~Core() {
@@ -43,6 +44,16 @@ void Core::start() {
 
 void Core::stop() {
     _running = false;
+}
+
+void Core::resizeWindow(const int w, const int h) {
+    _window->resize(w, h);
+    rebuildRenderContext(Viewport(0, 0, w, h));
+}
+
+void Core::rebuildRenderContext(const Viewport &viewport) {
+    if(_renderContext) { delete _renderContext; }
+    _renderContext = new RenderContext(viewport);
 }
 
 int Core::getTime() {

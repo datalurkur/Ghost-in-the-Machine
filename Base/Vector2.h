@@ -56,7 +56,7 @@ public:
 	}
 
     inline float& operator[](const size_t i) {
-		(i<2);
+		ASSERT(i<2);
 		return *(&x+i);
 	}
 

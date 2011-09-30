@@ -3,6 +3,7 @@
 
 #include <Engine/ParentState.h>
 #include <Engine/Window.h>
+#include <Render/Viewport.h>
 
 class Core: public ParentState {
 public:
@@ -12,8 +13,12 @@ public:
     void start();
     void stop();
 
+    void resizeWindow(const int w, const int h);
+
 protected:
     int getTime();
+
+    void rebuildRenderContext(const Viewport &viewport);
 
 private:
     bool _running;

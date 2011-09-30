@@ -13,7 +13,6 @@
 		E152C6571434D87500D83C44 /* ThreadedFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E152C6551434D87400D83C44 /* ThreadedFactory.cpp */; };
 		E152C65A1434D89A00D83C44 /* ThreadedWorldFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E152C6581434D89A00D83C44 /* ThreadedWorldFactory.cpp */; };
 		E15FA1EA142BDF1C00CC6CE2 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E13A3FF6142A79C700D7EA2A /* Cocoa.framework */; };
-		E18169D51433B1E40030B8BA /* Vector2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E18169D31433B1E40030B8BA /* Vector2.cpp */; };
 		E1A471BA142BDF5B0062C09B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E13A3FE3142A76DC00D7EA2A /* main.cpp */; };
 		E1A471BB142BDF5B0062C09B /* GameState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E13A3FE5142A76DC00D7EA2A /* GameState.cpp */; };
 		E1A471C4142BE5130062C09B /* Entity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E121B0BB142BD11800719A82 /* Entity.cpp */; };
@@ -31,6 +30,8 @@
 		E1B4F3321430DC7F00A87C70 /* PlayingState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1B4F3301430DC7F00A87C70 /* PlayingState.cpp */; };
 		E1B4F3351431178D00A87C70 /* Log.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1B4F3331431178D00A87C70 /* Log.cpp */; };
 		E1B4F3381431267800A87C70 /* GhostCore.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1B4F3361431267800A87C70 /* GhostCore.cpp */; };
+		E1BAD36314364A8F00D7430C /* Matrix4.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1BAD36114364A8F00D7430C /* Matrix4.cpp */; };
+		E1BAD36514364B0900D7430C /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1BAD36414364B0900D7430C /* OpenGL.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,7 +62,6 @@
 		E152C6581434D89A00D83C44 /* ThreadedWorldFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ThreadedWorldFactory.cpp; path = ../GitM/ThreadedWorldFactory.cpp; sourceTree = "<group>"; };
 		E152C6591434D89A00D83C44 /* ThreadedWorldFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ThreadedWorldFactory.h; path = ../GitM/ThreadedWorldFactory.h; sourceTree = "<group>"; };
 		E15FA1E8142BDF1C00CC6CE2 /* GitM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitM.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		E18169D31433B1E40030B8BA /* Vector2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Vector2.cpp; path = ../Base/Vector2.cpp; sourceTree = "<group>"; };
 		E18169D41433B1E40030B8BA /* Vector2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Vector2.h; path = ../Base/Vector2.h; sourceTree = "<group>"; };
 		E1B4F3131430D66800A87C70 /* Base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Base.h; path = ../Base/Base.h; sourceTree = "<group>"; };
 		E1B4F3171430D67A00A87C70 /* Player.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Player.cpp; path = ../GitM/Player.cpp; sourceTree = "<group>"; };
@@ -84,6 +84,10 @@
 		E1B4F3341431178D00A87C70 /* Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Log.h; path = ../Base/Log.h; sourceTree = "<group>"; };
 		E1B4F3361431267800A87C70 /* GhostCore.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GhostCore.cpp; path = ../GitM/GhostCore.cpp; sourceTree = "<group>"; };
 		E1B4F3371431267800A87C70 /* GhostCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GhostCore.h; path = ../GitM/GhostCore.h; sourceTree = "<group>"; };
+		E1BAD36114364A8F00D7430C /* Matrix4.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Matrix4.cpp; path = ../Base/Matrix4.cpp; sourceTree = "<group>"; };
+		E1BAD36214364A8F00D7430C /* Matrix4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Matrix4.h; path = ../Base/Matrix4.h; sourceTree = "<group>"; };
+		E1BAD36414364B0900D7430C /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = SDKs/MacOSX10.6.sdk/System/Library/Frameworks/OpenGL.framework; sourceTree = DEVELOPER_DIR; };
+		E1BAD3661436540700D7430C /* Viewport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Viewport.h; path = ../Render/Viewport.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1BAD36514364B0900D7430C /* OpenGL.framework in Frameworks */,
 				E15FA1EA142BDF1C00CC6CE2 /* Cocoa.framework in Frameworks */,
 				E152C6501434C8E100D83C44 /* SDL.framework in Frameworks */,
 			);
@@ -155,6 +160,7 @@
 		E13A3FF5142A79C700D7EA2A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E1BAD36414364B0900D7430C /* OpenGL.framework */,
 				E152C64F1434C8E100D83C44 /* SDL.framework */,
 				E13A3FF6142A79C700D7EA2A /* Cocoa.framework */,
 				E13A3FF8142A79C700D7EA2A /* Other Frameworks */,
@@ -184,7 +190,8 @@
 		E1B4F3111430D65000A87C70 /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				E18169D31433B1E40030B8BA /* Vector2.cpp */,
+				E1BAD36114364A8F00D7430C /* Matrix4.cpp */,
+				E1BAD36214364A8F00D7430C /* Matrix4.h */,
 				E18169D41433B1E40030B8BA /* Vector2.h */,
 				E1B4F3131430D66800A87C70 /* Base.h */,
 				E1B4F3331431178D00A87C70 /* Log.cpp */,
@@ -196,6 +203,7 @@
 		E1B4F3201430D68300A87C70 /* Render */ = {
 			isa = PBXGroup;
 			children = (
+				E1BAD3661436540700D7430C /* Viewport.h */,
 				E1B4F3211430D69200A87C70 /* Renderable.cpp */,
 				E1B4F3221430D69200A87C70 /* Renderable.h */,
 				E1B4F3231430D69200A87C70 /* RenderContext.cpp */,
@@ -317,11 +325,11 @@
 				E1B4F3321430DC7F00A87C70 /* PlayingState.cpp in Sources */,
 				E1B4F3351431178D00A87C70 /* Log.cpp in Sources */,
 				E1B4F3381431267800A87C70 /* GhostCore.cpp in Sources */,
-				E18169D51433B1E40030B8BA /* Vector2.cpp in Sources */,
 				E152C6441434C75E00D83C44 /* Window.cpp in Sources */,
 				E152C6541434C8F800D83C44 /* SDLMain.m in Sources */,
 				E152C6571434D87500D83C44 /* ThreadedFactory.cpp in Sources */,
 				E152C65A1434D89A00D83C44 /* ThreadedWorldFactory.cpp in Sources */,
+				E1BAD36314364A8F00D7430C /* Matrix4.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

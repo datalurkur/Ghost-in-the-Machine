@@ -33,7 +33,7 @@
 
 #define ASSERT(conditional) \
     do { \
-        if(!conditional) { \
+        if(!(conditional)) { \
 			ASSERT_FUNCTION; \
 		} \
     } while(false)

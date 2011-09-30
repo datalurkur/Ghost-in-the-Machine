@@ -79,9 +79,6 @@
     <ClCompile Include="..\GitM\PlayingState.cpp">
       <Filter>GitM\States</Filter>
     </ClCompile>
-    <ClCompile Include="..\Base\Vector2.cpp">
-      <Filter>Base</Filter>
-    </ClCompile>
     <ClCompile Include="..\GitM\ThreadedWorldFactory.cpp">
       <Filter>GitM</Filter>
     </ClCompile>

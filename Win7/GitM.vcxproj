@@ -72,7 +72,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\Base\Log.cpp" />
-    <ClCompile Include="..\Base\Vector2.cpp" />
     <ClCompile Include="..\Engine\Core.cpp" />
     <ClCompile Include="..\Engine\Entity.cpp" />
     <ClCompile Include="..\Engine\ParentState.cpp" />

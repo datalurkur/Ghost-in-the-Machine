@@ -6,26 +6,72 @@
 
 class Vector2 {
 public:
-    union {
-        float data[2];
-        struct { float x, y; };
-    };
+	float x, y;
 
 public:
-    Vector2();
-    Vector2(const Vector2 &other);
-    Vector2(float nX, float nY);
+    inline Vector2(): x(0), y(0) {}
+    inline Vector2(const Vector2 &other): x(other.x), y(other.y) {}
+	inline Vector2(const float nX, const float nY): x(nX), y(nY) {}
 
-    Vector2 operator+(const Vector2 &rhs) const;
-    Vector2 operator-(const Vector2 &rhs) const;
+	inline Vector2& operator=(const Vector2 &rhs) {
+		x = rhs.x;
+		y = rhs.y;
+		return *this;
+	}
 
-    Vector2& operator+=(const Vector2 &rhs);
-    Vector2& operator-=(const Vector2 &rhs);
+    inline Vector2 operator+(const Vector2 &rhs) const {
+		Vector2 ret(*this);
+		ret += rhs;
+		return ret;
+	}
 
-    float operator[](int i);
-    const float operator[](int i) const;
+    inline Vector2 operator-(const Vector2 &rhs) const {
+		Vector2 ret(*this);
+		ret -= rhs;
+		return ret;
+	}
 
-private:
+    inline Vector2& operator+=(const Vector2 &rhs) {
+		x += rhs.x;
+		y += rhs.y;
+		return *this;
+	}
+
+    inline Vector2& operator-=(const Vector2 &rhs) {
+		x -= rhs.x;
+		y -= rhs.y;
+		return *this;
+	}
+
+	inline Vector2 operator-() const {
+		return Vector2(-x, -y);
+	}
+
+	inline bool operator==(const Vector2 &rhs) const {
+		return (x == rhs.x && y == rhs.y);
+	}
+
+	inline bool operator!=(const Vector2 &rhs) const {
+		return (x != rhs.x || y != rhs.y);
+	}
+
+    inline float& operator[](const size_t i) {
+		(i<2);
+		return *(&x+i);
+	}
+
+    inline float operator[](const size_t i) const {
+		ASSERT(i<2);
+		return *(&x+i);
+	}
+
+	inline float *ptr() {
+		return &x;
+	}
+
+	inline const float *ptr() const {
+		return &x;
+	}
 };
 
 #endif

@@ -10,8 +10,7 @@ void PlayingState::update(int elapsed) {
 }
 
 void PlayingState::render(RenderContext *renderContext) {
-	RenderableList list;
-	renderContext->render(list);
+	_world->render(renderContext);
 }
 
 void PlayingState::setup(va_list args) {

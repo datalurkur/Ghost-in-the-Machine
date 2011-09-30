@@ -2,6 +2,7 @@
 #define WORLD_H
 
 #include <Base/Base.h>
+#include <Base/Matrix4.h>
 #include <GitM/QuadTreeSceneManager.h>
 #include <GitM/Player.h>
 
@@ -22,6 +23,7 @@ public:
 protected:
 	QuadTreeSceneManager *_scene;
 	Player *_player;
+	Matrix4 _projection, _modelView;
 
     friend class ThreadedWorldFactory;
 };

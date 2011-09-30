@@ -8,18 +8,12 @@ RenderContext::RenderContext() {
 RenderContext::~RenderContext() {
 }
 
-void RenderContext::render(RenderableList &renderables) {
-	// FIXME - Move viewport setting elsewhere (and get the data externally)
-	glViewport(0, 0, 640, 480);
-
-	// FIXME - Allow passing in of modelview and projection matrices
-	float ratio = 640.0 / 480.0;
+void RenderContext::render(const Matrix4 &projection, const Matrix4 &modelView, RenderableList &renderables) {
 	glMatrixMode(GL_PROJECTION);
-	glLoadIdentity();
-	glOrtho(-ratio, ratio, -1, 1, 10, -10);
+	glLoadMatrixf(projection.ptr());
 
 	glMatrixMode(GL_MODELVIEW);
-	glLoadIdentity();
+	glLoadMatrixf(modelView.ptr());
 	// FIXME - Remove static loading and implement renderable list rendering
 	// FIXME - Add the render queue and group rendering by material
 
@@ -47,4 +41,8 @@ void RenderContext::render(RenderableList &renderables) {
 
 void RenderContext::clear() {
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+}
+
+void RenderContext::setViewport(int x, int y, int w, int h) {
+	glViewport(x, y, w, h);
 }

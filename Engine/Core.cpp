@@ -8,6 +8,7 @@ Core::Core(): _running(false) {
     // FIXME - Set this with an options class
 	_window = new Window(640, 480);
 	_renderContext = new RenderContext();
+	_renderContext->setViewport(0, 0, 640, 480);
 }
 
 Core::~Core() {

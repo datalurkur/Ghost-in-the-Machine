@@ -72,6 +72,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\Base\Log.cpp" />
+    <ClCompile Include="..\Base\Matrix4.cpp" />
     <ClCompile Include="..\Engine\Core.cpp" />
     <ClCompile Include="..\Engine\Entity.cpp" />
     <ClCompile Include="..\Engine\ParentState.cpp" />
@@ -95,6 +96,7 @@
   <ItemGroup>
     <ClInclude Include="..\Base\Base.h" />
     <ClInclude Include="..\Base\Log.h" />
+    <ClInclude Include="..\Base\Matrix4.h" />
     <ClInclude Include="..\Base\Vector2.h" />
     <ClInclude Include="..\Engine\Core.h" />
     <ClInclude Include="..\Engine\Entity.h" />

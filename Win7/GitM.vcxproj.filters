@@ -88,6 +88,9 @@
     <ClCompile Include="..\Engine\ThreadedFactory.cpp">
       <Filter>Engine</Filter>
     </ClCompile>
+    <ClCompile Include="..\Base\Matrix4.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Engine\ParentState.h">
@@ -152,6 +155,9 @@
     </ClInclude>
     <ClInclude Include="..\Engine\ThreadedFactory.h">
       <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Base\Matrix4.h">
+      <Filter>Base</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

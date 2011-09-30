@@ -3,7 +3,8 @@
 #include <Base/Log.h>
 #include <Render/RenderContext.h>
 
-World::World(): _player(0) {
+// FIXME - The ratio for the orthographic projection needs to come from elsewhere, this is not the place for it.
+World::World(): _player(0), _projection(Matrix4::MakeOrtho(-(640.0/480.0), (640.0/480.0), -1.0, 1.0, -1.0, 1.0)), _modelView(Matrix4::Identity) {
 	_scene = new QuadTreeSceneManager();
 }
 
@@ -15,6 +16,8 @@ World::~World() {
 }
 
 void World::render(RenderContext *context) {
+	RenderableList renderables;
+	context->render(_projection, _modelView, renderables);
 }
 
 SceneManager* World::getScene() {

@@ -15,9 +15,9 @@ World::~World() {
     }
 }
 
-void World::render(RenderContext *context) {
+void World::render(Camera *camera, RenderContext *context) {
 	RenderableList renderables;
-	context->render(_projection, _modelView, renderables);
+	context->render(camera->getProjectionMatrix(), _modelView, renderables);
 }
 
 SceneManager* World::getScene() {

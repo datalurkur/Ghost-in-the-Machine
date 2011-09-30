@@ -5,6 +5,7 @@
 #include <Render/RenderContext.h>
 
 class ParentState;
+class Core;
 
 class State {
 public:
@@ -19,10 +20,12 @@ protected:
     virtual void teardown() = 0;
 
     void setParent(ParentState *parent);
+    void setCore(Core *core);
 
 protected:
 	friend class ParentState;
     ParentState *_parent;
+    Core *_core;
 };
 
 #endif

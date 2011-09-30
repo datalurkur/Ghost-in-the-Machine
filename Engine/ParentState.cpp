@@ -27,6 +27,7 @@ void ParentState::pushState(State *state, ...) {
 
 void ParentState::pushState(State *state, va_list args) {
     state->setParent(this);
+    state->setCore(_core);
     state->setup(args);
     _stateStack.push(state);
 }

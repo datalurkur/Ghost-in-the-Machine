@@ -18,6 +18,7 @@ protected:
     
 private:
     World *_world;
+    Camera *_camera;
 };
 
 #endif

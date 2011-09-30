@@ -3,10 +3,13 @@
 #include <SDL.h>
 
 Core::Core(): _running(false) {
+    _core = this;
+
     Log::EnableAllChannels();
 
     // FIXME - Set this with an options class
 	_window = new Window();
+    _viewport = new Viewport();
 	_renderContext = new RenderContext();
     
     resizeWindow(640, 480);
@@ -14,6 +17,7 @@ Core::Core(): _running(false) {
 
 Core::~Core() {
 	delete _renderContext;
+    delete _viewport;
 	delete _window;
 }
 
@@ -48,14 +52,14 @@ void Core::stop() {
 
 void Core::resizeWindow(const int w, const int h) {
     _window->resize(w, h);
-    rebuildRenderContext(Viewport(0, 0, w, h));
-}
-
-void Core::rebuildRenderContext(const Viewport &viewport) {
-    if(_renderContext) { delete _renderContext; }
-    _renderContext = new RenderContext(viewport);
+    _viewport->resize(0, 0, w, h);
+    _renderContext->setViewport(_viewport);
 }
 
 int Core::getTime() {
     return SDL_GetTicks();
+}
+
+Viewport* Core::getViewport() const {
+    return _viewport;
 }

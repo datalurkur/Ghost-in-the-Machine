@@ -3,6 +3,8 @@
 
 #include <Engine/ParentState.h>
 
+class Camera;
+
 class GameState: public ParentState {
 public:
     GameState();
@@ -10,8 +12,6 @@ public:
 
     void setup(va_list args);
     void teardown();
-
-private:
 };
 
 #endif

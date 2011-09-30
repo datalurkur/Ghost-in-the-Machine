@@ -32,6 +32,9 @@
 		E1B4F3381431267800A87C70 /* GhostCore.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1B4F3361431267800A87C70 /* GhostCore.cpp */; };
 		E1BAD36314364A8F00D7430C /* Matrix4.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1BAD36114364A8F00D7430C /* Matrix4.cpp */; };
 		E1BAD36514364B0900D7430C /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1BAD36414364B0900D7430C /* OpenGL.framework */; };
+		E1BAD36914366A4C00D7430C /* Viewport.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1BAD36714366A4C00D7430C /* Viewport.cpp */; };
+		E1BAD36E14366A6000D7430C /* Camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1BAD36A14366A6000D7430C /* Camera.cpp */; };
+		E1BAD36F14366A6000D7430C /* Frustum.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1BAD36C14366A6000D7430C /* Frustum.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -87,7 +90,12 @@
 		E1BAD36114364A8F00D7430C /* Matrix4.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Matrix4.cpp; path = ../Base/Matrix4.cpp; sourceTree = "<group>"; };
 		E1BAD36214364A8F00D7430C /* Matrix4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Matrix4.h; path = ../Base/Matrix4.h; sourceTree = "<group>"; };
 		E1BAD36414364B0900D7430C /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = SDKs/MacOSX10.6.sdk/System/Library/Frameworks/OpenGL.framework; sourceTree = DEVELOPER_DIR; };
-		E1BAD3661436540700D7430C /* Viewport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Viewport.h; path = ../Render/Viewport.h; sourceTree = "<group>"; };
+		E1BAD36714366A4C00D7430C /* Viewport.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Viewport.cpp; path = ../Render/Viewport.cpp; sourceTree = "<group>"; };
+		E1BAD36814366A4C00D7430C /* Viewport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Viewport.h; path = ../Render/Viewport.h; sourceTree = "<group>"; };
+		E1BAD36A14366A6000D7430C /* Camera.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Camera.cpp; path = ../Engine/Camera.cpp; sourceTree = "<group>"; };
+		E1BAD36B14366A6000D7430C /* Camera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Camera.h; path = ../Engine/Camera.h; sourceTree = "<group>"; };
+		E1BAD36C14366A6000D7430C /* Frustum.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Frustum.cpp; path = ../Engine/Frustum.cpp; sourceTree = "<group>"; };
+		E1BAD36D14366A6000D7430C /* Frustum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Frustum.h; path = ../Engine/Frustum.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +128,10 @@
 		E13A3FDD142A76AD00D7EA2A /* Engine */ = {
 			isa = PBXGroup;
 			children = (
+				E1BAD36A14366A6000D7430C /* Camera.cpp */,
+				E1BAD36B14366A6000D7430C /* Camera.h */,
+				E1BAD36C14366A6000D7430C /* Frustum.cpp */,
+				E1BAD36D14366A6000D7430C /* Frustum.h */,
 				E152C6551434D87400D83C44 /* ThreadedFactory.cpp */,
 				E152C6561434D87500D83C44 /* ThreadedFactory.h */,
 				E152C6421434C75E00D83C44 /* Window.cpp */,
@@ -203,7 +215,8 @@
 		E1B4F3201430D68300A87C70 /* Render */ = {
 			isa = PBXGroup;
 			children = (
-				E1BAD3661436540700D7430C /* Viewport.h */,
+				E1BAD36714366A4C00D7430C /* Viewport.cpp */,
+				E1BAD36814366A4C00D7430C /* Viewport.h */,
 				E1B4F3211430D69200A87C70 /* Renderable.cpp */,
 				E1B4F3221430D69200A87C70 /* Renderable.h */,
 				E1B4F3231430D69200A87C70 /* RenderContext.cpp */,
@@ -330,6 +343,9 @@
 				E152C6571434D87500D83C44 /* ThreadedFactory.cpp in Sources */,
 				E152C65A1434D89A00D83C44 /* ThreadedWorldFactory.cpp in Sources */,
 				E1BAD36314364A8F00D7430C /* Matrix4.cpp in Sources */,
+				E1BAD36914366A4C00D7430C /* Viewport.cpp in Sources */,
+				E1BAD36E14366A6000D7430C /* Camera.cpp in Sources */,
+				E1BAD36F14366A6000D7430C /* Frustum.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

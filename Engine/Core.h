@@ -15,14 +15,16 @@ public:
 
     void resizeWindow(const int w, const int h);
 
+    Viewport *getViewport() const;
+
 protected:
     int getTime();
 
-    void rebuildRenderContext(const Viewport &viewport);
-
 private:
     bool _running;
+
 	Window *_window;
+    Viewport *_viewport;
 	RenderContext *_renderContext;
 };
 

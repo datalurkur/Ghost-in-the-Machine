@@ -3,7 +3,6 @@
 #include "SDL_opengl.h"
 
 RenderContext::RenderContext() {}
-RenderContext::RenderContext(const Viewport &viewport): _viewport(viewport) {}
 
 void RenderContext::render(const Matrix4 &projection, const Matrix4 &modelView, RenderableList &renderables) {
 	glMatrixMode(GL_PROJECTION);
@@ -40,11 +39,6 @@ void RenderContext::clear() {
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 }
 
-void RenderContext::setViewport(const Viewport &viewport) {
-    _viewport = viewport;
-	glViewport(_viewport.x, _viewport.y, _viewport.w, _viewport.h);
-}
-
-const Viewport RenderContext::getViewport() const {
-    return _viewport;
+void RenderContext::setViewport(Viewport *viewport) {
+	glViewport(viewport->x(), viewport->y(), viewport->w(), viewport->h());
 }

@@ -6,6 +6,7 @@
 #include <GitM/QuadTreeSceneManager.h>
 #include <GitM/Player.h>
 
+class Camera;
 class RenderContext;
 class ThreadedWorldFactory;
 
@@ -15,10 +16,13 @@ public:
 	virtual ~World();
 
 	// Render the world
-	void render(RenderContext *context);
+	void render(Camera *camera, RenderContext *context);
 
 	// Return the scene manager
 	SceneManager *getScene();
+    
+    template <typename T>
+    T *create(const std::string &name);
 
 protected:
 	QuadTreeSceneManager *_scene;
@@ -27,5 +31,12 @@ protected:
 
     friend class ThreadedWorldFactory;
 };
+
+template <typename T>
+T* World::create(const std::string &name) {
+    T *newObject = new T(name);
+    _scene->addNode(newObject);
+    return newObject;
+}
 
 #endif

@@ -7,6 +7,10 @@ State::~State() {
 }
 
 void State::setParent(ParentState *parent) {
-    //ASSERT(parent == 0 || _parent == 0);
+    ASSERT(parent == 0 || _parent == 0);
     _parent = parent;
+}
+
+void State::setCore(Core *core) {
+    _core = core;
 }

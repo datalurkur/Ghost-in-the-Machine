@@ -3,9 +3,11 @@
 
 #include <Engine/ParentState.h>
 #include <Engine/Window.h>
+#include <Engine/EventHandler.h>
+#include <Engine/WindowListener.h>
 #include <Render/Viewport.h>
 
-class Core: public ParentState {
+class Core: public ParentState, public WindowListener {
 public:
     Core();
     ~Core();
@@ -14,6 +16,7 @@ public:
     void stop();
 
     void resizeWindow(const int w, const int h);
+	void closeWindow();
 
     Viewport *getViewport() const;
 
@@ -22,6 +25,8 @@ protected:
 
 private:
     bool _running;
+
+	EventHandler *_eventHandler;
 
 	Window *_window;
     Viewport *_viewport;

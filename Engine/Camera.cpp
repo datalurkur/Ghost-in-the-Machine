@@ -2,4 +2,3 @@
 
 Camera::Camera(const std::string &name): SceneNode(name) {
 }
-

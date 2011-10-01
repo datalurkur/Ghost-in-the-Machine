@@ -27,7 +27,7 @@ public:
 protected:
 	QuadTreeSceneManager *_scene;
 	Player *_player;
-	Matrix4 _projection, _modelView;
+	Matrix4 _modelView;
 
     friend class ThreadedWorldFactory;
 };

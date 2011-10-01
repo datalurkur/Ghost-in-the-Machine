@@ -20,6 +20,7 @@ void Window::setup() {
 	_videoFlags |= SDL_GL_DOUBLEBUFFER;
 	_videoFlags |= SDL_HWSURFACE;
 	_videoFlags |= SDL_OPENGL;
+	_videoFlags |= SDL_RESIZABLE;
 
 	resize(_w, _h);
 }

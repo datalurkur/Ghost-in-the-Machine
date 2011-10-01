@@ -12,10 +12,15 @@ Core::Core(): _running(false) {
     _viewport = new Viewport();
 	_renderContext = new RenderContext();
     
-    resizeWindow(640, 480);
+	_eventHandler = new EventHandler();
+	_eventHandler->addWindowListener(this);
+
+    resizeWindow(1000, 480);
 }
 
 Core::~Core() {
+	delete _eventHandler;
+
 	delete _renderContext;
     delete _viewport;
 	delete _window;
@@ -32,7 +37,7 @@ void Core::start() {
         int currentTime = getTime();
         elapsedTime = currentTime - lastTime;
 
-        // FIXME - Handle events here
+        _eventHandler->handleEvents();
 
         update(elapsedTime);
 		_renderContext->clear();
@@ -54,6 +59,10 @@ void Core::resizeWindow(const int w, const int h) {
     _window->resize(w, h);
     _viewport->resize(0, 0, w, h);
     _renderContext->setViewport(_viewport);
+}
+
+void Core::closeWindow() {
+	stop();
 }
 
 int Core::getTime() {

@@ -73,14 +73,19 @@
   <ItemGroup>
     <ClCompile Include="..\Base\Log.cpp" />
     <ClCompile Include="..\Base\Matrix4.cpp" />
+    <ClCompile Include="..\Engine\Camera.cpp" />
     <ClCompile Include="..\Engine\Core.cpp" />
     <ClCompile Include="..\Engine\Entity.cpp" />
+    <ClCompile Include="..\Engine\EventHandler.cpp" />
+    <ClCompile Include="..\Engine\EventListener.cpp" />
+    <ClCompile Include="..\Engine\Frustum.cpp" />
     <ClCompile Include="..\Engine\ParentState.cpp" />
     <ClCompile Include="..\Engine\SceneManager.cpp" />
     <ClCompile Include="..\Engine\SceneNode.cpp" />
     <ClCompile Include="..\Engine\State.cpp" />
     <ClCompile Include="..\Engine\ThreadedFactory.cpp" />
     <ClCompile Include="..\Engine\Window.cpp" />
+    <ClCompile Include="..\Engine\WindowListener.cpp" />
     <ClCompile Include="..\GitM\GameState.cpp" />
     <ClCompile Include="..\GitM\GhostCore.cpp" />
     <ClCompile Include="..\GitM\LoadingState.cpp" />
@@ -92,20 +97,26 @@
     <ClCompile Include="..\GitM\World.cpp" />
     <ClCompile Include="..\Render\Renderable.cpp" />
     <ClCompile Include="..\Render\RenderContext.cpp" />
+    <ClCompile Include="..\Render\Viewport.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Base\Base.h" />
     <ClInclude Include="..\Base\Log.h" />
     <ClInclude Include="..\Base\Matrix4.h" />
     <ClInclude Include="..\Base\Vector2.h" />
+    <ClInclude Include="..\Engine\Camera.h" />
     <ClInclude Include="..\Engine\Core.h" />
     <ClInclude Include="..\Engine\Entity.h" />
+    <ClInclude Include="..\Engine\EventHandler.h" />
+    <ClInclude Include="..\Engine\EventListener.h" />
+    <ClInclude Include="..\Engine\Frustum.h" />
     <ClInclude Include="..\Engine\ParentState.h" />
     <ClInclude Include="..\Engine\SceneManager.h" />
     <ClInclude Include="..\Engine\SceneNode.h" />
     <ClInclude Include="..\Engine\State.h" />
     <ClInclude Include="..\Engine\ThreadedFactory.h" />
     <ClInclude Include="..\Engine\Window.h" />
+    <ClInclude Include="..\Engine\WindowListener.h" />
     <ClInclude Include="..\GitM\GameState.h" />
     <ClInclude Include="..\GitM\GhostCore.h" />
     <ClInclude Include="..\GitM\LoadingState.h" />
@@ -116,6 +127,7 @@
     <ClInclude Include="..\GitM\World.h" />
     <ClInclude Include="..\Render\Renderable.h" />
     <ClInclude Include="..\Render\RenderContext.h" />
+    <ClInclude Include="..\Render\Viewport.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

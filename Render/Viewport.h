@@ -24,4 +24,6 @@ private:
     CameraMap _cameras;
 };
 
+std::ostream& operator<<(std::ostream& lhs, const Viewport &rhs);
+
 #endif

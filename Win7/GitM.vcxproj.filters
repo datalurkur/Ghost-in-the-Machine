@@ -26,6 +26,9 @@
     <Filter Include="GitM\States">
       <UniqueIdentifier>{93f05665-51dd-4274-b352-3c6371dfd7d7}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Engine\Event Handling">
+      <UniqueIdentifier>{a80683b5-1795-4a0f-8e89-67d2607220dd}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\GitM\main.cpp">
@@ -90,6 +93,24 @@
     </ClCompile>
     <ClCompile Include="..\Base\Matrix4.cpp">
       <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\Camera.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\Frustum.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Render\Viewport.cpp">
+      <Filter>Render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\WindowListener.cpp">
+      <Filter>Engine\Event Handling</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\EventHandler.cpp">
+      <Filter>Engine\Event Handling</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\EventListener.cpp">
+      <Filter>Engine\Event Handling</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -158,6 +179,24 @@
     </ClInclude>
     <ClInclude Include="..\Base\Matrix4.h">
       <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\Camera.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\Frustum.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Render\Viewport.h">
+      <Filter>Render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\WindowListener.h">
+      <Filter>Engine\Event Handling</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\EventHandler.h">
+      <Filter>Engine\Event Handling</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\EventListener.h">
+      <Filter>Engine\Event Handling</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

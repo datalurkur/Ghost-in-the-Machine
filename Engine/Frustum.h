@@ -3,6 +3,8 @@
 
 class Matrix4;
 
+#include <Base/Base.h>
+
 class Frustum {
 public:
     Frustum();
@@ -15,5 +17,7 @@ public:
 private:
     float _aspectRatio;
 };
+
+std::ostream& operator<<(std::ostream& lhs, const Frustum &rhs);
 
 #endif

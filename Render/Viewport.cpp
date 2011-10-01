@@ -29,3 +29,12 @@ const int Viewport::x() const { return _x; }
 const int Viewport::y() const { return _y; }
 const int Viewport::w() const { return _w; }
 const int Viewport::h() const { return _h; }
+
+std::ostream& operator<<(std::ostream& lhs, const Viewport &rhs) {
+	lhs << "Viewport";
+	lhs << " x: " << rhs.x();
+	lhs << " y: " << rhs.y();
+	lhs << " w: " << rhs.w();
+	lhs << " h:" << rhs.h();
+	return lhs;
+}

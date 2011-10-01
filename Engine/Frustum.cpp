@@ -17,5 +17,11 @@ const Matrix4 Frustum::getProjectionMatrix() const {
     //  Realistically, the frustum is just a vehicle for computing the projection matrix,
     //   the camera is the object that needs to make the sorts of decisions about what type
     //   frustum it's using, which will consequently change the projection matrix returned by it
-    return Matrix4::MakeOrtho(-_aspectRatio, _aspectRatio, -1, 1, -10, 10);
+    return Matrix4::MakeOrtho(-2*_aspectRatio, 2*_aspectRatio, -2, 2, -10, 10);
+}
+
+std::ostream& operator<<(std::ostream &lhs, const Frustum &rhs) {
+	lhs << "Frustum";
+	lhs << " Aspect ratio: " << rhs.getAspectRatio();
+	return lhs;
 }

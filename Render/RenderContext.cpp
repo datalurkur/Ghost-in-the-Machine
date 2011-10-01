@@ -14,22 +14,27 @@ void RenderContext::render(const Matrix4 &projection, const Matrix4 &modelView, 
 	// FIXME - Add the render queue and group rendering by material
 
 	float vert_val = 0.5;
-	float verts[24] = {
+	float verts[36] = {
 		-vert_val, -vert_val, 0.0,
 		 vert_val, -vert_val, 0.0,
 		 vert_val,  vert_val, 0.0,
 		-vert_val,  vert_val, 0.0,
 		 
 		 vert_val*2, -vert_val, 0.0,
-		 vert_val*3, -vert_val, 0.0,
-		 vert_val*3, vert_val, 0.0,
-		 vert_val*2, vert_val, 0.0
+		 vert_val*4, -vert_val, 0.0,
+		 vert_val*4, vert_val, 0.0,
+		 vert_val*2, vert_val, 0.0, 
+
+		-vert_val, vert_val*2, 0.0,
+		 vert_val, vert_val*2, 0.0,
+		 vert_val, vert_val*4, 0.0,
+		-vert_val, vert_val*4, 0.0
 	};
 	glDisable(GL_TEXTURE_2D);
 	glDisable(GL_LIGHTING);
 	glColor4f(1.0f, 0.0f, 0.0f, 1.0f);
 	glBegin(GL_QUADS);
-		for(int i=0; i<8; i++) {
+		for(int i=0; i<12; i++) {
 			glVertex3fv(&(verts[i*3]));
 		}
 	glEnd();

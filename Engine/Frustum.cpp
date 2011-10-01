@@ -1,7 +1,7 @@
 #include <Engine/Frustum.h>
 #include <Base/Matrix4.h>
 
-Frustum::Frustum(): _dirty(true), _projection(Matrix4::Identity) {
+Frustum::Frustum(): _projection(Matrix4::Identity), _modelView(Matrix4::Identity) {
 }
 
 void Frustum::setProjection(const Matrix4 &matrix) {
@@ -10,6 +10,14 @@ void Frustum::setProjection(const Matrix4 &matrix) {
 
 const Matrix4 Frustum::getProjection() const {
     return _projection;
+}
+
+void Frustum::setModelView(const Matrix4  &matrix) {
+	_modelView = matrix;
+}
+
+const Matrix4 Frustum::getModelView() const {
+	return _modelView;
 }
 
 Frustum& Frustum::operator=(const Frustum &other) {

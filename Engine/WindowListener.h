@@ -1,9 +1,7 @@
 #ifndef WINDOWLISTENER_H
 #define WINDOWLISTENER_H
 
-#include <Engine/EventListener.h>
-
-class WindowListener: public EventListener {
+class WindowListener {
 public:
 	WindowListener();
 

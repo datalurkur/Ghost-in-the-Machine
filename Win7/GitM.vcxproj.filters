@@ -109,9 +109,6 @@
     <ClCompile Include="..\Engine\EventHandler.cpp">
       <Filter>Engine\Event Handling</Filter>
     </ClCompile>
-    <ClCompile Include="..\Engine\EventListener.cpp">
-      <Filter>Engine\Event Handling</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Engine\ParentState.h">
@@ -193,9 +190,6 @@
       <Filter>Engine\Event Handling</Filter>
     </ClInclude>
     <ClInclude Include="..\Engine\EventHandler.h">
-      <Filter>Engine\Event Handling</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Engine\EventListener.h">
       <Filter>Engine\Event Handling</Filter>
     </ClInclude>
   </ItemGroup>

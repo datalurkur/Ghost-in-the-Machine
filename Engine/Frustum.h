@@ -1,21 +1,21 @@
 #ifndef FRUSTUM_H
 #define FRUSTUM_H
 
-class Matrix4;
-
 #include <Base/Base.h>
+#include <Base/Matrix4.h>
 
 class Frustum {
 public:
     Frustum();
 
-    void setAspectRatio(const float ratio);
-    const float getAspectRatio() const;
-    
-    const Matrix4 getProjectionMatrix() const;
+	void setProjection(const Matrix4 &matrix);
+    const Matrix4 getProjection() const;
+
+	Frustum& operator=(const Frustum &other);
 
 private:
-    float _aspectRatio;
+	bool _dirty;
+	Matrix4 _projection;
 };
 
 std::ostream& operator<<(std::ostream& lhs, const Frustum &rhs);

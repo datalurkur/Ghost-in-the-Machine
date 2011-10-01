@@ -1,5 +1,6 @@
 #include <GitM/PlayingState.h>
 #include <Engine/Core.h>
+#include <Engine/OrthoCamera.h>
 
 PlayingState::PlayingState() {
 }
@@ -18,7 +19,7 @@ void PlayingState::setup(va_list args) {
 	Info("Setting up PlayingState");
     _world = va_arg(args, World*);
 
-    _camera = _world->create<Camera>("MainCam");
+    _camera = _world->create<OrthoCamera>("MainCam");
     _core->getViewport()->registerCamera(_camera);
 }
 

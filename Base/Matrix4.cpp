@@ -20,3 +20,11 @@ Matrix4 Matrix4::MakeOrtho(float l, float r, float b, float t, float n, float f)
 
     return ret;
 }
+
+std::ostream& operator<<(std::ostream& lhs, const Matrix4 &rhs) {
+	lhs << "Matrix4";
+	for(int i=0; i<4; i++) {
+		lhs << " " << rhs[i][0] << " " << rhs[i][1] << " " << rhs[i][2] << " " << rhs[i][3];
+	}
+	return lhs;
+}

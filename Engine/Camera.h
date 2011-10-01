@@ -8,6 +8,8 @@ class Camera: public Frustum, public SceneNode {
 public:
     Camera(const std::string &name);
 
+	virtual void setAspectRatio(const float ratio) = 0;
+
 private:
 };
 

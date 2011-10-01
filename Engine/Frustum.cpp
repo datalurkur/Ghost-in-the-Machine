@@ -1,27 +1,24 @@
 #include <Engine/Frustum.h>
 #include <Base/Matrix4.h>
 
-Frustum::Frustum() {
+Frustum::Frustum(): _dirty(true), _projection(Matrix4::Identity) {
 }
 
-void Frustum::setAspectRatio(const float ratio) {
-    _aspectRatio = ratio;
+void Frustum::setProjection(const Matrix4 &matrix) {
+	_projection = matrix;
 }
 
-const float Frustum::getAspectRatio() const {
-    return _aspectRatio;
+const Matrix4 Frustum::getProjection() const {
+    return _projection;
 }
 
-const Matrix4 Frustum::getProjectionMatrix() const {
-    // FIXME - Frustum obviously needs to get beefed up with planes
-    //  Realistically, the frustum is just a vehicle for computing the projection matrix,
-    //   the camera is the object that needs to make the sorts of decisions about what type
-    //   frustum it's using, which will consequently change the projection matrix returned by it
-    return Matrix4::MakeOrtho(-2*_aspectRatio, 2*_aspectRatio, -2, 2, -10, 10);
+Frustum& Frustum::operator=(const Frustum &other) {
+	_projection = other.getProjection();
+	return *this;
 }
 
 std::ostream& operator<<(std::ostream &lhs, const Frustum &rhs) {
 	lhs << "Frustum";
-	lhs << " Aspect ratio: " << rhs.getAspectRatio();
+	lhs << " Projection: " << rhs.getProjection();
 	return lhs;
 }

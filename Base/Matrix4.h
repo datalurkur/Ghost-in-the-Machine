@@ -110,4 +110,6 @@ public:
     static Matrix4 MakeOrtho(float l, float r, float b, float t, float n, float f);
 };
 
+std::ostream& operator<<(std::ostream& lhs, const Matrix4 &rhs);
+
 #endif

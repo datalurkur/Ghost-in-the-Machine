@@ -14,7 +14,7 @@ Core::Core(): _running(false) {
 	_eventHandler = new EventHandler();
 	_eventHandler->addWindowListener(this);
 
-    resizeWindow(1000, 480);
+    resizeWindow(640, 480);
 }
 
 Core::~Core() {

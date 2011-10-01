@@ -20,9 +20,6 @@
     <Filter Include="Base">
       <UniqueIdentifier>{0398eccb-ac26-409f-acb8-a84674443e2d}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Render">
-      <UniqueIdentifier>{367c79f7-652d-4d6c-9a1b-347167ba9d3e}</UniqueIdentifier>
-    </Filter>
     <Filter Include="GitM\States">
       <UniqueIdentifier>{93f05665-51dd-4274-b352-3c6371dfd7d7}</UniqueIdentifier>
     </Filter>
@@ -31,6 +28,9 @@
     </Filter>
     <Filter Include="Engine\Cameras">
       <UniqueIdentifier>{6304265b-eaa4-4c43-acbe-fce5d435bf10}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Render">
+      <UniqueIdentifier>{367c79f7-652d-4d6c-9a1b-347167ba9d3e}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

@@ -11,7 +11,7 @@
 #include <map>
 #include <list>
 
-#include <SDL.h>
+#include "SDL/SDL.h"
 
 #define	PLATFORM_APPLE 0
 #define PLATFORM_WIN32 1
@@ -27,20 +27,28 @@
 
 #if SYS_PLATFORM == PLATFORM_APPLE
 # define ASSERT_FUNCTION __asm__("int $03")
-#else
+#elif SYS_PLATFORM == PLATFORM_WIN32
 # define ASSERT_FUNCTION __asm { int 3 }
+#else
+# include <assert.h>
+# define ASSERT(conditional) assert(conditional)
 #endif
 
-#define ASSERT(conditional) \
+#ifndef ASSERT
+# define ASSERT(conditional) \
     do { \
         if(!(conditional)) { \
 			ASSERT_FUNCTION; \
 		} \
     } while(false)
+#endif
 
 #if SYS_PLATFORM == PLATFORM_WIN32
 # include "Windows.h"
 # define sleep(seconds) Sleep(seconds*1000)
+#elif SYS_PLATFORM == PLATFORM_LINUX
+# include <GL/gl.h>
+# include <GL/glu.h>
 #endif
 
 #endif

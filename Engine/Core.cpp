@@ -1,6 +1,5 @@
 #include <Engine/Core.h>
 #include <Base/Log.h>
-#include <SDL.h>
 
 Core::Core(): _running(false) {
     _core = this;

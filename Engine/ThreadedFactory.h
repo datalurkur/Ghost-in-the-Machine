@@ -4,8 +4,8 @@
 #include <Base/Base.h>
 #include <Base/Log.h>
 
-#include "SDL_mutex.h"
-#include "SDL_thread.h"
+#include <SDL/SDL_mutex.h>
+#include <SDL/SDL_thread.h>
 
 #define LOCK_MUTEX \
     do { \

@@ -62,6 +62,7 @@ void Core::resizeWindow(const int w, const int h) {
 
 void Core::closeWindow() {
 	stop();
+    flushStates();
 }
 
 int Core::getTime() {

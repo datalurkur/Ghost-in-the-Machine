@@ -11,6 +11,11 @@ public:
     Entity(const std::string &name);
     ~Entity();
 
+    void update(int elapsed);
+
+protected:
+    Entity(const std::string &name, const std::string &type);
+
 private:
 };
 

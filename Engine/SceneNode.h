@@ -23,7 +23,12 @@ public:
 	void addChild(SceneNode *child);
 
 protected:
+    SceneNode(const std::string &name, const std::string &type);
+
+protected:
 	std::string _name;
+    std::string _type;
+
 	Vector2 _position;
 
 	SceneNode *_parent;

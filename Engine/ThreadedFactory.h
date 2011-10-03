@@ -34,7 +34,7 @@ public:
     static void Teardown();
 
     static T* Load(const std::string &name);
-    static void Finish(T* t);
+    static void Unload(T* t);
 
     static float Progress(T* t);
     static std::string Status(T* t);
@@ -48,12 +48,16 @@ protected:
 
     static void UpdateProgress(T* t, float progress);
     static void UpdateStatus(T* t, const std::string &status);
+    static void Finish(T* t);
     
     static ThreadInfo* GetThreadInfo(T* t);
 
 protected:
     static SDL_mutex* Lock;
     static ThreadMap Threads;
+
+    typedef std::list<T*> ContentList;
+    static ContentList Resources;
 };
 
 template <typename T, typename F>
@@ -61,6 +65,9 @@ SDL_mutex* ThreadedFactory<T,F>::Lock = SDL_CreateMutex();
 
 template <typename T, typename F>
 typename ThreadedFactory<T,F>::ThreadMap ThreadedFactory<T,F>::Threads;
+
+template <typename T, typename F>
+typename ThreadedFactory<T,F>::ContentList ThreadedFactory<T,F>::Resources;
 
 template <typename T, typename F>
 void ThreadedFactory<T,F>::Setup() {
@@ -71,11 +78,20 @@ template <typename T, typename F>
 void ThreadedFactory<T,F>::Teardown() {
     if(Lock) {
         SDL_mutexP(Lock);
+
         ThreadMapIterator itr = Threads.begin();
         for(; itr != Threads.end(); itr++) {
             SDL_KillThread(itr->second.thread);
         }
         Threads.clear();
+
+        typename ContentList::iterator cItr = Resources.begin();
+        for(; cItr != Resources.end(); cItr++) {
+            delete (*cItr);
+        }
+        Resources.clear();
+
+        SDL_mutexV(Lock);
         SDL_DestroyMutex(Lock);
         Lock = 0;
     }
@@ -87,9 +103,22 @@ T* ThreadedFactory<T,F>::Load(const std::string &name) {
 
     LOCK_MUTEX;
     Threads[t] = ThreadInfo(SDL_CreateThread(F::ThreadedLoad, t));
+    Resources.push_back(t);
     UNLOCK_MUTEX;
 
     return t;
+}
+
+template <typename T, typename F>
+void ThreadedFactory<T,F>::Unload(T* t) {
+    LOCK_MUTEX;
+    typename ContentList::iterator itr = Resources.begin();
+    for(; itr != Resources.end(); itr++) {
+        if(*itr == t) { break; }
+    }
+    ASSERT(itr != Resources.end());
+    Resources.erase(itr);
+    delete t;
 }
 
 template <typename T, typename F>

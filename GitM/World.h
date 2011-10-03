@@ -15,27 +15,47 @@ public:
 	World();
 	virtual ~World();
 
+    // Update the world objects
+    void update(int elapsed);
+
 	// Render the world
 	void render(Camera *camera, RenderContext *context);
 
 	// Return the scene manager
 	SceneManager *getScene();
     
+    // Designed to generically add objects to the scene
     template <typename T>
-    T *create(const std::string &name);
+    T *createObject(const std::string &name);
+
+    // Designed to generically add an entity to the entities list
+    // Defers to createObject to also add the entity to the scene
+    template <typename T>
+    T *createEntity(const std::string &name);
 
 protected:
 	QuadTreeSceneManager *_scene;
-	Player *_player;
 
+    typedef std::map<std::string, Entity*> EntityList;
+    EntityList _entities;
+
+    // Objects created by the world factory
+	Player *_player;
     friend class ThreadedWorldFactory;
 };
 
 template <typename T>
-T* World::create(const std::string &name) {
+T* World::createObject(const std::string &name) {
     T *newObject = new T(name);
     _scene->addNode(newObject);
     return newObject;
+}
+
+template <typename T>
+T* World::createEntity(const std::string &name) {
+    T *newEntity = createObject<T>(name);
+    _entities[name] = newEntity;
+    return newEntity;
 }
 
 #endif

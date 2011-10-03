@@ -16,6 +16,7 @@
 		E16C5AF1143A43910063EE8C /* OrthoCamera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E16C5AEF143A43910063EE8C /* OrthoCamera.cpp */; };
 		E16C5AF8143A43AD0063EE8C /* EventHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E16C5AF4143A43AD0063EE8C /* EventHandler.cpp */; };
 		E16C5AF9143A43AD0063EE8C /* WindowListener.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E16C5AF6143A43AD0063EE8C /* WindowListener.cpp */; };
+		E16C5AFD143A54000063EE8C /* Material.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E16C5AFB143A54000063EE8C /* Material.cpp */; };
 		E1A471BA142BDF5B0062C09B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E13A3FE3142A76DC00D7EA2A /* main.cpp */; };
 		E1A471BB142BDF5B0062C09B /* GameState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E13A3FE5142A76DC00D7EA2A /* GameState.cpp */; };
 		E1A471C4142BE5130062C09B /* Entity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E121B0BB142BD11800719A82 /* Entity.cpp */; };
@@ -74,6 +75,8 @@
 		E16C5AF5143A43AD0063EE8C /* EventHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventHandler.h; path = ../Engine/EventHandler.h; sourceTree = "<group>"; };
 		E16C5AF6143A43AD0063EE8C /* WindowListener.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = WindowListener.cpp; path = ../Engine/WindowListener.cpp; sourceTree = "<group>"; };
 		E16C5AF7143A43AD0063EE8C /* WindowListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WindowListener.h; path = ../Engine/WindowListener.h; sourceTree = "<group>"; };
+		E16C5AFB143A54000063EE8C /* Material.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Material.cpp; path = ../Render/Material.cpp; sourceTree = "<group>"; };
+		E16C5AFC143A54000063EE8C /* Material.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Material.h; path = ../Render/Material.h; sourceTree = "<group>"; };
 		E18169D41433B1E40030B8BA /* Vector2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Vector2.h; path = ../Base/Vector2.h; sourceTree = "<group>"; };
 		E1B4F3131430D66800A87C70 /* Base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Base.h; path = ../Base/Base.h; sourceTree = "<group>"; };
 		E1B4F3171430D67A00A87C70 /* Player.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Player.cpp; path = ../GitM/Player.cpp; sourceTree = "<group>"; };
@@ -246,6 +249,8 @@
 		E1B4F3201430D68300A87C70 /* Render */ = {
 			isa = PBXGroup;
 			children = (
+				E16C5AFB143A54000063EE8C /* Material.cpp */,
+				E16C5AFC143A54000063EE8C /* Material.h */,
 				E1BAD36714366A4C00D7430C /* Viewport.cpp */,
 				E1BAD36814366A4C00D7430C /* Viewport.h */,
 				E1B4F3211430D69200A87C70 /* Renderable.cpp */,
@@ -380,6 +385,7 @@
 				E16C5AF1143A43910063EE8C /* OrthoCamera.cpp in Sources */,
 				E16C5AF8143A43AD0063EE8C /* EventHandler.cpp in Sources */,
 				E16C5AF9143A43AD0063EE8C /* WindowListener.cpp in Sources */,
+				E16C5AFD143A54000063EE8C /* Material.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

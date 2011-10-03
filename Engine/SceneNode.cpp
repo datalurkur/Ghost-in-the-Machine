@@ -3,7 +3,13 @@
 const std::string SceneNode::NodeType = "SceneNode";
 
 SceneNode::SceneNode(const std::string &name):
-	_position(0,0), _name(name) {
+    _name(name), _type(NodeType), _position(0,0)
+{
+}
+
+SceneNode::SceneNode(const std::string &name, const std::string &type):
+    _name(name), _type(type), _position(0,0)
+{
 }
 
 SceneNode::~SceneNode() {

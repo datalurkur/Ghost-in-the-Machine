@@ -4,6 +4,7 @@ ParentState::ParentState() {
 }
 
 ParentState::~ParentState() {
+    flushStates();
 }
 
 void ParentState::setState(State *state, ...) {

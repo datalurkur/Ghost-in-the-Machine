@@ -1,4 +1,5 @@
 #include <GitM/PlayingState.h>
+#include <GitM/ThreadedWorldFactory.h>
 #include <Engine/Core.h>
 #include <Engine/OrthoCamera.h>
 
@@ -9,6 +10,7 @@ PlayingState::~PlayingState() {
 }
 
 void PlayingState::update(int elapsed) {
+    _world->update(elapsed);
 }
 
 void PlayingState::render(RenderContext *renderContext) {
@@ -19,15 +21,14 @@ void PlayingState::setup(va_list args) {
 	Info("Setting up PlayingState");
     _world = va_arg(args, World*);
 
-    _camera = _world->create<OrthoCamera>("MainCam");
+    _camera = _world->createObject<OrthoCamera>("MainCam");
     _core->getViewport()->registerCamera(_camera);
 }
 
 void PlayingState::teardown() {
-    if(_world) {
-        delete _world;
-    }
+    Info("Tearing down PlayingState");
     if(_camera) {
         delete _camera;
     }
+    ThreadedWorldFactory::Unload(_world);
 }

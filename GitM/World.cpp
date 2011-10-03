@@ -14,6 +14,13 @@ World::~World() {
     }
 }
 
+void World::update(int elapsed) {
+    EntityList::iterator itr = _entities.begin();
+    for(; itr != _entities.end(); itr++) {
+        itr->second->update(elapsed);
+    }
+}
+
 void World::render(Camera *camera, RenderContext *context) {
 	RenderableList renderables;
 	context->render(camera->getProjection(), camera->getModelView(), renderables);

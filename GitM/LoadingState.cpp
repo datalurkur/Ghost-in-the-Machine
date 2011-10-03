@@ -13,10 +13,7 @@ LoadingState::~LoadingState() {
 
 void LoadingState::update(int elapsed) {
     if(ThreadedWorldFactory::IsDone(_world)) {
-        ThreadedWorldFactory::Finish(_world);
         _parent->setState(new PlayingState(), _world);
-    } else {
-        //Info("Status: " << ThreadedWorldFactory::Status(_world));
     }
 }
 
@@ -24,8 +21,10 @@ void LoadingState::render(RenderContext *renderContext) {
 }
 
 void LoadingState::setup(va_list args) {
+    Info("Setting up LoadingState");
     _world = ThreadedWorldFactory::Load("test_world.wld");
 }
 
 void LoadingState::teardown() {
+    Info("Tearing down LoadingState");
 }

@@ -22,8 +22,7 @@ void World::update(int elapsed) {
 }
 
 void World::render(Camera *camera, RenderContext *context) {
-	RenderableList renderables;
-	context->render(camera->getProjection(), camera->getModelView(), renderables);
+	_scene->render(camera, context);
 }
 
 SceneManager* World::getScene() {

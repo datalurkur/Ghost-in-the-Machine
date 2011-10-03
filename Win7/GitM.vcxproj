@@ -96,8 +96,10 @@
     <ClCompile Include="..\GitM\QuadTreeSceneManager.cpp" />
     <ClCompile Include="..\GitM\ThreadedWorldFactory.cpp" />
     <ClCompile Include="..\GitM\World.cpp" />
+    <ClCompile Include="..\Render\Material.cpp" />
     <ClCompile Include="..\Render\Renderable.cpp" />
     <ClCompile Include="..\Render\RenderContext.cpp" />
+    <ClCompile Include="..\Render\Texture.cpp" />
     <ClCompile Include="..\Render\Viewport.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -126,8 +128,10 @@
     <ClInclude Include="..\GitM\QuadTreeSceneManager.h" />
     <ClInclude Include="..\GitM\ThreadedWorldFactory.h" />
     <ClInclude Include="..\GitM\World.h" />
+    <ClInclude Include="..\Render\Material.h" />
     <ClInclude Include="..\Render\Renderable.h" />
     <ClInclude Include="..\Render\RenderContext.h" />
+    <ClInclude Include="..\Render\Texture.h" />
     <ClInclude Include="..\Render\Viewport.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -21,6 +21,16 @@ Matrix4 Matrix4::MakeOrtho(float l, float r, float b, float t, float n, float f)
     return ret;
 }
 
+Matrix4 Matrix4::MakeTranslation(float x, float y, float z) {
+	Matrix4 ret = Matrix4::Identity;
+
+	ret[0][3] = x;
+	ret[1][3] = y;
+	ret[2][3] = z;
+
+	return ret;
+}
+
 std::ostream& operator<<(std::ostream& lhs, const Matrix4 &rhs) {
 	lhs << "Matrix4";
 	for(int i=0; i<4; i++) {

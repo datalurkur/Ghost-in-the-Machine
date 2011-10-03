@@ -5,8 +5,6 @@
 #include <Render/Viewport.h>
 #include <Base/Matrix4.h>
 
-typedef std::list<Renderable*> RenderableList;
-
 class RenderContext {
 public:
     RenderContext();

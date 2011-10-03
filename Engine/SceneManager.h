@@ -3,6 +3,9 @@
 
 #include <Engine/SceneNode.h>
 
+class Camera;
+class RenderContext;
+
 class SceneManager {
 public:
     SceneManager();
@@ -16,6 +19,8 @@ public:
 
 	template <typename T>
 	void deleteNode(const std::string &name);
+
+	void render(Camera *camera, RenderContext *context);
 
 private:
 	SceneNode *_root;

@@ -3,14 +3,12 @@
 const std::string Entity::NodeType = "Entity";
 
 Entity::Entity(const std::string &name):
-    SceneNode(name, NodeType)
-{
-}
+	SceneNode(name, NodeType) 
+{}
 
 Entity::Entity(const std::string &name, const std::string &type):
-    SceneNode(name, type)
-{
-}
+	SceneNode(name, type)
+{}
 
 Entity::~Entity() {
 }

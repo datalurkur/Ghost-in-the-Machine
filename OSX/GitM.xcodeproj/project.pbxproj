@@ -13,6 +13,9 @@
 		E152C6571434D87500D83C44 /* ThreadedFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E152C6551434D87400D83C44 /* ThreadedFactory.cpp */; };
 		E152C65A1434D89A00D83C44 /* ThreadedWorldFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E152C6581434D89A00D83C44 /* ThreadedWorldFactory.cpp */; };
 		E15FA1EA142BDF1C00CC6CE2 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E13A3FF6142A79C700D7EA2A /* Cocoa.framework */; };
+		E16C5AF1143A43910063EE8C /* OrthoCamera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E16C5AEF143A43910063EE8C /* OrthoCamera.cpp */; };
+		E16C5AF8143A43AD0063EE8C /* EventHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E16C5AF4143A43AD0063EE8C /* EventHandler.cpp */; };
+		E16C5AF9143A43AD0063EE8C /* WindowListener.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E16C5AF6143A43AD0063EE8C /* WindowListener.cpp */; };
 		E1A471BA142BDF5B0062C09B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E13A3FE3142A76DC00D7EA2A /* main.cpp */; };
 		E1A471BB142BDF5B0062C09B /* GameState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E13A3FE5142A76DC00D7EA2A /* GameState.cpp */; };
 		E1A471C4142BE5130062C09B /* Entity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E121B0BB142BD11800719A82 /* Entity.cpp */; };
@@ -65,6 +68,12 @@
 		E152C6581434D89A00D83C44 /* ThreadedWorldFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ThreadedWorldFactory.cpp; path = ../GitM/ThreadedWorldFactory.cpp; sourceTree = "<group>"; };
 		E152C6591434D89A00D83C44 /* ThreadedWorldFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ThreadedWorldFactory.h; path = ../GitM/ThreadedWorldFactory.h; sourceTree = "<group>"; };
 		E15FA1E8142BDF1C00CC6CE2 /* GitM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitM.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E16C5AEF143A43910063EE8C /* OrthoCamera.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = OrthoCamera.cpp; path = ../Engine/OrthoCamera.cpp; sourceTree = "<group>"; };
+		E16C5AF0143A43910063EE8C /* OrthoCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OrthoCamera.h; path = ../Engine/OrthoCamera.h; sourceTree = "<group>"; };
+		E16C5AF4143A43AD0063EE8C /* EventHandler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EventHandler.cpp; path = ../Engine/EventHandler.cpp; sourceTree = "<group>"; };
+		E16C5AF5143A43AD0063EE8C /* EventHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventHandler.h; path = ../Engine/EventHandler.h; sourceTree = "<group>"; };
+		E16C5AF6143A43AD0063EE8C /* WindowListener.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = WindowListener.cpp; path = ../Engine/WindowListener.cpp; sourceTree = "<group>"; };
+		E16C5AF7143A43AD0063EE8C /* WindowListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WindowListener.h; path = ../Engine/WindowListener.h; sourceTree = "<group>"; };
 		E18169D41433B1E40030B8BA /* Vector2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Vector2.h; path = ../Base/Vector2.h; sourceTree = "<group>"; };
 		E1B4F3131430D66800A87C70 /* Base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Base.h; path = ../Base/Base.h; sourceTree = "<group>"; };
 		E1B4F3171430D67A00A87C70 /* Player.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Player.cpp; path = ../GitM/Player.cpp; sourceTree = "<group>"; };
@@ -128,8 +137,8 @@
 		E13A3FDD142A76AD00D7EA2A /* Engine */ = {
 			isa = PBXGroup;
 			children = (
-				E1BAD36A14366A6000D7430C /* Camera.cpp */,
-				E1BAD36B14366A6000D7430C /* Camera.h */,
+				E16C5AFA143A43AF0063EE8C /* Event Management */,
+				E16C5AF3143A43930063EE8C /* Cameras */,
 				E1BAD36C14366A6000D7430C /* Frustum.cpp */,
 				E1BAD36D14366A6000D7430C /* Frustum.h */,
 				E152C6551434D87400D83C44 /* ThreadedFactory.cpp */,
@@ -197,6 +206,28 @@
 				E152C6531434C8F800D83C44 /* SDLMain.m */,
 			);
 			path = SDL;
+			sourceTree = "<group>";
+		};
+		E16C5AF3143A43930063EE8C /* Cameras */ = {
+			isa = PBXGroup;
+			children = (
+				E16C5AEF143A43910063EE8C /* OrthoCamera.cpp */,
+				E16C5AF0143A43910063EE8C /* OrthoCamera.h */,
+				E1BAD36A14366A6000D7430C /* Camera.cpp */,
+				E1BAD36B14366A6000D7430C /* Camera.h */,
+			);
+			name = Cameras;
+			sourceTree = "<group>";
+		};
+		E16C5AFA143A43AF0063EE8C /* Event Management */ = {
+			isa = PBXGroup;
+			children = (
+				E16C5AF4143A43AD0063EE8C /* EventHandler.cpp */,
+				E16C5AF5143A43AD0063EE8C /* EventHandler.h */,
+				E16C5AF6143A43AD0063EE8C /* WindowListener.cpp */,
+				E16C5AF7143A43AD0063EE8C /* WindowListener.h */,
+			);
+			name = "Event Management";
 			sourceTree = "<group>";
 		};
 		E1B4F3111430D65000A87C70 /* Base */ = {
@@ -346,6 +377,9 @@
 				E1BAD36914366A4C00D7430C /* Viewport.cpp in Sources */,
 				E1BAD36E14366A6000D7430C /* Camera.cpp in Sources */,
 				E1BAD36F14366A6000D7430C /* Frustum.cpp in Sources */,
+				E16C5AF1143A43910063EE8C /* OrthoCamera.cpp in Sources */,
+				E16C5AF8143A43AD0063EE8C /* EventHandler.cpp in Sources */,
+				E16C5AF9143A43AD0063EE8C /* WindowListener.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

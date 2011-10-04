@@ -2,7 +2,7 @@
 #define THREADEDWORLDFACTORY_H
 
 #include <GitM/World.h>
-#include <Engine/ThreadedFactory.h>
+#include <Resource/ThreadedFactory.h>
 
 class ThreadedWorldFactory;
 

@@ -84,7 +84,6 @@
     <ClCompile Include="..\Engine\SceneManager.cpp" />
     <ClCompile Include="..\Engine\SceneNode.cpp" />
     <ClCompile Include="..\Engine\State.cpp" />
-    <ClCompile Include="..\Engine\ThreadedFactory.cpp" />
     <ClCompile Include="..\Engine\Window.cpp" />
     <ClCompile Include="..\Engine\WindowListener.cpp" />
     <ClCompile Include="..\GitM\GameState.cpp" />
@@ -94,13 +93,14 @@
     <ClCompile Include="..\GitM\Player.cpp" />
     <ClCompile Include="..\GitM\PlayingState.cpp" />
     <ClCompile Include="..\GitM\QuadTreeSceneManager.cpp" />
-    <ClCompile Include="..\GitM\ThreadedWorldFactory.cpp" />
     <ClCompile Include="..\GitM\World.cpp" />
     <ClCompile Include="..\Render\Material.cpp" />
     <ClCompile Include="..\Render\Renderable.cpp" />
     <ClCompile Include="..\Render\RenderContext.cpp" />
     <ClCompile Include="..\Render\Texture.cpp" />
     <ClCompile Include="..\Render\Viewport.cpp" />
+    <ClCompile Include="..\Resource\ThreadedFactory.cpp" />
+    <ClCompile Include="..\Resource\ThreadedWorldFactory.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Base\Base.h" />
@@ -117,7 +117,6 @@
     <ClInclude Include="..\Engine\SceneManager.h" />
     <ClInclude Include="..\Engine\SceneNode.h" />
     <ClInclude Include="..\Engine\State.h" />
-    <ClInclude Include="..\Engine\ThreadedFactory.h" />
     <ClInclude Include="..\Engine\Window.h" />
     <ClInclude Include="..\Engine\WindowListener.h" />
     <ClInclude Include="..\GitM\GameState.h" />
@@ -126,13 +125,14 @@
     <ClInclude Include="..\GitM\Player.h" />
     <ClInclude Include="..\GitM\PlayingState.h" />
     <ClInclude Include="..\GitM\QuadTreeSceneManager.h" />
-    <ClInclude Include="..\GitM\ThreadedWorldFactory.h" />
     <ClInclude Include="..\GitM\World.h" />
     <ClInclude Include="..\Render\Material.h" />
     <ClInclude Include="..\Render\Renderable.h" />
     <ClInclude Include="..\Render\RenderContext.h" />
     <ClInclude Include="..\Render\Texture.h" />
     <ClInclude Include="..\Render\Viewport.h" />
+    <ClInclude Include="..\Resource\ThreadedFactory.h" />
+    <ClInclude Include="..\Resource\ThreadedWorldFactory.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

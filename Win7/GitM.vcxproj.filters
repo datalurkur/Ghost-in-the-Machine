@@ -32,6 +32,9 @@
     <Filter Include="Render">
       <UniqueIdentifier>{367c79f7-652d-4d6c-9a1b-347167ba9d3e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Resource">
+      <UniqueIdentifier>{573ee846-065b-4972-9bef-2c3fd2072dbc}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\GitM\main.cpp">
@@ -85,13 +88,7 @@
     <ClCompile Include="..\GitM\PlayingState.cpp">
       <Filter>GitM\States</Filter>
     </ClCompile>
-    <ClCompile Include="..\GitM\ThreadedWorldFactory.cpp">
-      <Filter>GitM</Filter>
-    </ClCompile>
     <ClCompile Include="..\Engine\Window.cpp">
-      <Filter>Engine</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Engine\ThreadedFactory.cpp">
       <Filter>Engine</Filter>
     </ClCompile>
     <ClCompile Include="..\Base\Matrix4.cpp">
@@ -120,6 +117,12 @@
     </ClCompile>
     <ClCompile Include="..\Render\Texture.cpp">
       <Filter>Render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Resource\ThreadedFactory.cpp">
+      <Filter>Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Resource\ThreadedWorldFactory.cpp">
+      <Filter>Resource</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -177,13 +180,7 @@
     <ClInclude Include="..\Base\Vector2.h">
       <Filter>Base</Filter>
     </ClInclude>
-    <ClInclude Include="..\GitM\ThreadedWorldFactory.h">
-      <Filter>GitM</Filter>
-    </ClInclude>
     <ClInclude Include="..\Engine\Window.h">
-      <Filter>Engine</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Engine\ThreadedFactory.h">
       <Filter>Engine</Filter>
     </ClInclude>
     <ClInclude Include="..\Base\Matrix4.h">
@@ -212,6 +209,12 @@
     </ClInclude>
     <ClInclude Include="..\Render\Texture.h">
       <Filter>Render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Resource\ThreadedFactory.h">
+      <Filter>Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Resource\ThreadedWorldFactory.h">
+      <Filter>Resource</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

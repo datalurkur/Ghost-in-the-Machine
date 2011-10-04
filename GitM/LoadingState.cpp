@@ -3,7 +3,7 @@
 #include <GitM/LoadingState.h>
 #include <GitM/PlayingState.h>
 
-#include <GitM/ThreadedWorldFactory.h>
+#include <Resource/ThreadedWorldFactory.h>
 
 LoadingState::LoadingState() {
 }

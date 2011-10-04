@@ -1,4 +1,4 @@
-#include <GitM/ThreadedWorldFactory.h>
+#include <Resource/ThreadedWorldFactory.h>
 
 int ThreadedWorldFactory::ThreadedLoad(void *data) {
     World *world = (World*)data;

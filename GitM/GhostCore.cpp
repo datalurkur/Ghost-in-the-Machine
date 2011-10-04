@@ -1,7 +1,7 @@
 #include <GitM/GhostCore.h>
 #include <GitM/GameState.h>
 
-#include <GitM/ThreadedWorldFactory.h>
+#include <Resource/ThreadedWorldFactory.h>
 
 GhostCore::GhostCore() {
     ThreadedWorldFactory::Setup();

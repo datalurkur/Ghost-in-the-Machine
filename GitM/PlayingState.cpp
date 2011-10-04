@@ -1,5 +1,5 @@
 #include <GitM/PlayingState.h>
-#include <GitM/ThreadedWorldFactory.h>
+#include <Resource/ThreadedWorldFactory.h>
 #include <Engine/Core.h>
 #include <Engine/OrthoCamera.h>
 

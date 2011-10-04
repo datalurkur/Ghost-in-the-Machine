@@ -9,9 +9,6 @@ World::World(): _player(0) {
 
 World::~World() {
 	delete _scene;
-    if(_player) {
-        delete _player;
-    }
 }
 
 void World::update(int elapsed) {

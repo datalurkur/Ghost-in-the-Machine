@@ -39,6 +39,11 @@ public:
 	// Adds the renderables to the provided list
 	virtual void getRenderables(RenderableList &list);
 
+	// Adds a renderable to the scenenode's internal renderable list
+	void addRenderable(Renderable *renderable);
+
+	// Clear the renderable list and delete the renderables if flag is set
+	void clearRenderables(bool deleteOnClear = true);
 
 protected:
 	SceneNode(const std::string &name, const std::string &type);

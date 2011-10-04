@@ -11,6 +11,12 @@ SceneNode::SceneNode(const std::string &name, const std::string &type):
 {}
 
 SceneNode::~SceneNode() {
+	clearRenderables(true);
+	NodeMap::iterator itr = _children.begin();
+	for(; itr != _children.end(); itr++) {
+		delete (itr->second);
+	}
+	_children.clear();
 }
 
 Vector2 SceneNode::getAbsolutePosition() const { return _absolutePosition; }
@@ -42,7 +48,22 @@ void SceneNode::getNodes(NodeList &list, Frustum *frustum) {
 }
 
 void SceneNode::getRenderables(RenderableList &list) {
+	Info("SceneNode " << _name << " adding " << _renderables.size() << " renderables to list.");
 	list.insert(list.end(), _renderables.begin(), _renderables.end());
+}
+
+void SceneNode::addRenderable(Renderable *renderable) {
+	_renderables.push_back(renderable);
+}
+
+void SceneNode::clearRenderables(bool deleteOnClear) {
+	if(deleteOnClear) {
+		RenderableList::iterator itr = _renderables.begin();
+		for(; itr != _renderables.end(); itr++) {
+			delete *itr;
+		}
+	}
+	_renderables.clear();
 }
 
 void SceneNode::updateCachedValues() {

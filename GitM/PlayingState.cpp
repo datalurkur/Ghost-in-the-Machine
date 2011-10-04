@@ -27,8 +27,5 @@ void PlayingState::setup(va_list args) {
 
 void PlayingState::teardown() {
     Info("Tearing down PlayingState");
-    if(_camera) {
-        delete _camera;
-    }
     ThreadedWorldFactory::Unload(_world);
 }

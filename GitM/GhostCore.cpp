@@ -4,10 +4,10 @@
 #include <GitM/ThreadedWorldFactory.h>
 
 GhostCore::GhostCore() {
+    ThreadedWorldFactory::Setup();
+
     std::string mapName = "test_world.wld";
     pushState(new GameState(), &mapName);
-    
-    ThreadedWorldFactory::Setup();
 }
 
 GhostCore::~GhostCore() {

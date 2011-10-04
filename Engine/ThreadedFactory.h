@@ -9,13 +9,13 @@
 
 #define LOCK_MUTEX \
     do { \
-        ASSERT(Lock); \
-        SDL_mutexP(Lock); \
+        ASSERT(F::Lock); \
+        SDL_mutexP(F::Lock); \
     } while(false)
 
 #define UNLOCK_MUTEX \
     do { \
-        SDL_mutexV(Lock); \
+        SDL_mutexV(F::Lock); \
     } while(false)
 
 struct ThreadInfo {
@@ -61,7 +61,7 @@ protected:
 };
 
 template <typename T, typename F>
-SDL_mutex* ThreadedFactory<T,F>::Lock = SDL_CreateMutex();
+SDL_mutex* ThreadedFactory<T,F>::Lock;
 
 template <typename T, typename F>
 typename ThreadedFactory<T,F>::ThreadMap ThreadedFactory<T,F>::Threads;
@@ -71,29 +71,29 @@ typename ThreadedFactory<T,F>::ContentList ThreadedFactory<T,F>::Resources;
 
 template <typename T, typename F>
 void ThreadedFactory<T,F>::Setup() {
-    Lock = SDL_CreateMutex();
+    F::Lock = SDL_CreateMutex();
 }
 
 template <typename T, typename F>
 void ThreadedFactory<T,F>::Teardown() {
-    if(Lock) {
-        SDL_mutexP(Lock);
+    if(F::Lock) {
+        SDL_mutexP(F::Lock);
 
-        ThreadMapIterator itr = Threads.begin();
-        for(; itr != Threads.end(); itr++) {
+        ThreadMapIterator itr = F::Threads.begin();
+        for(; itr != F::Threads.end(); itr++) {
             SDL_KillThread(itr->second.thread);
         }
-        Threads.clear();
+        F::Threads.clear();
 
-        typename ContentList::iterator cItr = Resources.begin();
-        for(; cItr != Resources.end(); cItr++) {
+        typename ContentList::iterator cItr = F::Resources.begin();
+        for(; cItr != F::Resources.end(); cItr++) {
             delete (*cItr);
         }
-        Resources.clear();
+        F::Resources.clear();
 
-        SDL_mutexV(Lock);
-        SDL_DestroyMutex(Lock);
-        Lock = 0;
+        SDL_mutexV(F::Lock);
+        SDL_DestroyMutex(F::Lock);
+        F::Lock = 0;
     }
 }
 
@@ -103,7 +103,7 @@ T* ThreadedFactory<T,F>::Load(const std::string &name) {
 
     LOCK_MUTEX;
     Threads[t] = ThreadInfo(SDL_CreateThread(F::ThreadedLoad, t));
-    Resources.push_back(t);
+    F::Resources.push_back(t);
     UNLOCK_MUTEX;
 
     return t;
@@ -112,19 +112,19 @@ T* ThreadedFactory<T,F>::Load(const std::string &name) {
 template <typename T, typename F>
 void ThreadedFactory<T,F>::Unload(T* t) {
     LOCK_MUTEX;
-    typename ContentList::iterator itr = Resources.begin();
-    for(; itr != Resources.end(); itr++) {
+    typename ContentList::iterator itr = F::Resources.begin();
+    for(; itr != F::Resources.end(); itr++) {
         if(*itr == t) { break; }
     }
-    ASSERT(itr != Resources.end());
-    Resources.erase(itr);
+    ASSERT(itr != F::Resources.end());
+    F::Resources.erase(itr);
     delete t;
 }
 
 template <typename T, typename F>
 void ThreadedFactory<T,F>::Finish(T *t) {
     LOCK_MUTEX;
-    Threads.erase(t);
+    F::Threads.erase(t);
     UNLOCK_MUTEX;
 }
 
@@ -170,21 +170,21 @@ bool ThreadedFactory<T,F>::IsDone(T *t) {
 template <typename T, typename F>
 int ThreadedFactory<T,F>::ThreadedLoad(void* data) {
     Error("ThreadedLoad not implemented for default ThreadedFactory");
-    Finish((T*)data);
+    F::Finish((T*)data);
     return 0;
 }
 
 template <typename T, typename F>
 void ThreadedFactory<T,F>::UpdateProgress(T* t, float progress) {
     LOCK_MUTEX;
-    Threads[t].progress = progress;
+    F::Threads[t].progress = progress;
     UNLOCK_MUTEX;
 }
 
 template <typename T, typename F>
 void ThreadedFactory<T,F>::UpdateStatus(T* t, const std::string &status) {
     LOCK_MUTEX;
-    Threads[t].status = status;
+    F::Threads[t].status = status;
     UNLOCK_MUTEX;
 }
 
@@ -192,8 +192,8 @@ void ThreadedFactory<T,F>::UpdateStatus(T* t, const std::string &status) {
 //  from within functions that make use of mutex locking
 template <typename T, typename F>
 ThreadInfo* ThreadedFactory<T,F>::GetThreadInfo(T *t) {
-    ThreadMapIterator itr = Threads.find(t);
-    if(itr != Threads.end()) {
+    ThreadMapIterator itr = F::Threads.find(t);
+    if(itr != F::Threads.end()) {
         return &(itr->second);
     } else {
         return 0;

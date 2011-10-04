@@ -103,7 +103,7 @@ T* ThreadedFactory<T,F>::GetOrLoad(const std::string &name) {
 	T* t = 0;
 
 	LOCK_MUTEX;
-	ContentMap::iterator itr = F::Resources.begin();
+	typename ContentMap::iterator itr = F::Resources.begin();
 	for(; itr != F::Resources.end(); itr++) {
 		if(name == itr->first) {
 			t = itr->second;
@@ -138,11 +138,13 @@ void ThreadedFactory<T,F>::Unload(const std::string &name) {
     LOCK_MUTEX;
     typename ContentMap::iterator itr = F::Resources.begin();
     for(; itr != F::Resources.end(); itr++) {
-        if(itr->first == name) { break; }
+        if(itr->first == name) {
+            delete (itr->second);
+            break;
+        }
     }
     ASSERT(itr != F::Resources.end());
     F::Resources.erase(itr);
-    delete t;
 }
 
 template <typename T, typename F>

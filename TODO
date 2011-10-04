@@ -1,11 +1,15 @@
 ENGINE
-1) Create a generic Controller class, which is instanced by Entities (and updated by World through its update function performed on its list of game world Entities)
-2) Create a PhysicsController class and begin simple dynamics simulation
+1) Begin designing / creating the user interface classes
+2) Create a generic Controller class, which is instanced by Entities (and updated by World through its update function performed on its list of game world Entities)
+3) Create a PhysicsController class and begin simple dynamics simulation
 
 RENDERING
-1) Create a threaded Texture loader, which creates an additional OpenGL context for loading textures into GPU memory
-2) Create an AnimationController and begin doing animated PNG loading and playing
+1) Reexamine / rework the relationship between materials and textures
+2) Create a Font class, which has a font texture, produces renderables, etc
+3) Create a threaded Texture loader, which creates an additional OpenGL context for loading textures into GPU memory
+4) Create an AnimationController and begin doing animated PNG loading and playing
 
 CONTENT
-1) Create a Property List loader, which can read generic property lists and update resources with them
-2) Flesh out the world loader and world saver with some entities
+1) Create a ThreadedFontFactory
+2) Create a Property List loader, which can read generic property lists and update resources with them
+3) Flesh out the world loader and world saver with some entities

@@ -19,8 +19,17 @@ SceneNode::~SceneNode() {
 	_children.clear();
 }
 
-Vector2 SceneNode::getAbsolutePosition() const { return _absolutePosition; }
-Vector2 SceneNode::getLocalPosition() const { return _position; }
+Vector2 SceneNode::getAbsolutePosition() const {
+    ASSERT(!_dirty);
+
+    return _absolutePosition;
+
+}
+Vector2 SceneNode::getLocalPosition() const {
+    ASSERT(!_dirty);
+
+    return _position;
+}
 
 void SceneNode::setPosition(const Vector2 &pos) {
 	_position = pos;
@@ -39,6 +48,8 @@ void SceneNode::addChild(SceneNode *child) {
 }
 
 void SceneNode::getNodes(NodeList &list, Frustum *frustum) {
+    ASSERT(!_dirty);
+
 	if(frustum) {
 		// Do bounds checking and return early if this node is not within the view frustum
 		// FIXME - Actually implement frustum culling
@@ -51,6 +62,8 @@ void SceneNode::getNodes(NodeList &list, Frustum *frustum) {
 }
 
 void SceneNode::getRenderables(RenderableList &list) {
+    ASSERT(!_dirty);
+
 	//Info("SceneNode " << _name << " adding " << _renderables.size() << " renderables to list.");
 	list.insert(list.end(), _renderables.begin(), _renderables.end());
 }

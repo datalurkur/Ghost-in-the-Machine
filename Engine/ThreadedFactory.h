@@ -33,8 +33,9 @@ public:
     static void Setup();
     static void Teardown();
 
-    static T* Load(const std::string &name);
+    static T* GetOrLoad(const std::string &name);
     static void Unload(T* t);
+	static void Unload(const std::string &name);
 
     static float Progress(T* t);
     static std::string Status(T* t);
@@ -56,8 +57,8 @@ protected:
     static SDL_mutex* Lock;
     static ThreadMap Threads;
 
-    typedef std::list<T*> ContentList;
-    static ContentList Resources;
+    typedef std::map<std::string, T*> ContentMap;
+    static ContentMap Resources;
 };
 
 template <typename T, typename F>
@@ -67,7 +68,7 @@ template <typename T, typename F>
 typename ThreadedFactory<T,F>::ThreadMap ThreadedFactory<T,F>::Threads;
 
 template <typename T, typename F>
-typename ThreadedFactory<T,F>::ContentList ThreadedFactory<T,F>::Resources;
+typename ThreadedFactory<T,F>::ContentMap ThreadedFactory<T,F>::Resources;
 
 template <typename T, typename F>
 void ThreadedFactory<T,F>::Setup() {
@@ -85,9 +86,9 @@ void ThreadedFactory<T,F>::Teardown() {
         }
         F::Threads.clear();
 
-        typename ContentList::iterator cItr = F::Resources.begin();
+        typename ContentMap::iterator cItr = F::Resources.begin();
         for(; cItr != F::Resources.end(); cItr++) {
-            delete (*cItr);
+            delete (cItr->second);
         }
         F::Resources.clear();
 
@@ -98,12 +99,23 @@ void ThreadedFactory<T,F>::Teardown() {
 }
 
 template <typename T, typename F>
-T* ThreadedFactory<T,F>::Load(const std::string &name) {
-    T* t = new T();
+T* ThreadedFactory<T,F>::GetOrLoad(const std::string &name) {
+	T* t = 0;
 
-    LOCK_MUTEX;
-    Threads[t] = ThreadInfo(SDL_CreateThread(F::ThreadedLoad, t));
-    F::Resources.push_back(t);
+	LOCK_MUTEX;
+	ContentMap::iterator itr = F::Resources.begin();
+	for(; itr != F::Resources.end(); itr++) {
+		if(name == itr->first) {
+			t = itr->second;
+			break;
+		}
+	}
+
+	if(!t) {
+		t = new T();
+		Threads[t] = ThreadInfo(SDL_CreateThread(F::ThreadedLoad, t));
+		F::Resources[name] = t;
+	}
     UNLOCK_MUTEX;
 
     return t;
@@ -112,9 +124,21 @@ T* ThreadedFactory<T,F>::Load(const std::string &name) {
 template <typename T, typename F>
 void ThreadedFactory<T,F>::Unload(T* t) {
     LOCK_MUTEX;
-    typename ContentList::iterator itr = F::Resources.begin();
+    typename ContentMap::iterator itr = F::Resources.begin();
     for(; itr != F::Resources.end(); itr++) {
-        if(*itr == t) { break; }
+        if(itr->second == t) { break; }
+    }
+    ASSERT(itr != F::Resources.end());
+    F::Resources.erase(itr);
+    delete t;
+}
+
+template <typename T, typename F>
+void ThreadedFactory<T,F>::Unload(const std::string &name) {
+    LOCK_MUTEX;
+    typename ContentMap::iterator itr = F::Resources.begin();
+    for(; itr != F::Resources.end(); itr++) {
+        if(itr->first == name) { break; }
     }
     ASSERT(itr != F::Resources.end());
     F::Resources.erase(itr);

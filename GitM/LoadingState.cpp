@@ -22,7 +22,7 @@ void LoadingState::render(RenderContext *renderContext) {
 
 void LoadingState::setup(va_list args) {
     Info("Setting up LoadingState");
-    _world = ThreadedWorldFactory::Load("test_world.wld");
+    _world = ThreadedWorldFactory::GetOrLoad("test_world.wld");
 }
 
 void LoadingState::teardown() {

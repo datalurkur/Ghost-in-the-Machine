@@ -6,7 +6,7 @@
 GhostCore::GhostCore() {
     ThreadedWorldFactory::Setup();
 
-    std::string mapName = "test_world.wld";
+    std::string mapName = "test_world";
     pushState(new GameState(), &mapName);
 }
 

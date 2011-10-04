@@ -1,13 +1,10 @@
 ENGINE
-1) Finish implementing SceneNode
-2) Maintain a list of game world Entities separately from the SceneManager in World
-3) Create a generic Controller class, which is instanced by Entities (and updated by World through its update function performed on its list of game world Entities)
-4) Create a PhysicsController class and begin simple dynamics simulation
+1) Create a generic Controller class, which is instanced by Entities (and updated by World through its update function performed on its list of game world Entities)
+2) Create a PhysicsController class and begin simple dynamics simulation
 
 RENDERING
-1) Create the Material and Texture classes
-2) Create a threaded Texture loader, which creates an additional OpenGL context for loading textures into GPU memory
-3) Create an AnimationController and begin doing animated PNG loading and playing
+1) Create a threaded Texture loader, which creates an additional OpenGL context for loading textures into GPU memory
+2) Create an AnimationController and begin doing animated PNG loading and playing
 
 CONTENT
 1) Create a Property List loader, which can read generic property lists and update resources with them

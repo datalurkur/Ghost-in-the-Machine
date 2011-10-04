@@ -20,6 +20,7 @@ public:
 	template <typename T>
 	void deleteNode(const std::string &name);
 
+    void update();
 	void render(Camera *camera, RenderContext *context);
 
 private:

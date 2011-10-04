@@ -16,6 +16,7 @@ void World::update(int elapsed) {
     for(; itr != _entities.end(); itr++) {
         itr->second->update(elapsed);
     }
+    _scene->update();
 }
 
 void World::render(Camera *camera, RenderContext *context) {

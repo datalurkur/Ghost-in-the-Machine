@@ -4,7 +4,7 @@
 RenderContext::RenderContext() {}
 
 void RenderContext::render(const Matrix4 &projection, const Matrix4 &modelView, RenderableList &renderables) {
-	Info("Rendering " << renderables.size() << " renderables");
+	//Info("Rendering " << renderables.size() << " renderables");
 	glMatrixMode(GL_PROJECTION);
 	glLoadMatrixf(projection.ptr());
 

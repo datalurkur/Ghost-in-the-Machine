@@ -6,6 +6,7 @@
 #include <Render/Renderable.h>
 
 class SceneNode;
+class SceneManager;
 typedef std::map<std::string, SceneNode*> NodeMap;
 typedef std::list<SceneNode*> NodeList;
 
@@ -70,6 +71,7 @@ protected:
 	bool _dirty;
 
 	RenderableList _renderables;
+    friend class SceneManager;
 };
 
 #endif

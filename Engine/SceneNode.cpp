@@ -33,6 +33,9 @@ const std::string &SceneNode::getType() const {	return NodeType; }
 void SceneNode::addChild(SceneNode *child) {
 	_children[child->getName()] = child;
 	child->_parent = this;
+
+    // Bounding boxes need to be recomputed
+    flagDirty(Upward);
 }
 
 void SceneNode::getNodes(NodeList &list, Frustum *frustum) {
@@ -48,7 +51,7 @@ void SceneNode::getNodes(NodeList &list, Frustum *frustum) {
 }
 
 void SceneNode::getRenderables(RenderableList &list) {
-	Info("SceneNode " << _name << " adding " << _renderables.size() << " renderables to list.");
+	//Info("SceneNode " << _name << " adding " << _renderables.size() << " renderables to list.");
 	list.insert(list.end(), _renderables.begin(), _renderables.end());
 }
 
@@ -67,35 +70,41 @@ void SceneNode::clearRenderables(bool deleteOnClear) {
 }
 
 void SceneNode::updateCachedValues() {
-	if(!_dirty) { return; }
+	if(_dirty) {
+        // Update any values dependent on the parent state
+        if(_parent) {
+            _absolutePosition = _position + _parent->getAbsolutePosition();
+        }
 
-	// Update any values dependent on the parent state
-	if(_parent) {
-		_absolutePosition = _position + _parent->getAbsolutePosition();
-	}
+        // Update any values dependent on other local values
+        // FIXME - Eventually, these need to be full affine transformations, to deal with rotation
+        _affine = Matrix4::MakeTranslation(_position.x, _position.y, 0.0);
+        _absoluteAffine = Matrix4::MakeTranslation(_absolutePosition.x, _absolutePosition.y, 0);
 
-	// Update any values dependent on other local values
-	// FIXME - Eventually, these need to be full affine transformations, to deal with rotation
-	_affine = Matrix4::MakeTranslation(_position.x, _position.y, 0.0);
-	_absoluteAffine = Matrix4::MakeTranslation(_absolutePosition.x, _absolutePosition.y, 0);
-
-	_dirty = false;
-
-	RenderableList::iterator rItr = _renderables.begin();
-	for(; rItr != _renderables.end(); rItr++) {
-		(*rItr)->setViewMatrix(_absoluteAffine);
-	}
+        // Update renderable view matrices
+        RenderableList::iterator rItr = _renderables.begin();
+        for(; rItr != _renderables.end(); rItr++) {
+            (*rItr)->setViewMatrix(_absoluteAffine);
+        }
+    }
 
 	NodeMap::iterator itr = _children.begin();
 	for(; itr != _children.end(); itr++) {
 		itr->second->updateCachedValues();
 	}
+    
+    if(_dirty) {
+        // Update any values dependend on child states
+        // FIXME - Update bounding boxes here
+
+        _dirty = false;
+    }
 }
 
 void SceneNode::flagDirty(DirtyPropagation direction) {
 	_dirty = true;
-	if(direction == Upward && _parent) {
-		_parent->flagDirty(direction);
+	if(direction == Upward) {
+        if(_parent) { _parent->flagDirty(direction); }
 	} else {
 		NodeMap::iterator itr = _children.begin();
 		for(; itr != _children.end(); itr++) {

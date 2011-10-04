@@ -83,8 +83,12 @@ void SceneNode::clearRenderables(bool deleteOnClear) {
 }
 
 void SceneNode::updateCachedValues() {
-	if(_dirty) {
-        // Update any values dependent on the parent state
+	bool needsUpdate = _dirty;
+
+	if(needsUpdate) {
+		_dirty = false;
+
+		// Update any values dependent on the parent state
         if(_parent) {
             _absolutePosition = _position + _parent->getAbsolutePosition();
         }
@@ -106,11 +110,9 @@ void SceneNode::updateCachedValues() {
 		itr->second->updateCachedValues();
 	}
     
-    if(_dirty) {
+    if(needsUpdate) {
         // Update any values dependend on child states
         // FIXME - Update bounding boxes here
-
-        _dirty = false;
     }
 }
 

@@ -23,6 +23,9 @@ void PlayingState::setup(va_list args) {
 
     _camera = _world->createObject<OrthoCamera>("MainCam");
     _core->getViewport()->registerCamera(_camera);
+
+	// Update the world once with no time to make sure the scene gets populated fully before rendering
+	_world->update(0);
 }
 
 void PlayingState::teardown() {

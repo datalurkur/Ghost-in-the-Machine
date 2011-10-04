@@ -51,9 +51,9 @@
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>SDL.lib;SDLmain.lib;opengl32.lib;glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>SDL_ttf.lib;SDL.lib;SDLmain.lib;opengl32.lib;glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <SubSystem>Windows</SubSystem>
-      <AdditionalLibraryDirectories>C:\GitM\Win7\lib\sdl;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\GitM\Win7\lib\sdl_ttf;C:\GitM\Win7\lib\sdl;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -94,12 +94,14 @@
     <ClCompile Include="..\GitM\PlayingState.cpp" />
     <ClCompile Include="..\GitM\QuadTreeSceneManager.cpp" />
     <ClCompile Include="..\GitM\World.cpp" />
+    <ClCompile Include="..\Render\Font.cpp" />
     <ClCompile Include="..\Render\Material.cpp" />
     <ClCompile Include="..\Render\Renderable.cpp" />
     <ClCompile Include="..\Render\RenderContext.cpp" />
     <ClCompile Include="..\Render\Texture.cpp" />
     <ClCompile Include="..\Render\Viewport.cpp" />
     <ClCompile Include="..\Resource\ThreadedFactory.cpp" />
+    <ClCompile Include="..\Resource\ThreadedTTFFactory.cpp" />
     <ClCompile Include="..\Resource\ThreadedWorldFactory.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -126,12 +128,14 @@
     <ClInclude Include="..\GitM\PlayingState.h" />
     <ClInclude Include="..\GitM\QuadTreeSceneManager.h" />
     <ClInclude Include="..\GitM\World.h" />
+    <ClInclude Include="..\Render\Font.h" />
     <ClInclude Include="..\Render\Material.h" />
     <ClInclude Include="..\Render\Renderable.h" />
     <ClInclude Include="..\Render\RenderContext.h" />
     <ClInclude Include="..\Render\Texture.h" />
     <ClInclude Include="..\Render\Viewport.h" />
     <ClInclude Include="..\Resource\ThreadedFactory.h" />
+    <ClInclude Include="..\Resource\ThreadedTTFFactory.h" />
     <ClInclude Include="..\Resource\ThreadedWorldFactory.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

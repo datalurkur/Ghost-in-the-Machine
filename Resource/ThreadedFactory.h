@@ -27,6 +27,17 @@ struct ThreadInfo {
     ThreadInfo(SDL_Thread *nThread);
 };
 
+template <typename T>
+struct FactoryThreadParams {
+	std::string name;
+	T *ptr;
+
+	FactoryThreadParams(const std::string &nName, T* nPtr);
+};
+
+template <typename T>
+FactoryThreadParams<T>::FactoryThreadParams(const std::string &nName, T* nPtr): name(nName), ptr(nPtr) {}
+
 template <typename T, typename F>
 class ThreadedFactory {
 public:
@@ -113,7 +124,8 @@ T* ThreadedFactory<T,F>::GetOrLoad(const std::string &name) {
 
 	if(!t) {
 		t = new T();
-		Threads[t] = ThreadInfo(SDL_CreateThread(F::ThreadedLoad, t));
+		FactoryThreadParams<T> params(name, t);
+		Threads[t] = ThreadInfo(SDL_CreateThread(F::ThreadedLoad, (void*)&params));
 		F::Resources[name] = t;
 	}
     UNLOCK_MUTEX;

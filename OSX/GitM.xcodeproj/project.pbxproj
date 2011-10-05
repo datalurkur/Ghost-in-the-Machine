@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		E146AA35143B5E9500DA17E9 /* ThreadedFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E146AA31143B5E9500DA17E9 /* ThreadedFactory.cpp */; };
 		E146AA36143B5E9500DA17E9 /* ThreadedWorldFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E146AA33143B5E9500DA17E9 /* ThreadedWorldFactory.cpp */; };
+		E146AA38143BAB6F00DA17E9 /* SDL_ttf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E146AA37143BAB6F00DA17E9 /* SDL_ttf.framework */; };
 		E152C6441434C75E00D83C44 /* Window.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E152C6421434C75E00D83C44 /* Window.cpp */; };
 		E152C6501434C8E100D83C44 /* SDL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E152C64F1434C8E100D83C44 /* SDL.framework */; };
 		E152C6541434C8F800D83C44 /* SDLMain.m in Sources */ = {isa = PBXBuildFile; fileRef = E152C6531434C8F800D83C44 /* SDLMain.m */; };
@@ -39,6 +40,11 @@
 		E1BAD36914366A4C00D7430C /* Viewport.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1BAD36714366A4C00D7430C /* Viewport.cpp */; };
 		E1BAD36E14366A6000D7430C /* Camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1BAD36A14366A6000D7430C /* Camera.cpp */; };
 		E1BAD36F14366A6000D7430C /* Frustum.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1BAD36C14366A6000D7430C /* Frustum.cpp */; };
+		E1ED2730143CB53100D6FFBC /* Font.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1ED272E143CB53000D6FFBC /* Font.cpp */; };
+		E1ED2734143CB53800D6FFBC /* Texture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1ED2732143CB53800D6FFBC /* Texture.cpp */; };
+		E1ED2739143CB54F00D6FFBC /* ThreadedTextureFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1ED2735143CB54F00D6FFBC /* ThreadedTextureFactory.cpp */; };
+		E1ED273A143CB54F00D6FFBC /* ThreadedTTFFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1ED2737143CB54F00D6FFBC /* ThreadedTTFFactory.cpp */; };
+		E1ED273C143CB59000D6FFBC /* SDL_image.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1ED273B143CB59000D6FFBC /* SDL_image.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +69,7 @@
 		E146AA32143B5E9500DA17E9 /* ThreadedFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ThreadedFactory.h; path = ../Resource/ThreadedFactory.h; sourceTree = "<group>"; };
 		E146AA33143B5E9500DA17E9 /* ThreadedWorldFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ThreadedWorldFactory.cpp; path = ../Resource/ThreadedWorldFactory.cpp; sourceTree = "<group>"; };
 		E146AA34143B5E9500DA17E9 /* ThreadedWorldFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ThreadedWorldFactory.h; path = ../Resource/ThreadedWorldFactory.h; sourceTree = "<group>"; };
+		E146AA37143BAB6F00DA17E9 /* SDL_ttf.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL_ttf.framework; path = Frameworks/SDL_ttf.framework; sourceTree = "<group>"; };
 		E152C6421434C75E00D83C44 /* Window.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Window.cpp; path = ../Engine/Window.cpp; sourceTree = "<group>"; };
 		E152C6431434C75E00D83C44 /* Window.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Window.h; path = ../Engine/Window.h; sourceTree = "<group>"; };
 		E152C64F1434C8E100D83C44 /* SDL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL.framework; path = Frameworks/SDL.framework; sourceTree = "<group>"; };
@@ -108,6 +115,15 @@
 		E1BAD36B14366A6000D7430C /* Camera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Camera.h; path = ../Engine/Camera.h; sourceTree = "<group>"; };
 		E1BAD36C14366A6000D7430C /* Frustum.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Frustum.cpp; path = ../Engine/Frustum.cpp; sourceTree = "<group>"; };
 		E1BAD36D14366A6000D7430C /* Frustum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Frustum.h; path = ../Engine/Frustum.h; sourceTree = "<group>"; };
+		E1ED272E143CB53000D6FFBC /* Font.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Font.cpp; path = ../Render/Font.cpp; sourceTree = "<group>"; };
+		E1ED272F143CB53100D6FFBC /* Font.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Font.h; path = ../Render/Font.h; sourceTree = "<group>"; };
+		E1ED2732143CB53800D6FFBC /* Texture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Texture.cpp; path = ../Render/Texture.cpp; sourceTree = "<group>"; };
+		E1ED2733143CB53800D6FFBC /* Texture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Texture.h; path = ../Render/Texture.h; sourceTree = "<group>"; };
+		E1ED2735143CB54F00D6FFBC /* ThreadedTextureFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ThreadedTextureFactory.cpp; path = ../Resource/ThreadedTextureFactory.cpp; sourceTree = "<group>"; };
+		E1ED2736143CB54F00D6FFBC /* ThreadedTextureFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ThreadedTextureFactory.h; path = ../Resource/ThreadedTextureFactory.h; sourceTree = "<group>"; };
+		E1ED2737143CB54F00D6FFBC /* ThreadedTTFFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ThreadedTTFFactory.cpp; path = ../Resource/ThreadedTTFFactory.cpp; sourceTree = "<group>"; };
+		E1ED2738143CB54F00D6FFBC /* ThreadedTTFFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ThreadedTTFFactory.h; path = ../Resource/ThreadedTTFFactory.h; sourceTree = "<group>"; };
+		E1ED273B143CB59000D6FFBC /* SDL_image.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL_image.framework; path = Frameworks/SDL_image.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +134,8 @@
 				E1BAD36514364B0900D7430C /* OpenGL.framework in Frameworks */,
 				E15FA1EA142BDF1C00CC6CE2 /* Cocoa.framework in Frameworks */,
 				E152C6501434C8E100D83C44 /* SDL.framework in Frameworks */,
+				E146AA38143BAB6F00DA17E9 /* SDL_ttf.framework in Frameworks */,
+				E1ED273C143CB59000D6FFBC /* SDL_image.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,6 +198,8 @@
 		E13A3FF5142A79C700D7EA2A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E1ED273B143CB59000D6FFBC /* SDL_image.framework */,
+				E146AA37143BAB6F00DA17E9 /* SDL_ttf.framework */,
 				E1BAD36414364B0900D7430C /* OpenGL.framework */,
 				E152C64F1434C8E100D83C44 /* SDL.framework */,
 				E13A3FF6142A79C700D7EA2A /* Cocoa.framework */,
@@ -203,6 +223,10 @@
 			children = (
 				E146AA31143B5E9500DA17E9 /* ThreadedFactory.cpp */,
 				E146AA32143B5E9500DA17E9 /* ThreadedFactory.h */,
+				E1ED2735143CB54F00D6FFBC /* ThreadedTextureFactory.cpp */,
+				E1ED2736143CB54F00D6FFBC /* ThreadedTextureFactory.h */,
+				E1ED2737143CB54F00D6FFBC /* ThreadedTTFFactory.cpp */,
+				E1ED2738143CB54F00D6FFBC /* ThreadedTTFFactory.h */,
 				E146AA33143B5E9500DA17E9 /* ThreadedWorldFactory.cpp */,
 				E146AA34143B5E9500DA17E9 /* ThreadedWorldFactory.h */,
 			);
@@ -256,14 +280,18 @@
 		E1B4F3201430D68300A87C70 /* Render */ = {
 			isa = PBXGroup;
 			children = (
+				E1ED272E143CB53000D6FFBC /* Font.cpp */,
+				E1ED272F143CB53100D6FFBC /* Font.h */,
 				E16C5AFB143A54000063EE8C /* Material.cpp */,
 				E16C5AFC143A54000063EE8C /* Material.h */,
-				E1BAD36714366A4C00D7430C /* Viewport.cpp */,
-				E1BAD36814366A4C00D7430C /* Viewport.h */,
 				E1B4F3211430D69200A87C70 /* Renderable.cpp */,
 				E1B4F3221430D69200A87C70 /* Renderable.h */,
 				E1B4F3231430D69200A87C70 /* RenderContext.cpp */,
 				E1B4F3241430D69200A87C70 /* RenderContext.h */,
+				E1ED2732143CB53800D6FFBC /* Texture.cpp */,
+				E1ED2733143CB53800D6FFBC /* Texture.h */,
+				E1BAD36714366A4C00D7430C /* Viewport.cpp */,
+				E1BAD36814366A4C00D7430C /* Viewport.h */,
 			);
 			name = Render;
 			sourceTree = "<group>";
@@ -394,6 +422,10 @@
 				E16C5AFD143A54000063EE8C /* Material.cpp in Sources */,
 				E146AA35143B5E9500DA17E9 /* ThreadedFactory.cpp in Sources */,
 				E146AA36143B5E9500DA17E9 /* ThreadedWorldFactory.cpp in Sources */,
+				E1ED2730143CB53100D6FFBC /* Font.cpp in Sources */,
+				E1ED2734143CB53800D6FFBC /* Texture.cpp in Sources */,
+				E1ED2739143CB54F00D6FFBC /* ThreadedTextureFactory.cpp in Sources */,
+				E1ED273A143CB54F00D6FFBC /* ThreadedTTFFactory.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

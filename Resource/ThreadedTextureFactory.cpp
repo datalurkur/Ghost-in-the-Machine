@@ -1,28 +1,19 @@
 #include <Resource/ThreadedTextureFactory.h>
-#include <Render/RenderContext.h>
 #include <SDL/SDL_image.h>
+#include <SDL/SDL_opengl.h>
 
 int ThreadedTextureFactory::ThreadedLoad(void *data) {
     Texture *texture = ((FactoryThreadParams<Texture>*)data)->ptr;
 	std::string name = ((FactoryThreadParams<Texture>*)data)->name;
 
-	// Create a temporary rendering context so that we don't block the main rendering context from rendering while loading textures
-	HDC hdc;
-	HGLRC context;
-
-	// Get the current device context, use it to create a new render context, and make the new context current
-	hdc = wglGetCurrentDC();
-	context = wglCreateContext(hdc);
-	wglMakeCurrent(hdc, context);
+    // FIXME - SDL 1.2 doesn't support rendering context creation
+    //  Upon release of SDL 1.3, it will make sense to revisit this and create
+    //   a separate context for non-blocking texture loading
 
 	// Load the texture
 	SDL_Surface *tSurf;
 	//tSurf = IMG_Load(name.c_str());
 	// FIXME - Finish image loading
-
-	// Done with our temporary render context, kill it
-	wglMakeCurrent(0, 0);
-	wglDeleteContext(context);
 	
 	Finish(texture);
 

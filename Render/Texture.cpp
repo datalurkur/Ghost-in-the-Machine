@@ -1,5 +1,4 @@
 #include <Render/Texture.h>
-#include <SDL/SDL_opengl.h>
 
 Texture::Texture():
 	_frames(1), _ids(0)

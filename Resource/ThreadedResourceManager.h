@@ -1,5 +1,5 @@
-#ifndef THREADEDFACTORY_H
-#define THREADEDFACTORY_H
+#ifndef THREADEDRESOURCEMANAGER_H
+#define THREADEDRESOURCEMANAGER_H
 
 #include <Base/Base.h>
 #include <Base/Log.h>
@@ -28,25 +28,30 @@ struct ThreadInfo {
 };
 
 template <typename T>
-struct FactoryThreadParams {
+struct ResourceThreadParams {
 	std::string name;
 	T *ptr;
 
-	FactoryThreadParams(const std::string &nName, T* nPtr);
+	ResourceThreadParams(const std::string &nName, T* nPtr);
 };
 
 template <typename T>
-FactoryThreadParams<T>::FactoryThreadParams(const std::string &nName, T* nPtr): name(nName), ptr(nPtr) {}
+ResourceThreadParams<T>::ResourceThreadParams(const std::string &nName, T* nPtr): name(nName), ptr(nPtr) {}
 
 template <typename T, typename F>
-class ThreadedFactory {
+class ThreadedResourceManager {
 public:
     static void Setup();
     static void Teardown();
 
+    static T* Get(const std::string &name);
+    static T* Load(const std::string &name);
     static T* GetOrLoad(const std::string &name);
     static void Unload(T* t);
 	static void Unload(const std::string &name);
+
+    static bool Register(const std::string &name, T* t);
+    static T* Unregister(const std::string &name);
 
     static float Progress(T* t);
     static std::string Status(T* t);
@@ -73,21 +78,21 @@ protected:
 };
 
 template <typename T, typename F>
-SDL_mutex* ThreadedFactory<T,F>::Lock;
+SDL_mutex* ThreadedResourceManager<T,F>::Lock;
 
 template <typename T, typename F>
-typename ThreadedFactory<T,F>::ThreadMap ThreadedFactory<T,F>::Threads;
+typename ThreadedResourceManager<T,F>::ThreadMap ThreadedResourceManager<T,F>::Threads;
 
 template <typename T, typename F>
-typename ThreadedFactory<T,F>::ContentMap ThreadedFactory<T,F>::Resources;
+typename ThreadedResourceManager<T,F>::ContentMap ThreadedResourceManager<T,F>::Resources;
 
 template <typename T, typename F>
-void ThreadedFactory<T,F>::Setup() {
+void ThreadedResourceManager<T,F>::Setup() {
     F::Lock = SDL_CreateMutex();
 }
 
 template <typename T, typename F>
-void ThreadedFactory<T,F>::Teardown() {
+void ThreadedResourceManager<T,F>::Teardown() {
     if(F::Lock) {
         SDL_mutexP(F::Lock);
 
@@ -110,23 +115,15 @@ void ThreadedFactory<T,F>::Teardown() {
 }
 
 template <typename T, typename F>
-T* ThreadedFactory<T,F>::GetOrLoad(const std::string &name) {
-	T* t = 0;
+T* ThreadedResourceManager<T,F>::Get(const std::string &name) {
+    T* t = 0;
 
 	LOCK_MUTEX;
 	typename ContentMap::iterator itr = F::Resources.begin();
 	for(; itr != F::Resources.end(); itr++) {
 		if(name == itr->first) {
 			t = itr->second;
-			break;
 		}
-	}
-
-	if(!t) {
-		t = new T();
-		FactoryThreadParams<T> params(name, t);
-		Threads[t] = ThreadInfo(SDL_CreateThread(F::ThreadedLoad, (void*)&params));
-		F::Resources[name] = t;
 	}
     UNLOCK_MUTEX;
 
@@ -134,7 +131,31 @@ T* ThreadedFactory<T,F>::GetOrLoad(const std::string &name) {
 }
 
 template <typename T, typename F>
-void ThreadedFactory<T,F>::Unload(T* t) {
+T* ThreadedResourceManager<T,F>::Load(const std::string &name) {
+	T* t = 0;
+
+	LOCK_MUTEX;
+    t = new T();
+    ResourceThreadParams<T> params(name, t);
+    Threads[t] = ThreadInfo(SDL_CreateThread(F::ThreadedLoad, (void*)&params));
+    F::Resources[name] = t;
+    UNLOCK_MUTEX;
+
+    return t;
+}
+
+template <typename T, typename F>
+T* ThreadedResourceManager<T,F>::GetOrLoad(const std::string &name) {
+    T* t;
+    t = F::Get(name);
+    if(!t) {
+        t = F::Load(name);
+    }
+    return t;
+}
+
+template <typename T, typename F>
+void ThreadedResourceManager<T,F>::Unload(T* t) {
     LOCK_MUTEX;
     typename ContentMap::iterator itr = F::Resources.begin();
     for(; itr != F::Resources.end(); itr++) {
@@ -146,7 +167,7 @@ void ThreadedFactory<T,F>::Unload(T* t) {
 }
 
 template <typename T, typename F>
-void ThreadedFactory<T,F>::Unload(const std::string &name) {
+void ThreadedResourceManager<T,F>::Unload(const std::string &name) {
     LOCK_MUTEX;
     typename ContentMap::iterator itr = F::Resources.begin();
     for(; itr != F::Resources.end(); itr++) {
@@ -160,14 +181,55 @@ void ThreadedFactory<T,F>::Unload(const std::string &name) {
 }
 
 template <typename T, typename F>
-void ThreadedFactory<T,F>::Finish(T *t) {
+bool ThreadedResourceManager<T,F>::Register(const std::string &name, T* t) {
+    LOCK_MUTEX;
+    typename ContentMap::iterator itr = F::Resources.begin();
+    for(; itr != F::Resources.end(); itr++) {
+        if(itr->first == name) {
+            break;
+        }
+    }
+
+    if(itr != F::Resources.end()) {
+        F::Resources[name] = t;
+        UNLOCK_MUTEX;
+        return true;
+    } else {
+        UNLOCK_MUTEX;
+        return true;
+    }
+}
+
+template <typename T, typename F>
+T* ThreadedResourceManager<T,F>::Unregister(const std::string &name) {
+    T* t = 0;
+
+    LOCK_MUTEX;
+    typename ContentMap::iterator itr = F::Resources.begin();
+    for(; itr != F::Resources.end(); itr++) {
+        if(itr->first == name) {
+            t = itr->second;
+            break;
+        }
+    }
+
+    if(itr != F::Resources.end()) {
+        F::Resources.erase(itr);
+    }
+    UNLOCK_MUTEX;
+
+    return t;
+}
+
+template <typename T, typename F>
+void ThreadedResourceManager<T,F>::Finish(T *t) {
     LOCK_MUTEX;
     F::Threads.erase(t);
     UNLOCK_MUTEX;
 }
 
 template <typename T, typename F>
-float ThreadedFactory<T,F>::Progress(T *t) {
+float ThreadedResourceManager<T,F>::Progress(T *t) {
     float progress;
     ThreadInfo* threadInfo;
 
@@ -181,7 +243,7 @@ float ThreadedFactory<T,F>::Progress(T *t) {
 }
 
 template <typename T, typename F>
-std::string ThreadedFactory<T,F>::Status(T *t) {
+std::string ThreadedResourceManager<T,F>::Status(T *t) {
     std::string status;
     ThreadInfo* threadInfo; 
 
@@ -195,7 +257,7 @@ std::string ThreadedFactory<T,F>::Status(T *t) {
 }
 
 template <typename T, typename F>
-bool ThreadedFactory<T,F>::IsDone(T *t) {
+bool ThreadedResourceManager<T,F>::IsDone(T *t) {
     bool done;
 
     LOCK_MUTEX;
@@ -206,21 +268,21 @@ bool ThreadedFactory<T,F>::IsDone(T *t) {
 }
 
 template <typename T, typename F>
-int ThreadedFactory<T,F>::ThreadedLoad(void* data) {
-    Error("ThreadedLoad not implemented for default ThreadedFactory");
+int ThreadedResourceManager<T,F>::ThreadedLoad(void* data) {
+    Error("ThreadedLoad not implemented for default ThreadedResourceManager");
     F::Finish((T*)data);
     return 0;
 }
 
 template <typename T, typename F>
-void ThreadedFactory<T,F>::UpdateProgress(T* t, float progress) {
+void ThreadedResourceManager<T,F>::UpdateProgress(T* t, float progress) {
     LOCK_MUTEX;
     F::Threads[t].progress = progress;
     UNLOCK_MUTEX;
 }
 
 template <typename T, typename F>
-void ThreadedFactory<T,F>::UpdateStatus(T* t, const std::string &status) {
+void ThreadedResourceManager<T,F>::UpdateStatus(T* t, const std::string &status) {
     LOCK_MUTEX;
     F::Threads[t].status = status;
     UNLOCK_MUTEX;
@@ -229,7 +291,7 @@ void ThreadedFactory<T,F>::UpdateStatus(T* t, const std::string &status) {
 // WARNING: This function is not threadsafe, and is designed to be called
 //  from within functions that make use of mutex locking
 template <typename T, typename F>
-ThreadInfo* ThreadedFactory<T,F>::GetThreadInfo(T *t) {
+ThreadInfo* ThreadedResourceManager<T,F>::GetThreadInfo(T *t) {
     ThreadMapIterator itr = F::Threads.find(t);
     if(itr != F::Threads.end()) {
         return &(itr->second);

@@ -8,7 +8,7 @@
 
 class Camera;
 class RenderContext;
-class ThreadedWorldFactory;
+class WorldManager;
 
 class World {
 public:
@@ -41,7 +41,7 @@ protected:
 
     // Objects created by the world factory
 	Player *_player;
-    friend class ThreadedWorldFactory;
+    friend class WorldManager;
 };
 
 template <typename T>

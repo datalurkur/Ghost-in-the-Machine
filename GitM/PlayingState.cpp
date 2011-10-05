@@ -1,5 +1,5 @@
 #include <GitM/PlayingState.h>
-#include <Resource/ThreadedWorldFactory.h>
+#include <Resource/WorldManager.h>
 #include <Engine/Core.h>
 #include <Engine/OrthoCamera.h>
 
@@ -30,5 +30,5 @@ void PlayingState::setup(va_list args) {
 
 void PlayingState::teardown() {
     Info("Tearing down PlayingState");
-    ThreadedWorldFactory::Unload(_world);
+    WorldManager::Unload(_world);
 }

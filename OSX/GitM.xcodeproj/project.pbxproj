@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E146AA35143B5E9500DA17E9 /* ThreadedFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E146AA31143B5E9500DA17E9 /* ThreadedFactory.cpp */; };
-		E146AA36143B5E9500DA17E9 /* ThreadedWorldFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E146AA33143B5E9500DA17E9 /* ThreadedWorldFactory.cpp */; };
 		E146AA38143BAB6F00DA17E9 /* SDL_ttf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E146AA37143BAB6F00DA17E9 /* SDL_ttf.framework */; };
 		E152C6441434C75E00D83C44 /* Window.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E152C6421434C75E00D83C44 /* Window.cpp */; };
 		E152C6501434C8E100D83C44 /* SDL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E152C64F1434C8E100D83C44 /* SDL.framework */; };
@@ -42,9 +40,11 @@
 		E1BAD36F14366A6000D7430C /* Frustum.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1BAD36C14366A6000D7430C /* Frustum.cpp */; };
 		E1ED2730143CB53100D6FFBC /* Font.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1ED272E143CB53000D6FFBC /* Font.cpp */; };
 		E1ED2734143CB53800D6FFBC /* Texture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1ED2732143CB53800D6FFBC /* Texture.cpp */; };
-		E1ED2739143CB54F00D6FFBC /* ThreadedTextureFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1ED2735143CB54F00D6FFBC /* ThreadedTextureFactory.cpp */; };
-		E1ED273A143CB54F00D6FFBC /* ThreadedTTFFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1ED2737143CB54F00D6FFBC /* ThreadedTTFFactory.cpp */; };
 		E1ED273C143CB59000D6FFBC /* SDL_image.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1ED273B143CB59000D6FFBC /* SDL_image.framework */; };
+		E1ED2745143CEB5F00D6FFBC /* TextureManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1ED273D143CEB5F00D6FFBC /* TextureManager.cpp */; };
+		E1ED2746143CEB5F00D6FFBC /* ThreadedResourceManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1ED273F143CEB5F00D6FFBC /* ThreadedResourceManager.cpp */; };
+		E1ED2747143CEB5F00D6FFBC /* TTFManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1ED2741143CEB5F00D6FFBC /* TTFManager.cpp */; };
+		E1ED2748143CEB5F00D6FFBC /* WorldManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1ED2743143CEB5F00D6FFBC /* WorldManager.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,10 +65,6 @@
 		E13A3FF9142A79C700D7EA2A /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		E13A3FFA142A79C700D7EA2A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		E13A3FFB142A79C700D7EA2A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		E146AA31143B5E9500DA17E9 /* ThreadedFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ThreadedFactory.cpp; path = ../Resource/ThreadedFactory.cpp; sourceTree = "<group>"; };
-		E146AA32143B5E9500DA17E9 /* ThreadedFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ThreadedFactory.h; path = ../Resource/ThreadedFactory.h; sourceTree = "<group>"; };
-		E146AA33143B5E9500DA17E9 /* ThreadedWorldFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ThreadedWorldFactory.cpp; path = ../Resource/ThreadedWorldFactory.cpp; sourceTree = "<group>"; };
-		E146AA34143B5E9500DA17E9 /* ThreadedWorldFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ThreadedWorldFactory.h; path = ../Resource/ThreadedWorldFactory.h; sourceTree = "<group>"; };
 		E146AA37143BAB6F00DA17E9 /* SDL_ttf.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL_ttf.framework; path = Frameworks/SDL_ttf.framework; sourceTree = "<group>"; };
 		E152C6421434C75E00D83C44 /* Window.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Window.cpp; path = ../Engine/Window.cpp; sourceTree = "<group>"; };
 		E152C6431434C75E00D83C44 /* Window.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Window.h; path = ../Engine/Window.h; sourceTree = "<group>"; };
@@ -119,11 +115,15 @@
 		E1ED272F143CB53100D6FFBC /* Font.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Font.h; path = ../Render/Font.h; sourceTree = "<group>"; };
 		E1ED2732143CB53800D6FFBC /* Texture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Texture.cpp; path = ../Render/Texture.cpp; sourceTree = "<group>"; };
 		E1ED2733143CB53800D6FFBC /* Texture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Texture.h; path = ../Render/Texture.h; sourceTree = "<group>"; };
-		E1ED2735143CB54F00D6FFBC /* ThreadedTextureFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ThreadedTextureFactory.cpp; path = ../Resource/ThreadedTextureFactory.cpp; sourceTree = "<group>"; };
-		E1ED2736143CB54F00D6FFBC /* ThreadedTextureFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ThreadedTextureFactory.h; path = ../Resource/ThreadedTextureFactory.h; sourceTree = "<group>"; };
-		E1ED2737143CB54F00D6FFBC /* ThreadedTTFFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ThreadedTTFFactory.cpp; path = ../Resource/ThreadedTTFFactory.cpp; sourceTree = "<group>"; };
-		E1ED2738143CB54F00D6FFBC /* ThreadedTTFFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ThreadedTTFFactory.h; path = ../Resource/ThreadedTTFFactory.h; sourceTree = "<group>"; };
 		E1ED273B143CB59000D6FFBC /* SDL_image.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL_image.framework; path = Frameworks/SDL_image.framework; sourceTree = "<group>"; };
+		E1ED273D143CEB5F00D6FFBC /* TextureManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TextureManager.cpp; path = ../Resource/TextureManager.cpp; sourceTree = "<group>"; };
+		E1ED273E143CEB5F00D6FFBC /* TextureManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TextureManager.h; path = ../Resource/TextureManager.h; sourceTree = "<group>"; };
+		E1ED273F143CEB5F00D6FFBC /* ThreadedResourceManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ThreadedResourceManager.cpp; path = ../Resource/ThreadedResourceManager.cpp; sourceTree = "<group>"; };
+		E1ED2740143CEB5F00D6FFBC /* ThreadedResourceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ThreadedResourceManager.h; path = ../Resource/ThreadedResourceManager.h; sourceTree = "<group>"; };
+		E1ED2741143CEB5F00D6FFBC /* TTFManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TTFManager.cpp; path = ../Resource/TTFManager.cpp; sourceTree = "<group>"; };
+		E1ED2742143CEB5F00D6FFBC /* TTFManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TTFManager.h; path = ../Resource/TTFManager.h; sourceTree = "<group>"; };
+		E1ED2743143CEB5F00D6FFBC /* WorldManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = WorldManager.cpp; path = ../Resource/WorldManager.cpp; sourceTree = "<group>"; };
+		E1ED2744143CEB5F00D6FFBC /* WorldManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WorldManager.h; path = ../Resource/WorldManager.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -221,14 +221,14 @@
 		E146AA30143B5E7100DA17E9 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				E146AA31143B5E9500DA17E9 /* ThreadedFactory.cpp */,
-				E146AA32143B5E9500DA17E9 /* ThreadedFactory.h */,
-				E1ED2735143CB54F00D6FFBC /* ThreadedTextureFactory.cpp */,
-				E1ED2736143CB54F00D6FFBC /* ThreadedTextureFactory.h */,
-				E1ED2737143CB54F00D6FFBC /* ThreadedTTFFactory.cpp */,
-				E1ED2738143CB54F00D6FFBC /* ThreadedTTFFactory.h */,
-				E146AA33143B5E9500DA17E9 /* ThreadedWorldFactory.cpp */,
-				E146AA34143B5E9500DA17E9 /* ThreadedWorldFactory.h */,
+				E1ED273D143CEB5F00D6FFBC /* TextureManager.cpp */,
+				E1ED273E143CEB5F00D6FFBC /* TextureManager.h */,
+				E1ED273F143CEB5F00D6FFBC /* ThreadedResourceManager.cpp */,
+				E1ED2740143CEB5F00D6FFBC /* ThreadedResourceManager.h */,
+				E1ED2741143CEB5F00D6FFBC /* TTFManager.cpp */,
+				E1ED2742143CEB5F00D6FFBC /* TTFManager.h */,
+				E1ED2743143CEB5F00D6FFBC /* WorldManager.cpp */,
+				E1ED2744143CEB5F00D6FFBC /* WorldManager.h */,
 			);
 			name = Resource;
 			sourceTree = "<group>";
@@ -420,12 +420,12 @@
 				E16C5AF8143A43AD0063EE8C /* EventHandler.cpp in Sources */,
 				E16C5AF9143A43AD0063EE8C /* WindowListener.cpp in Sources */,
 				E16C5AFD143A54000063EE8C /* Material.cpp in Sources */,
-				E146AA35143B5E9500DA17E9 /* ThreadedFactory.cpp in Sources */,
-				E146AA36143B5E9500DA17E9 /* ThreadedWorldFactory.cpp in Sources */,
 				E1ED2730143CB53100D6FFBC /* Font.cpp in Sources */,
 				E1ED2734143CB53800D6FFBC /* Texture.cpp in Sources */,
-				E1ED2739143CB54F00D6FFBC /* ThreadedTextureFactory.cpp in Sources */,
-				E1ED273A143CB54F00D6FFBC /* ThreadedTTFFactory.cpp in Sources */,
+				E1ED2745143CEB5F00D6FFBC /* TextureManager.cpp in Sources */,
+				E1ED2746143CEB5F00D6FFBC /* ThreadedResourceManager.cpp in Sources */,
+				E1ED2747143CEB5F00D6FFBC /* TTFManager.cpp in Sources */,
+				E1ED2748143CEB5F00D6FFBC /* WorldManager.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

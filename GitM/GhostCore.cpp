@@ -1,15 +1,21 @@
 #include <GitM/GhostCore.h>
 #include <GitM/GameState.h>
 
-#include <Resource/ThreadedWorldFactory.h>
+#include <Resource/WorldManager.h>
+#include <Resource/TTFManager.h>
+#include <Resource/TextureManager.h>
 
 GhostCore::GhostCore() {
-    ThreadedWorldFactory::Setup();
+    WorldManager::Setup();
+    TTFManager::Setup();
+    TextureManager::Setup();
 
     std::string mapName = "test_world";
     pushState(new GameState(), &mapName);
 }
 
 GhostCore::~GhostCore() {
-    ThreadedWorldFactory::Teardown();
+    WorldManager::Teardown();
+    TTFManager::Teardown();
+    TextureManager::Teardown();
 }

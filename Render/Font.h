@@ -3,6 +3,8 @@
 
 #include <Render/Texture.h>
 
+class FontManager;
+
 class Font {
 public:
 	Font();
@@ -10,6 +12,7 @@ public:
 
 private:
 	Texture *_texture;
+    friend class FontManager;
 };
 
 #endif

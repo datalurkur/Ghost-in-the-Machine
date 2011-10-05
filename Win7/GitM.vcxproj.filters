@@ -130,6 +130,9 @@
     <ClCompile Include="..\Resource\ThreadedTTFFactory.cpp">
       <Filter>Resource</Filter>
     </ClCompile>
+    <ClCompile Include="..\Resource\ThreadedTextureFactory.cpp">
+      <Filter>Resource</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Engine\ParentState.h">
@@ -226,6 +229,9 @@
       <Filter>Render</Filter>
     </ClInclude>
     <ClInclude Include="..\Resource\ThreadedTTFFactory.h">
+      <Filter>Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Resource\ThreadedTextureFactory.h">
       <Filter>Resource</Filter>
     </ClInclude>
   </ItemGroup>

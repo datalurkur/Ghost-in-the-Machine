@@ -20,8 +20,7 @@ void Material::setTexture(Texture *texture) {
 
 void Material::enable() {
     if(_texture) {
-        glEnable(GL_TEXTURE_2D);
-        // FIXME - Bind the texture here
+		_texture->enable();
     } else {
         glDisable(GL_TEXTURE_2D);
     }

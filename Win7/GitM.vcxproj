@@ -51,9 +51,9 @@
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>SDL_ttf.lib;SDL.lib;SDLmain.lib;opengl32.lib;glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>SDL_image.lib;SDL_ttf.lib;SDL.lib;SDLmain.lib;opengl32.lib;glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <SubSystem>Windows</SubSystem>
-      <AdditionalLibraryDirectories>C:\GitM\Win7\lib\sdl_ttf;C:\GitM\Win7\lib\sdl;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\GitM\Win7\lib\sdl;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -101,6 +101,7 @@
     <ClCompile Include="..\Render\Texture.cpp" />
     <ClCompile Include="..\Render\Viewport.cpp" />
     <ClCompile Include="..\Resource\ThreadedFactory.cpp" />
+    <ClCompile Include="..\Resource\ThreadedTextureFactory.cpp" />
     <ClCompile Include="..\Resource\ThreadedTTFFactory.cpp" />
     <ClCompile Include="..\Resource\ThreadedWorldFactory.cpp" />
   </ItemGroup>
@@ -135,6 +136,7 @@
     <ClInclude Include="..\Render\Texture.h" />
     <ClInclude Include="..\Render\Viewport.h" />
     <ClInclude Include="..\Resource\ThreadedFactory.h" />
+    <ClInclude Include="..\Resource\ThreadedTextureFactory.h" />
     <ClInclude Include="..\Resource\ThreadedTTFFactory.h" />
     <ClInclude Include="..\Resource\ThreadedWorldFactory.h" />
   </ItemGroup>

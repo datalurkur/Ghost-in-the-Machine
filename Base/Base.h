@@ -43,10 +43,12 @@
     } while(false)
 #endif
 
-#if SYS_PLATFORM == PLATFORM_WIN32
+#if SYS_PLATOFRM == PLATFORM_APPLE
+# include <OpenGL/OpenGL.h>
+#elif SYS_PLATFORM == PLATFORM_WIN32
 # include "Windows.h"
 # define sleep(seconds) Sleep(seconds*1000)
-#elif SYS_PLATFORM == PLATFORM_LINUX
+#else
 # include <GL/gl.h>
 # include <GL/glu.h>
 #endif

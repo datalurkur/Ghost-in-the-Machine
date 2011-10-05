@@ -1,7 +1,10 @@
 #include <Render/RenderContext.h>
+#include <Render/ContextMuxer.h>
 #include <SDL/SDL_opengl.h>
 
-RenderContext::RenderContext() {}
+RenderContext::RenderContext() {
+    ContextMuxer<Context>::Setup();
+}
 
 void RenderContext::render(const Matrix4 &projection, const Matrix4 &modelView, RenderableList &renderables) {
 	//Info("Rendering " << renderables.size() << " renderables");
@@ -18,7 +21,7 @@ void RenderContext::render(const Matrix4 &projection, const Matrix4 &modelView, 
 	// FIXME - Add the render queue and group rendering by material
 }
 
-void RenderContext::clear() {
+void RenderContext::clear() { 
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 }
 

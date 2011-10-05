@@ -1,8 +1,10 @@
 #include <Resource/TTFManager.h>
 
 int TTFManager::ThreadedLoad(void *data) {
-    Font *font = ((ResourceThreadParams<Font>*)data)->ptr;
-	std::string name = ((ResourceThreadParams<Font>*)data)->name;
+    ResourceThreadParams *params = (ResourceThreadParams*)data;
+
+    Font *font = (Font*)params->ptr;
+	std::string name = params->name;
 
     // FIXME - Write this code
 	

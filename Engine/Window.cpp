@@ -23,6 +23,7 @@ void Window::setup() {
 	_videoFlags |= SDL_RESIZABLE;
 
 	resize(_w, _h);
+    swapBuffers();
 }
 
 void Window::resize(int w, int h) {

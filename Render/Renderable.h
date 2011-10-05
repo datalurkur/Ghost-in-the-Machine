@@ -25,7 +25,7 @@ public:
 
 public:
 	static Renderable* OrthoBox(const float x, const float y, const float w, const float h, const float z, bool texCoords, bool normals);
-    static Renderable* Sprite(const float x, const float y, const float w, const float h, const float z, const std::string &name);
+    static Renderable* Sprite(const float x, const float y, const float w, const float h, const float z, Material *mat);
 
 private:
 	Matrix4 _viewMatrix;

@@ -45,6 +45,8 @@
 		E1ED2746143CEB5F00D6FFBC /* ThreadedResourceManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1ED273F143CEB5F00D6FFBC /* ThreadedResourceManager.cpp */; };
 		E1ED2747143CEB5F00D6FFBC /* TTFManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1ED2741143CEB5F00D6FFBC /* TTFManager.cpp */; };
 		E1ED2748143CEB5F00D6FFBC /* WorldManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1ED2743143CEB5F00D6FFBC /* WorldManager.cpp */; };
+		E1ED274B143CECD900D6FFBC /* MaterialManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1ED2749143CECD900D6FFBC /* MaterialManager.cpp */; };
+		E1ED2754143D0DD700D6FFBC /* ContextMuxer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1ED2753143D0DD700D6FFBC /* ContextMuxer.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -124,6 +126,11 @@
 		E1ED2742143CEB5F00D6FFBC /* TTFManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TTFManager.h; path = ../Resource/TTFManager.h; sourceTree = "<group>"; };
 		E1ED2743143CEB5F00D6FFBC /* WorldManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = WorldManager.cpp; path = ../Resource/WorldManager.cpp; sourceTree = "<group>"; };
 		E1ED2744143CEB5F00D6FFBC /* WorldManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WorldManager.h; path = ../Resource/WorldManager.h; sourceTree = "<group>"; };
+		E1ED2749143CECD900D6FFBC /* MaterialManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MaterialManager.cpp; path = ../Resource/MaterialManager.cpp; sourceTree = "<group>"; };
+		E1ED274A143CECD900D6FFBC /* MaterialManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MaterialManager.h; path = ../Resource/MaterialManager.h; sourceTree = "<group>"; };
+		E1ED2750143CF34300D6FFBC /* AGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AGL.framework; path = SDKs/MacOSX10.6.sdk/System/Library/Frameworks/AGL.framework; sourceTree = DEVELOPER_DIR; };
+		E1ED2752143D043200D6FFBC /* ContextMuxer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContextMuxer.h; path = ../Render/ContextMuxer.h; sourceTree = "<group>"; };
+		E1ED2753143D0DD700D6FFBC /* ContextMuxer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ContextMuxer.cpp; path = ../Render/ContextMuxer.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +205,7 @@
 		E13A3FF5142A79C700D7EA2A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E1ED2750143CF34300D6FFBC /* AGL.framework */,
 				E1ED273B143CB59000D6FFBC /* SDL_image.framework */,
 				E146AA37143BAB6F00DA17E9 /* SDL_ttf.framework */,
 				E1BAD36414364B0900D7430C /* OpenGL.framework */,
@@ -221,6 +229,8 @@
 		E146AA30143B5E7100DA17E9 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				E1ED2749143CECD900D6FFBC /* MaterialManager.cpp */,
+				E1ED274A143CECD900D6FFBC /* MaterialManager.h */,
 				E1ED273D143CEB5F00D6FFBC /* TextureManager.cpp */,
 				E1ED273E143CEB5F00D6FFBC /* TextureManager.h */,
 				E1ED273F143CEB5F00D6FFBC /* ThreadedResourceManager.cpp */,
@@ -280,6 +290,8 @@
 		E1B4F3201430D68300A87C70 /* Render */ = {
 			isa = PBXGroup;
 			children = (
+				E1ED2752143D043200D6FFBC /* ContextMuxer.h */,
+				E1ED2753143D0DD700D6FFBC /* ContextMuxer.cpp */,
 				E1ED272E143CB53000D6FFBC /* Font.cpp */,
 				E1ED272F143CB53100D6FFBC /* Font.h */,
 				E16C5AFB143A54000063EE8C /* Material.cpp */,
@@ -426,6 +438,8 @@
 				E1ED2746143CEB5F00D6FFBC /* ThreadedResourceManager.cpp in Sources */,
 				E1ED2747143CEB5F00D6FFBC /* TTFManager.cpp in Sources */,
 				E1ED2748143CEB5F00D6FFBC /* WorldManager.cpp in Sources */,
+				E1ED274B143CECD900D6FFBC /* MaterialManager.cpp in Sources */,
+				E1ED2754143D0DD700D6FFBC /* ContextMuxer.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

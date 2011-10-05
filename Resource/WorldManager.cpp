@@ -1,8 +1,10 @@
 #include <Resource/WorldManager.h>
 
 int WorldManager::ThreadedLoad(void *data) {
-    World *world = ((ResourceThreadParams<World>*)data)->ptr;
-	std::string name = ((ResourceThreadParams<World>*)data)->name;
+    ResourceThreadParams *params = (ResourceThreadParams*)data;
+
+    World *world = (World*)params->ptr;
+	std::string name = params->name;
 
     UpdateStatus(world, "Creating Player");
     world->_player = new Player("derpus");

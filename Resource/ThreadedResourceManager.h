@@ -27,16 +27,13 @@ struct ThreadInfo {
     ThreadInfo(SDL_Thread *nThread);
 };
 
-template <typename T>
 struct ResourceThreadParams {
 	std::string name;
-	T *ptr;
+	void *ptr;
+    SDL_mutex *mutex;
 
-	ResourceThreadParams(const std::string &nName, T* nPtr);
+	ResourceThreadParams(const std::string &nName, void* nPtr, SDL_mutex *nMutex);
 };
-
-template <typename T>
-ResourceThreadParams<T>::ResourceThreadParams(const std::string &nName, T* nPtr): name(nName), ptr(nPtr) {}
 
 template <typename T, typename F>
 class ThreadedResourceManager {
@@ -45,8 +42,8 @@ public:
     static void Teardown();
 
     static T* Get(const std::string &name);
-    static T* Load(const std::string &name);
-    static T* GetOrLoad(const std::string &name);
+    static T* Load(const std::string &name, bool wait = true);
+    static T* GetOrLoad(const std::string &name, bool wait = true);
     static void Unload(T* t);
 	static void Unload(const std::string &name);
 
@@ -72,6 +69,7 @@ protected:
 protected:
     static SDL_mutex* Lock;
     static ThreadMap Threads;
+    static CGLContextObj ParentRenderContext;
 
     typedef std::map<std::string, T*> ContentMap;
     static ContentMap Resources;
@@ -131,25 +129,31 @@ T* ThreadedResourceManager<T,F>::Get(const std::string &name) {
 }
 
 template <typename T, typename F>
-T* ThreadedResourceManager<T,F>::Load(const std::string &name) {
+T* ThreadedResourceManager<T,F>::Load(const std::string &name, bool wait) {
 	T* t = 0;
 
 	LOCK_MUTEX;
     t = new T();
-    ResourceThreadParams<T> params(name, t);
+    ResourceThreadParams params(name, (void*)t, F::Lock);
+    Info("Spawning thread");
     Threads[t] = ThreadInfo(SDL_CreateThread(F::ThreadedLoad, (void*)&params));
     F::Resources[name] = t;
     UNLOCK_MUTEX;
+    if(wait) {
+        Info("Waiting for load thread to finish");
+        SDL_WaitThread(Threads[t].thread, NULL);
+    }
+    Info("Thread done");
 
     return t;
 }
 
 template <typename T, typename F>
-T* ThreadedResourceManager<T,F>::GetOrLoad(const std::string &name) {
+T* ThreadedResourceManager<T,F>::GetOrLoad(const std::string &name, bool wait) {
     T* t;
     t = F::Get(name);
     if(!t) {
-        t = F::Load(name);
+        t = F::Load(name, wait);
     }
     return t;
 }
@@ -270,7 +274,9 @@ bool ThreadedResourceManager<T,F>::IsDone(T *t) {
 template <typename T, typename F>
 int ThreadedResourceManager<T,F>::ThreadedLoad(void* data) {
     Error("ThreadedLoad not implemented for default ThreadedResourceManager");
-    F::Finish((T*)data);
+    ResourceThreadParams *params = (ResourceThreadParams*)data;
+    F::Finish((T*)params->ptr);
+    ASSERT(0);
     return 0;
 }
 

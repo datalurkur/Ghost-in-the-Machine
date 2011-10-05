@@ -118,8 +118,8 @@ Renderable* Renderable::OrthoBox(const float x, const float y, const float w, co
 	return renderable;
 }
 
-Renderable* Renderable::Sprite(const float x, const float y, const float w, const float h, const float z, const std::string &name) {
+Renderable* Renderable::Sprite(const float x, const float y, const float w, const float h, const float z, Material *mat) {
     Renderable *renderable = Renderable::OrthoBox(x, y, w, h, z, true, true);
-
+    renderable->setMaterial(mat);
     return renderable;
 }

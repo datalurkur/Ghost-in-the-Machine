@@ -136,6 +136,12 @@
     <ClCompile Include="..\Resource\WorldManager.cpp">
       <Filter>Resource</Filter>
     </ClCompile>
+    <ClCompile Include="..\Base\Vector2.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\KeyboardListener.cpp">
+      <Filter>Engine\Event Handling</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Engine\ParentState.h">
@@ -242,6 +248,9 @@
     </ClInclude>
     <ClInclude Include="..\Resource\WorldManager.h">
       <Filter>Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\KeyboardListener.h">
+      <Filter>Engine\Event Handling</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

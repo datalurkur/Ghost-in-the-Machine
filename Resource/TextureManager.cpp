@@ -18,8 +18,13 @@ void TextureManager::DoLoad(const std::string &name, Texture *texture) {
     internalFormat = GL_RGBA;
 
     switch(tSurf->format->BytesPerPixel) {
+#if SYS_PLATFORM == PLATFORM_APPLE
         case 3: format = GL_BGR; break;
         case 4: format = GL_BGRA; break;
+#else
+		case 3: format = GL_RGB; break;
+		case 4: format = GL_RGBA; break;
+#endif
         default: ASSERT(0); break;
     };
 

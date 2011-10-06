@@ -118,19 +118,22 @@
     <ClCompile Include="..\Render\Texture.cpp">
       <Filter>Render</Filter>
     </ClCompile>
-    <ClCompile Include="..\Resource\ThreadedFactory.cpp">
-      <Filter>Resource</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Resource\ThreadedWorldFactory.cpp">
-      <Filter>Resource</Filter>
-    </ClCompile>
     <ClCompile Include="..\Render\Font.cpp">
       <Filter>Render</Filter>
     </ClCompile>
-    <ClCompile Include="..\Resource\ThreadedTTFFactory.cpp">
+    <ClCompile Include="..\Resource\MaterialManager.cpp">
       <Filter>Resource</Filter>
     </ClCompile>
-    <ClCompile Include="..\Resource\ThreadedTextureFactory.cpp">
+    <ClCompile Include="..\Resource\TextureManager.cpp">
+      <Filter>Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Resource\ThreadedResourceManager.cpp">
+      <Filter>Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Resource\TTFManager.cpp">
+      <Filter>Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Resource\WorldManager.cpp">
       <Filter>Resource</Filter>
     </ClCompile>
   </ItemGroup>
@@ -219,19 +222,25 @@
     <ClInclude Include="..\Render\Texture.h">
       <Filter>Render</Filter>
     </ClInclude>
-    <ClInclude Include="..\Resource\ThreadedFactory.h">
-      <Filter>Resource</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Resource\ThreadedWorldFactory.h">
-      <Filter>Resource</Filter>
-    </ClInclude>
     <ClInclude Include="..\Render\Font.h">
       <Filter>Render</Filter>
     </ClInclude>
-    <ClInclude Include="..\Resource\ThreadedTTFFactory.h">
+    <ClInclude Include="..\Resource\MaterialManager.h">
       <Filter>Resource</Filter>
     </ClInclude>
-    <ClInclude Include="..\Resource\ThreadedTextureFactory.h">
+    <ClInclude Include="..\Resource\ResourceManager.h">
+      <Filter>Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Resource\TextureManager.h">
+      <Filter>Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Resource\ThreadedResourceManager.h">
+      <Filter>Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Resource\TTFManager.h">
+      <Filter>Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Resource\WorldManager.h">
       <Filter>Resource</Filter>
     </ClInclude>
   </ItemGroup>

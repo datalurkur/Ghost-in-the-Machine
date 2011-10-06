@@ -8,7 +8,7 @@ class MaterialManager;
 
 class MaterialManager: public ThreadedResourceManager<Material, MaterialManager> {
 protected:
-    static int ThreadedLoad(void *data);
+    static void DoLoad(const std::string &name, Material *material);
     
     friend class ThreadedResourceManager<Material, MaterialManager>;
 };

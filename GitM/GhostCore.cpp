@@ -12,6 +12,10 @@ GhostCore::GhostCore() {
     TextureManager::Setup();
     MaterialManager::Setup();
 
+	// TEMP
+	//TextureManager::Load("C:/GitM/grass.png");
+	// FIXME - Add loading of resources based on directories
+
     std::string mapName = "test_world";
     pushState(new GameState(), &mapName);
 }

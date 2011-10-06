@@ -12,6 +12,7 @@ public:
     virtual ~Texture();
 
 	void setup(const unsigned int frames = 1);
+	void teardown();
     void setPixelData(SDL_Surface *surface, const unsigned int frame = 0);
 
 	void enable(const unsigned int frame = 0);

@@ -8,7 +8,7 @@ class TTFManager;
 
 class TTFManager: public ThreadedResourceManager<Font, TTFManager> {
 protected:
-    static int ThreadedLoad(void *data);
+    static void DoLoad(const std::string &name, Font *font);
     
     friend class ThreadedResourceManager<Font, TTFManager>;
 };

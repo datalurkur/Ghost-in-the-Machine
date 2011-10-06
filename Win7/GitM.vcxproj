@@ -100,10 +100,11 @@
     <ClCompile Include="..\Render\RenderContext.cpp" />
     <ClCompile Include="..\Render\Texture.cpp" />
     <ClCompile Include="..\Render\Viewport.cpp" />
-    <ClCompile Include="..\Resource\ThreadedFactory.cpp" />
-    <ClCompile Include="..\Resource\ThreadedTextureFactory.cpp" />
-    <ClCompile Include="..\Resource\ThreadedTTFFactory.cpp" />
-    <ClCompile Include="..\Resource\ThreadedWorldFactory.cpp" />
+    <ClCompile Include="..\Resource\MaterialManager.cpp" />
+    <ClCompile Include="..\Resource\TextureManager.cpp" />
+    <ClCompile Include="..\Resource\ThreadedResourceManager.cpp" />
+    <ClCompile Include="..\Resource\TTFManager.cpp" />
+    <ClCompile Include="..\Resource\WorldManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Base\Base.h" />
@@ -135,10 +136,12 @@
     <ClInclude Include="..\Render\RenderContext.h" />
     <ClInclude Include="..\Render\Texture.h" />
     <ClInclude Include="..\Render\Viewport.h" />
-    <ClInclude Include="..\Resource\ThreadedFactory.h" />
-    <ClInclude Include="..\Resource\ThreadedTextureFactory.h" />
-    <ClInclude Include="..\Resource\ThreadedTTFFactory.h" />
-    <ClInclude Include="..\Resource\ThreadedWorldFactory.h" />
+    <ClInclude Include="..\Resource\MaterialManager.h" />
+    <ClInclude Include="..\Resource\ResourceManager.h" />
+    <ClInclude Include="..\Resource\TextureManager.h" />
+    <ClInclude Include="..\Resource\ThreadedResourceManager.h" />
+    <ClInclude Include="..\Resource\TTFManager.h" />
+    <ClInclude Include="..\Resource\WorldManager.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

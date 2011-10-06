@@ -1,9 +1,7 @@
 #include <Render/RenderContext.h>
-#include <Render/ContextMuxer.h>
 #include <SDL/SDL_opengl.h>
 
 RenderContext::RenderContext() {
-    ContextMuxer<Context>::Setup();
 }
 
 void RenderContext::render(const Matrix4 &projection, const Matrix4 &modelView, RenderableList &renderables) {

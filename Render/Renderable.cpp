@@ -1,4 +1,5 @@
 #include <Render/Renderable.h>
+#include <Base/Log.h>
 
 Renderable::Renderable():
 	_viewMatrix(Matrix4::Identity), _material(0),

@@ -6,11 +6,11 @@
 
 class TextureManager;
 
-class TextureManager: public ThreadedResourceManager<Texture, TextureManager> {
+class TextureManager: public ResourceManager<Texture, TextureManager> {
 protected:
-    static int ThreadedLoad(void *data);
-    
-    friend class ThreadedResourceManager<Texture, TextureManager>;
+    static void DoLoad(const std::string &name, Texture *texture);
+
+    friend class ResourceManager<Texture, TextureManager>;
 };
 
 #endif

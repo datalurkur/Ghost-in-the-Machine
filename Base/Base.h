@@ -43,7 +43,7 @@
     } while(false)
 #endif
 
-#if SYS_PLATOFRM == PLATFORM_APPLE
+#if SYS_PLATFORM == PLATFORM_APPLE
 # include <OpenGL/OpenGL.h>
 #elif SYS_PLATFORM == PLATFORM_WIN32
 # include "Windows.h"

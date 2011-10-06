@@ -21,8 +21,6 @@ void Material::setTexture(Texture *texture) {
 void Material::enable() {
     if(_texture) {
 		_texture->enable();
-    } else {
-        glDisable(GL_TEXTURE_2D);
     }
     glColor4f(_r, _g, _b, _a);
 }

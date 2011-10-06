@@ -8,7 +8,7 @@ class WorldManager;
 
 class WorldManager: public ThreadedResourceManager<World, WorldManager> {
 protected:
-    static int ThreadedLoad(void *data);
+    static void DoLoad(const std::string &name, World *world);
     
     friend class ThreadedResourceManager<World, WorldManager>;
 };

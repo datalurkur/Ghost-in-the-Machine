@@ -34,6 +34,20 @@ void PlayingState::teardown() {
 }
 
 void PlayingState::keyDown(KeyboardEvent *event) {
+    switch(event->key()) {
+        case KeyboardEvent::KEY_a: {
+            _world->getPlayer()->moveLeft();
+        } break;
+        case KeyboardEvent::KEY_d: {
+            _world->getPlayer()->moveRight();
+        } break;
+        case KeyboardEvent::KEY_w: {
+            _world->getPlayer()->moveUp();
+        } break;
+        case KeyboardEvent::KEY_s: {
+            _world->getPlayer()->moveDown();
+        } break;
+    };
 }
 
 void PlayingState::keyUp(KeyboardEvent *event) {

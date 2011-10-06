@@ -1,3 +1,4 @@
+#include <Base/Log.h>
 #include <Engine/SceneNode.h>
 
 const std::string SceneNode::NodeType = "SceneNode";
@@ -34,6 +35,11 @@ Vector2 SceneNode::getLocalPosition() const {
 void SceneNode::setPosition(const Vector2 &pos) {
 	_position = pos;
 	flagDirty(Downward);
+}
+
+void SceneNode::moveRelative(const Vector2 &pos) {
+    _position += pos;
+    flagDirty(Downward);
 }
 
 const std::string &SceneNode::getName() const {	return _name; }
@@ -86,7 +92,7 @@ void SceneNode::updateCachedValues() {
 	bool needsUpdate = _dirty;
 
 	if(needsUpdate) {
-		_dirty = false;
+        _dirty = false;
 
 		// Update any values dependent on the parent state
         if(_parent) {

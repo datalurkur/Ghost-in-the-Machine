@@ -11,3 +11,19 @@ Player::Player(const std::string &name): Entity(name, NodeType) {
 
 Player::~Player() {
 }
+
+void Player::moveLeft() {
+    moveRelative(Vector2(-0.1, 0.0));
+}
+
+void Player::moveRight() {
+    moveRelative(Vector2(0.1, 0.0));
+}
+
+void Player::moveUp() {
+    moveRelative(Vector2(0.0, 0.1));
+}
+
+void Player::moveDown() {
+    moveRelative(Vector2(0.0, -0.1));
+}

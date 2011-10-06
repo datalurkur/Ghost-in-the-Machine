@@ -26,3 +26,7 @@ void World::render(Camera *camera, RenderContext *context) {
 SceneManager* World::getScene() {
 	return _scene;
 }
+
+Player* World::getPlayer() {
+    return _player;
+}

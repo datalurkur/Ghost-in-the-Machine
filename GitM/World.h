@@ -23,6 +23,9 @@ public:
 
 	// Return the scene manager
 	SceneManager *getScene();
+
+    // Return the player object
+    Player *getPlayer();
     
     // Designed to generically add objects to the scene
     template <typename T>

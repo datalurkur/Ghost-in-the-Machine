@@ -9,6 +9,7 @@ public:
         KEY_d     = 100,
         KEY_f     = 102,
         KEY_s     = 115,
+        KEY_w     = 119,
         KEY_F1    = 282
     };
 

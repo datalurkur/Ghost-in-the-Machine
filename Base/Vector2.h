@@ -74,4 +74,6 @@ public:
 	}
 };
 
+std::ostream& operator<<(std::ostream& lhs, const Vector2& rhs);
+
 #endif

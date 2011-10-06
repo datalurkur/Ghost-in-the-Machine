@@ -24,9 +24,9 @@ Matrix4 Matrix4::MakeOrtho(float l, float r, float b, float t, float n, float f)
 Matrix4 Matrix4::MakeTranslation(float x, float y, float z) {
 	Matrix4 ret = Matrix4::Identity;
 
-	ret[0][3] = x;
-	ret[1][3] = y;
-	ret[2][3] = z;
+	ret[3][0] = x;
+	ret[3][1] = y;
+	ret[3][2] = z;
 
 	return ret;
 }

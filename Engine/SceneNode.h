@@ -25,6 +25,7 @@ public:
 	Vector2 getLocalPosition() const;
 
 	void setPosition(const Vector2 &pos);
+    void moveRelative(const Vector2 &pos);
 
 	// Identifying information
 	const std::string &getName() const;

@@ -11,6 +11,11 @@ public:
 	Player(const std::string &name);
 	virtual ~Player();
 
+    void moveLeft();
+    void moveRight();
+    void moveUp();
+    void moveDown();
+
 private:
 };
 

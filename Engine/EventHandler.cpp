@@ -19,10 +19,28 @@ void EventHandler::handleEvents() {
 					(*itr)->closeWindow();
 				}
 			} break;
+            case SDL_KEYDOWN: {
+                KeyboardEvent keyEvent(event.key.keysym.sym, event.key.keysym.mod);
+                KeyboardListenerList::iterator itr = _keyboardListeners.begin();
+                for (; itr != _keyboardListeners.end(); itr++) {
+                    (*itr)->keyDown(&keyEvent);
+                }
+            } break;
+            case SDL_KEYUP: {
+                KeyboardEvent keyEvent(event.key.keysym.sym, event.key.keysym.mod);
+                KeyboardListenerList::iterator itr = _keyboardListeners.begin();
+                for (; itr != _keyboardListeners.end(); itr++) {
+                    (*itr)->keyUp(&keyEvent);
+                }
+            } break;
 		}
 	}
 }
 
 void EventHandler::addWindowListener(WindowListener *listener) {
 	_windowListeners.push_back(listener);
+}
+
+void EventHandler::addKeyboardListener(KeyboardListener *listener) {
+	_keyboardListeners.push_back(listener);
 }

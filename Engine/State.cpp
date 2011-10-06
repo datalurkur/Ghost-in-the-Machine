@@ -14,3 +14,11 @@ void State::setParent(ParentState *parent) {
 void State::setCore(Core *core) {
     _core = core;
 }
+
+void State::keyDown(KeyboardEvent *event) {
+    Info("Not handling keydown event " << event->key() << ":" << event->modifier());
+}
+
+void State::keyUp(KeyboardEvent *event) {
+    Info("Not handling keyup event " << event->key() << ":" << event->modifier());
+}

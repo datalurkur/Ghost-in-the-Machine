@@ -16,6 +16,7 @@
 		E16C5AF8143A43AD0063EE8C /* EventHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E16C5AF4143A43AD0063EE8C /* EventHandler.cpp */; };
 		E16C5AF9143A43AD0063EE8C /* WindowListener.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E16C5AF6143A43AD0063EE8C /* WindowListener.cpp */; };
 		E16C5AFD143A54000063EE8C /* Material.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E16C5AFB143A54000063EE8C /* Material.cpp */; };
+		E19826E1143E3F0B00670E4E /* KeyboardListener.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E19826DF143E3F0B00670E4E /* KeyboardListener.cpp */; };
 		E1A471BA142BDF5B0062C09B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E13A3FE3142A76DC00D7EA2A /* main.cpp */; };
 		E1A471BB142BDF5B0062C09B /* GameState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E13A3FE5142A76DC00D7EA2A /* GameState.cpp */; };
 		E1A471C4142BE5130062C09B /* Entity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E121B0BB142BD11800719A82 /* Entity.cpp */; };
@@ -82,6 +83,8 @@
 		E16C5AFB143A54000063EE8C /* Material.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Material.cpp; path = ../Render/Material.cpp; sourceTree = "<group>"; };
 		E16C5AFC143A54000063EE8C /* Material.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Material.h; path = ../Render/Material.h; sourceTree = "<group>"; };
 		E18169D41433B1E40030B8BA /* Vector2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Vector2.h; path = ../Base/Vector2.h; sourceTree = "<group>"; };
+		E19826DF143E3F0B00670E4E /* KeyboardListener.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = KeyboardListener.cpp; path = ../Engine/KeyboardListener.cpp; sourceTree = "<group>"; };
+		E19826E0143E3F0B00670E4E /* KeyboardListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KeyboardListener.h; path = ../Engine/KeyboardListener.h; sourceTree = "<group>"; };
 		E1B4F3131430D66800A87C70 /* Base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Base.h; path = ../Base/Base.h; sourceTree = "<group>"; };
 		E1B4F3171430D67A00A87C70 /* Player.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Player.cpp; path = ../GitM/Player.cpp; sourceTree = "<group>"; };
 		E1B4F3181430D67A00A87C70 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Player.h; path = ../GitM/Player.h; sourceTree = "<group>"; };
@@ -265,6 +268,8 @@
 			children = (
 				E16C5AF4143A43AD0063EE8C /* EventHandler.cpp */,
 				E16C5AF5143A43AD0063EE8C /* EventHandler.h */,
+				E19826DF143E3F0B00670E4E /* KeyboardListener.cpp */,
+				E19826E0143E3F0B00670E4E /* KeyboardListener.h */,
 				E16C5AF6143A43AD0063EE8C /* WindowListener.cpp */,
 				E16C5AF7143A43AD0063EE8C /* WindowListener.h */,
 			);
@@ -434,6 +439,7 @@
 				E1ED2747143CEB5F00D6FFBC /* TTFManager.cpp in Sources */,
 				E1ED2748143CEB5F00D6FFBC /* WorldManager.cpp in Sources */,
 				E1ED274B143CECD900D6FFBC /* MaterialManager.cpp in Sources */,
+				E19826E1143E3F0B00670E4E /* KeyboardListener.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

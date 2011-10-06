@@ -15,6 +15,9 @@ public:
     void start();
     void stop();
 
+    void setup();
+    void teardown();
+
     void resizeWindow(const int w, const int h);
 	void closeWindow();
 

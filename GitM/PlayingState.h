@@ -9,6 +9,9 @@ public:
     PlayingState();
     virtual ~PlayingState();
 
+    void keyDown(KeyboardEvent *event);
+    void keyUp(KeyboardEvent *event);
+
     void update(int elapsed);
     void render(RenderContext *renderContext);
 

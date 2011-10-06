@@ -2,10 +2,18 @@
 #include <Base/Log.h>
 
 Core::Core(): _running(false) {
+    setup();
+}
+
+Core::~Core() {
+    teardown();
+}
+
+void Core::setup() {
     _core = this;
-
+    
     Log::EnableAllChannels();
-
+    
     // FIXME - Set this with an options class
 	_window = new Window();
     _viewport = new Viewport();
@@ -13,16 +21,30 @@ Core::Core(): _running(false) {
     
 	_eventHandler = new EventHandler();
 	_eventHandler->addWindowListener(this);
-
+    _eventHandler->addKeyboardListener(this);
+    
     resizeWindow(640, 480);
 }
 
-Core::~Core() {
-	delete _eventHandler;
+void Core::teardown() {
+    ParentState::teardown();
 
-	delete _renderContext;
-    delete _viewport;
-	delete _window;
+    if(_eventHandler) {
+        delete _eventHandler;
+        _eventHandler = 0;
+    }
+    if(_renderContext) {
+        delete _renderContext;
+        _renderContext = 0;
+    }
+    if(_viewport) {
+        delete _viewport;
+        _viewport = 0;
+    }
+    if(_window) {
+        delete _window;
+        _window = 0;
+    }
 }
 
 void Core::start() {

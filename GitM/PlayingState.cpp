@@ -32,3 +32,9 @@ void PlayingState::teardown() {
     Info("Tearing down PlayingState");
     WorldManager::Unload(_world);
 }
+
+void PlayingState::keyDown(KeyboardEvent *event) {
+}
+
+void PlayingState::keyUp(KeyboardEvent *event) {
+}

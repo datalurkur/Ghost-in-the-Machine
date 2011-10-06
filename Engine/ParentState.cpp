@@ -4,6 +4,13 @@ ParentState::ParentState() {
 }
 
 ParentState::~ParentState() {
+    teardown();
+}
+
+void ParentState::setup(va_list args) {
+}
+
+void ParentState::teardown() {
     flushStates();
 }
 
@@ -59,6 +66,18 @@ State* ParentState::activeState() {
 
 void ParentState::flushStates() {
     while(popState()) {}
+}
+
+void ParentState::keyDown(KeyboardEvent *event) {
+    if(activeState()) {
+        activeState()->keyDown(event);
+    }
+}
+
+void ParentState::keyUp(KeyboardEvent *event) {
+    if(activeState()) {
+        activeState()->keyUp(event);
+    }
 }
 
 void ParentState::update(int elapsed) {

@@ -17,12 +17,15 @@ public:
 
     void flushStates();
 
+    virtual void keyDown(KeyboardEvent *event);
+    virtual void keyUp(KeyboardEvent *event);
+
     virtual void update(int elapsed);
     virtual void render(RenderContext *renderContext);
 
 protected:
-	virtual void setup(va_list args) {}
-	virtual void teardown() {}
+	virtual void setup(va_list args);
+	virtual void teardown();
 
 private:
     std::stack <State*> _stateStack;

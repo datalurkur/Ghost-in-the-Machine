@@ -58,6 +58,9 @@ void Renderable::setMaterial(Material *material) {
 }
 
 void Renderable::render() {
+    glPushMatrix();
+    glMultMatrixf(_viewMatrix.ptr());
+
 	if(_material) {
 		_material->enable();
 	}
@@ -79,6 +82,8 @@ void Renderable::render() {
 		}
 		glDrawElements(_drawMode, _numIndices, GL_UNSIGNED_INT, _indexPointer);
 	}
+
+    glPopMatrix();
 }
 
 Renderable* Renderable::OrthoBox(const float x, const float y, const float w, const float h, const float z, bool texCoords, bool normals) {

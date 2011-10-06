@@ -10,11 +10,11 @@ void RenderContext::render(const Matrix4 &projection, const Matrix4 &modelView, 
 	glLoadMatrixf(projection.ptr());
 
 	glMatrixMode(GL_MODELVIEW);
+    glLoadMatrixf(modelView.ptr());
 
 	RenderableList::iterator itr = renderables.begin();
 	for(; itr != renderables.end(); itr++) {
-    	glLoadMatrixf((modelView * (*itr)->getViewMatrix()).ptr());
-		(*itr)->render();
+        (*itr)->render();
 	}
 	// FIXME - Add the render queue and group rendering by material
 }

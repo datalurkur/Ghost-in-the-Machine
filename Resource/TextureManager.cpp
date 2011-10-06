@@ -5,16 +5,29 @@
 const std::string TextureManager::LoadDirectory = "Texture";
 
 void TextureManager::DoLoad(const std::string &name, Texture *texture) {
-	std::string fullName = LoadPath() + name;
+	std::string fullName;
+	SDL_Surface *tSurf;
+    GLenum internalFormat, format;
 
 	// Create an SDL surface with the image data
-	SDL_Surface *tSurf;
+    fullName = LoadPath() + name;
 	tSurf = IMG_Load(fullName.c_str());
+
+    ASSERT(SDL_LockSurface(tSurf)==0);
+
+    internalFormat = tSurf->format->BytesPerPixel;
+
+    switch(tSurf->format->BytesPerPixel) {
+        case 3: format = GL_BGR; break;
+        case 4: format = GL_BGRA; break;
+        default: ASSERT(0); break;
+    };
 
     // Setup the texture
     texture->setup();
-    texture->setPixelData(tSurf);
+    texture->setPixelData(internalFormat, format, tSurf->w, tSurf->h, (unsigned char*)tSurf->pixels, 0);
 
-	// Destroy the SDL surface
+	// Destroy the SDL surface    
+    SDL_UnlockSurface(tSurf);
 	SDL_FreeSurface(tSurf);
 }

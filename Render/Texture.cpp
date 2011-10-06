@@ -34,21 +34,11 @@ void Texture::teardown() {
 	}
 }
 
-void Texture::setPixelData(SDL_Surface *surface, const unsigned int frame) {
-    ASSERT(SDL_LockSurface(surface)==0);
-    GLenum format;
-    switch(surface->format->BytesPerPixel) {
-        case 3: format = GL_RGB; break;
-        case 4: format = GL_RGBA; break;
-        default: ASSERT(0); break;
-    };
-
+void Texture::setPixelData(GLenum internalFormat, GLenum format, const unsigned int w, const unsigned int h, unsigned char *pixelData, const unsigned int frame) {
     enable(frame);
-	gluBuild2DMipmaps(GL_TEXTURE_2D, surface->format->BytesPerPixel, surface->w, surface->h, format, GL_UNSIGNED_BYTE, surface->pixels);
+	gluBuild2DMipmaps(GL_TEXTURE_2D, internalFormat, w, h, format, GL_UNSIGNED_BYTE, pixelData);
     //glTexImage2D(GL_TEXTURE_2D, 0, format, surface->w, surface->h, 0, format, GL_UNSIGNED_BYTE, surface->pixels);
     disable();
-    
-    SDL_UnlockSurface(surface);
 }
 
 void Texture::enable(const unsigned int frame) {

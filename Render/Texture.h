@@ -13,7 +13,7 @@ public:
 
 	void setup(const unsigned int frames = 1);
 	void teardown();
-    void setPixelData(SDL_Surface *surface, const unsigned int frame = 0);
+    void setPixelData(GLenum internalFormat, GLenum format, const unsigned int w, const unsigned int h, unsigned char *pixelData, const unsigned int frame = 0);
 
 	void enable(const unsigned int frame = 0);
 	void disable();

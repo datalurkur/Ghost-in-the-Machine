@@ -10,6 +10,9 @@ class TextureManager: public ResourceManager<Texture, TextureManager> {
 protected:
     static void DoLoad(const std::string &name, Texture *texture);
 
+protected:
+	static const std::string LoadDirectory;
+
     friend class ResourceManager<Texture, TextureManager>;
 };
 

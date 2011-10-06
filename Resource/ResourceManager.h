@@ -25,11 +25,17 @@ public:
 
 protected:
 	static void DoLoad(const std::string &name, T* t);
+	static std::string LoadPath();
 
 protected:
+	static const std::string LoadDirectory;
+
     typedef std::map<std::string, T*> ContentMap;
     static ContentMap Resources;
 };
+
+template <typename T, typename F>
+const std::string ResourceManager<T,F>::LoadDirectory = "Data";
 
 template <typename T, typename F>
 typename ResourceManager<T,F>::ContentMap ResourceManager<T,F>::Resources;
@@ -169,6 +175,11 @@ T* ResourceManager<T,F>::Unregister(const std::string &name) {
 	ASSERT(itr != F::Resources.end());
     F::Resources.erase(itr);
     return t;
+}
+
+template <typename T, typename F>
+std::string ResourceManager<T,F>::LoadPath() {
+	return (LoadDirectory + "/" + F::LoadDirectory + "/");
 }
 
 #endif

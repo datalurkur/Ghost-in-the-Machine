@@ -15,7 +15,7 @@ void TextureManager::DoLoad(const std::string &name, Texture *texture) {
 
     ASSERT(SDL_LockSurface(tSurf)==0);
 
-    internalFormat = tSurf->format->BytesPerPixel;
+    internalFormat = GL_RGBA;
 
     switch(tSurf->format->BytesPerPixel) {
         case 3: format = GL_BGR; break;

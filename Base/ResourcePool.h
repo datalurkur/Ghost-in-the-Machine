@@ -77,7 +77,7 @@ void ResourcePool<T>::reallocate(const unsigned int capacity) {
 template <typename T>
 void ResourcePool<T>::expand() {
     // Double the ResourcePool in size
-    resize(_capacity << 1);
+    reallocate(_capacity << 1);
 }
 
 #endif

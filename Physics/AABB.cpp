@@ -27,6 +27,10 @@ const Vector2& AABB::getCenter() const {
     return (_lower + _upper) * 0.5;
 }
 
+const float AABB::getPerimeter() const {
+    return ((_upper.x - _lower.x) + (_upper.y - _lower.y)) * 2;
+}
+
 bool AABB::contains(const AABB& other) const {
     return (
         (_lower.x <= other._lower.x) &&
@@ -50,4 +54,10 @@ bool AABB::overlaps(const AABB& other) const {
 void AABB::expand(const AABB& other) {
     _lower = Vector2(std::min(_lower.x, other._lower.x), std::min(_lower.y, other._lower.y));
     _upper = Vector2(std::max(_upper.x, other._upper.x), std::max(_upper.y, other._upper.y));
+}
+
+AABB AABB::Combine(const AABB& b1, const AABB& b2) {
+    AABB ret = b1;
+    ret.expand(b2);
+    return ret;
 }

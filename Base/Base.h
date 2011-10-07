@@ -7,6 +7,8 @@
 #include <stdio.h>
 #include <iostream>
 
+#include <cmath>
+
 #include <stack>
 #include <map>
 #include <list>

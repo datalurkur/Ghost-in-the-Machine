@@ -31,6 +31,12 @@ public:
 		return ret;
 	}
 
+    inline Vector2 operator*(const float scalar) const {
+        Vector2 ret(*this);
+        ret *= scalar;
+        return ret;
+    }
+
     inline Vector2& operator+=(const Vector2 &rhs) {
 		x += rhs.x;
 		y += rhs.y;
@@ -42,6 +48,12 @@ public:
 		y -= rhs.y;
 		return *this;
 	}
+
+    inline Vector2& operator*=(const float scalar) {
+        x *= scalar;
+        y *= scalar;
+        return *this;
+    }
 
 	inline Vector2 operator-() const {
 		return Vector2(-x, -y);
@@ -72,6 +84,11 @@ public:
 	inline const float *ptr() const {
 		return &x;
 	}
+
+    float length() const;
+    float lengthSquared() const;
+
+    void normalize();
 };
 
 std::ostream& operator<<(std::ostream& lhs, const Vector2& rhs);

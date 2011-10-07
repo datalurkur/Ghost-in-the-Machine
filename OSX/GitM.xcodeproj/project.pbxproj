@@ -18,6 +18,10 @@
 		E16C5AFD143A54000063EE8C /* Material.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E16C5AFB143A54000063EE8C /* Material.cpp */; };
 		E19826E1143E3F0B00670E4E /* KeyboardListener.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E19826DF143E3F0B00670E4E /* KeyboardListener.cpp */; };
 		E19826E3143E5C8C00670E4E /* Vector2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E19826E2143E5C8C00670E4E /* Vector2.cpp */; };
+		E19826ED143FA4E800670E4E /* AABB.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E19826E5143FA4E800670E4E /* AABB.cpp */; };
+		E19826EE143FA4E800670E4E /* AABBTree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E19826E7143FA4E800670E4E /* AABBTree.cpp */; };
+		E19826EF143FA4E800670E4E /* PhysicsBody.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E19826E9143FA4E800670E4E /* PhysicsBody.cpp */; };
+		E19826F0143FA4E800670E4E /* PhysicsSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E19826EB143FA4E800670E4E /* PhysicsSystem.cpp */; };
 		E1A471BA142BDF5B0062C09B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E13A3FE3142A76DC00D7EA2A /* main.cpp */; };
 		E1A471BB142BDF5B0062C09B /* GameState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E13A3FE5142A76DC00D7EA2A /* GameState.cpp */; };
 		E1A471C4142BE5130062C09B /* Entity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E121B0BB142BD11800719A82 /* Entity.cpp */; };
@@ -87,6 +91,14 @@
 		E19826DF143E3F0B00670E4E /* KeyboardListener.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = KeyboardListener.cpp; path = ../Engine/KeyboardListener.cpp; sourceTree = "<group>"; };
 		E19826E0143E3F0B00670E4E /* KeyboardListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KeyboardListener.h; path = ../Engine/KeyboardListener.h; sourceTree = "<group>"; };
 		E19826E2143E5C8C00670E4E /* Vector2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Vector2.cpp; path = ../Base/Vector2.cpp; sourceTree = "<group>"; };
+		E19826E5143FA4E800670E4E /* AABB.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AABB.cpp; sourceTree = "<group>"; };
+		E19826E6143FA4E800670E4E /* AABB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AABB.h; sourceTree = "<group>"; };
+		E19826E7143FA4E800670E4E /* AABBTree.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AABBTree.cpp; sourceTree = "<group>"; };
+		E19826E8143FA4E800670E4E /* AABBTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AABBTree.h; sourceTree = "<group>"; };
+		E19826E9143FA4E800670E4E /* PhysicsBody.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PhysicsBody.cpp; sourceTree = "<group>"; };
+		E19826EA143FA4E800670E4E /* PhysicsBody.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhysicsBody.h; sourceTree = "<group>"; };
+		E19826EB143FA4E800670E4E /* PhysicsSystem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PhysicsSystem.cpp; sourceTree = "<group>"; };
+		E19826EC143FA4E800670E4E /* PhysicsSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhysicsSystem.h; sourceTree = "<group>"; };
 		E1B4F3131430D66800A87C70 /* Base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Base.h; path = ../Base/Base.h; sourceTree = "<group>"; };
 		E1B4F3171430D67A00A87C70 /* Player.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Player.cpp; path = ../GitM/Player.cpp; sourceTree = "<group>"; };
 		E1B4F3181430D67A00A87C70 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Player.h; path = ../GitM/Player.h; sourceTree = "<group>"; };
@@ -278,6 +290,22 @@
 			name = "Event Management";
 			sourceTree = "<group>";
 		};
+		E19826E4143FA4E700670E4E /* Physics */ = {
+			isa = PBXGroup;
+			children = (
+				E19826E5143FA4E800670E4E /* AABB.cpp */,
+				E19826E6143FA4E800670E4E /* AABB.h */,
+				E19826E7143FA4E800670E4E /* AABBTree.cpp */,
+				E19826E8143FA4E800670E4E /* AABBTree.h */,
+				E19826E9143FA4E800670E4E /* PhysicsBody.cpp */,
+				E19826EA143FA4E800670E4E /* PhysicsBody.h */,
+				E19826EB143FA4E800670E4E /* PhysicsSystem.cpp */,
+				E19826EC143FA4E800670E4E /* PhysicsSystem.h */,
+			);
+			name = Physics;
+			path = ../Physics;
+			sourceTree = "<group>";
+		};
 		E1B4F3111430D65000A87C70 /* Base */ = {
 			isa = PBXGroup;
 			children = (
@@ -317,6 +345,7 @@
 				E1B4F3111430D65000A87C70 /* Base */,
 				E1B4F3201430D68300A87C70 /* Render */,
 				E13A3FDD142A76AD00D7EA2A /* Engine */,
+				E19826E4143FA4E700670E4E /* Physics */,
 				E146AA30143B5E7100DA17E9 /* Resource */,
 				E13A3FE2142A76CF00D7EA2A /* GitM */,
 				E13A3FF5142A79C700D7EA2A /* Frameworks */,
@@ -444,6 +473,10 @@
 				E1ED274B143CECD900D6FFBC /* MaterialManager.cpp in Sources */,
 				E19826E1143E3F0B00670E4E /* KeyboardListener.cpp in Sources */,
 				E19826E3143E5C8C00670E4E /* Vector2.cpp in Sources */,
+				E19826ED143FA4E800670E4E /* AABB.cpp in Sources */,
+				E19826EE143FA4E800670E4E /* AABBTree.cpp in Sources */,
+				E19826EF143FA4E800670E4E /* PhysicsBody.cpp in Sources */,
+				E19826F0143FA4E800670E4E /* PhysicsSystem.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

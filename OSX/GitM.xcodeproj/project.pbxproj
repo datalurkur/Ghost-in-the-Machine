@@ -99,6 +99,7 @@
 		E19826EA143FA4E800670E4E /* PhysicsBody.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhysicsBody.h; sourceTree = "<group>"; };
 		E19826EB143FA4E800670E4E /* PhysicsSystem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PhysicsSystem.cpp; sourceTree = "<group>"; };
 		E19826EC143FA4E800670E4E /* PhysicsSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhysicsSystem.h; sourceTree = "<group>"; };
+		E19826F2143FAC0200670E4E /* ResourcePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ResourcePool.h; path = ../Base/ResourcePool.h; sourceTree = "<group>"; };
 		E1B4F3131430D66800A87C70 /* Base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Base.h; path = ../Base/Base.h; sourceTree = "<group>"; };
 		E1B4F3171430D67A00A87C70 /* Player.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Player.cpp; path = ../GitM/Player.cpp; sourceTree = "<group>"; };
 		E1B4F3181430D67A00A87C70 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Player.h; path = ../GitM/Player.h; sourceTree = "<group>"; };
@@ -309,13 +310,14 @@
 		E1B4F3111430D65000A87C70 /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				E1BAD36114364A8F00D7430C /* Matrix4.cpp */,
-				E1BAD36214364A8F00D7430C /* Matrix4.h */,
-				E19826E2143E5C8C00670E4E /* Vector2.cpp */,
-				E18169D41433B1E40030B8BA /* Vector2.h */,
 				E1B4F3131430D66800A87C70 /* Base.h */,
 				E1B4F3331431178D00A87C70 /* Log.cpp */,
 				E1B4F3341431178D00A87C70 /* Log.h */,
+				E1BAD36114364A8F00D7430C /* Matrix4.cpp */,
+				E1BAD36214364A8F00D7430C /* Matrix4.h */,
+				E19826F2143FAC0200670E4E /* ResourcePool.h */,
+				E19826E2143E5C8C00670E4E /* Vector2.cpp */,
+				E18169D41433B1E40030B8BA /* Vector2.h */,
 			);
 			name = Base;
 			sourceTree = "<group>";
@@ -344,8 +346,8 @@
 			children = (
 				E1B4F3111430D65000A87C70 /* Base */,
 				E1B4F3201430D68300A87C70 /* Render */,
-				E13A3FDD142A76AD00D7EA2A /* Engine */,
 				E19826E4143FA4E700670E4E /* Physics */,
+				E13A3FDD142A76AD00D7EA2A /* Engine */,
 				E146AA30143B5E7100DA17E9 /* Resource */,
 				E13A3FE2142A76CF00D7EA2A /* GitM */,
 				E13A3FF5142A79C700D7EA2A /* Frameworks */,

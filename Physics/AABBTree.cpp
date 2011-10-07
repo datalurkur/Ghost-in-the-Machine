@@ -26,8 +26,10 @@ void AABBTreeNode::clearChildren() {
 AABBTree::AABBTree():
     _root(0)
 {
+    _nodePool = new ResourcePool<AABBTreeNode>(32);
 }
 
 AABBTree::~AABBTree() {
     if(_root) { delete _root; }
+    if(_nodePool) { delete _nodePool; }
 }

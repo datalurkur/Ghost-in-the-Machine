@@ -1,6 +1,7 @@
 #ifndef AABBTREE_H
 #define AABBTREE_H
 
+#include <Base/ResourcePool.h>
 #include <Physics/AABB.h>
 
 class AABBTree;
@@ -29,6 +30,7 @@ public:
 
 private:
     AABBTreeNode *_root;
+    ResourcePool<AABBTreeNode> *_nodePool;
 };
 
 #endif

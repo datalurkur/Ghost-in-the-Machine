@@ -19,6 +19,7 @@ void PhysicsSystem::clearForces() {
 }
 
 PhysicsBody* PhysicsSystem::createBody() {
+    return 0;
 }
 
 void PhysicsSystem::destroyBody(PhysicsBody *body) {

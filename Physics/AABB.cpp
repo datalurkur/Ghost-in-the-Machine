@@ -11,8 +11,8 @@ AABB::AABB(const Vector2& v1, const Vector2& v2) {
 AABB::~AABB() {}
 
 void AABB::setExtents(const Vector2& v1, const Vector2& v2) {
-    _lower=Vector2(std::min(v1.x, v2.x), std::min(v1.y, v2.y));
-    _upper=Vector2(std::max(v1.x, v2.x), std::max(v1.y, v2.y));
+    _lower=Vector2(min(v1.x, v2.x), min(v1.y, v2.y));
+    _upper=Vector2(max(v1.x, v2.x), max(v1.y, v2.y));
 }
 
 const Vector2& AABB::getLowerBound() {
@@ -23,7 +23,7 @@ const Vector2& AABB::getUpperBound() {
     return _upper;
 }
 
-const Vector2& AABB::getCenter() const {
+Vector2 AABB::getCenter() const {
     return (_lower + _upper) * 0.5;
 }
 
@@ -52,8 +52,8 @@ bool AABB::overlaps(const AABB& other) const {
 }
 
 void AABB::expand(const AABB& other) {
-    _lower = Vector2(std::min(_lower.x, other._lower.x), std::min(_lower.y, other._lower.y));
-    _upper = Vector2(std::max(_upper.x, other._upper.x), std::max(_upper.y, other._upper.y));
+    _lower = Vector2(min(_lower.x, other._lower.x), min(_lower.y, other._lower.y));
+    _upper = Vector2(max(_upper.x, other._upper.x), max(_upper.y, other._upper.y));
 }
 
 AABB AABB::Combine(const AABB& b1, const AABB& b2) {

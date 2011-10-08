@@ -1,6 +1,7 @@
 #ifndef AABBTREE_H
 #define AABBTREE_H
 
+#include <Base/Base.h>
 #include <Base/ResourcePool.h>
 #include <Physics/AABB.h>
 
@@ -32,11 +33,14 @@ public:
     AABBTree();
     ~AABBTree();
 
-    void insert(const AABB& bounds, void* data);
+    AABBTreeNode* insert(const AABB& bounds, void* data);
+	void remove(AABBTreeNode* node);
 
 protected:
     void balance(AABBTreeNode* node);
-    void rotateUp(AABBTreeNode* node);
+
+	void validate();
+	void validate(AABBTreeNode* node);
 
 private:
     AABBTreeNode *_root;

@@ -21,7 +21,7 @@ void AABBTreeNode::clearChildren() {
 
 void AABBTreeNode::recomputeCachedValues() {
     _bounds = AABB::Combine(_child0->_bounds, _child1->_bounds);
-    _height = std::max(_child0->_height, _child1->_height);
+    _height = 1 + max(_child0->_height, _child1->_height);
 }
 
 // AABBTree
@@ -36,8 +36,10 @@ AABBTree::~AABBTree() {
     if(_nodePool) { delete _nodePool; }
 }
 
-void AABBTree::insert(const AABB& bounds, void *data) {
-    AABBTreeNode *leaf = _nodePool->allocate();
+AABBTreeNode* AABBTree::insert(const AABB& bounds, void *data) {
+    AABBTreeNode *leaf, *current, *oldParent, *newParent, *sibling;
+					
+	leaf = _nodePool->allocate();
 
     leaf->_bounds = bounds;
     leaf->_data = data;
@@ -47,36 +49,37 @@ void AABBTree::insert(const AABB& bounds, void *data) {
     if(_root == 0) {
         leaf->_parent = 0;
         _root = leaf;
-        return;
+        return leaf;
     }
     
     // Get the perimeter of the leaf node
     float leafPerim = bounds.getPerimeter();
 
     // Begin traversing the tree
-    AABBTreeNode *current = _root;
+    current = _root;
     while(!current->isLeaf()) {
+		float cost, inheritCost, child0Cost, child1Cost,
+			  combinedPerim, combinedPerim0, combinedPerim1;
+
         // Get the perimeter of the combined AABBs of the leaf node and the current node
-        float combinedPerim = AABB::Combine(bounds, current->_bounds).getPerimeter();
+        combinedPerim = AABB::Combine(bounds, current->_bounds).getPerimeter();
     
         // Compute the cost of creating a new parent node to contain the current node and the new leaf
-        float cost = 2 * combinedPerim;
+        cost = 2 * combinedPerim;
         
         // Compute the minimum cost of traversing further down in the tree
-        float inheritCost = 2 * (combinedPerim - leafPerim);
+        inheritCost = 2 * (combinedPerim - leafPerim);
         
         // Compute the cost of traversing to each child
-        float combinedPerim0 = AABB::Combine(bounds, current->_child0->_bounds).getPerimeter(),
-              combinedPerim1 = AABB::Combine(bounds, current->_child1->_bounds).getPerimeter();
+        combinedPerim0 = AABB::Combine(bounds, current->_child0->_bounds).getPerimeter();
+        combinedPerim1 = AABB::Combine(bounds, current->_child1->_bounds).getPerimeter();
 
-        float child0Cost;
         if(current->_child0->isLeaf()) {
             child0Cost = combinedPerim0 + inheritCost;
         } else {
             child0Cost = (combinedPerim0 - current->_child0->_bounds.getPerimeter()) + inheritCost;
         }
 
-        float child1Cost;
         if(current->_child1->isLeaf()) {
             child1Cost = combinedPerim1 + inheritCost;
         } else {
@@ -94,8 +97,6 @@ void AABBTree::insert(const AABB& bounds, void *data) {
     }
     
     // Insert a new parent node here, making the current node and the leaf node siblings
-    AABBTreeNode *oldParent, *newParent, *sibling;
-
     oldParent = current->_parent;
     sibling = current;
 
@@ -135,6 +136,56 @@ void AABBTree::insert(const AABB& bounds, void *data) {
         
         current = current->_parent;
     }
+
+	validate();
+
+	return leaf;
+}
+
+void AABBTree::remove(AABBTreeNode *node) {
+	AABBTreeNode *parent, *superParent,
+				 *sibling, *current;
+
+	if(node == _root) {
+		_root = 0;
+		return;
+	}
+
+	parent = node->_parent;
+	superParent = parent->_parent;
+	if(parent->_child0 == node) {
+		sibling = parent->_child1;
+	} else {
+		ASSERT(parent->_child1 == node);
+		sibling = parent->_child0;
+	}
+
+	if(superParent) {
+		// Connect the sibling to the superParent
+		if(superParent->_child0 == parent) {
+			superParent->_child0 = sibling;
+		} else {
+			ASSERT(superParent->_child1 == parent);
+			superParent->_child1 = sibling;
+		}
+		sibling->_parent = superParent;
+
+		current = superParent;
+		while(current) {
+			balance(current);
+			current->recomputeCachedValues();
+			current = current->_parent;
+		}
+	} else {
+		// Make the sibling the new root node
+		_root = sibling;
+		sibling->_parent = 0;
+	}
+
+	// Do away with the redundant parent
+	_nodePool->free(parent);
+
+	validate();
 }
 
 void AABBTree::balance(AABBTreeNode* node) {
@@ -143,57 +194,114 @@ void AABBTree::balance(AABBTreeNode* node) {
     if(node->isLeaf() || node->_height < 2) {
         return;
     }
+   
+	AABBTreeNode *child0 = node->_child0,
+				 *child1 = node->_child1,
+				 *subchild0, *subchild1, *superParent;
+    ASSERT(child0);
+    ASSERT(child1);
     
-    ASSERT(node->_child0);
-    ASSERT(node->_child1);
-    
-    unsigned int balance = node->_child1->_height - node->_child0->_height;
+    unsigned int balance = child1->_height - child0->_height;
     if(balance > 1) {
-        // Rotate child1 upward
-        rotateUp(node->_child1);
+		// Rotate child1 upward
+		subchild0 = child1->_child0;
+		subchild1 = child1->_child1;
+		superParent = node->_parent;
+
+		// Swap position of node and child1
+		child1->_child1 = node;
+		child1->_parent = superParent;
+		node->_parent = child1;
+
+		// Set node's old parent's child pointer (or set child1 as the new root if node was the root)
+		if(superParent) {
+			if(superParent->_child0 == node) {
+				superParent->_child0 = child1;
+			} else {
+				ASSERT(superParent->_child1 == node);
+				superParent->_child1 = child1;
+			}
+		} else {
+			_root = child1;
+		}
+
+		// Rotate the subchildren in properly
+		if(subchild0->_height > subchild1->_height) {
+			child1->_child1 = subchild0;
+			node->_child1 = subchild1;
+			subchild1->_parent = node;
+		} else {
+			child1->_child1 = subchild1;
+			node->_child1 = subchild0;
+			subchild0->_parent = node;
+		}
+
+		// Recompute any dependent values that have changed
+		child1->recomputeCachedValues();
+		node->recomputeCachedValues();
     } else if(balance < -1) {
         // Rotate child0 upward
-        rotateUp(node->_child0);
+		subchild0 = child1->_child0;
+		subchild1 = child1->_child1;
+		superParent = node->_parent;
+
+		// Swap position of node and child1
+		child0->_child0 = node;
+		child0->_parent = superParent;
+		node->_parent = child0;
+
+		// Set node's old parent's child pointer (or set child1 as the new root if node was the root)
+		if(superParent) {
+			if(superParent->_child0 == node) {
+				superParent->_child0 = child0;
+			} else {
+				ASSERT(superParent->_child1 == node);
+				superParent->_child1 = child0;
+			}
+		} else {
+			_root = child0;
+		}
+
+		// Rotate the subchildren in properly
+		if(subchild0->_height > subchild1->_height) {
+			child0->_child1 = subchild0;
+			node->_child0 = subchild1;
+			subchild1->_parent = node;
+		} else {
+			child0->_child1 = subchild1;
+			node->_child0 = subchild0;
+			subchild0->_parent = node;
+		}
+
+		// Recompute any dependent values that have changed
+		child1->recomputeCachedValues();
+		node->recomputeCachedValues();
     }
 }
 
-void AABBTree::rotateUp(AABBTreeNode *node) {
-    // Swap the node with its parent   
-    AABBTreeNode *oldParent = node->_parent,
-                 *child0 = node->_child0,
-                 *child1 = node->_child1;
+void AABBTree::validate() {
+	validate(_root);
+}
 
-    ASSERT(child0);
-    ASSERT(child1);
+void AABBTree::validate(AABBTreeNode *node) {
+	if(!node) { return; }
 
-    node->_parent = oldParent->_parent;
-    node->_child0 = oldParent;
-    oldParent->_parent = node;
-    
-    if(node->_parent) {
-        if(node->_parent->_child0 == oldParent) {
-            node->_parent->_child0 = node;
-        } else {
-            ASSERT(node->_parent->_child1 == oldParent);
-            node->_parent->_child1 = node;
-        }
-    } else {
-        _root = node;
-    }
+	if(node->isLeaf()) {
+		ASSERT(node->_height == 0);
+		ASSERT(node->_child0 == 0);
+		ASSERT(node->_child1 == 0);
+	} else {
+		ASSERT(node->_child0->_parent == node);
+		ASSERT(node->_child1->_parent == node);
 
-    if(child0->_height > child1->_height) {
-        node->_child1 = child0;
-        if(oldParent->_child0 == node) {
-            oldParent->_child0 = child1;
-        } else {
-            ASSERT(oldParent->_child1 == node);
-            oldParent->_child1 = child1;
-        }
-        child1->_parent = oldParent;
+		ASSERT(node->_height == max(node->_child0->_height, node->_child1->_height)+1);
+		ASSERT(node->_bounds == AABB::Combine(node->_child0->_bounds, node->_child1->_bounds));
+	}
 
-        node->recomputeCachedValues();
-        oldParent->recomputeCachedValues();
-        
-    } else {
-    }
+	if(_root == node) {
+		ASSERT(node->_parent == 0);
+	}
+
+	validate(node->_child0);
+	validate(node->_child1);
 }

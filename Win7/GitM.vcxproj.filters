@@ -35,6 +35,9 @@
     <Filter Include="Resource">
       <UniqueIdentifier>{573ee846-065b-4972-9bef-2c3fd2072dbc}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Physics">
+      <UniqueIdentifier>{e45bb8bc-59dd-4ab0-9124-0b13404bc3da}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\GitM\main.cpp">
@@ -141,6 +144,18 @@
     </ClCompile>
     <ClCompile Include="..\Engine\KeyboardListener.cpp">
       <Filter>Engine\Event Handling</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Physics\AABB.cpp">
+      <Filter>Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Physics\AABBTree.cpp">
+      <Filter>Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Physics\PhysicsBody.cpp">
+      <Filter>Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Physics\PhysicsSystem.cpp">
+      <Filter>Physics</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -251,6 +266,21 @@
     </ClInclude>
     <ClInclude Include="..\Engine\KeyboardListener.h">
       <Filter>Engine\Event Handling</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Base\ResourcePool.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Physics\PhysicsSystem.h">
+      <Filter>Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Physics\AABB.h">
+      <Filter>Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Physics\AABBTree.h">
+      <Filter>Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Physics\PhysicsBody.h">
+      <Filter>Physics</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

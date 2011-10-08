@@ -68,7 +68,7 @@ void ResourcePool<T>::reallocate(const unsigned int capacity) {
 
     _nodes = (T*)realloc((void*)_nodes, sizeof(T) * capacity);
     //memset(&_nodes[capacity], 0, sizeof(T) * (capacity - _capacity));
-    for(int i=_capacity; i<capacity; i++) {
+    for(unsigned int i=_capacity; i<capacity; i++) {
         _freeNodes.push(&_nodes[i]);
     }
     _capacity = capacity;

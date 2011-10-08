@@ -13,7 +13,7 @@ public:
     const Vector2& getLowerBound();
     const Vector2& getUpperBound();
 
-    const Vector2& getCenter() const;
+    Vector2 getCenter() const;
     const float getPerimeter() const;
 
     bool contains(const AABB& other) const;
@@ -27,6 +27,10 @@ public:
         return *this;
     }
     
+	inline bool operator==(const AABB& rhs) {
+		return (_lower == rhs._lower && _upper == rhs._upper);
+	}
+
 public:
     static AABB Combine(const AABB& b1, const AABB& b2);
 

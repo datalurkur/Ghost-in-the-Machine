@@ -148,13 +148,13 @@
     <ClCompile Include="..\Physics\AABB.cpp">
       <Filter>Physics</Filter>
     </ClCompile>
-    <ClCompile Include="..\Physics\AABBTree.cpp">
-      <Filter>Physics</Filter>
-    </ClCompile>
     <ClCompile Include="..\Physics\PhysicsBody.cpp">
       <Filter>Physics</Filter>
     </ClCompile>
     <ClCompile Include="..\Physics\PhysicsSystem.cpp">
+      <Filter>Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Physics\BroadPhase.cpp">
       <Filter>Physics</Filter>
     </ClCompile>
   </ItemGroup>
@@ -280,6 +280,9 @@
       <Filter>Physics</Filter>
     </ClInclude>
     <ClInclude Include="..\Physics\PhysicsBody.h">
+      <Filter>Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Physics\BroadPhase.h">
       <Filter>Physics</Filter>
     </ClInclude>
   </ItemGroup>

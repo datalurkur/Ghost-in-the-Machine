@@ -1,8 +1,8 @@
 #ifndef PHYSICSSYSTEM_H
 #define PHYSICSSYSTEM_H
 
-#include <Physics/AABBTree.h>
 #include <Physics/PhysicsBody.h>
+#include <Physics/BroadPhase.h>
 
 class PhysicsSystem {
 public:
@@ -12,7 +12,7 @@ public:
     void step(float time, bool clearWhenDone = true);
     void clearForces();
 
-    PhysicsBody* createBody();
+    PhysicsBody* createBody(const Vector2 &pos, const AABB &bounds, PhysicsBody::BodyType type = PhysicsBody::Static);
     void destroyBody(PhysicsBody *body);
 
     void setGravity(const Vector2 &gravity);
@@ -20,7 +20,7 @@ public:
 
 private:
     Vector2 _gravity;
-    AABBTree _bodies;
+	BroadPhase _broadPhase;
 };
 
 #endif

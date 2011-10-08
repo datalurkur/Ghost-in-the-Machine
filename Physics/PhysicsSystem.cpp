@@ -18,11 +18,15 @@ void PhysicsSystem::step(float time, bool clearWhenDone) {
 void PhysicsSystem::clearForces() {
 }
 
-PhysicsBody* PhysicsSystem::createBody() {
-    return 0;
+PhysicsBody* PhysicsSystem::createBody(const Vector2 &pos, const AABB &bounds, PhysicsBody::BodyType type) {
+	PhysicsBody *newBody = new PhysicsBody(pos, bounds, type);
+	_broadPhase.addBody(newBody);
+	return newBody;
 }
 
 void PhysicsSystem::destroyBody(PhysicsBody *body) {
+	_broadPhase.removeBody(body);
+	delete body;
 }
 
 void PhysicsSystem::setGravity(const Vector2 &gravity) {

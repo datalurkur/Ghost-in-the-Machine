@@ -9,10 +9,19 @@ PhysicsSystem::~PhysicsSystem() {
 }
 
 void PhysicsSystem::step(float time, bool clearWhenDone) {
+	// First, update the broad phase contacts
+	// FIXME - Update contacts
+
+	// Next, solve the system
+	solve(time);
 
     if(clearWhenDone) {
         clearForces();
     }
+}
+
+void PhysicsSystem::solve(float time) {
+	// FIXME - Solve
 }
 
 void PhysicsSystem::clearForces() {

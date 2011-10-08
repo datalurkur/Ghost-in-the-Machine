@@ -3,6 +3,7 @@
 
 #include <Physics/PhysicsBody.h>
 #include <Physics/BroadPhase.h>
+#include <Physics/Island.h>
 
 class PhysicsSystem {
 public:
@@ -10,6 +11,7 @@ public:
     ~PhysicsSystem();
 
     void step(float time, bool clearWhenDone = true);
+	void solve(float time);
     void clearForces();
 
     PhysicsBody* createBody(const Vector2 &pos, const AABB &bounds, PhysicsBody::BodyType type = PhysicsBody::Static);

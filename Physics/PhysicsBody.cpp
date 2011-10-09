@@ -18,12 +18,27 @@ AABB PhysicsBody::getBounds() const {
 	return _bounds;
 }
 
-void PhysicsBody::setAlert() {
-	_alert = true;
+void PhysicsBody::setFlag(PhysicsBody::Flag flag) {
+	switch(flag) {
+		case Island: _island = true; return;
+		case Alert:  _alert  = true; return;
+	}
 }
 
-bool PhysicsBody::isAlert() {
-	return _alert;
+void PhysicsBody::clearFlag(PhysicsBody::Flag flag) {
+	switch(flag) {
+		case Island: _island = false; return;
+		case Alert:  _alert  = false; return;
+	}
+}
+
+bool PhysicsBody::getFlag(PhysicsBody::Flag flag) const {
+	switch(flag) {
+		case Island: return _island;
+		case Alert:  return _alert;
+	}
+	ASSERT(0);
+	return false;
 }
 
 void PhysicsBody::addContact(Contact *contact) {
@@ -34,10 +49,18 @@ void PhysicsBody::addContact(Contact *contact) {
 	_contacts.push_back(contact);
 }
 
+ContactList* PhysicsBody::getContacts() {
+	return &_contacts;
+}
+
 bool PhysicsBody::canCollideWith(PhysicsBody *body) {
 	BodyList::iterator itr = _ignoreList.begin();
 	for(; itr != _ignoreList.end(); itr++) {
 		if((*itr) == body) { return false; }
 	}
 	return true;
+}
+
+void PhysicsBody::synchronize() {
+	// FIXME
 }

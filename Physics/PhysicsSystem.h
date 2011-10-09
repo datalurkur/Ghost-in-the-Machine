@@ -11,7 +11,7 @@ public:
     ~PhysicsSystem();
 
     void step(float time, bool clearWhenDone = true);
-	void solve(float time);
+	void solve(float time, ContactList &contacts);
     void clearForces();
 
     PhysicsBody* createBody(const Vector2 &pos, const AABB &bounds, PhysicsBody::BodyType type = PhysicsBody::Static);
@@ -21,7 +21,7 @@ public:
     const Vector2& getGravity() const;
 
 private:
-	void findCollisions(const ContactList &contacts);
+	void findCollisions(ContactList &contacts);
 
 private:
 	bool _newBodies;

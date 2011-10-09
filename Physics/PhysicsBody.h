@@ -17,18 +17,27 @@ public:
 		Artificial	// Bodies that generate collision callbacks but are not affected by collisions (attack volumes, etc)
 	};
 
+	enum Flag {
+		Island,
+		Alert
+	};
+
     PhysicsBody(const Vector2 &position, const AABB& bounds, BodyType bodyType);
     ~PhysicsBody();
 
 	BodyType getType() const;
 	AABB getBounds() const;
 
-	void setAlert();
-	bool isAlert();
+	void setFlag(Flag flag);
+	void clearFlag(Flag flag);
+	bool getFlag(Flag flag) const;
 
 	void addContact(Contact *contact);
+	ContactList* getContacts();
 
 	bool canCollideWith(PhysicsBody *body);
+
+	void synchronize();
 
 private:
 	// Deterines the type of physical simulation that this body undergoes
@@ -48,7 +57,7 @@ private:
 	ContactList _contacts;
 
 	// Is this body possibly contacting another?
-	bool _alert;
+	bool _alert, _island;
 };
 
 #endif

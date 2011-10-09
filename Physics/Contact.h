@@ -1,50 +1,40 @@
 #ifndef CONTACT_H
 #define CONTACT_H
 
-#include <Physics/PhysicsBody.h>
+#include <Base/Base.h>
+
+class PhysicsBody;
 
 class Contact {
 public:
-	inline Contact(PhysicsBody *a, PhysicsBody *b) {
-		// Use the pointers to order the bodies (for comparison)
-		if(a < b) {
-			_a = a;
-			_b = b;
-		} else {
-			_a = b;
-			_b = a;
-		}
-	}
+	enum Flag {
+		Island,
+		Filter,
+		Touching
+	};
 
-	inline void setIslandFlag() { _island = true; }
-	inline bool getIslandFlag() const { return _island; }
+	Contact(PhysicsBody *a, PhysicsBody *b);
 
-	inline bool involves(PhysicsBody *body) {
-		return (_a == body || _b == body);
-	}
+	void setFlag(Flag flag);
+	void clearFlag(Flag flag);
+	bool getFlag(Flag flag) const;
 
-	inline bool operator==(const Contact& rhs) const {
-		return (_a == rhs._a && _b == rhs._b);
-	}
+	bool canCollide();
+	bool overlaps();
+	bool involves(PhysicsBody *body);
 
-	inline bool operator<(const Contact& rhs) const {
-		if     (_a < rhs._a) { return true;  }
-		else if(_a > rhs._a) { return false; }
-		else if(_b < rhs._b) { return true;  }
-		else                 { return false; }
-	}
+	bool operator==(const Contact& rhs) const;
+	bool operator<(const Contact& rhs) const;
 
-	inline PhysicsBody* first() const { return _a; }
-	inline PhysicsBody* second() const { return _b; }
+	PhysicsBody* first() const;
+	PhysicsBody* second() const;
+	PhysicsBody* other(PhysicsBody* body);
 
-	inline PhysicsBody* other(PhysicsBody* body) {
-		ASSERT(body == _a || body == _b);
-		return (body == _a) ? _b : _a;
-	}
+	void update();
 
 protected:
 	PhysicsBody *_a, *_b;
-	bool _island;
+	bool _island, _filter, _touching;
 };
 
 typedef std::list<Contact*> ContactList;

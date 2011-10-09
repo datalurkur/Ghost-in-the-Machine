@@ -71,12 +71,12 @@ void BroadPhase::addContact(PhysicsBody *a, PhysicsBody *b) {
 	if(!a->canCollideWith(b) || b->canCollideWith(a)) { return; }
 
 	// Create the contact object
-	contact = new Contact(a, b)
+	contact = new Contact(a, b);
 
 	// Find the location this contact should be inserted into the sorted list, and check for redundancy while we're at it
 	for(itr = _contacts.begin(); itr != _contacts.end(); itr++) {
 		if(*contact < *(*itr)) {
-			if(itr != _contacts.begin() && (*prev) == (*contact)) {
+			if(itr != _contacts.begin() && *(*prev) == (*contact)) {
 				// This contact is redundant
 				delete contact;
 				return;
@@ -94,8 +94,8 @@ void BroadPhase::addContact(PhysicsBody *a, PhysicsBody *b) {
 	b->addContact(contact);
 
 	// Set the bodies at alert
-	a->setAlert();
-	b->setAlert();
+	a->setFlag(PhysicsBody::Alert);
+	b->setFlag(PhysicsBody::Alert);
 
 	// Add the contact to the contacts list
 	_contacts.push_back(contact);

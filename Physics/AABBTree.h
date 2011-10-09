@@ -256,7 +256,23 @@ void AABBTree<T>::remove(T *t) {
 
 template <typename T>
 void AABBTree<T>::query(const AABB& bounds, std::list<T*> &intersections) {
-	// FIXME - Write this function
+	std::stack<AABBTreeNode<T>*> nodeStack;
+	AABBTreeNode<T> *current;
+
+	nodeStack.push(_root);
+	while(!nodeStack.empty()) {
+		current = nodeStack.top();
+		nodeStack.pop();
+
+		if(current->_bounds.overlaps(bounds)) {
+			if(current->isLeaf()) {
+				intersections.push_back(current->_data);
+			} else {
+				nodeStack.push(current->_child0);
+				nodeStack.push(current->_child1);
+			}
+		}
+	}
 }
 
 template <typename T>

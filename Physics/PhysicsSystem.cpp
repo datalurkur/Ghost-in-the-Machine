@@ -22,7 +22,7 @@ void PhysicsSystem::step(float time, bool clearWhenDone) {
 	findCollisions(contacts);
 
 	// Solve the system
-	solve(time);
+	solve(time, contacts);
 
 	// Clean up
     if(clearWhenDone) {
@@ -30,13 +30,133 @@ void PhysicsSystem::step(float time, bool clearWhenDone) {
     }
 }
 
-void PhysicsSystem::solve(float time) {
+void PhysicsSystem::solve(float time, ContactList &contacts) {
+	ContactList::iterator cItr;
+	BodyList::iterator bItr;
+	PhysicsBody *origin, *current, *other;
+	ContactList *bodyContacts;
+
 	// Clear all the island flags in the system
-	// FIXME - Write this
+	for(cItr = contacts.begin(); cItr != contacts.end(); cItr++) {
+		(*cItr)->clearFlag(Contact::Island);
+	}
+	for(bItr = _bodies.begin(); bItr != _bodies.end(); bItr++) {
+		(*bItr)->clearFlag(PhysicsBody::Island);
+	}
+
+	// Iterate through the bodies, grouping them into islands
+	for(bItr = _bodies.begin(); bItr != _bodies.end(); bItr++) {
+		origin = (*bItr);
+
+		// Check to see if this body has already been accounted for
+		if(origin->getFlag(PhysicsBody::Island)) { continue; }
+
+		// Bodies need to be alert and non-static to start islands
+		if(!origin->getFlag(PhysicsBody::Alert)) { continue; }
+		if(origin->getType() == PhysicsBody::Static) { continue; }
+
+		// This body meets all the qualifications necessary to begin an island
+		Island island;
+		std::stack<PhysicsBody*> bodyStack;
+
+		origin->setFlag(PhysicsBody::Island);
+		bodyStack.push(origin);
+
+		// Find connected bodies (via contacts, etc) and add them to the island
+		while(!bodyStack.empty()) {
+			current = bodyStack.top();
+			bodyStack.pop();
+
+			// Add the body to the island
+			island.addBody(current);
+
+			// Make sure the body is alert
+			current->setFlag(PhysicsBody::Alert);
+
+			// Move on to the next body if this one is static
+			if(current->getType() == PhysicsBody::Static) { continue; }
+
+			// Search the contacts of this body
+			bodyContacts = current->getContacts();
+			for(cItr = bodyContacts->begin(); cItr != bodyContacts->end(); cItr++) {
+				// Skip contacts that are already part of an island
+				if((*cItr)->getFlag(Contact::Island)) { continue; }
+
+				// Skip contacts that are not touching
+				if(!(*cItr)->getFlag(Contact::Touching)) { continue; }
+
+				// Add the contact to the island
+				island.addContact(*cItr);
+				(*cItr)->setFlag(Contact::Island);
+
+				// If the other body is not already part of an island, add it
+				other = (*cItr)->other(current);
+				if(!other->getFlag(PhysicsBody::Island)) {
+					bodyStack.push(other);
+					other->setFlag(PhysicsBody::Island);
+				}
+			}
+		}
+
+		// Solve the island
+		island.solve(time);
+
+		// Cleanup afterwards
+		island.clearStaticBodies();
+	}
+
+	// Look for bodies that weren't a part of an island
+	for(bItr = _bodies.begin(); bItr != _bodies.end(); bItr++) {
+		if((*bItr)->getFlag(PhysicsBody::Island)) { continue; }
+		if((*bItr)->getType() == PhysicsBody::Static) { continue; }
+
+		(*bItr)->synchronize();
+	}
+
+	// Find new contacts
+	_broadPhase.findNewContacts();
 }
 
-void PhysicsSystem::findCollisions(const ContactList &contacts) {
-	// FIXME - Write this
+void PhysicsSystem::findCollisions(ContactList &contacts) {
+	ContactList::iterator current, itr;
+	Contact *contact;
+	PhysicsBody *first, *second;
+
+	itr = contacts.begin();
+	while(itr != contacts.end()) {
+		current = itr;
+		itr++;
+		contact = (*current);
+
+		// Check to see if this contact needs filtering
+		if(contact->getFlag(Contact::Filter)) {
+			// Can this contact collide?
+			if(!contact->canCollide()) {
+				contacts.erase(current);
+				delete contact;
+				continue;
+			}
+			contact->clearFlag(Contact::Filter);
+		}
+
+		// One of the bodies must be alert and non-static
+		first = contact->first();
+		second = contact->second();
+		if(!((first->getFlag(PhysicsBody::Alert)  && first->getType()  != PhysicsBody::Static) ||
+			 (second->getFlag(PhysicsBody::Alert) && second->getType() != PhysicsBody::Static))) {
+			continue;
+		}
+
+		// Check to see if the contact still overlaps in the broad phase
+		if(!contact->overlaps()) {
+			contacts.erase(current);
+			delete contact;
+			continue;
+		}
+
+		// Update the contact
+		contact->update();
+	}
 }
 
 void PhysicsSystem::clearForces() {

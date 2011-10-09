@@ -10,6 +10,34 @@ PhysicsBody::PhysicsBody(const Vector2 &position, const AABB& bounds, BodyType b
 PhysicsBody::~PhysicsBody() {
 }
 
-const AABB& PhysicsBody::getBounds() const {
+PhysicsBody::BodyType PhysicsBody::getType() const {
+	return _bodyType;
+}
+
+AABB PhysicsBody::getBounds() const {
 	return _bounds;
+}
+
+void PhysicsBody::setAlert() {
+	_alert = true;
+}
+
+bool PhysicsBody::isAlert() {
+	return _alert;
+}
+
+void PhysicsBody::addContact(Contact *contact) {
+	ContactList::iterator itr = _contacts.begin();
+	for(; itr != _contacts.end(); itr++) {
+		if(*contact == *(*itr)) { return; }
+	}
+	_contacts.push_back(contact);
+}
+
+bool PhysicsBody::canCollideWith(PhysicsBody *body) {
+	BodyList::iterator itr = _ignoreList.begin();
+	for(; itr != _ignoreList.end(); itr++) {
+		if((*itr) == body) { return false; }
+	}
+	return true;
 }

@@ -20,6 +20,13 @@ public:
     bool overlaps(const AABB& other) const;
 
     void expand(const AABB& other);
+	void expand(const Vector2& border);
+
+	inline AABB operator+(const Vector2& rhs) {
+		AABB ret(*this);
+		ret.expand(rhs);
+		return ret;
+	}
 
     inline AABB& operator=(const AABB& rhs) {
         _lower = rhs._lower;

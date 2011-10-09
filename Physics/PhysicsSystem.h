@@ -21,8 +21,14 @@ public:
     const Vector2& getGravity() const;
 
 private:
+	void findCollisions(const ContactList &contacts);
+
+private:
+	bool _newBodies;
+
     Vector2 _gravity;
 	BroadPhase _broadPhase;
+	BodyList _bodies;
 };
 
 #endif

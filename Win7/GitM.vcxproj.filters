@@ -160,6 +160,9 @@
     <ClCompile Include="..\Physics\Island.cpp">
       <Filter>Physics</Filter>
     </ClCompile>
+    <ClCompile Include="..\Physics\Contact.cpp">
+      <Filter>Physics</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Engine\ParentState.h">
@@ -289,6 +292,9 @@
       <Filter>Physics</Filter>
     </ClInclude>
     <ClInclude Include="..\Physics\Island.h">
+      <Filter>Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Physics\Contact.h">
       <Filter>Physics</Filter>
     </ClInclude>
   </ItemGroup>

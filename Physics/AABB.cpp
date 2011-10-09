@@ -56,6 +56,11 @@ void AABB::expand(const AABB& other) {
     _upper = Vector2(max(_upper.x, other._upper.x), max(_upper.y, other._upper.y));
 }
 
+void AABB::expand(const Vector2& border) {
+	_lower -= border;
+	_upper += border;
+}
+
 AABB AABB::Combine(const AABB& b1, const AABB& b2) {
     AABB ret = b1;
     ret.expand(b2);

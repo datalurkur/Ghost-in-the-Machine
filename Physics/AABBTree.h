@@ -39,6 +39,8 @@ public:
     void insert(T* t, const AABB& bounds);
 	void remove(T* t);
 
+	void query(const AABB& bounds, std::list<T*> &intersections);
+
 protected:
     void balance(AABBTreeNode<T>* node);
 
@@ -250,6 +252,11 @@ void AABBTree<T>::remove(T *t) {
 	_nodePool->free(parent);
 
 	validate();
+}
+
+template <typename T>
+void AABBTree<T>::query(const AABB& bounds, std::list<T*> &intersections) {
+	// FIXME - Write this function
 }
 
 template <typename T>

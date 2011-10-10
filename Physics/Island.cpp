@@ -9,15 +9,30 @@ Island::~Island() {
 }
 
 void Island::addBody(PhysicsBody *body) {
-	// FIXME
+	_bodies.push_back(body);
 }
 
 void Island::addContact(Contact *contact) {
-	// FIXME
+	_contacts.push_back(contact);
 }
 
-void Island::solve(float time) {
-	// FIXME
+void Island::solve(float time, const Vector2 &gravity) {
+	BodyList::iterator bItr;
+	PhysicsBody *body;
+
+	// Integrate velocity for each body
+	for(bItr = _bodies.begin(); bItr != _bodies.end(); bItr++) {
+		body = *bItr;
+		if(body->getType() != PhysicsBody::Dynamic) { continue; }
+
+		Vector2 newVelocity = body->getVelocity();
+		// Apply foce and gravity
+		newVelocity += time * (gravity + (body->getForce() * body->getInverseMass()));
+		// Apply the linear damping factor
+		newVelocity *= max(min(1.0 - (time * body->getDamping()), 1.0), 0.0);
+
+		body->setVelocity(newVelocity);
+	}
 }
 
 void Island::clearStaticBodies() {

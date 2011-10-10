@@ -20,3 +20,7 @@ std::ostream& operator<<(std::ostream &lhs, const Vector2 &rhs) {
     lhs << " " << rhs[1];
     return lhs;
 }
+
+Vector2& operator*(const float lhs, const Vector2& rhs) {
+	return rhs * lhs;
+}

@@ -28,6 +28,18 @@ public:
 	BodyType getType() const;
 	AABB getBounds() const;
 
+	Vector2 getPosition() const;
+	Vector2 getLastPosition() const;
+	Vector2 getVelocity() const;
+	Vector2 getForce() const;
+
+	float getMass() const;
+	float getInverseMass() const;
+	float getDamping() const;
+
+	void setPosition(const Vector2 &position);
+	void setVelocity(const Vector2 &velocity);
+
 	void setFlag(Flag flag);
 	void clearFlag(Flag flag);
 	bool getFlag(Flag flag) const;
@@ -37,15 +49,13 @@ public:
 
 	bool canCollideWith(PhysicsBody *body);
 
-	void synchronize();
-
 private:
 	// Deterines the type of physical simulation that this body undergoes
 	BodyType _bodyType;
 
 	// Physical definition and current modifiers
-	Vector2 _position, _velocity, _force;
-	float _mass, _friction, _density;
+	Vector2 _prevPosition, _position, _velocity, _force;
+	float _mass, _inverseMass, _friction, _density, _damping;
 
 	// The bounding box of this body
 	AABB _bounds;

@@ -1,8 +1,8 @@
 #ifndef ISLAND_H
 #define ISLAND_H
 
-class PhysicsBody;
-class Contact;
+#include <Base/Vector2.h>
+#include <Physics/PhysicsBody.h>
 
 class Island {
 public:
@@ -12,11 +12,13 @@ public:
 	void addBody(PhysicsBody *body);
 	void addContact(Contact *contact);
 
-	void solve(float time);
+	void solve(float time, const Vector2 &gravity);
 
 	void clearStaticBodies();
 
 private:
+	BodyList _bodies;
+	ContactList _contacts;
 };
 
 #endif

@@ -99,18 +99,29 @@ void PhysicsSystem::solve(float time, ContactList &contacts) {
 		}
 
 		// Solve the island
-		island.solve(time);
+		island.solve(time, _gravity);
 
-		// Cleanup afterwards
+		// Clear island flags on static bodies so that they can participate in other islands
 		island.clearStaticBodies();
 	}
 
-	// Look for bodies that weren't a part of an island
+	// Synchronize the bodies with the broad phase
 	for(bItr = _bodies.begin(); bItr != _bodies.end(); bItr++) {
-		if((*bItr)->getFlag(PhysicsBody::Island)) { continue; }
+		// If a body wasn't part of an island, it was stationary
+		if(!(*bItr)->getFlag(PhysicsBody::Island)) { continue; }
+
+		// Static bodies obviously haven't moved
 		if((*bItr)->getType() == PhysicsBody::Static) { continue; }
 
-		(*bItr)->synchronize();
+		// Compute an AABB that encompasses the entire sweep of movement
+		AABB combined = (*bItr)->getBounds();
+		// FIXME - Compute an expansion AABB using the swept motion of the body
+		combined.expand(AABB());
+
+		// FIXME - Compute a displacement vector
+		Vector2 displacement;
+
+		_broadPhase.moveBody(*bItr, combined, displacement);
 	}
 
 	// Find new contacts

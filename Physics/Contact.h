@@ -33,8 +33,12 @@ public:
 	void update();
 
 protected:
+	bool computeManifold();
+
+protected:
 	PhysicsBody *_a, *_b;
 	bool _island, _filter, _touching;
+	unsigned int _manifoldPoints;
 };
 
 typedef std::list<Contact*> ContactList;

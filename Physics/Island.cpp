@@ -33,6 +33,8 @@ void Island::solve(float time, const Vector2 &gravity) {
 
 		body->setVelocity(newVelocity);
 	}
+
+	// Solve constraints
 }
 
 void Island::clearStaticBodies() {

@@ -102,6 +102,7 @@
     <ClCompile Include="..\Physics\Island.cpp" />
     <ClCompile Include="..\Physics\PhysicsBody.cpp" />
     <ClCompile Include="..\Physics\PhysicsSystem.cpp" />
+    <ClCompile Include="..\Physics\Solver.cpp" />
     <ClCompile Include="..\Render\Font.cpp" />
     <ClCompile Include="..\Render\Material.cpp" />
     <ClCompile Include="..\Render\Renderable.cpp" />
@@ -147,6 +148,7 @@
     <ClInclude Include="..\Physics\Island.h" />
     <ClInclude Include="..\Physics\PhysicsBody.h" />
     <ClInclude Include="..\Physics\PhysicsSystem.h" />
+    <ClInclude Include="..\Physics\Solver.h" />
     <ClInclude Include="..\Render\Font.h" />
     <ClInclude Include="..\Render\Material.h" />
     <ClInclude Include="..\Render\Renderable.h" />

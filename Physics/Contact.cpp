@@ -75,9 +75,8 @@ void Contact::update() {
 	
 	wasTouching = getFlag(Touching);
 
-	// Find the overlapping manifold
-	// For now, for simplicity, we'll assume the AABB fully encapsulates the data needed to check for collisions
-	isTouching = true;
+	// Find the collision manifold
+	isTouching = computeManifold();
 
 	// Update the alert status of the bodies
 	if(wasTouching != isTouching) {
@@ -98,4 +97,16 @@ void Contact::update() {
 	} else if(!wasTouching && isTouching) {
 		// Contact started
 	}
+}
+
+bool Contact::computeManifold() {
+	AABB b1, b2;
+	float centerDistance, maxDistance1, maxDistance2;
+
+	_manifoldPoints = 0;
+
+	b1 = first()->getBounds();
+	b2 = second()->getBounds();
+
+	maxDistance1 = 
 }

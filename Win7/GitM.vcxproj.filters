@@ -163,6 +163,9 @@
     <ClCompile Include="..\Physics\Contact.cpp">
       <Filter>Physics</Filter>
     </ClCompile>
+    <ClCompile Include="..\Physics\Solver.cpp">
+      <Filter>Physics</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Engine\ParentState.h">
@@ -295,6 +298,9 @@
       <Filter>Physics</Filter>
     </ClInclude>
     <ClInclude Include="..\Physics\Contact.h">
+      <Filter>Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Physics\Solver.h">
       <Filter>Physics</Filter>
     </ClInclude>
   </ItemGroup>

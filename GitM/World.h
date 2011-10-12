@@ -3,7 +3,7 @@
 
 #include <Base/Base.h>
 #include <Base/Matrix4.h>
-#include <Box2D/Box2D.h>
+#include <Engine/PhysicsEngine.h>
 #include <GitM/QuadTreeSceneManager.h>
 #include <GitM/Player.h>
 
@@ -42,6 +42,9 @@ protected:
 
     typedef std::map<std::string, Entity*> EntityList;
     EntityList _entities;
+    
+    // Physics world object
+    PhysicsEngine *_physics;
 
     // Objects created by the world factory
 	Player *_player;

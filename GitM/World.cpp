@@ -5,10 +5,12 @@
 
 World::World(): _player(0) {
 	_scene = new QuadTreeSceneManager();
+    _physics = new PhysicsEngine();
 }
 
 World::~World() {
 	delete _scene;
+    delete _physics;
 }
 
 void World::update(int elapsed) {

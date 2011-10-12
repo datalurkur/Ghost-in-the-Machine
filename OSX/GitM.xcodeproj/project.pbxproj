@@ -72,6 +72,7 @@
 		E1AA8B1E1445FCA00024D891 /* b2WeldJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1AA8AEB1445FCA00024D891 /* b2WeldJoint.cpp */; };
 		E1AA8B1F1445FCA00024D891 /* b2WheelJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1AA8AED1445FCA00024D891 /* b2WheelJoint.cpp */; };
 		E1AA8B201445FCA00024D891 /* b2Rope.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1AA8AF01445FCA00024D891 /* b2Rope.cpp */; };
+		E1AA8B23144624C30024D891 /* PhysicsEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1AA8B21144624C30024D891 /* PhysicsEngine.cpp */; };
 		E1B4F31D1430D67A00A87C70 /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1B4F3171430D67A00A87C70 /* Player.cpp */; };
 		E1B4F31E1430D67A00A87C70 /* QuadTreeSceneManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1B4F3191430D67A00A87C70 /* QuadTreeSceneManager.cpp */; };
 		E1B4F31F1430D67A00A87C70 /* World.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1B4F31B1430D67A00A87C70 /* World.cpp */; };
@@ -228,6 +229,8 @@
 		E1AA8AEE1445FCA00024D891 /* b2WheelJoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = b2WheelJoint.h; sourceTree = "<group>"; };
 		E1AA8AF01445FCA00024D891 /* b2Rope.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = b2Rope.cpp; sourceTree = "<group>"; };
 		E1AA8AF11445FCA00024D891 /* b2Rope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = b2Rope.h; sourceTree = "<group>"; };
+		E1AA8B21144624C30024D891 /* PhysicsEngine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PhysicsEngine.cpp; path = ../Engine/PhysicsEngine.cpp; sourceTree = "<group>"; };
+		E1AA8B22144624C30024D891 /* PhysicsEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PhysicsEngine.h; path = ../Engine/PhysicsEngine.h; sourceTree = "<group>"; };
 		E1B4F3131430D66800A87C70 /* Base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Base.h; path = ../Base/Base.h; sourceTree = "<group>"; };
 		E1B4F3171430D67A00A87C70 /* Player.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Player.cpp; path = ../GitM/Player.cpp; sourceTree = "<group>"; };
 		E1B4F3181430D67A00A87C70 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Player.h; path = ../GitM/Player.h; sourceTree = "<group>"; };
@@ -308,6 +311,8 @@
 		E13A3FDD142A76AD00D7EA2A /* Engine */ = {
 			isa = PBXGroup;
 			children = (
+				E1AA8B21144624C30024D891 /* PhysicsEngine.cpp */,
+				E1AA8B22144624C30024D891 /* PhysicsEngine.h */,
 				E16C5AFA143A43AF0063EE8C /* Event Management */,
 				E16C5AF3143A43930063EE8C /* Cameras */,
 				E1BAD36C14366A6000D7430C /* Frustum.cpp */,
@@ -791,6 +796,7 @@
 				E1AA8B1E1445FCA00024D891 /* b2WeldJoint.cpp in Sources */,
 				E1AA8B1F1445FCA00024D891 /* b2WheelJoint.cpp in Sources */,
 				E1AA8B201445FCA00024D891 /* b2Rope.cpp in Sources */,
+				E1AA8B23144624C30024D891 /* PhysicsEngine.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

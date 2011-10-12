@@ -5,11 +5,9 @@
 
 World::World(): _player(0) {
 	_scene = new QuadTreeSceneManager();
-    _physicsSystem = new PhysicsSystem();
 }
 
 World::~World() {
-    delete _physicsSystem;
 	delete _scene;
 }
 

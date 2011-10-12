@@ -3,7 +3,7 @@
 
 #include <Base/Base.h>
 #include <Base/Matrix4.h>
-#include <Physics/PhysicsSystem.h>
+#include <Box2D/Box2D.h>
 #include <GitM/QuadTreeSceneManager.h>
 #include <GitM/Player.h>
 
@@ -42,8 +42,6 @@ protected:
 
     typedef std::map<std::string, Entity*> EntityList;
     EntityList _entities;
-    
-    PhysicsSystem *_physicsSystem;
 
     // Objects created by the world factory
 	Player *_player;

@@ -14,10 +14,17 @@ World::~World() {
 }
 
 void World::update(int elapsed) {
-    EntityList::iterator itr = _entities.begin();
-    for(; itr != _entities.end(); itr++) {
+    EntityList::iterator itr;
+
+    // Tick the physics simulation
+    _physics->update(elapsed);
+
+    // Update the entities (and their controllers)
+    for(itr = _entities.begin(); itr != _entities.end(); itr++) {
         itr->second->update(elapsed);
     }
+
+    // Update the scene
     _scene->update();
 }
 

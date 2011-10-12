@@ -2,6 +2,8 @@
 #define ENTITY_H
 
 #include <Engine/SceneNode.h>
+#include <Engine/Controller.h>
+#include <Engine/PhysicsController.h>
 
 class Entity: public SceneNode {
 public:
@@ -13,10 +15,14 @@ public:
 
     void update(int elapsed);
 
+    template <typename T>
+    void addController(T *controlObject);
+
 protected:
     Entity(const std::string &name, const std::string &type);
 
 private:
+    ControllerList _controllers;
 };
 
 #endif

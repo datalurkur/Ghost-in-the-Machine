@@ -62,6 +62,7 @@ template <typename T>
 T* World::createEntity(const std::string &name) {
     T *newEntity = createObject<T>(name);
     _entities[name] = newEntity;
+
     return newEntity;
 }
 

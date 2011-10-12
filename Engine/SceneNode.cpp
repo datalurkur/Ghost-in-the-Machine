@@ -32,6 +32,11 @@ Vector2 SceneNode::getLocalPosition() const {
     return _position;
 }
 
+void SceneNode::setPosition(const float x, const float y) {
+    _position.x = x;
+    _position.y = y;
+}
+
 void SceneNode::setPosition(const Vector2 &pos) {
 	_position = pos;
 	flagDirty(Downward);

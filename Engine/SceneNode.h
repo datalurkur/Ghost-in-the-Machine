@@ -24,6 +24,7 @@ public:
 	Vector2 getAbsolutePosition() const;
 	Vector2 getLocalPosition() const;
 
+    void setPosition(const float x, const float y);
 	void setPosition(const Vector2 &pos);
     void moveRelative(const Vector2 &pos);
 

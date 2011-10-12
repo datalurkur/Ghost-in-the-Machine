@@ -13,8 +13,21 @@ Entity::Entity(const std::string &name, const std::string &type):
 }
 
 Entity::~Entity() {
+    ControllerList::iterator itr = _controllers.begin();
+    for(; itr != _controllers.end(); itr++) {
+        delete (*itr);
+    }
+    _controllers.clear();
 }
 
 void Entity::update(int elapsed) {
-    // FIXME - This is where a list of controllers would be passed an elapsed time to use to update
+    ControllerList::iterator itr = _controllers.begin();
+    for(; itr != _controllers.end(); itr++) {
+        (*itr)->update(elapsed);
+    }
+}
+
+template <>
+void Entity::addController(b2Body *physicsBody) {
+    _controllers.push_back(new PhysicsController(this, physicsBody));
 }

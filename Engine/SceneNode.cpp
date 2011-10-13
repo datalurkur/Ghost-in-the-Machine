@@ -4,11 +4,11 @@
 const std::string SceneNode::NodeType = "SceneNode";
 
 SceneNode::SceneNode(const std::string &name):
-	_name(name), _type(NodeType), _dirty(true), _parent(0)
+	_name(name), _type(NodeType), _dirty(true), _parent(0), _position(0,0), _dimensions(0,0)
 {}
 
 SceneNode::SceneNode(const std::string &name, const std::string &type):
-	_name(name), _type(type), _dirty(true), _parent(0)
+	_name(name), _type(type), _dirty(true), _parent(0), _position(0,0), _dimensions(0,0)
 {}
 
 SceneNode::~SceneNode() {
@@ -35,11 +35,20 @@ Vector2 SceneNode::getLocalPosition() const {
 void SceneNode::setPosition(const float x, const float y) {
     _position.x = x;
     _position.y = y;
+    flagDirty(Downward);
 }
 
 void SceneNode::setPosition(const Vector2 &pos) {
 	_position = pos;
 	flagDirty(Downward);
+}
+
+Vector2 SceneNode::getDimensions() const {
+    return _dimensions;
+}
+
+void SceneNode::setDimensions(const Vector2 &dim) {
+    _dimensions = dim;
 }
 
 void SceneNode::moveRelative(const Vector2 &pos) {

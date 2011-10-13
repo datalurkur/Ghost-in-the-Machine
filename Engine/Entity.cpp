@@ -3,12 +3,12 @@
 const std::string Entity::NodeType = "Entity";
 
 Entity::Entity(const std::string &name):
-	SceneNode(name, NodeType) 
+	SceneNode(name, NodeType), _pController(0)
 {
 }
 
 Entity::Entity(const std::string &name, const std::string &type):
-	SceneNode(name, type)
+	SceneNode(name, type), _pController(0)
 {
 }
 
@@ -28,6 +28,7 @@ void Entity::update(int elapsed) {
 }
 
 template <>
-void Entity::addController(b2Body *physicsBody) {
-    _controllers.push_back(new PhysicsController(this, physicsBody));
+void Entity::addController<PhysicsEngine>(PhysicsEngine* controlObject) {
+    _pController = new PhysicsController(controlObject, this);
+    _controllers.push_back(_pController);
 }

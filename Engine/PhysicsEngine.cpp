@@ -26,8 +26,7 @@ b2World *PhysicsEngine::getPhysicsWorld() {
 }
 
 void PhysicsEngine::destroyObject(b2Body *body) {
-    ASSERT(0);
-    // FIXME
+    _world->DestroyBody(body);
 }
 
 b2Body *PhysicsEngine::createStaticBox(const Vector2 &pos, const Vector2 &dim) {

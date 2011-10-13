@@ -35,7 +35,10 @@ public:
     // Designed to generically add an entity to the entities list
     // Defers to createObject to also add the entity to the scene
     template <typename T>
-    T *createEntity(const std::string &name);
+    T *createEntity(const std::string &name, ...);
+    
+    template <typename T>
+    void addEntity(T* t);
 
 protected:
 	QuadTreeSceneManager *_scene;
@@ -53,17 +56,32 @@ protected:
 
 template <typename T>
 T* World::createObject(const std::string &name) {
-    T *newObject = new T(name);
-    _scene->addNode(newObject);
-    return newObject;
+    T *t = new T(name);
+    _scene->addNode(t);
+    return t;
 }
 
 template <typename T>
-T* World::createEntity(const std::string &name) {
-    T *newEntity = createObject<T>(name);
-    _entities[name] = newEntity;
+T* World::createEntity(const std::string &name, ...) {
+    va_list args;
+    T *t;
 
-    return newEntity;
+    va_start(args, name);
+    t = new T(name, args);
+    va_end(args);
+
+    _scene->addNode(t);
+    _entities[name] = t;
+    t->setupPhysics(_physics);
+
+    return t;
+}
+
+template <typename T>
+void World::addEntity(T* t) {
+    _scene->addNode(t);
+    _entities[t->getName()] = t;
+    t->setupPhysics(_physics);
 }
 
 #endif

@@ -27,6 +27,10 @@ public:
     void setPosition(const float x, const float y);
 	void setPosition(const Vector2 &pos);
     void moveRelative(const Vector2 &pos);
+    
+    // Dimensions
+    Vector2 getDimensions() const;
+    void setDimensions(const Vector2 &dim);
 
 	// Identifying information
 	const std::string &getName() const;
@@ -63,6 +67,8 @@ protected:
 
 	Vector2 _position;
 	Vector2 _absolutePosition;
+    
+    Vector2 _dimensions;
 
 	Matrix4 _affine;
 	Matrix4 _absoluteAffine;

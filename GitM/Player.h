@@ -8,13 +8,19 @@ public:
 	static const std::string NodeType;
 
 public:
-	Player(const std::string &name);
+    Player(const std::string &name);
+	Player(const std::string &name, va_list args);
 	virtual ~Player();
 
     void moveLeft();
     void moveRight();
     void moveUp();
     void moveDown();
+
+    void recreateRenderables();
+
+    void setupPhysics(PhysicsEngine *physics);
+    void recreatePhysicsBody();
 
 private:
 };

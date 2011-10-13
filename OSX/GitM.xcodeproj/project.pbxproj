@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E1128EF01447553000CBBB19 /* Platform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1128EEE1447553000CBBB19 /* Platform.cpp */; };
 		E146AA38143BAB6F00DA17E9 /* SDL_ttf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E146AA37143BAB6F00DA17E9 /* SDL_ttf.framework */; };
 		E152C6441434C75E00D83C44 /* Window.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E152C6421434C75E00D83C44 /* Window.cpp */; };
 		E152C6501434C8E100D83C44 /* SDL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E152C64F1434C8E100D83C44 /* SDL.framework */; };
@@ -101,6 +102,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E1128EEE1447553000CBBB19 /* Platform.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Platform.cpp; path = ../GitM/Platform.cpp; sourceTree = "<group>"; };
+		E1128EEF1447553000CBBB19 /* Platform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Platform.h; path = ../GitM/Platform.h; sourceTree = "<group>"; };
 		E121B0B7142BD0F500719A82 /* ParentState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ParentState.cpp; path = ../Engine/ParentState.cpp; sourceTree = "<group>"; };
 		E121B0B8142BD0F500719A82 /* ParentState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ParentState.h; path = ../Engine/ParentState.h; sourceTree = "<group>"; };
 		E121B0BB142BD11800719A82 /* Entity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Entity.cpp; path = ../Engine/Entity.cpp; sourceTree = "<group>"; };
@@ -301,6 +304,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E1128EEC1447551400CBBB19 /* Game Objects */ = {
+			isa = PBXGroup;
+			children = (
+				E1128EEE1447553000CBBB19 /* Platform.cpp */,
+				E1128EEF1447553000CBBB19 /* Platform.h */,
+				E1B4F31B1430D67A00A87C70 /* World.cpp */,
+				E1B4F31C1430D67A00A87C70 /* World.h */,
+				E1B4F3171430D67A00A87C70 /* Player.cpp */,
+				E1B4F3181430D67A00A87C70 /* Player.h */,
+			);
+			name = "Game Objects";
+			sourceTree = "<group>";
+		};
 		E121B0BA142BD10B00719A82 /* Scene Management */ = {
 			isa = PBXGroup;
 			children = (
@@ -335,14 +351,11 @@
 		E13A3FE2142A76CF00D7EA2A /* GitM */ = {
 			isa = PBXGroup;
 			children = (
+				E1128EEC1447551400CBBB19 /* Game Objects */,
 				E1B4F3361431267800A87C70 /* GhostCore.cpp */,
 				E1B4F3371431267800A87C70 /* GhostCore.h */,
-				E1B4F3171430D67A00A87C70 /* Player.cpp */,
-				E1B4F3181430D67A00A87C70 /* Player.h */,
 				E1B4F3191430D67A00A87C70 /* QuadTreeSceneManager.cpp */,
 				E1B4F31A1430D67A00A87C70 /* QuadTreeSceneManager.h */,
-				E1B4F31B1430D67A00A87C70 /* World.cpp */,
-				E1B4F31C1430D67A00A87C70 /* World.h */,
 				E1CE8DD3142BE67200BBB30A /* States */,
 				E13A3FE3142A76DC00D7EA2A /* main.cpp */,
 			);
@@ -817,6 +830,7 @@
 				E1AA8B23144624C30024D891 /* PhysicsEngine.cpp in Sources */,
 				E1AA8B2614462DAE0024D891 /* PhysicsController.cpp in Sources */,
 				E1AA8B2914462F710024D891 /* Controller.cpp in Sources */,
+				E1128EF01447553000CBBB19 /* Platform.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

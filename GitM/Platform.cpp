@@ -10,18 +10,10 @@ Platform::Platform(const std::string &name):
     recreateRenderables();
 }
 
-Platform::Platform(const std::string &name, va_list args):
-    Entity(name)
-{
-    _position = *va_arg(args, Vector2*);
-    _dimensions = *va_arg(args, Vector2*);
-    recreateRenderables();
-}
-
 Platform::~Platform() {}
 
 void Platform::recreateRenderables() {
-    addRenderable(Renderable::Sprite(_position.x, _position.y, _dimensions.x, _dimensions.y, 0, MaterialManager::Get("playerMaterial")));
+    addRenderable(Renderable::Sprite(_position, _dimensions, 0, MaterialManager::Get("playerMaterial")));
 }
 
 void Platform::setupPhysics(PhysicsEngine *physics) {

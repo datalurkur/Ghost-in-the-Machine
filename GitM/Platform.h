@@ -9,7 +9,6 @@ public:
 
 public:
     Platform(const std::string &name);
-    Platform(const std::string &name, va_list args);
     virtual ~Platform();
     
     void recreateRenderables();

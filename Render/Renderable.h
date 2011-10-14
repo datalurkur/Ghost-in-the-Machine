@@ -2,6 +2,7 @@
 #define RENDERABLE_H
 
 #include <Base/Base.h>
+#include <Base/Vector2.h>
 #include <Base/Matrix4.h>
 #include <Render/Material.h>
 #include <SDL/SDL_opengl.h>
@@ -24,8 +25,8 @@ public:
 	void render();
 
 public:
-	static Renderable* OrthoBox(const float x, const float y, const float w, const float h, const float z, bool texCoords, bool normals);
-    static Renderable* Sprite(const float x, const float y, const float w, const float h, const float z, Material *mat);
+	static Renderable* OrthoBox(const Vector2 &pos, const Vector2 &dims, const float z, bool texCoords, bool normals);
+    static Renderable* Sprite(const Vector2 &pos, const Vector2 &dims, const float z, Material *mat);
 
 private:
 	Matrix4 _viewMatrix;

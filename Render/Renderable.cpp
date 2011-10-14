@@ -86,15 +86,18 @@ void Renderable::render() {
     glPopMatrix();
 }
 
-Renderable* Renderable::OrthoBox(const float x, const float y, const float w, const float h, const float z, bool texCoords, bool normals) {
+Renderable* Renderable::OrthoBox(const Vector2 &pos, const Vector2 &dims, const float z, bool texCoords, bool normals) {
 	Renderable *renderable = new Renderable();
-	renderable->setViewMatrix(Matrix4::MakeTranslation(x, y, z));
+	renderable->setViewMatrix(Matrix4::MakeTranslation(pos.x, pos.y, z));
+
+	float hW = dims.x / 2.0,
+		  hH = dims.y / 2.0;
 
 	float verts[4 * 3] = {
-		0, 0, 0,
-		w, 0, 0,
-		w, h, 0,
-		0, h, 0
+		-hW, -hH, 0,
+		 hW, -hH, 0,
+		 hW,  hH, 0,
+		-hW,  hH, 0
 	};
 	renderable->setVertexPointer(&verts[0], 4, 3);
 
@@ -124,8 +127,8 @@ Renderable* Renderable::OrthoBox(const float x, const float y, const float w, co
 	return renderable;
 }
 
-Renderable* Renderable::Sprite(const float x, const float y, const float w, const float h, const float z, Material *mat) {
-    Renderable *renderable = Renderable::OrthoBox(x, y, w, h, z, true, true);
+Renderable* Renderable::Sprite(const Vector2 &pos, const Vector2 &dims, const float z, Material *mat) {
+    Renderable *renderable = Renderable::OrthoBox(pos, dims, z, true, true);
     renderable->setMaterial(mat);
     return renderable;
 }

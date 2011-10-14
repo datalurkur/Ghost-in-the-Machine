@@ -24,12 +24,13 @@ public:
 	Vector2 getAbsolutePosition() const;
 	Vector2 getLocalPosition() const;
 
-    void setPosition(const float x, const float y);
+    void setPosition(float x, float y);
 	void setPosition(const Vector2 &pos);
     void moveRelative(const Vector2 &pos);
     
     // Dimensions
     Vector2 getDimensions() const;
+	void setDimensions(float x, float y);
     void setDimensions(const Vector2 &dim);
 
 	// Identifying information
@@ -51,6 +52,11 @@ public:
 
 	// Clear the renderable list and delete the renderables if flag is set
 	void clearRenderables(bool deleteOnClear = true);
+
+	// Regenerate the renderables automatically (on a resize, for example)
+	virtual void recreateRenderables() {
+		Info("SceneNode regenerating renderables");
+	}
 
 protected:
 	SceneNode(const std::string &name, const std::string &type);

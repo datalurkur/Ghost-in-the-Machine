@@ -39,8 +39,8 @@ b2Body *PhysicsEngine::createStaticBox(const Vector2 &pos, const Vector2 &dim) {
     halfHeight = dim.y / 2.0;
 
     // Create the body
-    // The position passed is the center, but we want to define the box by its extremes
-    def.position.Set(pos.x + halfWidth, pos.y + halfHeight);
+    // The position passed is the center
+    def.position.Set(pos.x, pos.y);
     body = _world->CreateBody(&def);
     
     // Create the fixture shape
@@ -70,8 +70,8 @@ b2Body *PhysicsEngine::createDynamicBox(const Vector2 &pos, const Vector2 &dim, 
     if(!canRotate) {
         bDef.fixedRotation = true;
     }
-    // The position passed is the center, but we want to define the box by its extremes
-    bDef.position.Set(pos.x + halfWidth, pos.y + halfHeight);
+    // The position passed is the center
+    bDef.position.Set(pos.x, pos.y);
     body = _world->CreateBody(&bDef);
     
     // Create the fixture shape

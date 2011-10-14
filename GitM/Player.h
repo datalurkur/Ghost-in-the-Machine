@@ -9,7 +9,6 @@ public:
 
 public:
     Player(const std::string &name);
-	Player(const std::string &name, va_list args);
 	virtual ~Player();
 
     void moveLeft();
@@ -23,6 +22,7 @@ public:
     void recreatePhysicsBody();
 
 private:
+	float _speed;
 };
 
 #endif

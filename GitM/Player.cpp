@@ -6,15 +6,8 @@
 const std::string Player::NodeType = "Player";
 
 Player::Player(const std::string &name):
-Entity(name, NodeType)
+	Entity(name, NodeType), _speed(100.0)
 {
-    recreateRenderables();
-}
-
-Player::Player(const std::string &name, va_list args):
-    Entity(name, NodeType)
-{
-    _position = *va_arg(args, Vector2*);
     recreateRenderables();
 }
 
@@ -22,20 +15,24 @@ Player::~Player() {
 }
 
 void Player::moveLeft() {
+	_pController->getBody()->ApplyForceToCenter(b2Vec2(-_speed, 0));
 }
 
 void Player::moveRight() {
+	_pController->getBody()->ApplyForceToCenter(b2Vec2(_speed, 0));
 }
 
 void Player::moveUp() {
+	_pController->getBody()->ApplyForceToCenter(b2Vec2(0, _speed*10));
 }
 
 void Player::moveDown() {
+	_pController->getBody()->ApplyForceToCenter(b2Vec2(0, -_speed*10));
 }
 
 void Player::recreateRenderables() {
     clearRenderables();
-    addRenderable(Renderable::Sprite(_position.x, _position.y, 1.0, 1.0, 0, MaterialManager::Get("playerMaterial")));
+    addRenderable(Renderable::Sprite(_position, Vector2(1.0, 1.0), 0, MaterialManager::Get("playerMaterial")));
 }
 
 void Player::setupPhysics(PhysicsEngine *physics) {

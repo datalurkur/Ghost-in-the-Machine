@@ -41,6 +41,9 @@
     <Filter Include="Box2D">
       <UniqueIdentifier>{3af9d9f2-31c9-43af-9639-a30fa22cac48}</UniqueIdentifier>
     </Filter>
+    <Filter Include="GitM\Game Objects">
+      <UniqueIdentifier>{8816f58d-7f07-4b62-be66-c29dc1eab421}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\GitM\main.cpp">
@@ -67,14 +70,8 @@
     <ClCompile Include="..\GitM\QuadTreeSceneManager.cpp">
       <Filter>GitM</Filter>
     </ClCompile>
-    <ClCompile Include="..\GitM\World.cpp">
-      <Filter>GitM</Filter>
-    </ClCompile>
     <ClCompile Include="..\Engine\SceneNode.cpp">
       <Filter>Engine\Scene Management</Filter>
-    </ClCompile>
-    <ClCompile Include="..\GitM\Player.cpp">
-      <Filter>GitM</Filter>
     </ClCompile>
     <ClCompile Include="..\Render\Renderable.cpp">
       <Filter>Render</Filter>
@@ -292,6 +289,15 @@
     <ClCompile Include="..\Box2D\Rope\b2Rope.cpp">
       <Filter>Box2D</Filter>
     </ClCompile>
+    <ClCompile Include="..\GitM\Player.cpp">
+      <Filter>GitM\Game Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\GitM\World.cpp">
+      <Filter>GitM\Game Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\GitM\Platform.cpp">
+      <Filter>GitM\Game Objects</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Engine\ParentState.h">
@@ -315,17 +321,11 @@
     <ClInclude Include="..\GitM\QuadTreeSceneManager.h">
       <Filter>GitM</Filter>
     </ClInclude>
-    <ClInclude Include="..\GitM\World.h">
-      <Filter>GitM</Filter>
-    </ClInclude>
     <ClInclude Include="..\Base\Base.h">
       <Filter>Base</Filter>
     </ClInclude>
     <ClInclude Include="..\Engine\SceneNode.h">
       <Filter>Engine\Scene Management</Filter>
-    </ClInclude>
-    <ClInclude Include="..\GitM\Player.h">
-      <Filter>GitM</Filter>
     </ClInclude>
     <ClInclude Include="..\Render\Renderable.h">
       <Filter>Render</Filter>
@@ -551,6 +551,15 @@
     </ClInclude>
     <ClInclude Include="..\Box2D\Rope\b2Rope.h">
       <Filter>Box2D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GitM\Player.h">
+      <Filter>GitM\Game Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GitM\World.h">
+      <Filter>GitM\Game Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GitM\Platform.h">
+      <Filter>GitM\Game Objects</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

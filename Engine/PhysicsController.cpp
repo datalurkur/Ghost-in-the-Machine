@@ -30,6 +30,10 @@ void PhysicsController::setBody(b2Body *body) {
     _body = body;
 }
 
+b2Body *PhysicsController::getBody() {
+	return _body;
+}
+
 void PhysicsController::disallowUpdates() { _updates = false; }
 void PhysicsController::allowUpdates() { _updates = true; }
 

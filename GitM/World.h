@@ -35,7 +35,7 @@ public:
     // Designed to generically add an entity to the entities list
     // Defers to createObject to also add the entity to the scene
     template <typename T>
-    T *createEntity(const std::string &name, ...);
+    T *createEntity(const std::string &name);
     
     template <typename T>
     void addEntity(T* t);
@@ -62,18 +62,10 @@ T* World::createObject(const std::string &name) {
 }
 
 template <typename T>
-T* World::createEntity(const std::string &name, ...) {
-    va_list args;
+T* World::createEntity(const std::string &name) {
     T *t;
-
-    va_start(args, name);
-    t = new T(name, args);
-    va_end(args);
-
-    _scene->addNode(t);
-    _entities[name] = t;
-    t->setupPhysics(_physics);
-
+    t = new T(name);
+	addEntity(t);
     return t;
 }
 

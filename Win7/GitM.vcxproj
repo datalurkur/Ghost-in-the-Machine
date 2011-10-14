@@ -140,6 +140,7 @@
     <ClCompile Include="..\GitM\GhostCore.cpp" />
     <ClCompile Include="..\GitM\LoadingState.cpp" />
     <ClCompile Include="..\GitM\main.cpp" />
+    <ClCompile Include="..\GitM\Platform.cpp" />
     <ClCompile Include="..\GitM\Player.cpp" />
     <ClCompile Include="..\GitM\PlayingState.cpp" />
     <ClCompile Include="..\GitM\QuadTreeSceneManager.cpp" />
@@ -227,6 +228,7 @@
     <ClInclude Include="..\GitM\GameState.h" />
     <ClInclude Include="..\GitM\GhostCore.h" />
     <ClInclude Include="..\GitM\LoadingState.h" />
+    <ClInclude Include="..\GitM\Platform.h" />
     <ClInclude Include="..\GitM\Player.h" />
     <ClInclude Include="..\GitM\PlayingState.h" />
     <ClInclude Include="..\GitM\QuadTreeSceneManager.h" />

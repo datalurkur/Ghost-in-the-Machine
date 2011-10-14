@@ -32,23 +32,29 @@ Vector2 SceneNode::getLocalPosition() const {
     return _position;
 }
 
-void SceneNode::setPosition(const float x, const float y) {
+void SceneNode::setPosition(float x, float y) {
     _position.x = x;
     _position.y = y;
     flagDirty(Downward);
 }
 
 void SceneNode::setPosition(const Vector2 &pos) {
-	_position = pos;
-	flagDirty(Downward);
+	setPosition(pos.x, pos.y);
 }
 
 Vector2 SceneNode::getDimensions() const {
     return _dimensions;
 }
 
+void SceneNode::setDimensions(float x, float y) {
+    _dimensions.x = x;
+    _dimensions.y = y;
+    flagDirty(Upward);
+	recreateRenderables();
+}
+
 void SceneNode::setDimensions(const Vector2 &dim) {
-    _dimensions = dim;
+	setDimensions(dim.x, dim.y);
 }
 
 void SceneNode::moveRelative(const Vector2 &pos) {

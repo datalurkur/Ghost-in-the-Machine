@@ -22,7 +22,8 @@ void LoadingState::render(RenderContext *renderContext) {
 
 void LoadingState::setup(va_list args) {
     Info("Setting up LoadingState");
-    _world = WorldManager::Load("test_world.wld");
+	std::string *map = va_arg(args, std::string*);
+    _world = WorldManager::Load(*map);
 }
 
 void LoadingState::teardown() {

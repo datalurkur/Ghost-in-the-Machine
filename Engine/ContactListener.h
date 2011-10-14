@@ -9,12 +9,10 @@ class ContactListener {
 public:
     ContactListener();
 
-    virtual void contactBegins(ContactListener *a, ContactListener *b);
-    virtual void contactEnds(ContactListener *a, ContactListener *b);
+    virtual void contactBegins(Entity *a, Entity *b) = 0;
+    virtual void contactEnds(Entity *a, Entity *b) = 0;
 
 private:
 };
-
-typedef std::list<ContactListener*> ContactListenerList;
 
 #endif

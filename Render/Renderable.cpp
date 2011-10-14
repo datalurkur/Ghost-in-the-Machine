@@ -83,6 +83,10 @@ void Renderable::render() {
 		glDrawElements(_drawMode, _numIndices, GL_UNSIGNED_INT, _indexPointer);
 	}
 
+	if(_material) {
+		_material->disable();
+	}
+
     glPopMatrix();
 }
 
@@ -90,8 +94,8 @@ Renderable* Renderable::OrthoBox(const Vector2 &pos, const Vector2 &dims, const 
 	Renderable *renderable = new Renderable();
 	renderable->setViewMatrix(Matrix4::MakeTranslation(pos.x, pos.y, z));
 
-	float hW = dims.x / 2.0,
-		  hH = dims.y / 2.0;
+	float hW = dims.x / 2.0f,
+		  hH = dims.y / 2.0f;
 
 	float verts[4 * 3] = {
 		-hW, -hH, 0,

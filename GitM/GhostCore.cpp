@@ -25,7 +25,10 @@ void GhostCore::setup() {
     Material *playerMaterial = new Material();
     playerMaterial->setTexture(playerTexture);
     MaterialManager::Register("playerMaterial", playerMaterial);
-    
+
+	Material *debugMaterial = new Material();
+	debugMaterial->setColor(1.0f, 1.0f, 1.0f, 0.5f);
+	MaterialManager::Register("debugMaterial", debugMaterial);
     
     std::string mapName = "test_world";
     pushState(new GameState(), &mapName);

@@ -301,6 +301,12 @@
     <ClCompile Include="..\Engine\PlayerController.cpp">
       <Filter>Engine\Controllers</Filter>
     </ClCompile>
+    <ClCompile Include="..\Engine\ContactListener.cpp">
+      <Filter>Engine\Event Handling</Filter>
+    </ClCompile>
+    <ClCompile Include="..\GitM\DebugVolume.cpp">
+      <Filter>GitM\Game Objects</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Engine\ParentState.h">
@@ -566,6 +572,12 @@
     </ClInclude>
     <ClInclude Include="..\Engine\PlayerController.h">
       <Filter>Engine\Controllers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\ContactListener.h">
+      <Filter>Engine\Event Handling</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GitM\DebugVolume.h">
+      <Filter>GitM\Game Objects</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

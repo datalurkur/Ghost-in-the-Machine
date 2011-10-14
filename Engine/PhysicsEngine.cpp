@@ -18,7 +18,7 @@ void PhysicsEngine::update(int elapsed) {
     leftOver += elapsed;
     while(leftOver > _stepSize) {
         leftOver -= _stepSize;
-        _world->Step(_stepSize / 1000.0, _velocityIterations, _positionIterations);
+        _world->Step(_stepSize / 1000.0f, _velocityIterations, _positionIterations);
     }
 }
 
@@ -31,13 +31,13 @@ void PhysicsEngine::destroyObject(b2Body *body) {
 }
 
 void PhysicsEngine::BeginContact(b2Contact *contact) {
-    ContactListenerList::iterator itr = _contactListeners.begin();
+    ContactListenerMap::iterator itr = _contactListeners.begin();
     for(; itr != _contactListeners.end(); itr++) {
-        ContactListener *a, *b;
-        a = (ContactListener*)contact->GetFixtureA()->GetBody()->GetUserData();
-        b = (ContactListener*)contact->GetFixtureA()->GetBody()->GetUserData();
-        if(a == (*itr) || b == (*itr)) {
-            (*itr)->contactBegins(a, b);
+        Entity *a, *b;
+        a = (Entity*)contact->GetFixtureA()->GetBody()->GetUserData();
+        b = (Entity*)contact->GetFixtureA()->GetBody()->GetUserData();
+        if(itr->first == a || itr->first == b) {
+            itr->second->contactBegins(a, b);
         }
     }   
 }
@@ -46,14 +46,14 @@ void PhysicsEngine::EndContact(b2Contact *contact) {
     Info("Contact ends");
 }
 
-void PhysicsEngine::addContactListener(ContactListener *controller) {
-    _contactListeners.push_back(controller);
+void PhysicsEngine::addContactListenerCondition(Entity *entity, ContactListener *controller) {
+    _contactListeners[entity] = controller;
 }
 
-void PhysicsEngine::removeContactListener(ContactListener *controller) {
-    ContactListenerList::iterator itr = _contactListeners.begin();
+void PhysicsEngine::removeContactListenerCondition(Entity *entity) {
+    ContactListenerMap::iterator itr = _contactListeners.begin();
     for(; itr != _contactListeners.end(); itr++) {
-        if((*itr) == controller) {
+        if(itr->first == entity) {
             _contactListeners.erase(itr);
             return;
         }
@@ -66,8 +66,8 @@ b2Body *PhysicsEngine::createStaticBox(const Vector2 &pos, const Vector2 &dim) {
     b2Body *body;
     float halfWidth, halfHeight;
     
-    halfWidth = dim.x / 2.0;
-    halfHeight = dim.y / 2.0;
+    halfWidth = dim.x / 2.0f;
+    halfHeight = dim.y / 2.0f;
 
     // Create the body
     // The position passed is the center
@@ -91,8 +91,8 @@ b2Body *PhysicsEngine::createDynamicBox(const Vector2 &pos, const Vector2 &dim, 
     b2Body *body;
     float halfWidth, halfHeight;
     
-    halfWidth = dim.x / 2.0;
-    halfHeight = dim.y / 2.0;
+    halfWidth = dim.x / 2.0f;
+    halfHeight = dim.y / 2.0f;
     
     // Create the body
     // Set the body as dynamic

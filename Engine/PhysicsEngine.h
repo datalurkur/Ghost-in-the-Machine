@@ -28,16 +28,17 @@ public:
     void BeginContact(b2Contact *contact);
     void EndContact(b2Contact *contact);
 
-    void addContactListener(ContactListener *controller);
-    void removeContactListener(ContactListener *controller);
+    void addContactListenerCondition(Entity *entity, ContactListener *controller);
+    void removeContactListenerCondition(Entity *entity);
 
 private:
     b2Vec2 _gravity;
     b2World *_world;
 
     int _stepSize, _velocityIterations, _positionIterations;
-    
-    ContactListenerList _contactListeners;
+
+	typedef std::map<Entity*,ContactListener*> ContactListenerMap;
+	ContactListenerMap _contactListeners;
 };
 
 #endif

@@ -26,4 +26,7 @@ void Material::enable() {
 }
 
 void Material::disable() {
+	if(_texture) {
+		_texture->disable();
+	}
 }

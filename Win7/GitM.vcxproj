@@ -121,6 +121,7 @@
     <ClCompile Include="..\Box2D\Dynamics\Joints\b2WheelJoint.cpp" />
     <ClCompile Include="..\Box2D\Rope\b2Rope.cpp" />
     <ClCompile Include="..\Engine\Camera.cpp" />
+    <ClCompile Include="..\Engine\ContactListener.cpp" />
     <ClCompile Include="..\Engine\Controller.cpp" />
     <ClCompile Include="..\Engine\Core.cpp" />
     <ClCompile Include="..\Engine\Entity.cpp" />
@@ -137,6 +138,7 @@
     <ClCompile Include="..\Engine\State.cpp" />
     <ClCompile Include="..\Engine\Window.cpp" />
     <ClCompile Include="..\Engine\WindowListener.cpp" />
+    <ClCompile Include="..\GitM\DebugVolume.cpp" />
     <ClCompile Include="..\GitM\GameState.cpp" />
     <ClCompile Include="..\GitM\GhostCore.cpp" />
     <ClCompile Include="..\GitM\LoadingState.cpp" />
@@ -211,6 +213,7 @@
     <ClInclude Include="..\Box2D\Dynamics\Joints\b2WheelJoint.h" />
     <ClInclude Include="..\Box2D\Rope\b2Rope.h" />
     <ClInclude Include="..\Engine\Camera.h" />
+    <ClInclude Include="..\Engine\ContactListener.h" />
     <ClInclude Include="..\Engine\Controller.h" />
     <ClInclude Include="..\Engine\Core.h" />
     <ClInclude Include="..\Engine\Entity.h" />
@@ -227,6 +230,7 @@
     <ClInclude Include="..\Engine\State.h" />
     <ClInclude Include="..\Engine\Window.h" />
     <ClInclude Include="..\Engine\WindowListener.h" />
+    <ClInclude Include="..\GitM\DebugVolume.h" />
     <ClInclude Include="..\GitM\GameState.h" />
     <ClInclude Include="..\GitM\GhostCore.h" />
     <ClInclude Include="..\GitM\LoadingState.h" />

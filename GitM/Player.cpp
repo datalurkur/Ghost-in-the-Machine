@@ -1,4 +1,5 @@
 #include <GitM/Player.h>
+#include <GitM/DebugVolume.h>
 
 #include <Engine/PhysicsEngine.h>
 #include <Resource/MaterialManager.h>
@@ -6,11 +7,18 @@
 const std::string Player::NodeType = "Player";
 
 Player::Player(const std::string &name):
-	Entity(name, NodeType), _speed(0.05),
-	_height(1.0), _width(1.0), _playerController(0)
+	Entity(name, NodeType), _speed(0.05f),
+	_playerController(0)
 {
+	setDimensions(1.0f, 1.0f);
     recreateRenderables();
 	_playerController = addController<PlayerController,Player>(this);
+
+	// Debug
+	DebugVolume *jumpVolume = new DebugVolume("jumpVolume");
+	jumpVolume->setPosition(_position.x, _position.y - ((_dimensions.y + 0.1f) / 2.0f));
+	jumpVolume->setDimensions(_dimensions.x / 2.0f, 0.1f);
+	addChild(jumpVolume);
 }
 
 Player::~Player() {
@@ -18,7 +26,7 @@ Player::~Player() {
 
 void Player::recreateRenderables() {
     clearRenderables();
-    addRenderable(Renderable::Sprite(_position, Vector2(_width, _height), 0, MaterialManager::Get("playerMaterial")));
+    addRenderable(Renderable::Sprite(_position, Vector2(_dimensions.x, _dimensions.y), 0, MaterialManager::Get("playerMaterial")));
 }
 
 void Player::setupPhysics(PhysicsEngine *physics) {
@@ -44,16 +52,16 @@ void Player::recreatePhysicsBody() {
     
     // Create the player fixture shape
     // The dimensions passed are the half-extents
-    playerShape.SetAsBox(_width / 2.0, _height / 2.0);
+    playerShape.SetAsBox(_dimensions.x / 2.0f, _dimensions.y / 2.0f);
     
     // Create the player fixture
     playerDef.shape = &playerShape;
-    playerDef.density = 1.0;
-    playerDef.friction = 0.3;
+    playerDef.density = 1.0f;
+    playerDef.friction = 0.3f;
     body->CreateFixture(&playerDef);
 
 	// Add the jump sensor
-	sensorShape.SetAsBox(_width / 2.0, 0.1, b2Vec2(_position.x, _position.y - ((_height + 0.1) / 2.0)), 0);
+	sensorShape.SetAsBox(_dimensions.x / 2.0f, 0.1f, b2Vec2(_position.x, _position.y - ((_dimensions.y + 0.1f) / 2.0f)), 0);
 	sensorDef.isSensor = true;
 	sensorDef.shape = &sensorShape;
 	body->CreateFixture(&sensorDef);

@@ -3,11 +3,12 @@
 
 #include <Base/Vector2.h>
 #include <Box2D/Box2D.h>
+#include <Engine/ContactListener.h>
 
 // Some entites will need more granular control over their body and 
 //  fixtures than the functions of this class will provide
 
-class PhysicsEngine {
+class PhysicsEngine: public b2ContactListener {
 public:
     PhysicsEngine();
     ~PhysicsEngine();
@@ -22,11 +23,21 @@ public:
     b2Body *createStaticBox(const Vector2 &pos, const Vector2 &dim);
     b2Body *createDynamicBox(const Vector2 &pos, const Vector2 &dim, float density, float friction, bool canRotate = true);
 
+    // Contact callbacks
+    // It's irritating that Box2D capitalizes all of its function names
+    void BeginContact(b2Contact *contact);
+    void EndContact(b2Contact *contact);
+
+    void addContactListener(ContactListener *controller);
+    void removeContactListener(ContactListener *controller);
+
 private:
     b2Vec2 _gravity;
     b2World *_world;
 
     int _stepSize, _velocityIterations, _positionIterations;
+    
+    ContactListenerList _contactListeners;
 };
 
 #endif

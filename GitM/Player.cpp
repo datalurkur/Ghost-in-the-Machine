@@ -6,56 +6,59 @@
 const std::string Player::NodeType = "Player";
 
 Player::Player(const std::string &name):
-	Entity(name, NodeType), _speed(0.1),
+	Entity(name, NodeType), _speed(0.05),
 	_height(1.0), _width(1.0), _playerController(0)
 {
     recreateRenderables();
-	addController(this);
+	_playerController = addController<PlayerController,Player>(this);
 }
 
 Player::~Player() {
 }
-/*
-PlayerController::Direction Player::getMovementDirection() const {
-	return _playerController->getMovementDirection();
-}
 
-void Player::setMovementDirection(PlayerController::Direction dir) {
-	_playerController->setMovementDirection(dir);
-}
-
-void Player::jump() {
-}
-*/
 void Player::recreateRenderables() {
     clearRenderables();
     addRenderable(Renderable::Sprite(_position, Vector2(_width, _height), 0, MaterialManager::Get("playerMaterial")));
 }
 
 void Player::setupPhysics(PhysicsEngine *physics) {
-    addController(physics);
+    _physicsController = addController<PhysicsController,PhysicsEngine>(physics);
     recreatePhysicsBody();
 }
 
 void Player::recreatePhysicsBody() {
-    PhysicsEngine *engine = _pController->getEngine();
-	b2Body *body = engine->createDynamicBox(_position, Vector2(_width, _height), 1.0, 0.3, false);
+    b2BodyDef bDef;
+    b2FixtureDef playerDef, sensorDef;
+    b2PolygonShape playerShape, sensorShape;
+    b2Body *body;
+    b2World *physicsWorld;
+    
+    physicsWorld = _physicsController->getEngine()->getPhysicsWorld();
+  
+    // Create the main body
+    bDef.type = b2_dynamicBody;
+    bDef.fixedRotation = true;
+    bDef.position.Set(_position.x, _position.y);
+    body = physicsWorld->CreateBody(&bDef);
+    body->SetUserData(_physicsController);
+    
+    // Create the player fixture shape
+    // The dimensions passed are the half-extents
+    playerShape.SetAsBox(_width / 2.0, _height / 2.0);
+    
+    // Create the player fixture
+    playerDef.shape = &playerShape;
+    playerDef.density = 1.0;
+    playerDef.friction = 0.3;
+    body->CreateFixture(&playerDef);
 
 	// Add the jump sensor
-	b2PolygonShape shape;
-	b2FixtureDef sensorDef;
-	float sensorHeight = 0.1;
-
-	shape.SetAsBox(_width, sensorHeight, b2Vec2(_position.x, _position.y - ((_height + sensorHeight) / 2.0)), 0);
+	sensorShape.SetAsBox(_width / 2.0, 0.1, b2Vec2(_position.x, _position.y - ((_height + 0.1) / 2.0)), 0);
 	sensorDef.isSensor = true;
-	sensorDef.shape = &shape;
+	sensorDef.shape = &sensorShape;
 	body->CreateFixture(&sensorDef);
 
-    _pController->setBody(body);
-}
-
-void Player::setPlayerController(PlayerController *controller) {
-	_playerController = controller;
+    _physicsController->setBody(body);
 }
 
 PlayerController *Player::getPlayerController() const {

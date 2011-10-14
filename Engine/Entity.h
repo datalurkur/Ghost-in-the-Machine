@@ -18,8 +18,8 @@ public:
 
     void update(int elapsed);
     
-    template <typename T>
-    void addController(T* controlObject);
+    template <typename C, typename T>
+    C* addController(T* controlObject);
 
     virtual void setupPhysics(PhysicsEngine *physics) {}
 
@@ -31,7 +31,7 @@ private:
 
 protected:    
     // Certain controllers we want direct access to, for things like updating the sizes of bodies
-    PhysicsController *_pController;
+    PhysicsController *_physicsController;
 };
 
 #endif

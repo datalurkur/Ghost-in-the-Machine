@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		E1128EF01447553000CBBB19 /* Platform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1128EEE1447553000CBBB19 /* Platform.cpp */; };
+		E145305C1448D31600226101 /* PlayerController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E145305A1448D31600226101 /* PlayerController.cpp */; };
+		E14530601448E2D500226101 /* ContactListener.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E145305E1448E2D500226101 /* ContactListener.cpp */; };
 		E146AA38143BAB6F00DA17E9 /* SDL_ttf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E146AA37143BAB6F00DA17E9 /* SDL_ttf.framework */; };
 		E152C6441434C75E00D83C44 /* Window.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E152C6421434C75E00D83C44 /* Window.cpp */; };
 		E152C6501434C8E100D83C44 /* SDL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E152C64F1434C8E100D83C44 /* SDL.framework */; };
@@ -121,6 +123,10 @@
 		E13A3FF9142A79C700D7EA2A /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		E13A3FFA142A79C700D7EA2A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		E13A3FFB142A79C700D7EA2A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E145305A1448D31600226101 /* PlayerController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PlayerController.cpp; path = ../Engine/PlayerController.cpp; sourceTree = "<group>"; };
+		E145305B1448D31600226101 /* PlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlayerController.h; path = ../Engine/PlayerController.h; sourceTree = "<group>"; };
+		E145305E1448E2D500226101 /* ContactListener.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ContactListener.cpp; path = ../Engine/ContactListener.cpp; sourceTree = "<group>"; };
+		E145305F1448E2D500226101 /* ContactListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContactListener.h; path = ../Engine/ContactListener.h; sourceTree = "<group>"; };
 		E146AA37143BAB6F00DA17E9 /* SDL_ttf.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL_ttf.framework; path = Frameworks/SDL_ttf.framework; sourceTree = "<group>"; };
 		E152C6421434C75E00D83C44 /* Window.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Window.cpp; path = ../Engine/Window.cpp; sourceTree = "<group>"; };
 		E152C6431434C75E00D83C44 /* Window.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Window.h; path = ../Engine/Window.h; sourceTree = "<group>"; };
@@ -434,6 +440,8 @@
 		E16C5AFA143A43AF0063EE8C /* Event Management */ = {
 			isa = PBXGroup;
 			children = (
+				E145305E1448E2D500226101 /* ContactListener.cpp */,
+				E145305F1448E2D500226101 /* ContactListener.h */,
 				E16C5AF4143A43AD0063EE8C /* EventHandler.cpp */,
 				E16C5AF5143A43AD0063EE8C /* EventHandler.h */,
 				E19826DF143E3F0B00670E4E /* KeyboardListener.cpp */,
@@ -606,6 +614,8 @@
 			children = (
 				E1AA8B2714462E7F0024D891 /* Controller.h */,
 				E1AA8B2814462F710024D891 /* Controller.cpp */,
+				E145305A1448D31600226101 /* PlayerController.cpp */,
+				E145305B1448D31600226101 /* PlayerController.h */,
 				E1AA8B2414462DAE0024D891 /* PhysicsController.cpp */,
 				E1AA8B2514462DAE0024D891 /* PhysicsController.h */,
 			);
@@ -831,6 +841,8 @@
 				E1AA8B2614462DAE0024D891 /* PhysicsController.cpp in Sources */,
 				E1AA8B2914462F710024D891 /* Controller.cpp in Sources */,
 				E1128EF01447553000CBBB19 /* Platform.cpp in Sources */,
+				E145305C1448D31600226101 /* PlayerController.cpp in Sources */,
+				E14530601448E2D500226101 /* ContactListener.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

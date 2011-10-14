@@ -7,7 +7,7 @@ PlayerController::PlayerController(Player *player):
 }
 
 void PlayerController::update(int elapsed) {
-	b2Body *playerBody = _player->_pController->getBody();
+	b2Body *playerBody = _player->_physicsController->getBody();
 	switch(_movementDirection) {
 		case Left: {
 			b2Vec2 v = playerBody->GetLinearVelocity();
@@ -33,4 +33,18 @@ PlayerController::Direction PlayerController::getMovementDirection() const {
 }
 
 void PlayerController::jump() {
+}
+
+bool PlayerController::canJump() {
+    return _canJump;
+}
+
+void PlayerController::setCanJump(bool canJump) {
+    _canJump = canJump;
+}
+
+void PlayerController::contactBegins(Entity *a, Entity *b) {
+}
+
+void PlayerController::contactEnds(Entity *a, Entity *b) {
 }

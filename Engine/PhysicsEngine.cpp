@@ -5,6 +5,7 @@ PhysicsEngine::PhysicsEngine():
     _velocityIterations(6), _positionIterations(2), _stepSize(16) // Roughly 1/60th of a second
 {
     _world = new b2World(b2Vec2(_gravity));
+    _world->SetContactListener(this);
 }
 
 PhysicsEngine::~PhysicsEngine() { 
@@ -27,6 +28,36 @@ b2World *PhysicsEngine::getPhysicsWorld() {
 
 void PhysicsEngine::destroyObject(b2Body *body) {
     _world->DestroyBody(body);
+}
+
+void PhysicsEngine::BeginContact(b2Contact *contact) {
+    ContactListenerList::iterator itr = _contactListeners.begin();
+    for(; itr != _contactListeners.end(); itr++) {
+        ContactListener *a, *b;
+        a = (ContactListener*)contact->GetFixtureA()->GetBody()->GetUserData();
+        b = (ContactListener*)contact->GetFixtureA()->GetBody()->GetUserData();
+        if(a == (*itr) || b == (*itr)) {
+            (*itr)->contactBegins(a, b);
+        }
+    }   
+}
+
+void PhysicsEngine::EndContact(b2Contact *contact) {
+    Info("Contact ends");
+}
+
+void PhysicsEngine::addContactListener(ContactListener *controller) {
+    _contactListeners.push_back(controller);
+}
+
+void PhysicsEngine::removeContactListener(ContactListener *controller) {
+    ContactListenerList::iterator itr = _contactListeners.begin();
+    for(; itr != _contactListeners.end(); itr++) {
+        if((*itr) == controller) {
+            _contactListeners.erase(itr);
+            return;
+        }
+    }
 }
 
 b2Body *PhysicsEngine::createStaticBox(const Vector2 &pos, const Vector2 &dim) {

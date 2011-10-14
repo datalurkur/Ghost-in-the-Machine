@@ -12,19 +12,12 @@ public:
     Player(const std::string &name);
 	virtual ~Player();
 
-	void update(int elapsed);
-
-/*	PlayerController::Direction getMovementDirection() const;
-	void setMovementDirection(PlayerController::Direction dir);
-	void jump();
-*/
-
     void recreateRenderables();
 
     void setupPhysics(PhysicsEngine *physics);
     void recreatePhysicsBody();
 
-	void setPlayerController(PlayerController *controller);
+	//void setPlayerController(PlayerController *controller);
 	PlayerController* getPlayerController() const;
 
 private:

@@ -17,12 +17,12 @@ void Platform::recreateRenderables() {
 }
 
 void Platform::setupPhysics(PhysicsEngine *physics) {
-    addController(physics);
-    _pController->disallowUpdates();
+    _physicsController = addController<PhysicsController,PhysicsEngine>(physics);
+    _physicsController->disallowUpdates();
     recreatePhysicsBody();
 }
 
 void Platform::recreatePhysicsBody() {
-    PhysicsEngine *engine = _pController->getEngine();
-    _pController->setBody(engine->createStaticBox(_position, _dimensions));
+    PhysicsEngine *engine = _physicsController->getEngine();
+    _physicsController->setBody(engine->createStaticBox(_position, _dimensions));
 }

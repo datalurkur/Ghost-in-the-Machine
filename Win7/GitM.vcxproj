@@ -131,6 +131,7 @@
     <ClCompile Include="..\Engine\ParentState.cpp" />
     <ClCompile Include="..\Engine\PhysicsController.cpp" />
     <ClCompile Include="..\Engine\PhysicsEngine.cpp" />
+    <ClCompile Include="..\Engine\PlayerController.cpp" />
     <ClCompile Include="..\Engine\SceneManager.cpp" />
     <ClCompile Include="..\Engine\SceneNode.cpp" />
     <ClCompile Include="..\Engine\State.cpp" />
@@ -220,6 +221,7 @@
     <ClInclude Include="..\Engine\ParentState.h" />
     <ClInclude Include="..\Engine\PhysicsController.h" />
     <ClInclude Include="..\Engine\PhysicsEngine.h" />
+    <ClInclude Include="..\Engine\PlayerController.h" />
     <ClInclude Include="..\Engine\SceneManager.h" />
     <ClInclude Include="..\Engine\SceneNode.h" />
     <ClInclude Include="..\Engine\State.h" />

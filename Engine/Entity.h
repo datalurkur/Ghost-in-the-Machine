@@ -4,6 +4,7 @@
 #include <Engine/SceneNode.h>
 #include <Engine/Controller.h>
 #include <Engine/PhysicsController.h>
+#include <Engine/PlayerController.h>
 
 class PhysicsEngine;
 

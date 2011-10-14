@@ -298,6 +298,9 @@
     <ClCompile Include="..\GitM\Platform.cpp">
       <Filter>GitM\Game Objects</Filter>
     </ClCompile>
+    <ClCompile Include="..\Engine\PlayerController.cpp">
+      <Filter>Engine\Controllers</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Engine\ParentState.h">
@@ -560,6 +563,9 @@
     </ClInclude>
     <ClInclude Include="..\GitM\Platform.h">
       <Filter>GitM\Game Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\PlayerController.h">
+      <Filter>Engine\Controllers</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -1,4 +1,5 @@
 #include <Engine/Entity.h>
+#include <GitM/Player.h>
 
 const std::string Entity::NodeType = "Entity";
 
@@ -31,4 +32,11 @@ template <>
 void Entity::addController<PhysicsEngine>(PhysicsEngine* controlObject) {
     _pController = new PhysicsController(controlObject, this);
     _controllers.push_back(_pController);
+}
+
+template <>
+void Entity::addController<Player>(Player* player) {
+	PlayerController *p = new PlayerController(player);
+	player->setPlayerController(p);
+	_controllers.push_back(p);
 }

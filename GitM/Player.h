@@ -22,10 +22,6 @@ public:
 
 private:
 	PlayerController *_playerController;
-
-	float _speed;
-	float _height, _width;
-
 	friend class PlayerController;
 };
 

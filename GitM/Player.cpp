@@ -1,23 +1,23 @@
 #include <GitM/Player.h>
 #include <GitM/DebugVolume.h>
-
+#include <GitM/GameConstants.h>
 #include <Engine/PhysicsEngine.h>
 #include <Resource/MaterialManager.h>
 
 const std::string Player::NodeType = "Player";
 
 Player::Player(const std::string &name):
-	Entity(name, NodeType), _speed(0.05f),
+	Entity(name, NodeType),
 	_playerController(0)
 {
-	setDimensions(1.0f, 1.0f);
+	setDimensions(PlayerConst::Width, PlayerConst::Height);
     recreateRenderables();
 	_playerController = addController<PlayerController,Player>(this);
 
 	// Debug
 	DebugVolume *jumpVolume = new DebugVolume("jumpSensor");
-	jumpVolume->setPosition(_position.x, _position.y - (_dimensions.y / 2.0f) - 0.1f);
-	jumpVolume->setDimensions(_dimensions.x / 2.0f, 0.1f);
+	jumpVolume->setPosition(_position.x + PlayerConst::JumpSensorOffsetX, _position.y + PlayerConst::JumpSensorOffsetY);
+	jumpVolume->setDimensions(PlayerConst::JumpSensorWidth, PlayerConst::JumpSensorHeight);
 	addChild(jumpVolume);
 }
 
@@ -60,7 +60,7 @@ void Player::recreatePhysicsBody() {
     
     // Create the player fixture shape
     // The dimensions passed are the half-extents
-    playerShape.SetAsBox(_dimensions.x / 2.0f, _dimensions.y / 2.0f);
+    playerShape.SetAsBox(PlayerConst::Width / 2.0f, PlayerConst::Height / 2.0f);
     
     // Create the player fixture
     playerDef.shape = &playerShape;
@@ -70,7 +70,8 @@ void Player::recreatePhysicsBody() {
 	player->SetUserData("playerBody");
 
 	// Add the jump sensor
-	sensorShape.SetAsBox(_dimensions.x / 4.0f, 0.1f / 2.0f, b2Vec2(0.0f, -(_dimensions.y/2.0) - 0.1f), 0);
+	sensorShape.SetAsBox(PlayerConst::JumpSensorWidth / 2.0f, PlayerConst::JumpSensorHeight / 2.0f,
+		b2Vec2(PlayerConst::JumpSensorOffsetX, PlayerConst::JumpSensorOffsetY), 0);
 	sensorDef.isSensor = true;
 	sensorDef.shape = &sensorShape;
 	sensor = body->CreateFixture(&sensorDef);

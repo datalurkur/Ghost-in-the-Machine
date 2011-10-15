@@ -9,11 +9,6 @@ class Player;
 class PlayerController: public Controller, public ContactListener {
 public:
 	enum Direction { Left, Right, None };
-	
-	enum Parts {
-		PlayerBody,
-		JumpVolume
-	};
 
 public:
 	PlayerController(Player *player);
@@ -33,6 +28,7 @@ private:
 	Direction _movementDirection;
 	Player *_player;
 	int _jumpBoxContacts;
+	int _extraJumps;
 };
 
 #endif

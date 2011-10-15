@@ -139,6 +139,7 @@
     <ClCompile Include="..\Engine\Window.cpp" />
     <ClCompile Include="..\Engine\WindowListener.cpp" />
     <ClCompile Include="..\GitM\DebugVolume.cpp" />
+    <ClCompile Include="..\GitM\GameConstants.cpp" />
     <ClCompile Include="..\GitM\GameState.cpp" />
     <ClCompile Include="..\GitM\GhostCore.cpp" />
     <ClCompile Include="..\GitM\LoadingState.cpp" />
@@ -231,6 +232,7 @@
     <ClInclude Include="..\Engine\Window.h" />
     <ClInclude Include="..\Engine\WindowListener.h" />
     <ClInclude Include="..\GitM\DebugVolume.h" />
+    <ClInclude Include="..\GitM\GameConstants.h" />
     <ClInclude Include="..\GitM\GameState.h" />
     <ClInclude Include="..\GitM\GhostCore.h" />
     <ClInclude Include="..\GitM\LoadingState.h" />

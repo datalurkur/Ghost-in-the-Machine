@@ -307,6 +307,9 @@
     <ClCompile Include="..\GitM\DebugVolume.cpp">
       <Filter>GitM\Game Objects</Filter>
     </ClCompile>
+    <ClCompile Include="..\GitM\GameConstants.cpp">
+      <Filter>GitM</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Engine\ParentState.h">
@@ -578,6 +581,9 @@
     </ClInclude>
     <ClInclude Include="..\GitM\DebugVolume.h">
       <Filter>GitM\Game Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GitM\GameConstants.h">
+      <Filter>GitM</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -10,7 +10,7 @@ World::World(): _player(0) {
 
 World::~World() {
 	delete _scene;
-    delete _physics;
+	delete _physics;
 }
 
 void World::update(int elapsed) {

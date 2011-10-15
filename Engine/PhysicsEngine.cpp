@@ -31,39 +31,51 @@ void PhysicsEngine::destroyObject(b2Body *body) {
 }
 
 void PhysicsEngine::BeginContact(b2Contact *contact) {
-    ContactListenerMap::iterator itr = _contactListeners.begin();
-    for(; itr != _contactListeners.end(); itr++) {
-        Entity *a, *b;
-        a = (Entity*)contact->GetFixtureA()->GetBody()->GetUserData();
-        b = (Entity*)contact->GetFixtureA()->GetBody()->GetUserData();
-        if(itr->first == a || itr->first == b) {
-            itr->second->contactBegins(a, b);
-        }
+	//Info("Fixture " << (FixtureID*)contact->GetFixtureA()->GetUserData() << " contacts " << (FixtureID*)contact->GetFixtureB()->GetUserData());
+    FixtureContactMap::iterator itr = _fixtureContactListeners.begin();
+    for(; itr != _fixtureContactListeners.end(); itr++) {
+        FixtureID *a, *b;
+        a = (FixtureID*)contact->GetFixtureA()->GetUserData();
+        b = (FixtureID*)contact->GetFixtureA()->GetUserData();
+        if(itr->first == a) {
+            itr->second->contactBegins(b);
+        } else if(itr->first == b) {
+			itr->second->contactBegins(a);
+		}
     }   
 }
 
 void PhysicsEngine::EndContact(b2Contact *contact) {
-    Info("Contact ends");
-}
-
-void PhysicsEngine::addContactListenerCondition(Entity *entity, ContactListener *controller) {
-    _contactListeners[entity] = controller;
-}
-
-void PhysicsEngine::removeContactListenerCondition(Entity *entity) {
-    ContactListenerMap::iterator itr = _contactListeners.begin();
-    for(; itr != _contactListeners.end(); itr++) {
-        if(itr->first == entity) {
-            _contactListeners.erase(itr);
-            return;
-        }
+	//Info("Fixture " << (FixtureID*)contact->GetFixtureA()->GetUserData() << " ends contact with " <<  (FixtureID*)contact->GetFixtureB()->GetUserData());
+    FixtureContactMap::iterator itr = _fixtureContactListeners.begin();
+    for(; itr != _fixtureContactListeners.end(); itr++) {
+        FixtureID *a, *b;
+        a = (FixtureID*)contact->GetFixtureA()->GetUserData();
+        b = (FixtureID*)contact->GetFixtureA()->GetUserData();
+        if(itr->first == a) {
+            itr->second->contactEnds(b);
+        } else if(itr->first == b) {
+			itr->second->contactEnds(a);
+		}
     }
+}
+
+void PhysicsEngine::addFixtureContactListener(FixtureID *id, ContactListener *controller) {
+    _fixtureContactListeners[id] = controller;
+}
+
+void PhysicsEngine::removeFixtureContactListener(FixtureID *id) {
+	FixtureContactMap::iterator itr = _fixtureContactListeners.find(id);
+	if(itr != _fixtureContactListeners.end()) {
+		_fixtureContactListeners.erase(itr);
+	}
 }
 
 b2Body *PhysicsEngine::createStaticBox(const Vector2 &pos, const Vector2 &dim) {
     b2BodyDef def;
     b2PolygonShape shape;
     b2Body *body;
+	b2Fixture *fixture;
     float halfWidth, halfHeight;
     
     halfWidth = dim.x / 2.0f;
@@ -79,8 +91,9 @@ b2Body *PhysicsEngine::createStaticBox(const Vector2 &pos, const Vector2 &dim) {
     shape.SetAsBox(halfWidth, halfHeight);
     
     // Create the fixture
-    body->CreateFixture(&shape, 0.0);
-    
+    fixture = body->CreateFixture(&shape, 0.0);
+    fixture->SetUserData("static");
+
     return body;
 }
 
@@ -89,6 +102,7 @@ b2Body *PhysicsEngine::createDynamicBox(const Vector2 &pos, const Vector2 &dim, 
     b2FixtureDef fDef;
     b2PolygonShape shape;
     b2Body *body;
+	b2Fixture *fixture;
     float halfWidth, halfHeight;
     
     halfWidth = dim.x / 2.0f;
@@ -113,7 +127,8 @@ b2Body *PhysicsEngine::createDynamicBox(const Vector2 &pos, const Vector2 &dim, 
     fDef.shape = &shape;
     fDef.density = density;
     fDef.friction = friction;
-    body->CreateFixture(&fDef);
-    
+    fixture = body->CreateFixture(&fDef);
+    fixture->SetUserData("dynamic");
+
     return body;
 }

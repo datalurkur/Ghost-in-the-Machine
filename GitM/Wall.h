@@ -12,8 +12,10 @@ public:
     virtual ~Wall();
 
     void addVert(const Vector2 &vert);
+    void setVerts(Vector2 *verts, unsigned int size);
+    void setVerts(const std::vector<Vector2> &verts);
 
-    void createRenderables();
+    void recreateRenderables();
     
     void setupPhysics(PhysicsEngine *physics);
     void createPhysicsBody();

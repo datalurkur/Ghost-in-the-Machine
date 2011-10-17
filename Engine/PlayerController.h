@@ -20,9 +20,9 @@ public:
 	void jump();
     
     void contactBegins(Entity *a, Entity *b);
-    void contactBegins(FixtureID *a);
+    void contactBegins(FixtureID *trigger, FixtureID *other);
     void contactEnds(Entity *a, Entity *b);
-    void contactEnds(FixtureID *a);
+    void contactEnds(FixtureID *trigger, FixtureID *other);
 
 private:
 	Direction _movementDirection;

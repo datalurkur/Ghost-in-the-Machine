@@ -151,6 +151,7 @@ Renderable* Renderable::Lines(const std::vector<Vector2> &verts) {
     size = (unsigned int)verts.size();
 
     renderable = new Renderable();
+
     vertexBuffer = new float[size * 3];
     indexBuffer = new unsigned int[size];
     
@@ -164,6 +165,7 @@ Renderable* Renderable::Lines(const std::vector<Vector2> &verts) {
     
     renderable->setVertexPointer(&vertexBuffer[0], size, 3);
     renderable->setIndexPointer(&indexBuffer[0], size);
+    renderable->setDrawMode(GL_LINE_STRIP);
 
     delete vertexBuffer;
     delete indexBuffer;

@@ -1,4 +1,3 @@
 #include <Engine/ContactListener.h>
 
-ContactListener::ContactListener() {
-}
+ContactListener::ContactListener() {}

@@ -1,5 +1,7 @@
 #include <Engine/PhysicsEngine.h>
 
+const char EdgeID = 3;
+
 PhysicsEngine::PhysicsEngine():
     _gravity(0.0, -10.0), _world(0),
     _velocityIterations(6), _positionIterations(2), _stepSize(16) // Roughly 1/60th of a second
@@ -33,36 +35,35 @@ void PhysicsEngine::destroyObject(b2Body *body) {
 }
 
 void PhysicsEngine::BeginContact(b2Contact *contact) {
-	//Info("Fixture " << (FixtureID*)contact->GetFixtureA()->GetUserData() << " contacts " << (FixtureID*)contact->GetFixtureB()->GetUserData());
     FixtureContactMap::iterator itr = _fixtureContactListeners.begin();
     for(; itr != _fixtureContactListeners.end(); itr++) {
         FixtureID *a, *b;
         a = (FixtureID*)contact->GetFixtureA()->GetUserData();
-        b = (FixtureID*)contact->GetFixtureA()->GetUserData();
+        b = (FixtureID*)contact->GetFixtureB()->GetUserData();
         if(itr->first == a) {
-            itr->second->contactBegins(b);
+            itr->second->contactBegins(a, b);
         } else if(itr->first == b) {
-			itr->second->contactBegins(a);
+			itr->second->contactBegins(b, a);
 		}
     }   
 }
 
 void PhysicsEngine::EndContact(b2Contact *contact) {
-	//Info("Fixture " << (FixtureID*)contact->GetFixtureA()->GetUserData() << " ends contact with " <<  (FixtureID*)contact->GetFixtureB()->GetUserData());
     FixtureContactMap::iterator itr = _fixtureContactListeners.begin();
     for(; itr != _fixtureContactListeners.end(); itr++) {
         FixtureID *a, *b;
         a = (FixtureID*)contact->GetFixtureA()->GetUserData();
-        b = (FixtureID*)contact->GetFixtureA()->GetUserData();
+        b = (FixtureID*)contact->GetFixtureB()->GetUserData();
         if(itr->first == a) {
-            itr->second->contactEnds(b);
+            itr->second->contactEnds(a, b);
         } else if(itr->first == b) {
-			itr->second->contactEnds(a);
+			itr->second->contactEnds(b, a);
 		}
     }
 }
 
 void PhysicsEngine::addFixtureContactListener(FixtureID *id, ContactListener *controller) {
+    Info("Added listener for " << *id);
     _fixtureContactListeners[id] = controller;
 }
 
@@ -125,6 +126,7 @@ b2Body *PhysicsEngine::createStaticChain(const std::vector<Vector2> &verts, bool
     
     // Create the fixture
     fixture = body->CreateFixture(&shape, 0.0);
+    fixture->SetUserData((void*)&EdgeID);
     
     return body;
 }

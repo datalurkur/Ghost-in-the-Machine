@@ -5,8 +5,8 @@
 
 const std::string Player::NodeType = "Player";
 
-const char Player::PlayerBody = 0,
-           Player::JumpSensor = 1;
+const char Player::PlayerBody = 1,
+           Player::JumpSensor = 2;
 
 Player::Player(const std::string &name):
 	Mob(name, NodeType),
@@ -33,7 +33,7 @@ void Player::setupPhysics(PhysicsEngine *physics) {
     _physicsController = addController<PhysicsController,PhysicsEngine>(physics);
 
 	// Add the player controller as a listener for player / jump volume contacts
-	physics->addFixtureContactListener(&JumpSensor, _playerController);
+	physics->addFixtureContactListener(&Player::JumpSensor, _playerController);
 
     createPhysicsBody();
 }
@@ -90,16 +90,16 @@ PlayerController *Player::getPlayerController() const {
 Player* Player::DefaultPlayer() {
     Player *player = new Player("defaultPlayer");
     player->setDimensions(0.5f, 1.0f);
-    player->recreateRenderables();
     
     player->_maxSpeed = 6.0f;
     player->_accel = 0.02f;
     player->_jumpPower = 3.0f;
-    player->_jumpSensorDimensions = Vector2(0.3f, 0.1f);
-    player->_jumpSensorOffset = Vector2(0.0f, -0.5f);
+    player->_jumpSensorDimensions = Vector2(0.3f, 0.3f);
+    player->_jumpSensorOffset = Vector2(0.0f, -0.65f);
     
     PlayerController *controller = player->addController<PlayerController,Player>(player);
     player->setPlayerController(controller);
 
+    player->recreateRenderables();
     return player;
 }

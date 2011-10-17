@@ -44,9 +44,9 @@ void PlayerController::jump() {
 void PlayerController::contactBegins(Entity *a, Entity *b) {
 }
 
-void PlayerController::contactBegins(FixtureID *a) {
+void PlayerController::contactBegins(FixtureID *trigger, FixtureID *other) {
 	// For now, assume the player can jump off of anything
-	if(a == &Player::JumpSensor) {
+	if(trigger == &Player::JumpSensor) {
 		_jumpBoxContacts++;
 	}
 }
@@ -54,9 +54,9 @@ void PlayerController::contactBegins(FixtureID *a) {
 void PlayerController::contactEnds(Entity *a, Entity *b) {
 }
 
-void PlayerController::contactEnds(FixtureID *a) {
+void PlayerController::contactEnds(FixtureID *trigger, FixtureID *other) {
 	// For now, assume the player can jump off of anything
-	if(a == &Player::JumpSensor) {
+	if(trigger == &Player::JumpSensor) {
 		_jumpBoxContacts--;
 	}
 }

@@ -20,6 +20,7 @@ void PhysicsEngine::update(int elapsed) {
         leftOver -= _stepSize;
         _world->Step(_stepSize / 1000.0f, _velocityIterations, _positionIterations);
     }
+    _world->ClearForces();
 }
 
 b2World *PhysicsEngine::getPhysicsWorld() {
@@ -92,7 +93,7 @@ b2Body *PhysicsEngine::createStaticBox(const Vector2 &pos, const Vector2 &dim) {
     
     // Create the fixture
     fixture = body->CreateFixture(&shape, 0.0);
-    fixture->SetUserData("static");
+    fixture->SetUserData((void*)"static");
 
     return body;
 }
@@ -128,7 +129,7 @@ b2Body *PhysicsEngine::createDynamicBox(const Vector2 &pos, const Vector2 &dim, 
     fDef.density = density;
     fDef.friction = friction;
     fixture = body->CreateFixture(&fDef);
-    fixture->SetUserData("dynamic");
+    fixture->SetUserData((void*)"dynamic");
 
     return body;
 }

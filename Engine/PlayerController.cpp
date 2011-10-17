@@ -12,14 +12,14 @@ void PlayerController::update(int elapsed) {
 	switch(_movementDirection) {
 		case Left: {
 			b2Vec2 v = playerBody->GetLinearVelocity();
-			v.x -= PlayerConst::Accel * elapsed;
-			if(v.x < -PlayerConst::MaxSpeed) { v.x = -PlayerConst::MaxSpeed; }
+			v.x -= _player->_accel * elapsed;
+			if(v.x < -_player->_maxSpeed) { v.x = -_player->_maxSpeed; }
 			playerBody->SetLinearVelocity(v);
 		} break;
 		case Right: {
 			b2Vec2 v = playerBody->GetLinearVelocity();
-			v.x += PlayerConst::Accel * elapsed;
-			if(v.x > PlayerConst::MaxSpeed) { v.x = PlayerConst::MaxSpeed; }
+			v.x += _player->_accel * elapsed;
+			if(v.x > _player->_maxSpeed) { v.x = _player->_maxSpeed; }
 			playerBody->SetLinearVelocity(v);
 		} break;
 		default: {
@@ -38,7 +38,7 @@ PlayerController::Direction PlayerController::getMovementDirection() const {
 void PlayerController::jump() {
 	if(_jumpBoxContacts > 0) {
 		b2Body *playerBody = _player->_physicsController->getBody();
-		playerBody->ApplyLinearImpulse(b2Vec2(0.0f, PlayerConst::JumpPower), playerBody->GetWorldCenter());
+		playerBody->ApplyLinearImpulse(b2Vec2(0.0f, _player->_jumpPower), playerBody->GetWorldCenter());
 	}
 }
 

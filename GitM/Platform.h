@@ -14,7 +14,7 @@ public:
     void recreateRenderables();
     
     void setupPhysics(PhysicsEngine *physics);
-    void recreatePhysicsBody();
+    void createPhysicsBody();
 
 private:
 };

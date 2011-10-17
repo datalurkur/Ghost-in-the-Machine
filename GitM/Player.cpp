@@ -7,18 +7,14 @@
 const std::string Player::NodeType = "Player";
 
 Player::Player(const std::string &name):
-	Entity(name, NodeType),
+	Mob(name, NodeType),
 	_playerController(0)
 {
+/*
 	setDimensions(PlayerConst::Width, PlayerConst::Height);
     recreateRenderables();
-	_playerController = addController<PlayerController,Player>(this);
-
-	// Debug
-	DebugVolume *jumpVolume = new DebugVolume("jumpSensor");
-	jumpVolume->setPosition(_position.x + PlayerConst::JumpSensorOffsetX, _position.y + PlayerConst::JumpSensorOffsetY);
-	jumpVolume->setDimensions(PlayerConst::JumpSensorWidth, PlayerConst::JumpSensorHeight);
-	addChild(jumpVolume);
+    _playerController = addController<PlayerController,Player>(this);
+*/
 }
 
 Player::~Player() {
@@ -28,6 +24,13 @@ Player::~Player() {
 void Player::recreateRenderables() {
     clearRenderables();
     addRenderable(Renderable::Sprite(_position, Vector2(_dimensions.x, _dimensions.y), 0, MaterialManager::Get("playerMaterial")));
+
+	// Debug
+    deleteChild("jumpSensor");
+	DebugVolume *jumpVolume = new DebugVolume("jumpSensor");
+	jumpVolume->setPosition(_position.x + _jumpSensorOffset.x, _position.y + _jumpSensorOffset.y);
+	jumpVolume->setDimensions(_jumpSensorDimensions.x, _jumpSensorDimensions.y);
+	addChild(jumpVolume);
 }
 
 void Player::setupPhysics(PhysicsEngine *physics) {
@@ -36,10 +39,10 @@ void Player::setupPhysics(PhysicsEngine *physics) {
 	// Add the player controller as a listener for player / jump volume contacts
 	physics->addFixtureContactListener("jumpSensor", _playerController);
 
-    recreatePhysicsBody();
+    createPhysicsBody();
 }
 
-void Player::recreatePhysicsBody() {
+void Player::createPhysicsBody() {
     b2BodyDef bDef;
     b2FixtureDef playerDef, sensorDef;
     b2PolygonShape playerShape, sensorShape;
@@ -60,28 +63,49 @@ void Player::recreatePhysicsBody() {
     
     // Create the player fixture shape
     // The dimensions passed are the half-extents
-    playerShape.SetAsBox(PlayerConst::Width / 2.0f, PlayerConst::Height / 2.0f);
+    playerShape.SetAsBox(_dimensions.x / 2.0f, _dimensions.y / 2.0f);
     
     // Create the player fixture
     playerDef.shape = &playerShape;
     playerDef.density = 1.0f;
     playerDef.friction = 0.3f;
     player = body->CreateFixture(&playerDef);
-	player->SetUserData("playerBody");
+	player->SetUserData((void*)"playerBody");
 
 	// Add the jump sensor
-	sensorShape.SetAsBox(PlayerConst::JumpSensorWidth / 2.0f, PlayerConst::JumpSensorHeight / 2.0f,
-		b2Vec2(PlayerConst::JumpSensorOffsetX, PlayerConst::JumpSensorOffsetY), 0);
+	sensorShape.SetAsBox(_jumpSensorDimensions.x / 2.0f, _jumpSensorDimensions.y / 2.0f,
+		b2Vec2(_jumpSensorOffset.x, _jumpSensorOffset.y), 0);
 	sensorDef.isSensor = true;
 	sensorDef.shape = &sensorShape;
 	sensor = body->CreateFixture(&sensorDef);
-	sensor->SetUserData("jumpSensor");
+	sensor->SetUserData((void*)"jumpSensor");
 
 	// FIXME - I don't like using strings for the fixture IDs, but I don't see what other choice I have, short of finding meaningful pointers to stuff in there
 
     _physicsController->setBody(body);
 }
 
+void Player::setPlayerController(PlayerController *controller) {
+    _playerController = controller;
+}
+
 PlayerController *Player::getPlayerController() const {
 	return _playerController;
+}
+
+Player* Player::DefaultPlayer() {
+    Player *player = new Player("defaultPlayer");
+    player->setDimensions(0.5f, 1.0f);
+    player->recreateRenderables();
+    
+    player->_maxSpeed = 6.0f;
+    player->_accel = 0.02f;
+    player->_jumpPower = 3.0f;
+    player->_jumpSensorDimensions = Vector2(0.3f, 0.1f);
+    player->_jumpSensorOffset = Vector2(0.0f, -0.5f);
+    
+    PlayerController *controller = player->addController<PlayerController,Player>(player);
+    player->setPlayerController(controller);
+
+    return player;
 }

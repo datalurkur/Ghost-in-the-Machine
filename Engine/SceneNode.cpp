@@ -73,6 +73,14 @@ void SceneNode::addChild(SceneNode *child) {
     flagDirty(Upward);
 }
 
+void SceneNode::deleteChild(const std::string &childName) {
+    NodeMap::iterator itr = _children.find(childName);
+    if(itr != _children.end()) {
+        delete itr->second;
+        _children.erase(itr);
+    }
+}
+
 void SceneNode::getNodes(NodeList &list, Frustum *frustum) {
     ASSERT(!_dirty);
 

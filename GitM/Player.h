@@ -1,10 +1,10 @@
 #ifndef PLAYER_H
 #define PLAYER_H
 
-#include <Engine/Entity.h>
+#include <Engine/Mob.h>
 #include <Engine/PlayerController.h>
 
-class Player: public Entity {
+class Player: public Mob {
 public:
 	static const std::string NodeType;
 
@@ -15,10 +15,17 @@ public:
     void recreateRenderables();
 
     void setupPhysics(PhysicsEngine *physics);
-    void recreatePhysicsBody();
+    void createPhysicsBody();
 
-	//void setPlayerController(PlayerController *controller);
+	void setPlayerController(PlayerController *controller);
 	PlayerController* getPlayerController() const;
+
+public:
+    static Player* DefaultPlayer();
+    
+protected:
+    float _jumpPower;
+    Vector2 _jumpSensorDimensions, _jumpSensorOffset;
 
 private:
 	PlayerController *_playerController;

@@ -19,10 +19,10 @@ void Platform::recreateRenderables() {
 void Platform::setupPhysics(PhysicsEngine *physics) {
     _physicsController = addController<PhysicsController,PhysicsEngine>(physics);
     _physicsController->disallowUpdates();
-    recreatePhysicsBody();
+    createPhysicsBody();
 }
 
-void Platform::recreatePhysicsBody() {
+void Platform::createPhysicsBody() {
     PhysicsEngine *engine = _physicsController->getEngine();
     _physicsController->setBody(engine->createStaticBox(_position, _dimensions));
 }

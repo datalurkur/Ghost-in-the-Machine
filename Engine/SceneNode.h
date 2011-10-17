@@ -39,6 +39,7 @@ public:
 
 	// Scene heirarchy
 	void addChild(SceneNode *child);
+    void deleteChild(const std::string &childName);
 
 	// Adds this scene node and its children to the list
 	// If frustum is non-null, frustum culling will be performed

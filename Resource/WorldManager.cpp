@@ -5,7 +5,7 @@
 void WorldManager::DoLoad(const std::string &name, World *world) {
     UpdateStatus(world, "Creating Player");
 
-    world->_player = new Player("herpus");
+    world->_player = Player::DefaultPlayer(); //new Player("herpus");
     world->_player->setPosition(0.5, 2);
     world->addEntity(world->_player);
 

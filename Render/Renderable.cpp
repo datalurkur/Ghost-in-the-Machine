@@ -57,6 +57,10 @@ void Renderable::setMaterial(Material *material) {
 	_material = material;
 }
 
+void Renderable::setDrawMode(GLenum mode) {
+    _drawMode = mode;
+}
+
 void Renderable::render() {
     glPushMatrix();
     glMultMatrixf(_viewMatrix.ptr());
@@ -134,5 +138,35 @@ Renderable* Renderable::OrthoBox(const Vector2 &pos, const Vector2 &dims, const 
 Renderable* Renderable::Sprite(const Vector2 &pos, const Vector2 &dims, const float z, Material *mat) {
     Renderable *renderable = Renderable::OrthoBox(pos, dims, z, true, true);
     renderable->setMaterial(mat);
+    return renderable;
+}
+
+Renderable* Renderable::Lines(const std::vector<Vector2> &verts) {
+    Renderable *renderable;
+    float *vertexBuffer;
+    unsigned int *indexBuffer;
+    unsigned int size;
+    int i;
+    
+    size = (unsigned int)verts.size();
+
+    renderable = new Renderable();
+    vertexBuffer = new float[size * 3];
+    indexBuffer = new unsigned int[size];
+    
+    for(i=0; i < size; i++) {
+        vertexBuffer[3*i  ] = verts[i].x;
+        vertexBuffer[3*i+1] = verts[i].y;
+        vertexBuffer[3*i+2] = 0.0f;
+
+        indexBuffer[i] = i;
+    }
+    
+    renderable->setVertexPointer(&vertexBuffer[0], size, 3);
+    renderable->setIndexPointer(&indexBuffer[0], size);
+
+    delete vertexBuffer;
+    delete indexBuffer;
+
     return renderable;
 }

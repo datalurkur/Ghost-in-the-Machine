@@ -1,11 +1,10 @@
 #include <Engine/PlayerController.h>
 #include <GitM/Player.h>
-#include <GitM/GameConstants.h>
 
 PlayerController::PlayerController(Player *player):
-	Controller(player), _player(player), _jumpBoxContacts(0), _extraJumps(0)
-{
-}
+	Controller(player), _player(player), _movementDirection(None),
+    _jumpBoxContacts(0), _extraJumps(0)
+{}
 
 void PlayerController::update(int elapsed) {
 	b2Body *playerBody = _player->_physicsController->getBody();
@@ -47,7 +46,7 @@ void PlayerController::contactBegins(Entity *a, Entity *b) {
 
 void PlayerController::contactBegins(FixtureID *a) {
 	// For now, assume the player can jump off of anything
-	if(a == "jumpSensor") {
+	if(a == &Player::JumpSensor) {
 		_jumpBoxContacts++;
 	}
 }
@@ -57,7 +56,7 @@ void PlayerController::contactEnds(Entity *a, Entity *b) {
 
 void PlayerController::contactEnds(FixtureID *a) {
 	// For now, assume the player can jump off of anything
-	if(a == "jumpSensor") {
+	if(a == &Player::JumpSensor) {
 		_jumpBoxContacts--;
 	}
 }

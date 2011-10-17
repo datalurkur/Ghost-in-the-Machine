@@ -13,6 +13,7 @@
 #include <stack>
 #include <map>
 #include <list>
+#include <vector>
 
 #include "SDL/SDL.h"
 

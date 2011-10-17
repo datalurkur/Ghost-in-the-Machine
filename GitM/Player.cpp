@@ -1,24 +1,20 @@
 #include <GitM/Player.h>
 #include <GitM/DebugVolume.h>
-#include <GitM/GameConstants.h>
 #include <Engine/PhysicsEngine.h>
 #include <Resource/MaterialManager.h>
 
 const std::string Player::NodeType = "Player";
 
+const char Player::PlayerBody = 0,
+           Player::JumpSensor = 1;
+
 Player::Player(const std::string &name):
 	Mob(name, NodeType),
 	_playerController(0)
-{
-/*
-	setDimensions(PlayerConst::Width, PlayerConst::Height);
-    recreateRenderables();
-    _playerController = addController<PlayerController,Player>(this);
-*/
-}
+{}
 
 Player::~Player() {
-	_physicsController->getEngine()->removeFixtureContactListener("jumpSensor");
+	_physicsController->getEngine()->removeFixtureContactListener(&JumpSensor);
 }
 
 void Player::recreateRenderables() {
@@ -37,7 +33,7 @@ void Player::setupPhysics(PhysicsEngine *physics) {
     _physicsController = addController<PhysicsController,PhysicsEngine>(physics);
 
 	// Add the player controller as a listener for player / jump volume contacts
-	physics->addFixtureContactListener("jumpSensor", _playerController);
+	physics->addFixtureContactListener(&JumpSensor, _playerController);
 
     createPhysicsBody();
 }
@@ -70,7 +66,7 @@ void Player::createPhysicsBody() {
     playerDef.density = 1.0f;
     playerDef.friction = 0.3f;
     player = body->CreateFixture(&playerDef);
-	player->SetUserData((void*)"playerBody");
+	player->SetUserData((void*)&PlayerBody);
 
 	// Add the jump sensor
 	sensorShape.SetAsBox(_jumpSensorDimensions.x / 2.0f, _jumpSensorDimensions.y / 2.0f,
@@ -78,9 +74,7 @@ void Player::createPhysicsBody() {
 	sensorDef.isSensor = true;
 	sensorDef.shape = &sensorShape;
 	sensor = body->CreateFixture(&sensorDef);
-	sensor->SetUserData((void*)"jumpSensor");
-
-	// FIXME - I don't like using strings for the fixture IDs, but I don't see what other choice I have, short of finding meaningful pointers to stuff in there
+	sensor->SetUserData((void*)&JumpSensor);
 
     _physicsController->setBody(body);
 }

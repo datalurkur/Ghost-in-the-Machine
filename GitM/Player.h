@@ -7,6 +7,7 @@
 class Player: public Mob {
 public:
 	static const std::string NodeType;
+    static const char PlayerBody, JumpSensor;
 
 public:
     Player(const std::string &name);

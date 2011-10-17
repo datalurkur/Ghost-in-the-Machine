@@ -21,6 +21,7 @@ public:
     
     // High-level builder functions
     b2Body *createStaticBox(const Vector2 &pos, const Vector2 &dim);
+    b2Body *createStaticChain(const std::vector<Vector2> &verts, bool loop=false);
     b2Body *createDynamicBox(const Vector2 &pos, const Vector2 &dim, float density, float friction, bool canRotate = true);
 
     // Contact callbacks

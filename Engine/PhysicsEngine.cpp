@@ -6,6 +6,7 @@ PhysicsEngine::PhysicsEngine():
 {
     _world = new b2World(b2Vec2(_gravity));
     _world->SetContactListener(this);
+    _world->ClearForces();
 }
 
 PhysicsEngine::~PhysicsEngine() { 
@@ -93,8 +94,38 @@ b2Body *PhysicsEngine::createStaticBox(const Vector2 &pos, const Vector2 &dim) {
     
     // Create the fixture
     fixture = body->CreateFixture(&shape, 0.0);
-    fixture->SetUserData((void*)"static");
 
+    return body;
+}
+
+b2Body *PhysicsEngine::createStaticChain(const std::vector<Vector2> &verts, bool loop) {
+    b2BodyDef def;
+    b2ChainShape shape;
+    b2Body *body;
+	b2Fixture *fixture;
+    b2Vec2 *chainVectors;
+    int i;
+    unsigned int size;
+    
+    // Create the body
+    // The position passed is the center
+    body = _world->CreateBody(&def);
+    
+    // Create the fixture shape
+    size = (unsigned int)verts.size();
+    chainVectors = new b2Vec2[size];
+    for(i = 0; i < size; i++) {
+        chainVectors[i] = b2Vec2(verts[i].x, verts[i].y);
+    }
+    if(loop) {
+        shape.CreateLoop(chainVectors, size);
+    } else {
+        shape.CreateChain(chainVectors, size);
+    }
+    
+    // Create the fixture
+    fixture = body->CreateFixture(&shape, 0.0);
+    
     return body;
 }
 
@@ -129,7 +160,6 @@ b2Body *PhysicsEngine::createDynamicBox(const Vector2 &pos, const Vector2 &dim, 
     fDef.density = density;
     fDef.friction = friction;
     fixture = body->CreateFixture(&fDef);
-    fixture->SetUserData((void*)"dynamic");
 
     return body;
 }

@@ -146,7 +146,7 @@ Renderable* Renderable::Lines(const std::vector<Vector2> &verts) {
     float *vertexBuffer;
     unsigned int *indexBuffer;
     unsigned int size;
-    int i;
+    unsigned int i;
     
     size = (unsigned int)verts.size();
 

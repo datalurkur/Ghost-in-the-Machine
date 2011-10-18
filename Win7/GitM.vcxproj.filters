@@ -307,8 +307,11 @@
     <ClCompile Include="..\GitM\DebugVolume.cpp">
       <Filter>GitM\Game Objects</Filter>
     </ClCompile>
-    <ClCompile Include="..\GitM\GameConstants.cpp">
-      <Filter>GitM</Filter>
+    <ClCompile Include="..\GitM\Wall.cpp">
+      <Filter>GitM\Game Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\Mob.cpp">
+      <Filter>Engine</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -582,8 +585,11 @@
     <ClInclude Include="..\GitM\DebugVolume.h">
       <Filter>GitM\Game Objects</Filter>
     </ClInclude>
-    <ClInclude Include="..\GitM\GameConstants.h">
-      <Filter>GitM</Filter>
+    <ClInclude Include="..\GitM\Wall.h">
+      <Filter>GitM\Game Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\Mob.h">
+      <Filter>Engine</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

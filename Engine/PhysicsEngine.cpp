@@ -105,7 +105,7 @@ b2Body *PhysicsEngine::createStaticChain(const std::vector<Vector2> &verts, bool
     b2Body *body;
 	b2Fixture *fixture;
     b2Vec2 *chainVectors;
-    int i;
+    unsigned int i;
     unsigned int size;
     
     // Create the body

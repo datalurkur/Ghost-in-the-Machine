@@ -128,6 +128,7 @@
     <ClCompile Include="..\Engine\EventHandler.cpp" />
     <ClCompile Include="..\Engine\Frustum.cpp" />
     <ClCompile Include="..\Engine\KeyboardListener.cpp" />
+    <ClCompile Include="..\Engine\Mob.cpp" />
     <ClCompile Include="..\Engine\OrthoCamera.cpp" />
     <ClCompile Include="..\Engine\ParentState.cpp" />
     <ClCompile Include="..\Engine\PhysicsController.cpp" />
@@ -139,7 +140,6 @@
     <ClCompile Include="..\Engine\Window.cpp" />
     <ClCompile Include="..\Engine\WindowListener.cpp" />
     <ClCompile Include="..\GitM\DebugVolume.cpp" />
-    <ClCompile Include="..\GitM\GameConstants.cpp" />
     <ClCompile Include="..\GitM\GameState.cpp" />
     <ClCompile Include="..\GitM\GhostCore.cpp" />
     <ClCompile Include="..\GitM\LoadingState.cpp" />
@@ -148,6 +148,7 @@
     <ClCompile Include="..\GitM\Player.cpp" />
     <ClCompile Include="..\GitM\PlayingState.cpp" />
     <ClCompile Include="..\GitM\QuadTreeSceneManager.cpp" />
+    <ClCompile Include="..\GitM\Wall.cpp" />
     <ClCompile Include="..\GitM\World.cpp" />
     <ClCompile Include="..\Render\Font.cpp" />
     <ClCompile Include="..\Render\Material.cpp" />
@@ -221,6 +222,7 @@
     <ClInclude Include="..\Engine\EventHandler.h" />
     <ClInclude Include="..\Engine\Frustum.h" />
     <ClInclude Include="..\Engine\KeyboardListener.h" />
+    <ClInclude Include="..\Engine\Mob.h" />
     <ClInclude Include="..\Engine\OrthoCamera.h" />
     <ClInclude Include="..\Engine\ParentState.h" />
     <ClInclude Include="..\Engine\PhysicsController.h" />
@@ -232,7 +234,6 @@
     <ClInclude Include="..\Engine\Window.h" />
     <ClInclude Include="..\Engine\WindowListener.h" />
     <ClInclude Include="..\GitM\DebugVolume.h" />
-    <ClInclude Include="..\GitM\GameConstants.h" />
     <ClInclude Include="..\GitM\GameState.h" />
     <ClInclude Include="..\GitM\GhostCore.h" />
     <ClInclude Include="..\GitM\LoadingState.h" />
@@ -240,6 +241,7 @@
     <ClInclude Include="..\GitM\Player.h" />
     <ClInclude Include="..\GitM\PlayingState.h" />
     <ClInclude Include="..\GitM\QuadTreeSceneManager.h" />
+    <ClInclude Include="..\GitM\Wall.h" />
     <ClInclude Include="..\GitM\World.h" />
     <ClInclude Include="..\Render\Font.h" />
     <ClInclude Include="..\Render\Material.h" />

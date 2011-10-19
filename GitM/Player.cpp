@@ -19,7 +19,7 @@ Player::~Player() {
 
 void Player::recreateRenderables() {
     clearRenderables();
-    addRenderable(Renderable::Sprite(_position, Vector2(_dimensions.x, _dimensions.y), 0, MaterialManager::Get("playerMaterial")));
+    addRenderable(Renderable::Sprite(_position, Vector2(_dimensions.x, _dimensions.y), 0, MaterialManager::Get("player")));
 
 	// Debug
     deleteChild("jumpSensor");

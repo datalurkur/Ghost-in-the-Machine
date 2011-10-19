@@ -1,17 +1,18 @@
 #include <Render/Material.h>
 #include <SDL/SDL_opengl.h>
 
-Material::Material(): _r(1.0), _g(1.0), _b(1.0), _a(1.0), _texture(0) {
+Material::Material(): _color(1.0f, 1.0f, 1.0f, 1.0f), _texture(0) {
 }
 
 Material::~Material() {
 }
 
 void Material::setColor(float r, float g, float b, float a) {
-    _r = r;
-    _g = g;
-    _b = b;
-    _a = a;
+    _color = Color4(r, g, b, a);
+}
+
+void Material::setColor(const Color4 &color) {
+    _color = color;
 }
 
 void Material::setTexture(Texture *texture) {
@@ -22,7 +23,7 @@ void Material::enable() {
     if(_texture) {
 		_texture->enable();
     }
-    glColor4f(_r, _g, _b, _a);
+    glColor4f(_color.r, _color.g, _color.b, _color.a);
 }
 
 void Material::disable() {

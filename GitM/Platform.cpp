@@ -13,7 +13,7 @@ Platform::Platform(const std::string &name):
 Platform::~Platform() {}
 
 void Platform::recreateRenderables() {
-    addRenderable(Renderable::Sprite(_position, _dimensions, 0, MaterialManager::Get("playerMaterial")));
+    addRenderable(Renderable::Sprite(_position, _dimensions, 0, MaterialManager::Get("platform")));
 }
 
 void Platform::setupPhysics(PhysicsEngine *physics) {

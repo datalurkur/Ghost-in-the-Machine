@@ -14,7 +14,8 @@ public:
     static T* Get(const std::string &name);
     static T* Load(const std::string &name);
 	static void LoadAllFromPath();
-    //static T* GetOrLoad(const std::string &name);
+    static unsigned int LoadNextFromPath_r(unsigned int &pos);
+
     static void Unload(T* t);
 	static void Unload(const std::string &name);
 	static void Reload(T* t);
@@ -28,10 +29,10 @@ public:
 protected:
 	static void DoLoad(const std::string &name, T* t);
 	static std::string LoadPath();
-	static void ParsePropertyMap(const char *data, std::map<std::string,std::string> &map);
 
 protected:
 	static const std::string LoadDirectory;
+    static std::vector<std::string> AvailableResources;
 
     typedef std::map<std::string, T*> ContentMap;
     static ContentMap Resources;
@@ -41,10 +42,16 @@ template <typename T, typename F>
 const std::string ResourceManager<T,F>::LoadDirectory = "Data";
 
 template <typename T, typename F>
+std::vector<std::string> ResourceManager<T,F>::AvailableResources;
+
+template <typename T, typename F>
 typename ResourceManager<T,F>::ContentMap ResourceManager<T,F>::Resources;
 
 template <typename T, typename F>
-void ResourceManager<T,F>::Setup() {}
+void ResourceManager<T,F>::Setup() {
+	Info("Listing all resources from " << LoadPath());
+	FileSystem::GetDirectoryContents(LoadPath(), AvailableResources);
+}
 
 template <typename T, typename F>
 void ResourceManager<T,F>::Teardown() {
@@ -72,18 +79,6 @@ T* ResourceManager<T,F>::Load(const std::string &name) {
 
     return t;
 }
-
-/*
-template <typename T, typename F>
-T* ResourceManager<T,F>::GetOrLoad(const std::string &name) {
-    T* t;
-    t = F::Get(name);
-    if(!t) {
-        t = F::Load(name);
-    }
-    return t;
-}
-*/
 
 template <typename T, typename F>
 void ResourceManager<T,F>::Unload(T* t) {
@@ -184,21 +179,22 @@ std::string ResourceManager<T,F>::LoadPath() {
 
 template <typename T, typename F>
 void ResourceManager<T,F>::LoadAllFromPath() {
-	std::list<std::string> resources;
-	std::list<std::string>::iterator itr;
-
-	Info("Loading all resources from " << LoadPath());
-	FileSystem::GetDirectoryContents(LoadPath(), resources);
-
-	for(itr = resources.begin(); itr != resources.end(); itr++) {
-		Info("Loading " << (*itr));
+	std::vector<std::string>::iterator itr;
+	for(itr = F::AvailableResources.begin(); itr != F::AvailableResources.end(); itr++) {
+        Info("Loading " << (*itr));
 		F::Load(*itr);
 	}
 }
 
 template <typename T, typename F>
-void ResourceManager<T,F>::ParsePropertyMap(const char *data, std::map<std::string,std::string> &map) {
-	
+unsigned int ResourceManager<T,F>::LoadNextFromPath_r(unsigned int &pos) {
+    if(pos < F::AvailableResources.size()) {
+        F::Load(F::AvailableResources[pos]);
+        pos++;
+        return ((unsigned int)F::AvailableResources.size() - pos);
+    } else {
+        return 0;
+    }
 }
 
 #endif

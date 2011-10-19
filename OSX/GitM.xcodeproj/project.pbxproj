@@ -21,6 +21,7 @@
 		E16C5AFD143A54000063EE8C /* Material.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E16C5AFB143A54000063EE8C /* Material.cpp */; };
 		E19826E1143E3F0B00670E4E /* KeyboardListener.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E19826DF143E3F0B00670E4E /* KeyboardListener.cpp */; };
 		E19826E3143E5C8C00670E4E /* Vector2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E19826E2143E5C8C00670E4E /* Vector2.cpp */; };
+		E19DBC17144F5A2A00AFD454 /* StartingState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E19DBC15144F5A2A00AFD454 /* StartingState.cpp */; };
 		E1A471BA142BDF5B0062C09B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E13A3FE3142A76DC00D7EA2A /* main.cpp */; };
 		E1A471BB142BDF5B0062C09B /* GameState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E13A3FE5142A76DC00D7EA2A /* GameState.cpp */; };
 		E1A471C4142BE5130062C09B /* Entity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E121B0BB142BD11800719A82 /* Entity.cpp */; };
@@ -154,6 +155,9 @@
 		E19826E0143E3F0B00670E4E /* KeyboardListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KeyboardListener.h; path = ../Engine/KeyboardListener.h; sourceTree = "<group>"; };
 		E19826E2143E5C8C00670E4E /* Vector2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Vector2.cpp; path = ../Base/Vector2.cpp; sourceTree = "<group>"; };
 		E19826F2143FAC0200670E4E /* ResourcePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ResourcePool.h; path = ../Base/ResourcePool.h; sourceTree = "<group>"; };
+		E19DBC15144F5A2A00AFD454 /* StartingState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = StartingState.cpp; path = ../GitM/StartingState.cpp; sourceTree = "<group>"; };
+		E19DBC16144F5A2A00AFD454 /* StartingState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StartingState.h; path = ../GitM/StartingState.h; sourceTree = "<group>"; };
+		E19DBC19144F6F5C00AFD454 /* ResourceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ResourceManager.h; path = ../Resource/ResourceManager.h; sourceTree = "<group>"; };
 		E1A98B3C144CABEE00081665 /* Mob.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Mob.cpp; path = ../Engine/Mob.cpp; sourceTree = "<group>"; };
 		E1A98B3D144CABEE00081665 /* Mob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Mob.h; path = ../Engine/Mob.h; sourceTree = "<group>"; };
 		E1A98B40144CB3E500081665 /* DebugVolume.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DebugVolume.cpp; path = ../GitM/DebugVolume.cpp; sourceTree = "<group>"; };
@@ -433,6 +437,7 @@
 			children = (
 				E1ED2749143CECD900D6FFBC /* MaterialManager.cpp */,
 				E1ED274A143CECD900D6FFBC /* MaterialManager.h */,
+				E19DBC19144F6F5C00AFD454 /* ResourceManager.h */,
 				E1ED273D143CEB5F00D6FFBC /* TextureManager.cpp */,
 				E1ED273E143CEB5F00D6FFBC /* TextureManager.h */,
 				E1ED273F143CEB5F00D6FFBC /* ThreadedResourceManager.cpp */,
@@ -724,12 +729,14 @@
 		E1CE8DD3142BE67200BBB30A /* States */ = {
 			isa = PBXGroup;
 			children = (
-				E1B4F3301430DC7F00A87C70 /* PlayingState.cpp */,
-				E1B4F3311430DC7F00A87C70 /* PlayingState.h */,
-				E1B4F32D1430D91400A87C70 /* LoadingState.cpp */,
-				E1B4F32E1430D91400A87C70 /* LoadingState.h */,
 				E13A3FE4142A76DC00D7EA2A /* GameState.h */,
 				E13A3FE5142A76DC00D7EA2A /* GameState.cpp */,
+				E1B4F32D1430D91400A87C70 /* LoadingState.cpp */,
+				E1B4F32E1430D91400A87C70 /* LoadingState.h */,
+				E1B4F3301430DC7F00A87C70 /* PlayingState.cpp */,
+				E1B4F3311430DC7F00A87C70 /* PlayingState.h */,
+				E19DBC15144F5A2A00AFD454 /* StartingState.cpp */,
+				E19DBC16144F5A2A00AFD454 /* StartingState.h */,
 			);
 			name = States;
 			sourceTree = "<group>";
@@ -887,6 +894,7 @@
 				E1A98B4B144F43A600081665 /* PropertyMap.cpp in Sources */,
 				E1A98B4E144F474A00081665 /* Vector4.cpp in Sources */,
 				E1A98B51144F499F00081665 /* Vector3.cpp in Sources */,
+				E19DBC17144F5A2A00AFD454 /* StartingState.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

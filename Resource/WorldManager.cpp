@@ -3,6 +3,8 @@
 #include <GitM/Platform.h>
 #include <GitM/Wall.h>
 
+const std::string WorldManager::LoadDirectory = "Save";
+
 void WorldManager::DoLoad(const std::string &name, World *world) {
     UpdateStatus(world, "Creating Player");
 

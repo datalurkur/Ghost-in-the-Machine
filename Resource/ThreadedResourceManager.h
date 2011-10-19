@@ -42,7 +42,6 @@ public:
 
     static T* Get(const std::string &name);
     static T* Load(const std::string &name);
-    //static T* GetOrLoad(const std::string &name);
     static void Unload(T* t);
 	static void Unload(const std::string &name);
 	static void Reload(T* t);
@@ -56,6 +55,7 @@ public:
     static float Progress(T* t);
     static std::string Status(T* t);
     static bool IsDone(T* t);
+    static bool IsWorking();
     
 protected:
     static int ThreadedLoad(void* data);
@@ -126,7 +126,8 @@ T* ThreadedResourceManager<T,F>::Load(const std::string &name) {
 	LOCK_MUTEX;
     t = new T();
 	ResourceThreadParams params(name, (void*)t, F::Lock);
-    F::Threads[t] = ThreadInfo(SDL_CreateThread(F::ThreadedLoad, (void*)&params));
+    SDL_Thread *thread = SDL_CreateThread(F::ThreadedLoad, (void*)&params);
+    F::Threads[t] = ThreadInfo(thread);
     F::Resources[name] = t;
     UNLOCK_MUTEX;
 
@@ -232,6 +233,17 @@ bool ThreadedResourceManager<T,F>::IsDone(T *t) {
     UNLOCK_MUTEX;
     
     return done;
+}
+
+template <typename T, typename F>
+bool ThreadedResourceManager<T,F>::IsWorking() {
+    bool working;
+    
+    LOCK_MUTEX;
+    working = !F::Threads.empty();
+    UNLOCK_MUTEX;
+    
+    return working;
 }
 
 template <typename T, typename F>

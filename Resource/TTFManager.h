@@ -2,15 +2,15 @@
 #define TTFMANAGER_H
 
 #include <Render/Font.h>
-#include <Resource/ThreadedResourceManager.h>
+#include <Resource/ResourceManager.h>
 
 class TTFManager;
 
-class TTFManager: public ThreadedResourceManager<Font, TTFManager> {
+class TTFManager: public ResourceManager<Font, TTFManager> {
 protected:
     static void DoLoad(const std::string &name, Font *font);
-    
-    friend class ThreadedResourceManager<Font, TTFManager>;
+    static const std::string LoadDirectory;
+	friend class ResourceManager<Font, TTFManager>;
 };
 
 #endif

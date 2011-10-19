@@ -1,5 +1,5 @@
 #include <GitM/GhostCore.h>
-#include <GitM/GameState.h>
+#include <GitM/StartingState.h>
 
 #include <Resource/WorldManager.h>
 #include <Resource/TTFManager.h>
@@ -19,22 +19,8 @@ void GhostCore::setup() {
     TTFManager::Setup();
     TextureManager::Setup();
     MaterialManager::Setup();
-    
-	// TEMP
-	TextureManager::LoadAllFromPath();
-	MaterialManager::LoadAllFromPath();
 
-	Texture *playerTexture = TextureManager::Get("grass.png");
-    Material *playerMaterial = new Material();
-    playerMaterial->setTexture(playerTexture);
-    MaterialManager::Register("playerMaterial", playerMaterial);
-
-	Material *debugMaterial = new Material();
-	debugMaterial->setColor(1.0f, 1.0f, 1.0f, 0.5f);
-	MaterialManager::Register("debugMaterial", debugMaterial);
-    
-    std::string mapName = "test_world";
-    pushState(new GameState(), &mapName);
+    pushState(new StartingState());
 }
 
 void GhostCore::teardown() {

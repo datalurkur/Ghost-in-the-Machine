@@ -15,5 +15,5 @@ DebugVolume::~DebugVolume() {
 
 void DebugVolume::recreateRenderables() {
     clearRenderables();
-    addRenderable(Renderable::Sprite(_position, _dimensions, 0, MaterialManager::Get("debugMaterial")));
+    addRenderable(Renderable::Sprite(_position, _dimensions, 0, MaterialManager::Get("debug")));
 }

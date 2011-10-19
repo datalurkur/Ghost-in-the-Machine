@@ -2,15 +2,14 @@
 #define MATERIALMANAGER_H
 
 #include <Render/Material.h>
-#include <Resource/ThreadedResourceManager.h>
+#include <Resource/ResourceManager.h>
 
 class MaterialManager;
 
-class MaterialManager: public ThreadedResourceManager<Material, MaterialManager> {
+class MaterialManager: public ResourceManager<Material, MaterialManager> {
 protected:
     static void DoLoad(const std::string &name, Material *material);
     static const std::string LoadDirectory;
-    friend class ThreadedResourceManager<Material, MaterialManager>;
 	friend class ResourceManager<Material, MaterialManager>;
 };
 

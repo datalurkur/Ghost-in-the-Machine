@@ -32,6 +32,9 @@
 		E1A98B42144CB3E500081665 /* DebugVolume.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1A98B40144CB3E500081665 /* DebugVolume.cpp */; };
 		E1A98B45144CC86900081665 /* Wall.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1A98B43144CC86900081665 /* Wall.cpp */; };
 		E1A98B48144F2F9E00081665 /* FileSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1A98B46144F2F9E00081665 /* FileSystem.cpp */; };
+		E1A98B4B144F43A600081665 /* PropertyMap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1A98B49144F43A600081665 /* PropertyMap.cpp */; };
+		E1A98B4E144F474A00081665 /* Vector4.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1A98B4C144F474A00081665 /* Vector4.cpp */; };
+		E1A98B51144F499F00081665 /* Vector3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1A98B4F144F499F00081665 /* Vector3.cpp */; };
 		E1AA8AF21445FCA00024D891 /* Box2DConfig.cmake in Resources */ = {isa = PBXBuildFile; fileRef = E1AA8A8F1445FCA00024D891 /* Box2DConfig.cmake */; };
 		E1AA8AF31445FCA00024D891 /* CMakeLists.txt in Resources */ = {isa = PBXBuildFile; fileRef = E1AA8A901445FCA00024D891 /* CMakeLists.txt */; };
 		E1AA8AF41445FCA00024D891 /* b2BroadPhase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1AA8A921445FCA00024D891 /* b2BroadPhase.cpp */; };
@@ -159,6 +162,13 @@
 		E1A98B44144CC86900081665 /* Wall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Wall.h; path = ../GitM/Wall.h; sourceTree = "<group>"; };
 		E1A98B46144F2F9E00081665 /* FileSystem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FileSystem.cpp; path = ../Base/FileSystem.cpp; sourceTree = "<group>"; };
 		E1A98B47144F2F9E00081665 /* FileSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FileSystem.h; path = ../Base/FileSystem.h; sourceTree = "<group>"; };
+		E1A98B49144F43A600081665 /* PropertyMap.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PropertyMap.cpp; path = ../Base/PropertyMap.cpp; sourceTree = "<group>"; };
+		E1A98B4A144F43A600081665 /* PropertyMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PropertyMap.h; path = ../Base/PropertyMap.h; sourceTree = "<group>"; };
+		E1A98B4C144F474A00081665 /* Vector4.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Vector4.cpp; path = ../Base/Vector4.cpp; sourceTree = "<group>"; };
+		E1A98B4D144F474A00081665 /* Vector4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Vector4.h; path = ../Base/Vector4.h; sourceTree = "<group>"; };
+		E1A98B4F144F499F00081665 /* Vector3.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Vector3.cpp; path = ../Base/Vector3.cpp; sourceTree = "<group>"; };
+		E1A98B50144F499F00081665 /* Vector3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Vector3.h; path = ../Base/Vector3.h; sourceTree = "<group>"; };
+		E1A98B52144F4A1D00081665 /* Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Color.h; path = ../Base/Color.h; sourceTree = "<group>"; };
 		E1AA8A8E1445FCA00024D891 /* Box2D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Box2D.h; sourceTree = "<group>"; };
 		E1AA8A8F1445FCA00024D891 /* Box2DConfig.cmake */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Box2DConfig.cmake; sourceTree = "<group>"; };
 		E1AA8A901445FCA00024D891 /* CMakeLists.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = "<group>"; };
@@ -643,16 +653,23 @@
 		E1B4F3111430D65000A87C70 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				E1B4F3131430D66800A87C70 /* Base.h */,
+				E1A98B52144F4A1D00081665 /* Color.h */,
 				E1A98B46144F2F9E00081665 /* FileSystem.cpp */,
 				E1A98B47144F2F9E00081665 /* FileSystem.h */,
-				E1B4F3131430D66800A87C70 /* Base.h */,
 				E1B4F3331431178D00A87C70 /* Log.cpp */,
 				E1B4F3341431178D00A87C70 /* Log.h */,
 				E1BAD36114364A8F00D7430C /* Matrix4.cpp */,
 				E1BAD36214364A8F00D7430C /* Matrix4.h */,
+				E1A98B49144F43A600081665 /* PropertyMap.cpp */,
+				E1A98B4A144F43A600081665 /* PropertyMap.h */,
 				E19826F2143FAC0200670E4E /* ResourcePool.h */,
 				E19826E2143E5C8C00670E4E /* Vector2.cpp */,
 				E18169D41433B1E40030B8BA /* Vector2.h */,
+				E1A98B4F144F499F00081665 /* Vector3.cpp */,
+				E1A98B50144F499F00081665 /* Vector3.h */,
+				E1A98B4C144F474A00081665 /* Vector4.cpp */,
+				E1A98B4D144F474A00081665 /* Vector4.h */,
 			);
 			name = Base;
 			sourceTree = "<group>";
@@ -867,6 +884,9 @@
 				E1A98B42144CB3E500081665 /* DebugVolume.cpp in Sources */,
 				E1A98B45144CC86900081665 /* Wall.cpp in Sources */,
 				E1A98B48144F2F9E00081665 /* FileSystem.cpp in Sources */,
+				E1A98B4B144F43A600081665 /* PropertyMap.cpp in Sources */,
+				E1A98B4E144F474A00081665 /* Vector4.cpp in Sources */,
+				E1A98B51144F499F00081665 /* Vector3.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

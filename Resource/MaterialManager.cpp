@@ -4,13 +4,14 @@
 const std::string MaterialManager::LoadDirectory = "Material";
 
 void MaterialManager::DoLoad(const std::string &name, Material *material) {
-	char *fileData,
-		 *line, *type, *param,
-		 *ptr1, *ptr2;
+	char *fileData;
 	unsigned int fileSize;
-
-	fileSize = FileSystem::GetFileData(name, &fileData);
-
-	//while((line = strtok_r(fileData, "\n", ptr1)) != 0) {
-	// }
+	fileSize = FileSystem::GetFileData(LoadPath() + name, &fileData);
+    
+    if(fileSize == 0) {
+        Error("Failed to load " << name);
+        return;
+    }
+    
+    free(fileData);
 }

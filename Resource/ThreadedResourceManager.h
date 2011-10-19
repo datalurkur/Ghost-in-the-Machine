@@ -42,7 +42,7 @@ public:
 
     static T* Get(const std::string &name);
     static T* Load(const std::string &name);
-    static T* GetOrLoad(const std::string &name);
+    //static T* GetOrLoad(const std::string &name);
     static void Unload(T* t);
 	static void Unload(const std::string &name);
 	static void Reload(T* t);

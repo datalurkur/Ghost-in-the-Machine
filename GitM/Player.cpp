@@ -94,8 +94,8 @@ Player* Player::DefaultPlayer() {
     player->_maxSpeed = 6.0f;
     player->_accel = 0.02f;
     player->_jumpPower = 3.0f;
-    player->_jumpSensorDimensions = Vector2(0.3f, 0.3f);
-    player->_jumpSensorOffset = Vector2(0.0f, -0.65f);
+    player->_jumpSensorDimensions = Vector2(0.3f, 0.1f);
+    player->_jumpSensorOffset = Vector2(0.0f, -0.5f);
     
     PlayerController *controller = player->addController<PlayerController,Player>(player);
     player->setPlayerController(controller);

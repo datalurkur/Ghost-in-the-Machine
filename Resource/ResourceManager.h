@@ -3,6 +3,7 @@
 
 #include <Base/Base.h>
 #include <Base/Log.h>
+#include <Base/FileSystem.h>
 
 template <typename T, typename F>
 class ResourceManager {
@@ -12,7 +13,8 @@ public:
 
     static T* Get(const std::string &name);
     static T* Load(const std::string &name);
-    static T* GetOrLoad(const std::string &name);
+	static void LoadAllFromPath();
+    //static T* GetOrLoad(const std::string &name);
     static void Unload(T* t);
 	static void Unload(const std::string &name);
 	static void Reload(T* t);
@@ -26,6 +28,7 @@ public:
 protected:
 	static void DoLoad(const std::string &name, T* t);
 	static std::string LoadPath();
+	static void ParsePropertyMap(const char *data, std::map<std::string,std::string> &map);
 
 protected:
 	static const std::string LoadDirectory;
@@ -54,14 +57,9 @@ void ResourceManager<T,F>::Teardown() {
 
 template <typename T, typename F>
 T* ResourceManager<T,F>::Get(const std::string &name) {
-	typename ContentMap::iterator itr = F::Resources.begin();
-	for(; itr != F::Resources.end(); itr++) {
-		if(name == itr->first) {
-			return itr->second;
-		}
-	}
-	ASSERT(0);
-	return 0;
+	typename ContentMap::iterator itr = F::Resources.find(name);
+	ASSERT(itr != F::Resources.end());
+	return itr->second;
 }
 
 template <typename T, typename F>
@@ -75,6 +73,7 @@ T* ResourceManager<T,F>::Load(const std::string &name) {
     return t;
 }
 
+/*
 template <typename T, typename F>
 T* ResourceManager<T,F>::GetOrLoad(const std::string &name) {
     T* t;
@@ -84,6 +83,7 @@ T* ResourceManager<T,F>::GetOrLoad(const std::string &name) {
     }
     return t;
 }
+*/
 
 template <typename T, typename F>
 void ResourceManager<T,F>::Unload(T* t) {
@@ -180,6 +180,25 @@ T* ResourceManager<T,F>::Unregister(const std::string &name) {
 template <typename T, typename F>
 std::string ResourceManager<T,F>::LoadPath() {
 	return (LoadDirectory + "/" + F::LoadDirectory + "/");
+}
+
+template <typename T, typename F>
+void ResourceManager<T,F>::LoadAllFromPath() {
+	std::list<std::string> resources;
+	std::list<std::string>::iterator itr;
+
+	Info("Loading all resources from " << LoadPath());
+	FileSystem::GetDirectoryContents(LoadPath(), resources);
+
+	for(itr = resources.begin(); itr != resources.end(); itr++) {
+		Info("Loading " << (*itr));
+		F::Load(*itr);
+	}
+}
+
+template <typename T, typename F>
+void ResourceManager<T,F>::ParsePropertyMap(const char *data, std::map<std::string,std::string> &map) {
+	
 }
 
 #endif

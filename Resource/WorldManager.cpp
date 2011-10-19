@@ -26,13 +26,15 @@ void WorldManager::DoLoad(const std::string &name, World *world) {
 	world->addEntity(platform);
     */
     Wall *wallSegment = new Wall("wall01");
-    Vector2 verts[4] = {
+    Vector2 verts[6] = {
         Vector2(10.0f, -5.0f),
         Vector2(5.0f, -7.0f),
         Vector2(-5.0f, -7.0f),
-        Vector2(-10.0f, -5.0f)
+        Vector2(-10.0f, -5.0f),
+		Vector2(-10.0f, 0.0f),
+		Vector2(-5.0f, 5.0f)
     };
-    wallSegment->setVerts(verts, 4);
+    wallSegment->setVerts(verts, 6);
     wallSegment->recreateRenderables();
     world->addEntity(wallSegment);
 }

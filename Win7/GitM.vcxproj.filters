@@ -142,9 +142,6 @@
     <ClCompile Include="..\Base\Vector2.cpp">
       <Filter>Base</Filter>
     </ClCompile>
-    <ClCompile Include="..\Engine\KeyboardListener.cpp">
-      <Filter>Engine\Event Handling</Filter>
-    </ClCompile>
     <ClCompile Include="..\Engine\PhysicsEngine.cpp">
       <Filter>Engine</Filter>
     </ClCompile>
@@ -312,6 +309,12 @@
     </ClCompile>
     <ClCompile Include="..\Engine\Mob.cpp">
       <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Base\FileSystem.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\KeyboardListener.cpp">
+      <Filter>Engine\Event Handling</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -590,6 +593,9 @@
     </ClInclude>
     <ClInclude Include="..\Engine\Mob.h">
       <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Base\FileSystem.h">
+      <Filter>Base</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

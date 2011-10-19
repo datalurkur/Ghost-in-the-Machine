@@ -21,7 +21,10 @@ void GhostCore::setup() {
     MaterialManager::Setup();
     
 	// TEMP
-	Texture *playerTexture = TextureManager::Load("grass.png");
+	TextureManager::LoadAllFromPath();
+	MaterialManager::LoadAllFromPath();
+
+	Texture *playerTexture = TextureManager::Get("grass.png");
     Material *playerMaterial = new Material();
     playerMaterial->setTexture(playerTexture);
     MaterialManager::Register("playerMaterial", playerMaterial);

@@ -15,6 +15,8 @@ public:
 
 	void update(int elapsed);
 
+	bool isTouchingGround();
+
 	void setMovementDirection(Direction dir);
 	Direction getMovementDirection() const;
 	void jump();
@@ -27,7 +29,7 @@ public:
 private:
 	Direction _movementDirection;
 	Player *_player;
-	int _jumpBoxContacts;
+	int _jumpSensorContacts;
 	int _extraJumps;
 };
 

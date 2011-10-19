@@ -63,7 +63,6 @@ void PhysicsEngine::EndContact(b2Contact *contact) {
 }
 
 void PhysicsEngine::addFixtureContactListener(FixtureID *id, ContactListener *controller) {
-    Info("Added listener for " << *id);
     _fixtureContactListeners[id] = controller;
 }
 

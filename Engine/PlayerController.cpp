@@ -3,7 +3,7 @@
 
 PlayerController::PlayerController(Player *player):
 	Controller(player), _player(player), _movementDirection(None),
-    _jumpBoxContacts(0), _extraJumps(0)
+    _jumpSensorContacts(0), _extraJumps(0)
 {}
 
 void PlayerController::update(int elapsed) {
@@ -22,8 +22,14 @@ void PlayerController::update(int elapsed) {
 			playerBody->SetLinearVelocity(v);
 		} break;
 		default: {
+			if(isTouchingGround()) {
+			}
 		} break;
 	};
+}
+
+bool PlayerController::isTouchingGround() {
+	return (_jumpSensorContacts > 0);
 }
 
 void PlayerController::setMovementDirection(PlayerController::Direction dir) {
@@ -35,7 +41,7 @@ PlayerController::Direction PlayerController::getMovementDirection() const {
 }
 
 void PlayerController::jump() {
-	if(_jumpBoxContacts > 0) {
+	if(isTouchingGround()) {
 		b2Body *playerBody = _player->_physicsController->getBody();
 		playerBody->ApplyLinearImpulse(b2Vec2(0.0f, _player->_jumpPower), playerBody->GetWorldCenter());
 	}
@@ -47,7 +53,7 @@ void PlayerController::contactBegins(Entity *a, Entity *b) {
 void PlayerController::contactBegins(FixtureID *trigger, FixtureID *other) {
 	// For now, assume the player can jump off of anything
 	if(trigger == &Player::JumpSensor) {
-		_jumpBoxContacts++;
+		_jumpSensorContacts++;
 	}
 }
 
@@ -57,6 +63,6 @@ void PlayerController::contactEnds(Entity *a, Entity *b) {
 void PlayerController::contactEnds(FixtureID *trigger, FixtureID *other) {
 	// For now, assume the player can jump off of anything
 	if(trigger == &Player::JumpSensor) {
-		_jumpBoxContacts--;
+		_jumpSensorContacts--;
 	}
 }

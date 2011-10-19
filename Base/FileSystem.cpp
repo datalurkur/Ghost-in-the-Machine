@@ -2,13 +2,16 @@
 #include <Base/FileSystem.h>
 
 void FileSystem::GetDirectoryContents(const std::string &dir, std::list<std::string> &files) {
+	std::string cleanDirName;
+    
+    // Clean up the directory name
+    CleanFilename(dir, cleanDirName);
+
 #if SYS_PLATFORM == PLATFORM_WIN32
 	_finddata_t fileInfo;
 	intptr_t handle;
-	std::string cleanDirName;
 
-	// Clean up the directory name, and make sure there's a wildcard on the end
-	CleanFilename(dir, cleanDirName);
+	// Ensure the directory name ends in a wildcard for Win32
 	if(cleanDirName[cleanDirName.size()-1] != '/') {
 		cleanDirName += '/';
 	}
@@ -22,44 +25,50 @@ void FileSystem::GetDirectoryContents(const std::string &dir, std::list<std::str
 		files.push_back(fileInfo.name);
 	}
 
-	// Remove the parent directory from this list
-	files.remove("..");
-
+    // Cleanup
 	_findclose(handle);
 #else
-	// FIXME - Write OSX / Linux directory listing code
-	ASSERT(0);
+    DIR *dirObj;
+    dirent *entry;
+
+    // Check that the directory exists
+    dirObj = opendir(dir.c_str());
+    if(dirObj == 0) { return; }
+    
+    // Iterate through the directory
+    while((entry = readdir(dirObj)) != 0) {
+        files.push_back(entry->d_name);
+    }
+
+    // Cleanup
+    closedir(dirObj);
 #endif
+    
+	// Remove the local and parent directory from this list
+    files.remove(".");
+	files.remove("..");
 }
 
 unsigned int FileSystem::GetFileData(const std::string &filename, char **data) {
-#if SYS_PLATFORM == PLATFORM_WIN32
-	_finddata_t fileInfo;
-	intptr_t handle;
-
 	FILE *file;
 	unsigned int size;
 
-	if((handle = _findfirst(filename.c_str(), &fileInfo)) == 0) {
-		size = fileInfo.size;
-		_findclose(handle);
-	} else {
-		return 0;
-	}
-
+#if SYS_PLATFORM == PLATFORM_WIN32
+    // For some reason, fopen is considered "unsafe" on Win32
+    // Did I mention I really hate Windows development?
 	fopen_s(&file, filename.c_str(), "r");
-	if(!file) { return 0; }
+#else
+    file = fopen(filename.c_str(), "r");
+#endif
 
+	if(!file) { return 0; }
+    
 	(*data) = (char*)calloc(size, sizeof(char));
 	fread(*data, sizeof(char), size, file);
-
+    
 	fclose(file);
-
+    
 	return size;
-#else
-	// FIXME - Write OSX / Linux file loading code
-	ASSERT(0);
-#endif
 }
 
 void FileSystem::CleanFilename(const std::string &filename, std::string &cleaned) {
@@ -70,7 +79,7 @@ void FileSystem::CleanFilename(const std::string &filename, std::string &cleaned
 	// Replace backslashes with forwardslashes
 	i = 0;
 	while(i < cleaned.size()) {
-		j = cleaned.find('\\', i);
+		j = (unsigned int)cleaned.find('\\', i);
 		if(j != -1) {
 			cleaned[j] = '/';
 			i = j+1;

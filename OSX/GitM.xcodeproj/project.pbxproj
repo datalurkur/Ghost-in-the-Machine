@@ -31,6 +31,7 @@
 		E1A98B3E144CABEE00081665 /* Mob.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1A98B3C144CABEE00081665 /* Mob.cpp */; };
 		E1A98B42144CB3E500081665 /* DebugVolume.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1A98B40144CB3E500081665 /* DebugVolume.cpp */; };
 		E1A98B45144CC86900081665 /* Wall.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1A98B43144CC86900081665 /* Wall.cpp */; };
+		E1A98B48144F2F9E00081665 /* FileSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1A98B46144F2F9E00081665 /* FileSystem.cpp */; };
 		E1AA8AF21445FCA00024D891 /* Box2DConfig.cmake in Resources */ = {isa = PBXBuildFile; fileRef = E1AA8A8F1445FCA00024D891 /* Box2DConfig.cmake */; };
 		E1AA8AF31445FCA00024D891 /* CMakeLists.txt in Resources */ = {isa = PBXBuildFile; fileRef = E1AA8A901445FCA00024D891 /* CMakeLists.txt */; };
 		E1AA8AF41445FCA00024D891 /* b2BroadPhase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1AA8A921445FCA00024D891 /* b2BroadPhase.cpp */; };
@@ -156,6 +157,8 @@
 		E1A98B41144CB3E500081665 /* DebugVolume.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DebugVolume.h; path = ../GitM/DebugVolume.h; sourceTree = "<group>"; };
 		E1A98B43144CC86900081665 /* Wall.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Wall.cpp; path = ../GitM/Wall.cpp; sourceTree = "<group>"; };
 		E1A98B44144CC86900081665 /* Wall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Wall.h; path = ../GitM/Wall.h; sourceTree = "<group>"; };
+		E1A98B46144F2F9E00081665 /* FileSystem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FileSystem.cpp; path = ../Base/FileSystem.cpp; sourceTree = "<group>"; };
+		E1A98B47144F2F9E00081665 /* FileSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FileSystem.h; path = ../Base/FileSystem.h; sourceTree = "<group>"; };
 		E1AA8A8E1445FCA00024D891 /* Box2D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Box2D.h; sourceTree = "<group>"; };
 		E1AA8A8F1445FCA00024D891 /* Box2DConfig.cmake */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Box2DConfig.cmake; sourceTree = "<group>"; };
 		E1AA8A901445FCA00024D891 /* CMakeLists.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = "<group>"; };
@@ -640,6 +643,8 @@
 		E1B4F3111430D65000A87C70 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				E1A98B46144F2F9E00081665 /* FileSystem.cpp */,
+				E1A98B47144F2F9E00081665 /* FileSystem.h */,
 				E1B4F3131430D66800A87C70 /* Base.h */,
 				E1B4F3331431178D00A87C70 /* Log.cpp */,
 				E1B4F3341431178D00A87C70 /* Log.h */,
@@ -861,6 +866,7 @@
 				E1A98B3E144CABEE00081665 /* Mob.cpp in Sources */,
 				E1A98B42144CB3E500081665 /* DebugVolume.cpp in Sources */,
 				E1A98B45144CC86900081665 /* Wall.cpp in Sources */,
+				E1A98B48144F2F9E00081665 /* FileSystem.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

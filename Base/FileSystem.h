@@ -3,10 +3,9 @@
 
 #include <Base/Base.h>
 
-#include <direct.h>
-
 #if SYS_PLATFORM == PLATFORM_WIN32
 # include <io.h>
+# include <direct.h>
 #else
 # include <dirent.h>
 #endif

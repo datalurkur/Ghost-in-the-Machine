@@ -48,7 +48,8 @@
 #endif
 
 #if SYS_PLATFORM == PLATFORM_APPLE
-# include <OpenGL/OpenGL.h>
+// Causes GL_GLEXT_VERSION macro redefinition warnings in SDL
+//# include <OpenGL/OpenGL.h>
 #elif SYS_PLATFORM == PLATFORM_WIN32
 # include "Windows.h"
 # define sleep(seconds) Sleep(seconds*1000)

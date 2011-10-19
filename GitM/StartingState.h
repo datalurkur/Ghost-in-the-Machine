@@ -24,7 +24,7 @@ private:
         MaterialLoading,
         Done
     };
-    Stage _stage;
+    unsigned int _stage;
     unsigned int _progress, _left;
 };
 

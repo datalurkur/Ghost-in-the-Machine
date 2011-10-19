@@ -15,8 +15,8 @@ World::~World() {
 
 void World::update(int elapsed) {
     EntityList::iterator itr;
-
-    // Tick the physics simulation
+    
+	// Tick the physics simulation
     _physics->update(elapsed);
 
     // Update the entities (and their controllers)

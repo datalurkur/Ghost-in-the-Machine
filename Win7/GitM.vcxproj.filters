@@ -316,6 +316,18 @@
     <ClCompile Include="..\Engine\KeyboardListener.cpp">
       <Filter>Engine\Event Handling</Filter>
     </ClCompile>
+    <ClCompile Include="..\Base\PropertyMap.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Base\Vector3.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Base\Vector4.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\GitM\StartingState.cpp">
+      <Filter>GitM\States</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Engine\ParentState.h">
@@ -596,6 +608,21 @@
     </ClInclude>
     <ClInclude Include="..\Base\FileSystem.h">
       <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Base\Color.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Base\PropertyMap.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Base\Vector3.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Base\Vector4.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GitM\StartingState.h">
+      <Filter>GitM\States</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

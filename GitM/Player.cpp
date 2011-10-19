@@ -10,7 +10,7 @@ const char Player::PlayerBody = 1,
 
 Player::Player(const std::string &name):
 	Mob(name, NodeType),
-	_playerController(0)
+	_playerController(0), _extraJumps(0)
 {}
 
 Player::~Player() {
@@ -93,9 +93,10 @@ Player* Player::DefaultPlayer() {
     
     player->_maxSpeed = 6.0f;
     player->_accel = 0.02f;
-    player->_jumpPower = 3.0f;
-    player->_jumpSensorDimensions = Vector2(0.3f, 0.1f);
+    player->_jumpSpeed = 6.0f;
+    player->_jumpSensorDimensions = Vector2(0.4f, 0.1f);
     player->_jumpSensorOffset = Vector2(0.0f, -0.5f);
+	player->_extraJumps = 1;
     
     PlayerController *controller = player->addController<PlayerController,Player>(player);
     player->setPlayerController(controller);

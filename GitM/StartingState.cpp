@@ -54,9 +54,4 @@ void StartingState::teardown() {
 void StartingState::incrementStage() {
     _stage++;
     _progress = 0;
-    
-    if(_stage == MaterialLoading) {
-        // Multithreaded, let it rock
-        MaterialManager::LoadAllFromPath();
-    }
 }

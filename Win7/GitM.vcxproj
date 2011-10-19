@@ -75,7 +75,10 @@
     <ClCompile Include="..\Base\FileSystem.cpp" />
     <ClCompile Include="..\Base\Log.cpp" />
     <ClCompile Include="..\Base\Matrix4.cpp" />
+    <ClCompile Include="..\Base\PropertyMap.cpp" />
     <ClCompile Include="..\Base\Vector2.cpp" />
+    <ClCompile Include="..\Base\Vector3.cpp" />
+    <ClCompile Include="..\Base\Vector4.cpp" />
     <ClCompile Include="..\Box2D\Collision\b2BroadPhase.cpp" />
     <ClCompile Include="..\Box2D\Collision\b2CollideCircle.cpp" />
     <ClCompile Include="..\Box2D\Collision\b2CollideEdge.cpp" />
@@ -149,6 +152,7 @@
     <ClCompile Include="..\GitM\Player.cpp" />
     <ClCompile Include="..\GitM\PlayingState.cpp" />
     <ClCompile Include="..\GitM\QuadTreeSceneManager.cpp" />
+    <ClCompile Include="..\GitM\StartingState.cpp" />
     <ClCompile Include="..\GitM\Wall.cpp" />
     <ClCompile Include="..\GitM\World.cpp" />
     <ClCompile Include="..\Render\Font.cpp" />
@@ -165,11 +169,15 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Base\Base.h" />
+    <ClInclude Include="..\Base\Color.h" />
     <ClInclude Include="..\Base\FileSystem.h" />
     <ClInclude Include="..\Base\Log.h" />
     <ClInclude Include="..\Base\Matrix4.h" />
+    <ClInclude Include="..\Base\PropertyMap.h" />
     <ClInclude Include="..\Base\ResourcePool.h" />
     <ClInclude Include="..\Base\Vector2.h" />
+    <ClInclude Include="..\Base\Vector3.h" />
+    <ClInclude Include="..\Base\Vector4.h" />
     <ClInclude Include="..\Box2D\Box2D.h" />
     <ClInclude Include="..\Box2D\Collision\b2BroadPhase.h" />
     <ClInclude Include="..\Box2D\Collision\b2Collision.h" />
@@ -243,6 +251,7 @@
     <ClInclude Include="..\GitM\Player.h" />
     <ClInclude Include="..\GitM\PlayingState.h" />
     <ClInclude Include="..\GitM\QuadTreeSceneManager.h" />
+    <ClInclude Include="..\GitM\StartingState.h" />
     <ClInclude Include="..\GitM\Wall.h" />
     <ClInclude Include="..\GitM\World.h" />
     <ClInclude Include="..\Render\Font.h" />

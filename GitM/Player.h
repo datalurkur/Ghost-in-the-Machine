@@ -25,7 +25,8 @@ public:
     static Player* DefaultPlayer();
     
 protected:
-    float _jumpPower;
+	int _extraJumps;
+    float _jumpSpeed;
     Vector2 _jumpSensorDimensions, _jumpSensorOffset;
 
 private:

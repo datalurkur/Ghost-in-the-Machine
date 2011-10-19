@@ -30,7 +30,7 @@ private:
 	Direction _movementDirection;
 	Player *_player;
 	int _jumpSensorContacts;
-	int _extraJumps;
+	int _extraJumpsLeft;
 };
 
 #endif

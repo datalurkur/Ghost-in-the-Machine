@@ -4,11 +4,11 @@
 const std::string SceneNode::NodeType = "SceneNode";
 
 SceneNode::SceneNode(const std::string &name):
-	_name(name), _type(NodeType), _dirty(true), _parent(0), _position(0,0), _dimensions(0,0)
+	_name(name), _type(NodeType), _dirty(true), _parent(0)
 {}
 
 SceneNode::SceneNode(const std::string &name, const std::string &type):
-	_name(name), _type(type), _dirty(true), _parent(0), _position(0,0), _dimensions(0,0)
+	_name(name), _type(type), _dirty(true), _parent(0)
 {}
 
 SceneNode::~SceneNode() {
@@ -33,9 +33,13 @@ Vector2 SceneNode::getLocalPosition() const {
 }
 
 void SceneNode::setPosition(float x, float y) {
+    // Any children dependent on this node will need to update their absolute positions
     _position.x = x;
     _position.y = y;
     flagDirty(Downward);
+
+    // This will change the position of the AABB, so the parent may need to adjust the size of its AABB
+    flagDirty(Upward);
 }
 
 void SceneNode::setPosition(const Vector2 &pos) {
@@ -49,6 +53,8 @@ Vector2 SceneNode::getDimensions() const {
 void SceneNode::setDimensions(float x, float y) {
     _dimensions.x = x;
     _dimensions.y = y;
+
+    // Parents will need to update their AABBs
     flagDirty(Upward);
 	recreateRenderables();
 }
@@ -57,9 +63,13 @@ void SceneNode::setDimensions(const Vector2 &dim) {
 	setDimensions(dim.x, dim.y);
 }
 
+const AABB2& SceneNode::getAbsoluteBounds() const {
+    ASSERT(!_dirty);
+    return _absoluteBounds;
+}
+
 void SceneNode::moveRelative(const Vector2 &pos) {
-    _position += pos;
-    flagDirty(Downward);
+    setPosition(_position + pos);
 }
 
 const std::string &SceneNode::getName() const {	return _name; }
@@ -146,7 +156,18 @@ void SceneNode::updateCachedValues() {
     
     if(needsUpdate) {
         // Update any values dependend on child states
-        // FIXME - Update bounding boxes here
+
+        // Update the absolute AABB
+        _absoluteBounds = AABB2(
+            _absolutePosition - (_dimensions / 2.0f),
+            _absolutePosition + (_dimensions / 2.0f)
+        );
+
+        // Expand the AABB with the children's bounds
+        NodeMap::iterator itr = _children.begin();
+        for(; itr != _children.end(); itr++) {
+            _absoluteBounds.expand(itr->second->getAbsoluteBounds());
+        }
     }
 }
 

@@ -2,6 +2,7 @@
 #define SCENENODE_H
 
 #include <Base/Vector2.h>
+#include <Base/AABB2.h>
 #include <Engine/Frustum.h>
 #include <Render/Renderable.h>
 
@@ -32,6 +33,9 @@ public:
     Vector2 getDimensions() const;
 	void setDimensions(float x, float y);
     void setDimensions(const Vector2 &dim);
+
+    // AABB Information
+    const AABB2& getAbsoluteBounds() const;
 
 	// Identifying information
 	const std::string &getName() const;
@@ -76,6 +80,7 @@ protected:
 	Vector2 _absolutePosition;
     
     Vector2 _dimensions;
+    AABB2 _absoluteBounds;
 
 	Matrix4 _affine;
 	Matrix4 _absoluteAffine;

@@ -101,6 +101,7 @@
 		E1BAD36914366A4C00D7430C /* Viewport.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1BAD36714366A4C00D7430C /* Viewport.cpp */; };
 		E1BAD36E14366A6000D7430C /* Camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1BAD36A14366A6000D7430C /* Camera.cpp */; };
 		E1BAD36F14366A6000D7430C /* Frustum.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1BAD36C14366A6000D7430C /* Frustum.cpp */; };
+		E1ECB69F1450DC6E001EE856 /* AABB2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1ECB69D1450DC6E001EE856 /* AABB2.cpp */; };
 		E1ED2730143CB53100D6FFBC /* Font.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1ED272E143CB53000D6FFBC /* Font.cpp */; };
 		E1ED2734143CB53800D6FFBC /* Texture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1ED2732143CB53800D6FFBC /* Texture.cpp */; };
 		E1ED273C143CB59000D6FFBC /* SDL_image.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1ED273B143CB59000D6FFBC /* SDL_image.framework */; };
@@ -302,6 +303,8 @@
 		E1BAD36B14366A6000D7430C /* Camera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Camera.h; path = ../Engine/Camera.h; sourceTree = "<group>"; };
 		E1BAD36C14366A6000D7430C /* Frustum.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Frustum.cpp; path = ../Engine/Frustum.cpp; sourceTree = "<group>"; };
 		E1BAD36D14366A6000D7430C /* Frustum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Frustum.h; path = ../Engine/Frustum.h; sourceTree = "<group>"; };
+		E1ECB69D1450DC6E001EE856 /* AABB2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AABB2.cpp; path = ../Base/AABB2.cpp; sourceTree = "<group>"; };
+		E1ECB69E1450DC6E001EE856 /* AABB2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AABB2.h; path = ../Base/AABB2.h; sourceTree = "<group>"; };
 		E1ED272E143CB53000D6FFBC /* Font.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Font.cpp; path = ../Render/Font.cpp; sourceTree = "<group>"; };
 		E1ED272F143CB53100D6FFBC /* Font.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Font.h; path = ../Render/Font.h; sourceTree = "<group>"; };
 		E1ED2732143CB53800D6FFBC /* Texture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Texture.cpp; path = ../Render/Texture.cpp; sourceTree = "<group>"; };
@@ -658,6 +661,8 @@
 		E1B4F3111430D65000A87C70 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				E1ECB69D1450DC6E001EE856 /* AABB2.cpp */,
+				E1ECB69E1450DC6E001EE856 /* AABB2.h */,
 				E1B4F3131430D66800A87C70 /* Base.h */,
 				E1A98B52144F4A1D00081665 /* Color.h */,
 				E1A98B46144F2F9E00081665 /* FileSystem.cpp */,
@@ -895,6 +900,7 @@
 				E1A98B4E144F474A00081665 /* Vector4.cpp in Sources */,
 				E1A98B51144F499F00081665 /* Vector3.cpp in Sources */,
 				E19DBC17144F5A2A00AFD454 /* StartingState.cpp in Sources */,
+				E1ECB69F1450DC6E001EE856 /* AABB2.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

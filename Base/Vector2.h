@@ -37,6 +37,12 @@ public:
         return ret;
     }
 
+    inline Vector2 operator/(const float scalar) const {
+        Vector2 ret(*this);
+        ret /= scalar;
+        return ret;
+    }
+
     inline Vector2& operator+=(const Vector2 &rhs) {
 		x += rhs.x;
 		y += rhs.y;
@@ -54,7 +60,12 @@ public:
         y *= scalar;
         return *this;
     }
-
+    
+    inline Vector2& operator/=(const float scalar) {
+        x /= scalar;
+        y /= scalar;
+        return *this;
+    }
 	inline Vector2 operator-() const {
 		return Vector2(-x, -y);
 	}

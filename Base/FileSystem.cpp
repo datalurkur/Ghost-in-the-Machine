@@ -14,7 +14,7 @@ unsigned int FileSystem::GetFileData(const std::string &filename, char **data) {
 #endif
 	// Determine the filesize
 	fseek(file, 0, SEEK_END);
-	size = ftell(file);
+	size = (unsigned int)ftell(file);
 	rewind(file);
 
 	if(!file) { return 0; }

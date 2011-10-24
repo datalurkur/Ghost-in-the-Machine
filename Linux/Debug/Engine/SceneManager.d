@@ -1,16 +1,43 @@
-Engine/SceneManager.d Engine/SceneManager.o: \
- /home/datalurkur/GitM/Engine/SceneManager.cpp \
- /home/datalurkur/GitM/Engine/SceneManager.h \
- /home/datalurkur/GitM/Engine/SceneNode.h \
- /home/datalurkur/GitM/Base/Vector2.h /home/datalurkur/GitM/Base/Base.h \
- /home/datalurkur/GitM/Base/Log.h
+Engine/SceneManager.d: \
+ /home/ajean/Ghost-in-the-Machine/Engine/SceneManager.cpp \
+ ../../Engine/SceneManager.h ../../Engine/SceneNode.h \
+ ../../Base/Vector2.h ../../Base/Base.h ../../Base/Log.h \
+ ../../Base/AABB2.h ../../Engine/Frustum.h ../../Base/Matrix4.h \
+ ../../Render/Renderable.h ../../Render/Material.h ../../Render/Texture.h \
+ ../../Base/Color.h ../../Base/Vector3.h ../../Base/Vector4.h \
+ ../../Engine/Camera.h ../../Render/RenderContext.h \
+ ../../Render/Viewport.h
 
-/home/datalurkur/GitM/Engine/SceneManager.h:
+../../Engine/SceneManager.h:
 
-/home/datalurkur/GitM/Engine/SceneNode.h:
+../../Engine/SceneNode.h:
 
-/home/datalurkur/GitM/Base/Vector2.h:
+../../Base/Vector2.h:
 
-/home/datalurkur/GitM/Base/Base.h:
+../../Base/Base.h:
 
-/home/datalurkur/GitM/Base/Log.h:
+../../Base/Log.h:
+
+../../Base/AABB2.h:
+
+../../Engine/Frustum.h:
+
+../../Base/Matrix4.h:
+
+../../Render/Renderable.h:
+
+../../Render/Material.h:
+
+../../Render/Texture.h:
+
+../../Base/Color.h:
+
+../../Base/Vector3.h:
+
+../../Base/Vector4.h:
+
+../../Engine/Camera.h:
+
+../../Render/RenderContext.h:
+
+../../Render/Viewport.h:

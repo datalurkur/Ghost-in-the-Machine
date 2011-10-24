@@ -23,8 +23,17 @@ C_UPPER_DEPS :=
 
 # Every subdirectory with source files must be described here
 SUBDIRS := \
+Resource \
 Render \
 GitM \
 Engine \
+Box2D/Rope \
+Box2D/Dynamics \
+Box2D/Dynamics/Joints \
+Box2D/Dynamics/Contacts \
+Box2D/Common \
+Box2D/Collision \
+Box2D/Collision/Shapes \
 Base \
+.metadata/.plugins/org.eclipse.cdt.make.core \
 

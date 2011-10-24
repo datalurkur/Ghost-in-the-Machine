@@ -27,8 +27,8 @@ public:
     void contactEnds(FixtureID *trigger, FixtureID *other);
 
 private:
-	Direction _movementDirection;
 	Player *_player;
+	Direction _movementDirection;
 	int _jumpSensorContacts;
 	int _extraJumpsLeft;
 };

@@ -1,10 +1,8 @@
-Engine/Frustum.d Engine/Frustum.o: \
- /home/datalurkur/GitM/Engine/Frustum.cpp \
- /home/datalurkur/GitM/Engine/Frustum.h /home/datalurkur/GitM/Base/Base.h \
- /home/datalurkur/GitM/Base/Matrix4.h
+Engine/Frustum.d: /home/ajean/Ghost-in-the-Machine/Engine/Frustum.cpp \
+ ../../Engine/Frustum.h ../../Base/Base.h ../../Base/Matrix4.h
 
-/home/datalurkur/GitM/Engine/Frustum.h:
+../../Engine/Frustum.h:
 
-/home/datalurkur/GitM/Base/Base.h:
+../../Base/Base.h:
 
-/home/datalurkur/GitM/Base/Matrix4.h:
+../../Base/Matrix4.h:

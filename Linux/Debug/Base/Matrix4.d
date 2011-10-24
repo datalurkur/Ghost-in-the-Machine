@@ -1,6 +1,6 @@
-Base/Matrix4.d Base/Matrix4.o: /home/datalurkur/GitM/Base/Matrix4.cpp \
- /home/datalurkur/GitM/Base/Matrix4.h /home/datalurkur/GitM/Base/Base.h
+Base/Matrix4.d: /home/ajean/Ghost-in-the-Machine/Base/Matrix4.cpp \
+ ../../Base/Matrix4.h ../../Base/Base.h
 
-/home/datalurkur/GitM/Base/Matrix4.h:
+../../Base/Matrix4.h:
 
-/home/datalurkur/GitM/Base/Base.h:
+../../Base/Base.h:

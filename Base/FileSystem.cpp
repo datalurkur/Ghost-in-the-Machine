@@ -28,14 +28,14 @@ unsigned int FileSystem::GetFileData(const std::string &filename, char **data) {
 }
 
 void FileSystem::CleanFilename(const std::string &filename, std::string &cleaned) {
-	unsigned int i, j;
+	int i, j;
 
 	cleaned = filename;
 
-	// Replace backslashes with forwardslashes
+	// Replace backslashes with forward slashes
 	i = 0;
-	while(i < cleaned.size()) {
-		j = (unsigned int)cleaned.find('\\', i);
+	while(i < (int)cleaned.size()) {
+		j = cleaned.find('\\', i);
 		if(j != -1) {
 			cleaned[j] = '/';
 			i = j+1;

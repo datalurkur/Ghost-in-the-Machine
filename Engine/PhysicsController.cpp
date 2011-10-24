@@ -2,7 +2,7 @@
 #include <Engine/PhysicsController.h>
 
 PhysicsController::PhysicsController(PhysicsEngine *engine, SceneNode *node):
-    Controller(node), _body(0), _updates(true), _engine(engine)
+    Controller(node), _engine(engine), _body(0), _updates(true)
 {}
 
 PhysicsController::~PhysicsController() {

@@ -11,7 +11,7 @@
 class PhysicsEngine: public b2ContactListener {
 public:
     PhysicsEngine();
-    ~PhysicsEngine();
+    virtual ~PhysicsEngine();
 
     void update(int elapsed);
 

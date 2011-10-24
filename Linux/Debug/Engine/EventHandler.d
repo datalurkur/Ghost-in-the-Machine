@@ -1,11 +1,12 @@
-Engine/EventHandler.d Engine/EventHandler.o: \
- /home/datalurkur/GitM/Engine/EventHandler.cpp \
- /home/datalurkur/GitM/Engine/EventHandler.h \
- /home/datalurkur/GitM/Base/Base.h \
- /home/datalurkur/GitM/Engine/WindowListener.h
+Engine/EventHandler.d: \
+ /home/ajean/Ghost-in-the-Machine/Engine/EventHandler.cpp \
+ ../../Engine/EventHandler.h ../../Base/Base.h \
+ ../../Engine/WindowListener.h ../../Engine/KeyboardListener.h
 
-/home/datalurkur/GitM/Engine/EventHandler.h:
+../../Engine/EventHandler.h:
 
-/home/datalurkur/GitM/Base/Base.h:
+../../Base/Base.h:
 
-/home/datalurkur/GitM/Engine/WindowListener.h:
+../../Engine/WindowListener.h:
+
+../../Engine/KeyboardListener.h:

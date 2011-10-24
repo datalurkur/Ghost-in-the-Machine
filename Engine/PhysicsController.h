@@ -8,7 +8,7 @@
 class PhysicsController: public Controller {
 public:
     PhysicsController(PhysicsEngine *engine, SceneNode *node);
-    ~PhysicsController();
+    virtual ~PhysicsController();
 
     void update(int elapsed);
     

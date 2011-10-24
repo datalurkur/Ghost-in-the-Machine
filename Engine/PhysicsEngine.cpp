@@ -4,7 +4,7 @@ const char EdgeID = 3;
 
 PhysicsEngine::PhysicsEngine():
     _gravity(0.0, -10.0), _world(0),
-    _velocityIterations(6), _positionIterations(2), _stepSize(16) // Roughly 1/60th of a second
+    _stepSize(16), _velocityIterations(6), _positionIterations(2) // Roughly 1/60th of a second step
 {
     _world = new b2World(b2Vec2(_gravity));
     _world->SetContactListener(this);
@@ -77,7 +77,6 @@ b2Body *PhysicsEngine::createStaticBox(const Vector2 &pos, const Vector2 &dim) {
     b2BodyDef def;
     b2PolygonShape shape;
     b2Body *body;
-	b2Fixture *fixture;
     float halfWidth, halfHeight;
     
     halfWidth = dim.x / 2.0f;
@@ -93,7 +92,7 @@ b2Body *PhysicsEngine::createStaticBox(const Vector2 &pos, const Vector2 &dim) {
     shape.SetAsBox(halfWidth, halfHeight);
     
     // Create the fixture
-    fixture = body->CreateFixture(&shape, 0.0);
+    body->CreateFixture(&shape, 0.0);
 
     return body;
 }
@@ -135,7 +134,6 @@ b2Body *PhysicsEngine::createDynamicBox(const Vector2 &pos, const Vector2 &dim, 
     b2FixtureDef fDef;
     b2PolygonShape shape;
     b2Body *body;
-	b2Fixture *fixture;
     float halfWidth, halfHeight;
     
     halfWidth = dim.x / 2.0f;
@@ -160,7 +158,7 @@ b2Body *PhysicsEngine::createDynamicBox(const Vector2 &pos, const Vector2 &dim, 
     fDef.shape = &shape;
     fDef.density = density;
     fDef.friction = friction;
-    fixture = body->CreateFixture(&fDef);
+    body->CreateFixture(&fDef);
 
     return body;
 }

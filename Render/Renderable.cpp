@@ -3,10 +3,9 @@
 
 Renderable::Renderable():
 	_viewMatrix(Matrix4::Identity), _material(0),
+	_vertexPointer(0), _texCoordPointer(0), _normalPointer(0),
+	_vertSize(3), _texCoordSize(2),
 	_indexPointer(0), _numIndices(0),
-	_vertexPointer(0), _vertSize(3),
-	_texCoordPointer(0), _texCoordSize(2),
-	_normalPointer(0),
 	_drawMode(GL_QUADS)
 {
 }

@@ -83,22 +83,32 @@
 		<link>
 			<name>Base</name>
 			<type>2</type>
-			<location>/home/datalurkur/GitM/Base</location>
+			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/Base</locationURI>
+		</link>
+		<link>
+			<name>Box2D</name>
+			<type>2</type>
+			<location>/home/ajean/Ghost-in-the-Machine/Box2D</location>
 		</link>
 		<link>
 			<name>Engine</name>
 			<type>2</type>
-			<location>/home/datalurkur/GitM/Engine</location>
+			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/Engine</locationURI>
 		</link>
 		<link>
 			<name>GitM</name>
 			<type>2</type>
-			<location>/home/datalurkur/GitM/GitM</location>
+			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/GitM</locationURI>
 		</link>
 		<link>
 			<name>Render</name>
 			<type>2</type>
-			<location>/home/datalurkur/GitM/Render</location>
+			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/Render</locationURI>
+		</link>
+		<link>
+			<name>Resource</name>
+			<type>2</type>
+			<locationURI>PARENT-1-PROJECT_LOC/Resource</locationURI>
 		</link>
 	</linkedResources>
 </projectDescription>

@@ -10,7 +10,7 @@ const char Player::PlayerBody = 1,
 
 Player::Player(const std::string &name):
 	Mob(name, NodeType),
-	_playerController(0), _extraJumps(0)
+	_extraJumps(0),	_playerController(0)
 {}
 
 Player::~Player() {

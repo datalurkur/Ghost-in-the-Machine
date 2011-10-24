@@ -3,7 +3,7 @@
 #include <Render/Texture.h>
 
 Texture::Texture():
-	_frames(1), _ids(0)
+	_ids(0), _frames(1)
 {
 }
 

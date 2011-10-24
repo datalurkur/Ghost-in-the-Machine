@@ -1,8 +1,26 @@
-Render/Renderable.d Render/Renderable.o: \
- /home/datalurkur/GitM/Render/Renderable.cpp \
- /home/datalurkur/GitM/Render/Renderable.h \
- /home/datalurkur/GitM/Base/Base.h
+Render/Renderable.d: \
+ /home/ajean/Ghost-in-the-Machine/Render/Renderable.cpp \
+ ../../Render/Renderable.h ../../Base/Base.h ../../Base/Vector2.h \
+ ../../Base/Log.h ../../Base/Matrix4.h ../../Render/Material.h \
+ ../../Render/Texture.h ../../Base/Color.h ../../Base/Vector3.h \
+ ../../Base/Vector4.h
 
-/home/datalurkur/GitM/Render/Renderable.h:
+../../Render/Renderable.h:
 
-/home/datalurkur/GitM/Base/Base.h:
+../../Base/Base.h:
+
+../../Base/Vector2.h:
+
+../../Base/Log.h:
+
+../../Base/Matrix4.h:
+
+../../Render/Material.h:
+
+../../Render/Texture.h:
+
+../../Base/Color.h:
+
+../../Base/Vector3.h:
+
+../../Base/Vector4.h:

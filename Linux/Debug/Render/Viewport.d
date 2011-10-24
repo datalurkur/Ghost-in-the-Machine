@@ -1,24 +1,46 @@
-Render/Viewport.d Render/Viewport.o: \
- /home/datalurkur/GitM/Render/Viewport.cpp \
- /home/datalurkur/GitM/Render/Viewport.h \
- /home/datalurkur/GitM/Base/Base.h /home/datalurkur/GitM/Engine/Camera.h \
- /home/datalurkur/GitM/Engine/Frustum.h \
- /home/datalurkur/GitM/Base/Matrix4.h \
- /home/datalurkur/GitM/Engine/SceneNode.h \
- /home/datalurkur/GitM/Base/Vector2.h /home/datalurkur/GitM/Base/Log.h
+Render/Viewport.d: /home/ajean/Ghost-in-the-Machine/Render/Viewport.cpp \
+ ../../Render/Viewport.h ../../Base/Base.h ../../Engine/Camera.h \
+ ../../Engine/Frustum.h ../../Base/Matrix4.h ../../Engine/SceneNode.h \
+ ../../Base/Vector2.h ../../Base/Log.h ../../Base/AABB2.h \
+ ../../Render/Renderable.h ../../Render/Material.h ../../Render/Texture.h \
+ ../../Base/Color.h ../../Base/Vector3.h ../../Base/Vector4.h \
+ ../../Resource/TextureManager.h ../../Resource/ThreadedResourceManager.h \
+ ../../Resource/ResourceManager.h ../../Base/FileSystem.h
 
-/home/datalurkur/GitM/Render/Viewport.h:
+../../Render/Viewport.h:
 
-/home/datalurkur/GitM/Base/Base.h:
+../../Base/Base.h:
 
-/home/datalurkur/GitM/Engine/Camera.h:
+../../Engine/Camera.h:
 
-/home/datalurkur/GitM/Engine/Frustum.h:
+../../Engine/Frustum.h:
 
-/home/datalurkur/GitM/Base/Matrix4.h:
+../../Base/Matrix4.h:
 
-/home/datalurkur/GitM/Engine/SceneNode.h:
+../../Engine/SceneNode.h:
 
-/home/datalurkur/GitM/Base/Vector2.h:
+../../Base/Vector2.h:
 
-/home/datalurkur/GitM/Base/Log.h:
+../../Base/Log.h:
+
+../../Base/AABB2.h:
+
+../../Render/Renderable.h:
+
+../../Render/Material.h:
+
+../../Render/Texture.h:
+
+../../Base/Color.h:
+
+../../Base/Vector3.h:
+
+../../Base/Vector4.h:
+
+../../Resource/TextureManager.h:
+
+../../Resource/ThreadedResourceManager.h:
+
+../../Resource/ResourceManager.h:
+
+../../Base/FileSystem.h:

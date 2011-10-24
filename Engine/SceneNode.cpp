@@ -4,11 +4,11 @@
 const std::string SceneNode::NodeType = "SceneNode";
 
 SceneNode::SceneNode(const std::string &name):
-	_name(name), _type(NodeType), _dirty(true), _parent(0)
+	_name(name), _type(NodeType), _parent(0), _dirty(true)
 {}
 
 SceneNode::SceneNode(const std::string &name, const std::string &type):
-	_name(name), _type(type), _dirty(true), _parent(0)
+	_name(name), _type(type), _parent(0), _dirty(true)
 {}
 
 SceneNode::~SceneNode() {

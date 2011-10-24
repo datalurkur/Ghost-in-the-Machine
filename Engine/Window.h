@@ -17,8 +17,8 @@ public:
 
 private:
 	int _w, _h;
-	SDL_Surface *_frameBuffer;
 	int _videoFlags;
+	SDL_Surface *_frameBuffer;
 };
 
 #endif

@@ -9,10 +9,19 @@ RM := rm -rf
 # All of the sources participating in the build are defined here
 -include sources.mk
 -include subdir.mk
+-include Resource/subdir.mk
 -include Render/subdir.mk
 -include GitM/subdir.mk
 -include Engine/subdir.mk
+-include Box2D/Rope/subdir.mk
+-include Box2D/Dynamics/subdir.mk
+-include Box2D/Dynamics/Joints/subdir.mk
+-include Box2D/Dynamics/Contacts/subdir.mk
+-include Box2D/Common/subdir.mk
+-include Box2D/Collision/subdir.mk
+-include Box2D/Collision/Shapes/subdir.mk
 -include Base/subdir.mk
+-include .metadata/.plugins/org.eclipse.cdt.make.core/subdir.mk
 -include objects.mk
 
 ifneq ($(MAKECMDGOALS),clean)
@@ -47,7 +56,7 @@ all: Linux
 Linux: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: GCC C++ Linker'
-	g++ -L/usr/lib -o"Linux" $(OBJS) $(USER_OBJS) $(LIBS)
+	g++ -L/usr/lib -o "Linux" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 

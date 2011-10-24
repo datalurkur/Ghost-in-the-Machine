@@ -1,0 +1,34 @@
+
+**** Clean-only build of configuration Debug for project Linux ****
+
+make clean 
+rm -rf  ./Render/RenderContext.o ./Render/Renderable.o ./Render/Viewport.o  ./GitM/GameState.o ./GitM/GhostCore.o ./GitM/LoadingState.o ./GitM/Player.o ./GitM/PlayingState.o ./GitM/QuadTreeSceneManager.o ./GitM/ThreadedWorldFactory.o ./GitM/World.o ./GitM/main.o  ./Engine/Camera.o ./Engine/Core.o ./Engine/Entity.o ./Engine/EventHandler.o ./Engine/Frustum.o ./Engine/OrthoCamera.o ./Engine/ParentState.o ./Engine/SceneManager.o ./Engine/SceneNode.o ./Engine/State.o ./Engine/ThreadedFactory.o ./Engine/Window.o ./Engine/WindowListener.o  ./Base/Log.o ./Base/Matrix4.o  ./Render/RenderContext.d ./Render/Renderable.d ./Render/Viewport.d  ./GitM/GameState.d ./GitM/GhostCore.d ./GitM/LoadingState.d ./GitM/Player.d ./GitM/PlayingState.d ./GitM/QuadTreeSceneManager.d ./GitM/ThreadedWorldFactory.d ./GitM/World.d ./GitM/main.d  ./Engine/Camera.d ./Engine/Core.d ./Engine/Entity.d ./Engine/EventHandler.d ./Engine/Frustum.d ./Engine/OrthoCamera.d ./Engine/ParentState.d ./Engine/SceneManager.d ./Engine/SceneNode.d ./Engine/State.d ./Engine/ThreadedFactory.d ./Engine/Window.d ./Engine/WindowListener.d  ./Base/Log.d ./Base/Matrix4.d  Linux
+ 
+
+**** Build Finished ****
+
+**** Clean-only build of configuration Debug for project Linux ****
+
+make clean 
+rm -rf  ./Render/RenderContext.o ./Render/Renderable.o ./Render/Viewport.o  ./GitM/GameState.o ./GitM/GhostCore.o ./GitM/LoadingState.o ./GitM/Player.o ./GitM/PlayingState.o ./GitM/QuadTreeSceneManager.o ./GitM/ThreadedWorldFactory.o ./GitM/World.o ./GitM/main.o  ./Engine/Camera.o ./Engine/Core.o ./Engine/Entity.o ./Engine/EventHandler.o ./Engine/Frustum.o ./Engine/OrthoCamera.o ./Engine/ParentState.o ./Engine/SceneManager.o ./Engine/SceneNode.o ./Engine/State.o ./Engine/ThreadedFactory.o ./Engine/Window.o ./Engine/WindowListener.o  ./Base/Log.o ./Base/Matrix4.o  ./Render/RenderContext.d ./Render/Renderable.d ./Render/Viewport.d  ./GitM/GameState.d ./GitM/GhostCore.d ./GitM/LoadingState.d ./GitM/Player.d ./GitM/PlayingState.d ./GitM/QuadTreeSceneManager.d ./GitM/ThreadedWorldFactory.d ./GitM/World.d ./GitM/main.d  ./Engine/Camera.d ./Engine/Core.d ./Engine/Entity.d ./Engine/EventHandler.d ./Engine/Frustum.d ./Engine/OrthoCamera.d ./Engine/ParentState.d ./Engine/SceneManager.d ./Engine/SceneNode.d ./Engine/State.d ./Engine/ThreadedFactory.d ./Engine/Window.d ./Engine/WindowListener.d  ./Base/Log.d ./Base/Matrix4.d  Linux
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Linux ****
+
+make all 
+Building file: ../.metadata/.plugins/org.eclipse.cdt.make.core/specs.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF".metadata/.plugins/org.eclipse.cdt.make.core/specs.d" -MT".metadata/.plugins/org.eclipse.cdt.make.core/specs.d" -o ".metadata/.plugins/org.eclipse.cdt.make.core/specs.o" "../.metadata/.plugins/org.eclipse.cdt.make.core/specs.c"
+Finished building: ../.metadata/.plugins/org.eclipse.cdt.make.core/specs.c
+ 
+Building target: Linux
+Invoking: GCC C++ Linker
+g++ -L/usr/lib -o "Linux"  ./.metadata/.plugins/org.eclipse.cdt.make.core/specs.o   -lSDL -lGL -lGLU
+/usr/lib/gcc/x86_64-unknown-linux-gnu/4.6.1/../../../../lib/crt1.o: In function `_start':
+(.text+0x20): undefined reference to `main'
+collect2: ld returned 1 exit status
+make: *** [Linux] Error 1
+
+**** Build Finished ****

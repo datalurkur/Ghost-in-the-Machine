@@ -1,0 +1,9 @@
+!SESSION 2011-10-21 15:05:30.310 -----------------------------------------------
+eclipse.buildId=M20110909-1335
+java.version=1.7.0_147-icedtea
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -data /home/ajean/Ghost-in-the-Machine/ -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.cdt.core 1 0 2011-10-21 15:07:35.003
+!MESSAGE Indexed 'Linux' (2 sources, 74 headers) in 1.21 sec: 2,143 declarations; 2,300 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0.00%)

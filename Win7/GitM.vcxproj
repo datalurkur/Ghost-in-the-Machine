@@ -72,6 +72,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\Base\AABB2.cpp" />
     <ClCompile Include="..\Base\FileSystem.cpp" />
     <ClCompile Include="..\Base\Log.cpp" />
     <ClCompile Include="..\Base\Matrix4.cpp" />
@@ -168,6 +169,7 @@
     <ClCompile Include="..\Resource\WorldManager.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\Base\AABB2.h" />
     <ClInclude Include="..\Base\Base.h" />
     <ClInclude Include="..\Base\Color.h" />
     <ClInclude Include="..\Base\FileSystem.h" />

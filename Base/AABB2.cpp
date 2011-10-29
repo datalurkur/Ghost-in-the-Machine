@@ -11,8 +11,8 @@ AABB2::AABB2(const Vector2& v1, const Vector2& v2) {
 AABB2::~AABB2() {}
 
 void AABB2::setExtents(const Vector2& v1, const Vector2& v2) {
-    _lower=Vector2(fmin(v1.x, v2.x), fmin(v1.y, v2.y));
-    _upper=Vector2(fmax(v1.x, v2.x), fmax(v1.y, v2.y));
+    _lower=Vector2(min(v1.x, v2.x), min(v1.y, v2.y));
+    _upper=Vector2(max(v1.x, v2.x), max(v1.y, v2.y));
 }
 
 const Vector2& AABB2::getLowerBound() {
@@ -52,8 +52,8 @@ bool AABB2::overlaps(const AABB2& other) const {
 }
 
 void AABB2::expand(const AABB2& other) {
-    _lower = Vector2(fmin(_lower.x, other._lower.x), fmin(_lower.y, other._lower.y));
-    _upper = Vector2(fmax(_upper.x, other._upper.x), fmax(_upper.y, other._upper.y));
+    _lower = Vector2(min(_lower.x, other._lower.x), min(_lower.y, other._lower.y));
+    _upper = Vector2(max(_upper.x, other._upper.x), max(_upper.y, other._upper.y));
 }
 
 void AABB2::expand(const Vector2& border) {

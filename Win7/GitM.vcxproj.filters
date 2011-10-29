@@ -328,6 +328,9 @@
     <ClCompile Include="..\GitM\StartingState.cpp">
       <Filter>GitM\States</Filter>
     </ClCompile>
+    <ClCompile Include="..\Base\AABB2.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Engine\ParentState.h">
@@ -623,6 +626,9 @@
     </ClInclude>
     <ClInclude Include="..\GitM\StartingState.h">
       <Filter>GitM\States</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Base\AABB2.h">
+      <Filter>Base</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

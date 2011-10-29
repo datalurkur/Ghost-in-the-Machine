@@ -49,8 +49,6 @@ typename ResourceManager<T,F>::ContentMap ResourceManager<T,F>::Resources;
 
 template <typename T, typename F>
 void ResourceManager<T,F>::Setup() {
-	char buffer[128];
-	Info("Listing all resources from " << LoadPath() << " in pwd " << getcwd(buffer, 128));
 	FileSystem::GetDirectoryContents(LoadPath(), F::AvailableResources);
 	std::vector<std::string>::iterator itr = F::AvailableResources.begin();
 	for(; itr != F::AvailableResources.end(); itr++) {

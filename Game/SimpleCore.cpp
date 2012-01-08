@@ -1,20 +1,20 @@
-#include <GitM/GhostCore.h>
-#include <GitM/StartingState.h>
+#include <Game/SimpleCore.h>
+#include <Game/StartingState.h>
 
 #include <Resource/WorldManager.h>
 #include <Resource/TTFManager.h>
 #include <Resource/TextureManager.h>
 #include <Resource/MaterialManager.h>
 
-GhostCore::GhostCore() {
+SimpleCore::SimpleCore() {
     setup();
 }
 
-GhostCore::~GhostCore() {
+SimpleCore::~SimpleCore() {
     teardown();
 }
 
-void GhostCore::setup() {
+void SimpleCore::setup() {
     WorldManager::Setup();
     TTFManager::Setup();
     TextureManager::Setup();
@@ -23,7 +23,7 @@ void GhostCore::setup() {
     pushState(new StartingState());
 }
 
-void GhostCore::teardown() {
+void SimpleCore::teardown() {
     Core::teardown();
 
     WorldManager::Teardown();
@@ -32,7 +32,7 @@ void GhostCore::teardown() {
     MaterialManager::Teardown();
 }
 
-void GhostCore::keyDown(KeyboardEvent *event) {
+void SimpleCore::keyDown(KeyboardEvent *event) {
     switch(event->key()) {
         case KeyboardEvent::KEY_F1: {
             stop();

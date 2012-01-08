@@ -3,8 +3,8 @@
 #include <Resource/TextureManager.h>
 #include <Resource/MaterialManager.h>
 
-#include <GitM/StartingState.h>
-#include <GitM/GameState.h>
+#include <Game/StartingState.h>
+#include <Game/GameState.h>
 
 StartingState::StartingState() {
 }

@@ -1,4 +1,4 @@
-#include <GitM/QuadTreeSceneManager.h>
+#include <Game/QuadTreeSceneManager.h>
 
 QuadTreeSceneManager::QuadTreeSceneManager(): _maxDepth(0) {
 }

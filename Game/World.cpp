@@ -1,9 +1,10 @@
-#include <GitM/World.h>
+#include <Game/World.h>
 
 #include <Base/Log.h>
+#include <Engine/Entity.h>
 #include <Render/RenderContext.h>
 
-World::World(): _player(0) {
+World::World() {
 	_scene = new QuadTreeSceneManager();
     _physics = new PhysicsEngine();
 }
@@ -34,8 +35,4 @@ void World::render(Camera *camera, RenderContext *context) {
 
 SceneManager* World::getScene() {
 	return _scene;
-}
-
-Player* World::getPlayer() {
-    return _player;
 }

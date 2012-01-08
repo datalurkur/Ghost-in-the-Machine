@@ -4,8 +4,7 @@
 #include <Base/Base.h>
 #include <Base/Matrix4.h>
 #include <Engine/PhysicsEngine.h>
-#include <GitM/QuadTreeSceneManager.h>
-#include <GitM/Player.h>
+#include <Game/QuadTreeSceneManager.h>
 
 class Camera;
 class RenderContext;
@@ -24,9 +23,6 @@ public:
 
 	// Return the scene manager
 	SceneManager *getScene();
-
-    // Return the player object
-    Player *getPlayer();
     
     // Designed to generically add objects to the scene
     template <typename T>
@@ -50,7 +46,6 @@ protected:
     PhysicsEngine *_physics;
 
     // Objects created by the world factory
-	Player *_player;
     friend class WorldManager;
 };
 

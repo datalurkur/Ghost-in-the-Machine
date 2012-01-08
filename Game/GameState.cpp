@@ -1,5 +1,5 @@
-#include <GitM/GameState.h>
-#include <GitM/LoadingState.h>
+#include <Game/GameState.h>
+#include <Game/LoadingState.h>
 
 GameState::GameState() {
 }

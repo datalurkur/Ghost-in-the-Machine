@@ -1,7 +1,7 @@
 #include <Engine/ParentState.h>
 
-#include <GitM/LoadingState.h>
-#include <GitM/PlayingState.h>
+#include <Game/LoadingState.h>
+#include <Game/PlayingState.h>
 
 #include <Resource/WorldManager.h>
 

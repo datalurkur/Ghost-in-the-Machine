@@ -99,6 +99,8 @@ public:
     float length() const;
     float lengthSquared() const;
 
+	int arraySize() const;
+
     void normalize();
 };
 

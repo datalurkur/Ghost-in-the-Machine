@@ -14,6 +14,10 @@ void Vector2::normalize() {
     y = y / l;
 }
 
+int Vector2::arraySize() const {
+	return (int)(x*y);
+}
+
 std::ostream& operator<<(std::ostream &lhs, const Vector2 &rhs) {
     lhs << "Vector2";
     lhs << " " << rhs[0];

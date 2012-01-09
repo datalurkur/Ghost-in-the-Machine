@@ -150,6 +150,7 @@
     <ClCompile Include="..\Game\QuadTreeSceneManager.cpp" />
     <ClCompile Include="..\Game\SimpleCore.cpp" />
     <ClCompile Include="..\Game\StartingState.cpp" />
+    <ClCompile Include="..\Game\Terrain.cpp" />
     <ClCompile Include="..\Game\World.cpp" />
     <ClCompile Include="..\Render\Font.cpp" />
     <ClCompile Include="..\Render\Material.cpp" />
@@ -245,6 +246,7 @@
     <ClInclude Include="..\Game\QuadTreeSceneManager.h" />
     <ClInclude Include="..\Game\SimpleCore.h" />
     <ClInclude Include="..\Game\StartingState.h" />
+    <ClInclude Include="..\Game\Terrain.h" />
     <ClInclude Include="..\Game\World.h" />
     <ClInclude Include="..\Render\Font.h" />
     <ClInclude Include="..\Render\Material.h" />

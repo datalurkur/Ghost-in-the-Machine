@@ -5,6 +5,7 @@
 #include <Base/Matrix4.h>
 #include <Engine/PhysicsEngine.h>
 #include <Game/QuadTreeSceneManager.h>
+#include <Game/Terrain.h>
 
 class Camera;
 class RenderContext;
@@ -41,6 +42,8 @@ protected:
 
     typedef std::map<std::string, Entity*> EntityList;
     EntityList _entities;
+
+	Terrain *_terrain;
     
     // Physics world object
     PhysicsEngine *_physics;

@@ -19,7 +19,7 @@ void MaterialManager::DoLoad(const std::string &name, Material *material) {
         Error("Failed to load " << name);
         return;
     }
-    
+
     pMap = new PropertyMap(fileData);
     free(fileData);
     

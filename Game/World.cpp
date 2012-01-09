@@ -8,12 +8,15 @@ World::World() {
 	_scene = new QuadTreeSceneManager();
     _physics = new PhysicsEngine();
 	_terrain = new Terrain(Vector2(17, 17));
+
+	_scene->addNode(_terrain);
 }
 
 World::~World() {
+	// We don't need to delete the terrain, because the scene will delete it for us
 	delete _scene;
+
 	delete _physics;
-	delete _terrain;
 }
 
 void World::update(int elapsed) {

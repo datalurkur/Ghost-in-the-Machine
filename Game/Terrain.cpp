@@ -3,7 +3,7 @@
 
 const std::string Terrain::NodeType = "Terrain";
 
-Terrain::Terrain(const Vector2 &dims): SceneNode("terrain", NodeType) {
+Terrain::Terrain(const Vector2 &dims): SceneNode("Terrain", NodeType) {
 	setDimensions(dims);
 	_tileData = (TerrainType*)calloc((size_t)(getDimensions().arraySize()), sizeof(TerrainType));
 	populateScene();
@@ -30,5 +30,6 @@ void Terrain::populateScene() {
 	tRend->setIndexPointer(&indices[0], 4);
 	tRend->setMaterial(MaterialManager::Get("debug"));
 
+	clearRenderables();
 	addRenderable(tRend);
 }

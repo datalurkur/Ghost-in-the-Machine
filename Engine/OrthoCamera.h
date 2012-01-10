@@ -7,6 +7,8 @@ class OrthoCamera: public Camera {
 public:
 	OrthoCamera(const std::string &name);
 
+	void setup();
+
 	void setAspectRatio(const float ratio);
 
 private:

@@ -28,10 +28,10 @@ Matrix4 Matrix4::MakePerspective(float ratio, float fov, float nearPlane, float 
 
 	ret[0][0] = f / ratio;
 	ret[1][1] = f;
-	ret[2][2] =     (nearPlane + farPlane) / (nearPlane - farPlane);
-	ret[2][3] = 2 * (nearPlane * farPlane) / (nearPlane - farPlane);
-	ret[3][2] = -1;
-	ret[3][3] = 0;
+	ret[2][2] = (nearPlane + farPlane) / (nearPlane - farPlane);
+	ret[2][3] = (2.0f * nearPlane * farPlane) / (nearPlane - farPlane);
+	ret[3][2] = -1.0f;
+	ret[3][3] = 0.0f;
 
 	return ret;
 }

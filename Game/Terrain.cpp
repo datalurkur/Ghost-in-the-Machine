@@ -95,7 +95,7 @@ void Terrain::populateScene() {
 			bottom = &verts[(INDEX(i,j,0)*3)];
 			top[0] = (float)i;
 			top[1] = (float)j;
-			top[2] = 0.5f;
+			top[2] = 0.1f;
 			bottom[0] = (float)i;
 			bottom[1] = (float)j;
 			bottom[2] = 0.0f;

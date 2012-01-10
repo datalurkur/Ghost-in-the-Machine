@@ -23,6 +23,7 @@ void SceneManager::render(Camera *camera, RenderContext *context) {
 		(*itr)->getRenderables(renderables);
 	}
 
+	camera->setup();
 	context->render(camera->getProjection(), camera->getModelView(), renderables);
 }
 

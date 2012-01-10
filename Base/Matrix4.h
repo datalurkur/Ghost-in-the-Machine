@@ -95,6 +95,11 @@ public:
         );
     }
 
+	inline void translate(const float x, const float y, const float z) {
+		Matrix4 result = Matrix4::MakeTranslation(x, y, z);
+		(*this) = result * (*this);
+	}
+
     inline float *ptr() {
         return &_data[0];
     }
@@ -108,6 +113,7 @@ public:
 
 public:
     static Matrix4 MakeOrtho(float l, float r, float b, float t, float n, float f);
+	static Matrix4 MakePerspective(float ratio, float fov, float near, float far);
 	static Matrix4 MakeTranslation(float x, float y, float z);
 };
 

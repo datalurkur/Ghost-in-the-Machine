@@ -7,7 +7,7 @@
 World::World() {
 	_scene = new QuadTreeSceneManager();
     _physics = new PhysicsEngine();
-	_terrain = new Terrain(Vector2(9,9));
+	_terrain = new Terrain(Vector2(17,17));
 
 	_scene->addNode(_terrain);
 }

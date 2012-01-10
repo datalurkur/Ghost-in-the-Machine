@@ -2,6 +2,7 @@
 #include <Resource/WorldManager.h>
 #include <Engine/Core.h>
 #include <Engine/OrthoCamera.h>
+#include <Engine/IsoCamera.h>
 
 PlayingState::PlayingState() {
 }
@@ -21,7 +22,7 @@ void PlayingState::setup(va_list args) {
 	Info("Setting up PlayingState");
     _world = va_arg(args, World*);
 
-    _camera = _world->createObject<OrthoCamera>("MainCam");
+    _camera = _world->createObject<IsoCamera>("MainCam");
     _core->getViewport()->registerCamera(_camera);
 
 	// Update the world once with no time to make sure the scene gets populated fully before rendering

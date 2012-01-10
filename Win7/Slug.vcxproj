@@ -132,6 +132,7 @@
     <ClCompile Include="..\Engine\Entity.cpp" />
     <ClCompile Include="..\Engine\EventHandler.cpp" />
     <ClCompile Include="..\Engine\Frustum.cpp" />
+    <ClCompile Include="..\Engine\IsoCamera.cpp" />
     <ClCompile Include="..\Engine\KeyboardListener.cpp" />
     <ClCompile Include="..\Engine\Mob.cpp" />
     <ClCompile Include="..\Engine\OrthoCamera.cpp" />
@@ -229,6 +230,7 @@
     <ClInclude Include="..\Engine\Entity.h" />
     <ClInclude Include="..\Engine\EventHandler.h" />
     <ClInclude Include="..\Engine\Frustum.h" />
+    <ClInclude Include="..\Engine\IsoCamera.h" />
     <ClInclude Include="..\Engine\KeyboardListener.h" />
     <ClInclude Include="..\Engine\Mob.h" />
     <ClInclude Include="..\Engine\OrthoCamera.h" />

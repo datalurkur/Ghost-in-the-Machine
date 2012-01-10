@@ -1,8 +1,8 @@
 #include <Game/Terrain.h>
 #include <Resource/MaterialManager.h>
 
-#define TILE(i,j) _tileData[(j * (int)dims.x) + i]
-#define FLAGS(i,j) _faceFlags[(j * (int)dims.x) + i]
+#define TILE(i,j) _tileData[((j) * (int)dims.x) + (i)]
+#define FLAGS(i,j) _faceFlags[((j) * (int)dims.x) + (i)]
 
 const std::string Terrain::NodeType = "Terrain";
 
@@ -36,7 +36,6 @@ void Terrain::generateMap() {
 	for(int i=0; i < dims.x; i++) {
 		for(int j=0; j < dims.y; j++) {
 			TILE(i,j) = (TerrainType)(rand() % NUM_TILE_TYPES);
-			//TILE(i,j) = EMPTY;
 		}
 	}
 
@@ -67,12 +66,13 @@ void Terrain::regenFaceFlags() {
 
 void Terrain::populateScene() {
 	Vector2 dims;
-	Renderable *topRenderable, *bottomRenderable;
+	Renderable *topRenderable, *bottomRenderable, *wallRenderable;
 	int vertexSize, layers, vertsPerLayer, totalVerts,
 		i, j;
 	float *verts;
 	std::vector<unsigned int> bottomIndices;
 	std::vector<unsigned int> topIndices;
+	std::vector<unsigned int> wallIndices;
 
 	dims = getDimensions();
 
@@ -95,7 +95,7 @@ void Terrain::populateScene() {
 			bottom = &verts[(INDEX(i,j,0)*3)];
 			top[0] = (float)i;
 			top[1] = (float)j;
-			top[2] = 1.0f;
+			top[2] = 0.5f;
 			bottom[0] = (float)i;
 			bottom[1] = (float)j;
 			bottom[2] = 0.0f;
@@ -117,28 +117,28 @@ void Terrain::populateScene() {
 				topIndices.push_back(INDEX(i,  j+1,1));
 				
 				if(flags & EAST) {
-					topIndices.push_back(INDEX(i+1,j,  1));
-					topIndices.push_back(INDEX(i+1,j,  0));
-					topIndices.push_back(INDEX(i+1,j+1,0));
-					topIndices.push_back(INDEX(i+1,j+1,1));
+					wallIndices.push_back(INDEX(i+1,j,  1));
+					wallIndices.push_back(INDEX(i+1,j,  0));
+					wallIndices.push_back(INDEX(i+1,j+1,0));
+					wallIndices.push_back(INDEX(i+1,j+1,1));
 				}
 				if(flags & WEST) {
-					topIndices.push_back(INDEX(i,j,  0));
-					topIndices.push_back(INDEX(i,j,  1));
-					topIndices.push_back(INDEX(i,j+1,1));
-					topIndices.push_back(INDEX(i,j+1,0));
+					wallIndices.push_back(INDEX(i,j,  0));
+					wallIndices.push_back(INDEX(i,j,  1));
+					wallIndices.push_back(INDEX(i,j+1,1));
+					wallIndices.push_back(INDEX(i,j+1,0));
 				}
 				if(flags & SOUTH) {
-					topIndices.push_back(INDEX(i  ,j,0));
-					topIndices.push_back(INDEX(i  ,j,1));
-					topIndices.push_back(INDEX(i+1,j,1));
-					topIndices.push_back(INDEX(i+1,j,0));
+					wallIndices.push_back(INDEX(i  ,j,0));
+					wallIndices.push_back(INDEX(i  ,j,1));
+					wallIndices.push_back(INDEX(i+1,j,1));
+					wallIndices.push_back(INDEX(i+1,j,0));
 				}
 				if(flags & NORTH) {
-					topIndices.push_back(INDEX(i  ,j+1,1));
-					topIndices.push_back(INDEX(i  ,j+1,0));
-					topIndices.push_back(INDEX(i+1,j+1,0));
-					topIndices.push_back(INDEX(i+1,j+1,1));
+					wallIndices.push_back(INDEX(i  ,j+1,1));
+					wallIndices.push_back(INDEX(i  ,j+1,0));
+					wallIndices.push_back(INDEX(i+1,j+1,0));
+					wallIndices.push_back(INDEX(i+1,j+1,1));
 				}
 			}
 		}
@@ -154,8 +154,13 @@ void Terrain::populateScene() {
 	topRenderable = new Renderable();
 	topRenderable->setVertexPointer(&verts[0], totalVerts, 3);
 	topRenderable->setIndexPointer(&topIndices[0], topIndices.size());
-	topRenderable->setMaterial(MaterialManager::Get("wall"));
+	topRenderable->setMaterial(MaterialManager::Get("roof"));
 	addRenderable(topRenderable);
+	wallRenderable = new Renderable();
+	wallRenderable->setVertexPointer(&verts[0], totalVerts, 3);
+	wallRenderable->setIndexPointer(&wallIndices[0], wallIndices.size());
+	wallRenderable->setMaterial(MaterialManager::Get("wall"));
+	addRenderable(wallRenderable);
 
 	free(verts);
 

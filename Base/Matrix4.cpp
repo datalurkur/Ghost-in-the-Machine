@@ -21,6 +21,21 @@ Matrix4 Matrix4::MakeOrtho(float l, float r, float b, float t, float n, float f)
     return ret;
 }
 
+Matrix4 Matrix4::MakePerspective(float ratio, float fov, float nearPlane, float farPlane) {
+	Matrix4 ret = Matrix4::Identity;
+
+	float f = 1.0f / tan(fov / 2.0f);
+
+	ret[0][0] = f / ratio;
+	ret[1][1] = f;
+	ret[2][2] =     (nearPlane + farPlane) / (nearPlane - farPlane);
+	ret[2][3] = 2 * (nearPlane * farPlane) / (nearPlane - farPlane);
+	ret[3][2] = -1;
+	ret[3][3] = 0;
+
+	return ret;
+}
+
 Matrix4 Matrix4::MakeTranslation(float x, float y, float z) {
 	Matrix4 ret = Matrix4::Identity;
 

@@ -26,7 +26,7 @@ public:
 
 public:
 	Terrain(const Vector2 &dims);
-	~Terrain();
+	virtual ~Terrain();
 
 	/*
 	TerrainType getType(int x, int y) const;

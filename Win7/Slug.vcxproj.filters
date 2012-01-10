@@ -322,6 +322,9 @@
     <ClCompile Include="..\Game\Terrain.cpp">
       <Filter>Game\Objects</Filter>
     </ClCompile>
+    <ClCompile Include="..\Engine\IsoCamera.cpp">
+      <Filter>Engine\Cameras</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Engine\ParentState.h">
@@ -608,6 +611,9 @@
     </ClInclude>
     <ClInclude Include="..\Game\Terrain.h">
       <Filter>Game\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\IsoCamera.h">
+      <Filter>Engine\Cameras</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

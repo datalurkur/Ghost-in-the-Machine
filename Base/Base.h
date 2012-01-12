@@ -64,6 +64,8 @@
 # include <GL/glu.h>
 #endif
 
+using namespace std;
+
 // String conversion / manipulation
 template <typename T>
 bool string_to_decimal(const std::string &string, T &t) {
@@ -74,15 +76,15 @@ bool string_to_decimal(const std::string &string, T &t) {
 template <typename T>
 void tokenize_string(const std::string &string, const std::string &delims, T &tokens) {
     size_t token_begin, token_end;
-    
+
     // Get the first line
     token_begin = string.find_first_not_of(delims);
     token_end   = string.find_first_of(delims, token_begin);
-    
+
     // Parse the lines
     while(token_begin != std::string::npos) {
         tokens.push_back(string.substr(token_begin, token_end - token_begin));
-        
+
         // Get the next line
         token_begin = string.find_first_not_of(delims, token_end);
         token_end   = string.find_first_of(delims, token_begin);

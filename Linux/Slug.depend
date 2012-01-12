@@ -1,0 +1,33 @@
+# depslib dependency file v1.0
+1326402080 source:/home/ajean/Ghost-in-the-Machine/Base/AABB2.cpp
+	<Base/AABB2.h>
+
+1319745014 /home/ajean/Ghost-in-the-Machine//Base/AABB2.h
+	<Base/Vector2.h>
+
+1326395198 /home/ajean/Ghost-in-the-Machine//Base/Vector2.h
+	<Base/Base.h>
+	<Base/Log.h>
+
+1326402104 /home/ajean/Ghost-in-the-Machine//Base/Base.h
+	<string>
+	<sstream>
+	<stdarg.h>
+	<stdlib.h>
+	<stdio.h>
+	<iostream>
+	<algorithm>
+	<cmath>
+	<stack>
+	<map>
+	<list>
+	<vector>
+	"SDL/SDL.h"
+	<assert.h>
+	"Windows.h"
+	<GL/gl.h>
+	<GL/glu.h>
+
+1319745014 /home/ajean/Ghost-in-the-Machine//Base/Log.h
+	<Base/Base.h>
+

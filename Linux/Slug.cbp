@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Slug" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/Slug" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="../Linux" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="../" />
+				</Compiler>
+				<Linker>
+					<Add directory="../" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/Slug" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="../Linux" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="../Base/AABB2.cpp" />
+		<Unit filename="../Base/AABB2.h" />
+		<Unit filename="../Base/AABB3.cpp" />
+		<Unit filename="../Base/AABB3.h" />
+		<Unit filename="../Base/Base.h" />
+		<Unit filename="../Base/Color.h" />
+		<Unit filename="../Base/FileSystem.cpp" />
+		<Unit filename="../Base/FileSystem.h" />
+		<Unit filename="../Base/Log.cpp" />
+		<Unit filename="../Base/Log.h" />
+		<Unit filename="../Base/Matrix4.cpp" />
+		<Unit filename="../Base/Matrix4.h" />
+		<Unit filename="../Base/PropertyMap.cpp" />
+		<Unit filename="../Base/PropertyMap.h" />
+		<Unit filename="../Base/ResourcePool.h" />
+		<Unit filename="../Base/Vector2.cpp" />
+		<Unit filename="../Base/Vector2.h" />
+		<Unit filename="../Base/Vector3.cpp" />
+		<Unit filename="../Base/Vector3.h" />
+		<Unit filename="../Base/Vector4.cpp" />
+		<Unit filename="../Base/Vector4.h" />
+		<Unit filename="../Engine/Camera.cpp" />
+		<Unit filename="../Engine/Camera.h" />
+		<Unit filename="../Engine/ContactListener.cpp" />
+		<Unit filename="../Engine/ContactListener.h" />
+		<Unit filename="../Engine/Controller.cpp" />
+		<Unit filename="../Engine/Controller.h" />
+		<Unit filename="../Engine/Core.cpp" />
+		<Unit filename="../Engine/Core.h" />
+		<Unit filename="../Engine/Entity.cpp" />
+		<Unit filename="../Engine/Entity.h" />
+		<Unit filename="../Engine/EventHandler.cpp" />
+		<Unit filename="../Engine/EventHandler.h" />
+		<Unit filename="../Engine/Frustum.cpp" />
+		<Unit filename="../Engine/Frustum.h" />
+		<Unit filename="../Engine/IsoCamera.cpp" />
+		<Unit filename="../Engine/IsoCamera.h" />
+		<Unit filename="../Engine/KeyboardListener.cpp" />
+		<Unit filename="../Engine/KeyboardListener.h" />
+		<Unit filename="../Engine/Mob.cpp" />
+		<Unit filename="../Engine/Mob.h" />
+		<Unit filename="../Engine/OrthoCamera.cpp" />
+		<Unit filename="../Engine/OrthoCamera.h" />
+		<Unit filename="../Engine/ParentState.cpp" />
+		<Unit filename="../Engine/ParentState.h" />
+		<Unit filename="../Engine/PhysicsController.cpp" />
+		<Unit filename="../Engine/PhysicsController.h" />
+		<Unit filename="../Engine/PhysicsEngine.cpp" />
+		<Unit filename="../Engine/PhysicsEngine.h" />
+		<Unit filename="../Engine/SceneManager.cpp" />
+		<Unit filename="../Engine/SceneManager.h" />
+		<Unit filename="../Engine/SceneNode.cpp" />
+		<Unit filename="../Engine/SceneNode.h" />
+		<Unit filename="../Engine/State.cpp" />
+		<Unit filename="../Engine/State.h" />
+		<Unit filename="../Engine/Window.cpp" />
+		<Unit filename="../Engine/Window.h" />
+		<Unit filename="../Engine/WindowListener.cpp" />
+		<Unit filename="../Engine/WindowListener.h" />
+		<Unit filename="../Render/Font.cpp" />
+		<Unit filename="../Render/Font.h" />
+		<Unit filename="../Render/Material.cpp" />
+		<Unit filename="../Render/Material.h" />
+		<Unit filename="../Render/RenderContext.cpp" />
+		<Unit filename="../Render/RenderContext.h" />
+		<Unit filename="../Render/Renderable.cpp" />
+		<Unit filename="../Render/Renderable.h" />
+		<Unit filename="../Render/Texture.cpp" />
+		<Unit filename="../Render/Texture.h" />
+		<Unit filename="../Render/Viewport.cpp" />
+		<Unit filename="../Render/Viewport.h" />
+		<Unit filename="../Resource/MaterialManager.cpp" />
+		<Unit filename="../Resource/MaterialManager.h" />
+		<Unit filename="../Resource/ResourceManager.h" />
+		<Unit filename="../Resource/TTFManager.cpp" />
+		<Unit filename="../Resource/TTFManager.h" />
+		<Unit filename="../Resource/TextureManager.cpp" />
+		<Unit filename="../Resource/TextureManager.h" />
+		<Unit filename="../Resource/ThreadedResourceManager.cpp" />
+		<Unit filename="../Resource/ThreadedResourceManager.h" />
+		<Unit filename="../Resource/WorldManager.cpp" />
+		<Unit filename="../Resource/WorldManager.h" />
+		<Extensions>
+			<code_completion>
+				<search_path add="../" />
+			</code_completion>
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

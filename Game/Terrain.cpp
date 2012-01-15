@@ -7,7 +7,7 @@
 const std::string Terrain::NodeType = "Terrain";
 
 Terrain::Terrain(const Vector2 &dims): SceneNode("Terrain", NodeType) {
-	setDimensions(dims);
+//	setDimensions(dims);
 	generateMap();
 	populateScene();
 }
@@ -27,7 +27,7 @@ Terrain::FaceFlags Terrain::getFlags(int x, int y) const {
 */
 
 void Terrain::generateMap() {
-	Vector2 dims = getDimensions();
+	Vector3 dims = getDimensions();
 
 	_tileData = (TerrainType*)calloc((size_t)(dims.arraySize()), sizeof(TerrainType));
 	_faceFlags = (unsigned char*)calloc((size_t)(dims.arraySize()), sizeof(unsigned char));
@@ -44,7 +44,7 @@ void Terrain::generateMap() {
 
 void Terrain::regenFaceFlags() {
 	int i, j;
-	Vector2 dims;
+	Vector3 dims;
 
 	dims = getDimensions();
 
@@ -65,7 +65,7 @@ void Terrain::regenFaceFlags() {
 }
 
 void Terrain::populateScene() {
-	Vector2 dims;
+	Vector3 dims;
 	Renderable *topRenderable, *bottomRenderable, *wallRenderable;
 	int vertexSize, layers, vertsPerLayer, totalVerts,
 		i, j;

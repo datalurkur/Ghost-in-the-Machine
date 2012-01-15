@@ -19,7 +19,7 @@ public:
 	inline Vector3& operator=(const Vector3 &rhs) {
 		x = rhs.x;
 		y = rhs.y;
-        z = rhs.z;
+                z = rhs.z;
 		return *this;
 	}
 
@@ -41,17 +41,23 @@ public:
         return ret;
     }
 
+    inline Vector3 operator/(const float scalar) const {
+        Vector3 ret(*this);
+        ret /= scalar;
+        return ret;
+    }
+
     inline Vector3& operator+=(const Vector3 &rhs) {
 		x += rhs.x;
 		y += rhs.y;
-        z += rhs.z;
+                z += rhs.z;
 		return *this;
 	}
 
     inline Vector3& operator-=(const Vector3 &rhs) {
 		x -= rhs.x;
 		y -= rhs.y;
-        z -= rhs.z;
+                z -= rhs.z;
 		return *this;
 	}
 
@@ -59,6 +65,13 @@ public:
         x *= scalar;
         y *= scalar;
         z *= scalar;
+        return *this;
+    }
+
+   inline Vector3& operator/=(const float scalar) {
+        x /= scalar;
+        y /= scalar;
+        z /= scalar;
         return *this;
     }
 

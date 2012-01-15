@@ -20,55 +20,57 @@ SceneNode::~SceneNode() {
 	_children.clear();
 }
 
-Vector2 SceneNode::getAbsolutePosition() const {
+Vector3 SceneNode::getAbsolutePosition() const {
     ASSERT(!_dirty);
 
     return _absolutePosition;
 
 }
-Vector2 SceneNode::getLocalPosition() const {
+Vector3 SceneNode::getLocalPosition() const {
     ASSERT(!_dirty);
 
     return _position;
 }
 
-void SceneNode::setPosition(float x, float y) {
+void SceneNode::setPosition(float x, float y, float z) {
     // Any children dependent on this node will need to update their absolute positions
     _position.x = x;
     _position.y = y;
+    _position.z = z;
     flagDirty(Downward);
 
     // This will change the position of the AABB, so the parent may need to adjust the size of its AABB
     flagDirty(Upward);
 }
 
-void SceneNode::setPosition(const Vector2 &pos) {
-	setPosition(pos.x, pos.y);
+void SceneNode::setPosition(const Vector3 &pos) {
+	setPosition(pos.x, pos.y, pos.z);
 }
 
-Vector2 SceneNode::getDimensions() const {
+Vector3 SceneNode::getDimensions() const {
     return _dimensions;
 }
 
-void SceneNode::setDimensions(float x, float y) {
+void SceneNode::setDimensions(float x, float y, float z) {
     _dimensions.x = x;
     _dimensions.y = y;
+    _dimensions.z = z;
 
     // Parents will need to update their AABBs
     flagDirty(Upward);
 	recreateRenderables();
 }
 
-void SceneNode::setDimensions(const Vector2 &dim) {
-	setDimensions(dim.x, dim.y);
+void SceneNode::setDimensions(const Vector3 &dim) {
+	setDimensions(dim.x, dim.y, dim.z);
 }
 
-const AABB2& SceneNode::getAbsoluteBounds() const {
+const AABB3& SceneNode::getAbsoluteBounds() const {
     ASSERT(!_dirty);
     return _absoluteBounds;
 }
 
-void SceneNode::moveRelative(const Vector2 &pos) {
+void SceneNode::moveRelative(const Vector3 &pos) {
     setPosition(_position + pos);
 }
 
@@ -139,7 +141,7 @@ void SceneNode::updateCachedValues() {
 
         // Update any values dependent on other local values
         // FIXME - Eventually, these need to be full affine transformations, to deal with rotation
-        _affine = Matrix4::MakeTranslation(_position.x, _position.y, 0.0);
+        _affine = Matrix4::MakeTranslation(_position.x, _position.y, _position.z);
         _absoluteAffine = Matrix4::MakeTranslation(_absolutePosition.x, _absolutePosition.y, 0);
 
         // Update renderable view matrices
@@ -158,7 +160,7 @@ void SceneNode::updateCachedValues() {
         // Update any values dependend on child states
 
         // Update the absolute AABB
-        _absoluteBounds = AABB2(
+        _absoluteBounds = AABB3(
             _absolutePosition - (_dimensions / 2.0f),
             _absolutePosition + (_dimensions / 2.0f)
         );

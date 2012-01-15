@@ -15,7 +15,7 @@ void PhysicsController::update(int elapsed) {
     if(_updates) {
         b2Vec2 pos = _body->GetPosition();
         //Info("Updating position of " << _node->getName() << " to " << pos.x << "," << pos.y);
-        _node->setPosition(pos.x, pos.y);
+        _node->setPosition(pos.x, pos.y, 0);
     }
 }
 

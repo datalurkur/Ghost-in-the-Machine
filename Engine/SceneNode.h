@@ -2,7 +2,7 @@
 #define SCENENODE_H
 
 #include <Base/Vector2.h>
-#include <Base/AABB2.h>
+#include <Base/AABB3.h>
 #include <Engine/Frustum.h>
 #include <Render/Renderable.h>
 
@@ -22,20 +22,20 @@ public:
 	virtual ~SceneNode();
 
 	// Positions
-	Vector2 getAbsolutePosition() const;
-	Vector2 getLocalPosition() const;
+	Vector3 getAbsolutePosition() const;
+	Vector3 getLocalPosition() const;
 
-    void setPosition(float x, float y);
-	void setPosition(const Vector2 &pos);
-    void moveRelative(const Vector2 &pos);
+    void setPosition(float x, float y, float z);
+	void setPosition(const Vector3 &pos);
+    void moveRelative(const Vector3 &pos);
     
     // Dimensions
-    Vector2 getDimensions() const;
-	void setDimensions(float x, float y);
-    void setDimensions(const Vector2 &dim);
+    Vector3 getDimensions() const;
+	void setDimensions(float x, float y, float z);
+    void setDimensions(const Vector3 &dim);
 
     // AABB Information
-    const AABB2& getAbsoluteBounds() const;
+    const AABB3& getAbsoluteBounds() const;
 
 	// Identifying information
 	const std::string &getName() const;
@@ -48,7 +48,7 @@ public:
 	// Adds this scene node and its children to the list
 	// If frustum is non-null, frustum culling will be performed
 	void getNodes(NodeList &list, Frustum *frustum = 0);
-	
+
 	// Adds the renderables to the provided list
 	virtual void getRenderables(RenderableList &list);
 
@@ -65,7 +65,7 @@ public:
 
 protected:
 	SceneNode(const std::string &name, const std::string &type);
-	
+
 	// Updates any values that are dependent on local state or parent state
 	void updateCachedValues();
 
@@ -76,11 +76,11 @@ protected:
 	std::string _name;
 	std::string _type;
 
-	Vector2 _position;
-	Vector2 _absolutePosition;
+	Vector3 _position;
+	Vector3 _absolutePosition;
     
-    Vector2 _dimensions;
-    AABB2 _absoluteBounds;
+    Vector3 _dimensions;
+    AABB3 _absoluteBounds;
 
 	Matrix4 _affine;
 	Matrix4 _absoluteAffine;

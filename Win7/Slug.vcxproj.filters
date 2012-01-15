@@ -325,6 +325,9 @@
     <ClCompile Include="..\Engine\IsoCamera.cpp">
       <Filter>Engine\Cameras</Filter>
     </ClCompile>
+    <ClCompile Include="..\Base\AABB3.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Engine\ParentState.h">
@@ -614,6 +617,9 @@
     </ClInclude>
     <ClInclude Include="..\Engine\IsoCamera.h">
       <Filter>Engine\Cameras</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Base\AABB3.h">
+      <Filter>Base</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

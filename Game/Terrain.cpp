@@ -7,7 +7,7 @@
 const std::string Terrain::NodeType = "Terrain";
 
 Terrain::Terrain(const Vector2 &dims): SceneNode("Terrain", NodeType) {
-//	setDimensions(dims);
+	setDimensions(Vector3(dims.x, dims.y, 5.0f));
 	generateMap();
 	populateScene();
 }
@@ -29,8 +29,8 @@ Terrain::FaceFlags Terrain::getFlags(int x, int y) const {
 void Terrain::generateMap() {
 	Vector3 dims = getDimensions();
 
-	_tileData = (TerrainType*)calloc((size_t)(dims.arraySize()), sizeof(TerrainType));
-	_faceFlags = (unsigned char*)calloc((size_t)(dims.arraySize()), sizeof(unsigned char));
+	_tileData = (TerrainType*)calloc((size_t)(dims.x * dims.y), sizeof(TerrainType));
+	_faceFlags = (unsigned char*)calloc((size_t)(dims.x * dims.y), sizeof(unsigned char));
 
 	// For now, just seed the map randomly
 	for(int i=0; i < dims.x; i++) {

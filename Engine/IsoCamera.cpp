@@ -15,6 +15,10 @@ void IsoCamera::setAspectRatio(const float ratio) {
 }
 
 void IsoCamera::moveRelative(const Vector3 &dir) {
+	SceneNode::moveRelative(dir);
+
+	// Dirty the modelview matrix
+	// TODO
 }
 
 void IsoCamera::zoom(const float amount) {

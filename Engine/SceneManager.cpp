@@ -16,10 +16,10 @@ void SceneManager::render(Camera *camera, RenderContext *context) {
 
 	_root->getNodes(visibleNodes, camera);
 
-	//Info("Rendering " << visibleNodes.size() << " visible nodes");
+//	Info("Rendering " << visibleNodes.size() << " visible nodes");
 	NodeList::iterator itr = visibleNodes.begin();
 	for(; itr != visibleNodes.end(); itr++) {
-		//Info("Rendering " << (*itr)->getName());
+//		Info("Rendering " << (*itr)->getName());
 		(*itr)->getRenderables(renderables);
 	}
 

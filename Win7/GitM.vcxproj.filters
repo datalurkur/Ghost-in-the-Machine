@@ -5,630 +5,650 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Engine">
-      <UniqueIdentifier>{03685c9d-09be-4953-9d90-3166e4bcd083}</UniqueIdentifier>
+    <Filter Include="Ghastly">
+      <UniqueIdentifier>{3d2b6a65-6098-4c66-9f51-349d5567ba19}</UniqueIdentifier>
     </Filter>
-    <Filter Include="GitM">
+    <Filter Include="Ghastly\Base">
+      <UniqueIdentifier>{6b4b9337-c6b3-4704-b7fb-17b62339b484}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Ghastly\Resource">
+      <UniqueIdentifier>{ae3fb482-5550-48fc-b085-ca2e0382e266}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Ghastly\Box2D">
+      <UniqueIdentifier>{d4185f84-b83c-47a2-b1bd-ba212e348e04}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Ghastly\Render">
+      <UniqueIdentifier>{654321d7-f110-4138-ab33-51c249bb09d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Ghastly\Engine">
+      <UniqueIdentifier>{9b1b7f54-28a5-42cc-ac5e-689ccae0a796}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game">
       <UniqueIdentifier>{d72d2403-c03b-4437-ba43-b69cfcfd30a7}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Engine\State Management">
-      <UniqueIdentifier>{e8196291-1b6b-42d0-bf93-4ff8685ec082}</UniqueIdentifier>
+    <Filter Include="Game\Game Objects">
+      <UniqueIdentifier>{a62b6ba9-01b8-4a88-80c7-5af24159bfed}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Engine\Scene Management">
-      <UniqueIdentifier>{039b222d-0a1e-46cc-9201-2c9e94946936}</UniqueIdentifier>
+    <Filter Include="Game\States">
+      <UniqueIdentifier>{3b2d4583-e5e3-4c4a-9835-29f63758854f}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Base">
-      <UniqueIdentifier>{0398eccb-ac26-409f-acb8-a84674443e2d}</UniqueIdentifier>
+    <Filter Include="Game\Cores">
+      <UniqueIdentifier>{3011f223-0ae9-486b-9ee2-552ecba263ad}</UniqueIdentifier>
     </Filter>
-    <Filter Include="GitM\States">
-      <UniqueIdentifier>{93f05665-51dd-4274-b352-3c6371dfd7d7}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Engine\Event Handling">
-      <UniqueIdentifier>{a80683b5-1795-4a0f-8e89-67d2607220dd}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Engine\Cameras">
-      <UniqueIdentifier>{6304265b-eaa4-4c43-acbe-fce5d435bf10}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Render">
-      <UniqueIdentifier>{367c79f7-652d-4d6c-9a1b-347167ba9d3e}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Resource">
-      <UniqueIdentifier>{573ee846-065b-4972-9bef-2c3fd2072dbc}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Engine\Controllers">
-      <UniqueIdentifier>{a99ef08d-5d66-40cf-b3f4-223f6f6fd765}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Box2D">
-      <UniqueIdentifier>{3af9d9f2-31c9-43af-9639-a30fa22cac48}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="GitM\Game Objects">
-      <UniqueIdentifier>{8816f58d-7f07-4b62-be66-c29dc1eab421}</UniqueIdentifier>
+    <Filter Include="Game\Controllers">
+      <UniqueIdentifier>{c5d07884-ca64-4c2d-86a8-3f5ef9138ce8}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\GitM\main.cpp">
-      <Filter>GitM</Filter>
+    <ClCompile Include="..\Ghastly\Base\AABB2.cpp">
+      <Filter>Ghastly\Base</Filter>
     </ClCompile>
-    <ClCompile Include="..\Engine\ParentState.cpp">
-      <Filter>Engine\State Management</Filter>
+    <ClCompile Include="..\Ghastly\Base\AABB3.cpp">
+      <Filter>Ghastly\Base</Filter>
     </ClCompile>
-    <ClCompile Include="..\Engine\Core.cpp">
-      <Filter>Engine\State Management</Filter>
+    <ClCompile Include="..\Ghastly\Base\FileSystem.cpp">
+      <Filter>Ghastly\Base</Filter>
     </ClCompile>
-    <ClCompile Include="..\Engine\State.cpp">
-      <Filter>Engine\State Management</Filter>
+    <ClCompile Include="..\Ghastly\Base\Log.cpp">
+      <Filter>Ghastly\Base</Filter>
     </ClCompile>
-    <ClCompile Include="..\Engine\Entity.cpp">
-      <Filter>Engine\Scene Management</Filter>
+    <ClCompile Include="..\Ghastly\Base\Matrix4.cpp">
+      <Filter>Ghastly\Base</Filter>
     </ClCompile>
-    <ClCompile Include="..\Engine\SceneManager.cpp">
-      <Filter>Engine\Scene Management</Filter>
+    <ClCompile Include="..\Ghastly\Base\PropertyMap.cpp">
+      <Filter>Ghastly\Base</Filter>
     </ClCompile>
-    <ClCompile Include="..\Render\RenderContext.cpp">
-      <Filter>Render</Filter>
+    <ClCompile Include="..\Ghastly\Base\Vector2.cpp">
+      <Filter>Ghastly\Base</Filter>
     </ClCompile>
-    <ClCompile Include="..\GitM\QuadTreeSceneManager.cpp">
-      <Filter>GitM</Filter>
+    <ClCompile Include="..\Ghastly\Base\Vector3.cpp">
+      <Filter>Ghastly\Base</Filter>
     </ClCompile>
-    <ClCompile Include="..\Engine\SceneNode.cpp">
-      <Filter>Engine\Scene Management</Filter>
+    <ClCompile Include="..\Ghastly\Base\Vector4.cpp">
+      <Filter>Ghastly\Base</Filter>
     </ClCompile>
-    <ClCompile Include="..\Render\Renderable.cpp">
-      <Filter>Render</Filter>
+    <ClCompile Include="..\Ghastly\Box2D\Collision\b2BroadPhase.cpp">
+      <Filter>Ghastly\Box2D</Filter>
     </ClCompile>
-    <ClCompile Include="..\Base\Log.cpp">
-      <Filter>Base</Filter>
+    <ClCompile Include="..\Ghastly\Box2D\Collision\b2CollideCircle.cpp">
+      <Filter>Ghastly\Box2D</Filter>
     </ClCompile>
-    <ClCompile Include="..\GitM\GhostCore.cpp">
-      <Filter>GitM</Filter>
+    <ClCompile Include="..\Ghastly\Box2D\Collision\b2CollideEdge.cpp">
+      <Filter>Ghastly\Box2D</Filter>
     </ClCompile>
-    <ClCompile Include="..\GitM\GameState.cpp">
-      <Filter>GitM\States</Filter>
+    <ClCompile Include="..\Ghastly\Box2D\Collision\b2CollidePolygon.cpp">
+      <Filter>Ghastly\Box2D</Filter>
     </ClCompile>
-    <ClCompile Include="..\GitM\LoadingState.cpp">
-      <Filter>GitM\States</Filter>
+    <ClCompile Include="..\Ghastly\Box2D\Collision\b2Collision.cpp">
+      <Filter>Ghastly\Box2D</Filter>
     </ClCompile>
-    <ClCompile Include="..\GitM\PlayingState.cpp">
-      <Filter>GitM\States</Filter>
+    <ClCompile Include="..\Ghastly\Box2D\Collision\b2Distance.cpp">
+      <Filter>Ghastly\Box2D</Filter>
     </ClCompile>
-    <ClCompile Include="..\Engine\Window.cpp">
-      <Filter>Engine</Filter>
+    <ClCompile Include="..\Ghastly\Box2D\Collision\b2DynamicTree.cpp">
+      <Filter>Ghastly\Box2D</Filter>
     </ClCompile>
-    <ClCompile Include="..\Base\Matrix4.cpp">
-      <Filter>Base</Filter>
+    <ClCompile Include="..\Ghastly\Box2D\Collision\b2TimeOfImpact.cpp">
+      <Filter>Ghastly\Box2D</Filter>
     </ClCompile>
-    <ClCompile Include="..\Engine\Frustum.cpp">
-      <Filter>Engine</Filter>
+    <ClCompile Include="..\Ghastly\Box2D\Collision\Shapes\b2ChainShape.cpp">
+      <Filter>Ghastly\Box2D</Filter>
     </ClCompile>
-    <ClCompile Include="..\Render\Viewport.cpp">
-      <Filter>Render</Filter>
+    <ClCompile Include="..\Ghastly\Box2D\Collision\Shapes\b2CircleShape.cpp">
+      <Filter>Ghastly\Box2D</Filter>
     </ClCompile>
-    <ClCompile Include="..\Engine\WindowListener.cpp">
-      <Filter>Engine\Event Handling</Filter>
+    <ClCompile Include="..\Ghastly\Box2D\Collision\Shapes\b2EdgeShape.cpp">
+      <Filter>Ghastly\Box2D</Filter>
     </ClCompile>
-    <ClCompile Include="..\Engine\EventHandler.cpp">
-      <Filter>Engine\Event Handling</Filter>
+    <ClCompile Include="..\Ghastly\Box2D\Collision\Shapes\b2PolygonShape.cpp">
+      <Filter>Ghastly\Box2D</Filter>
     </ClCompile>
-    <ClCompile Include="..\Engine\Camera.cpp">
-      <Filter>Engine\Cameras</Filter>
+    <ClCompile Include="..\Ghastly\Box2D\Common\b2BlockAllocator.cpp">
+      <Filter>Ghastly\Box2D</Filter>
     </ClCompile>
-    <ClCompile Include="..\Engine\OrthoCamera.cpp">
-      <Filter>Engine\Cameras</Filter>
+    <ClCompile Include="..\Ghastly\Box2D\Common\b2Draw.cpp">
+      <Filter>Ghastly\Box2D</Filter>
     </ClCompile>
-    <ClCompile Include="..\Render\Material.cpp">
-      <Filter>Render</Filter>
+    <ClCompile Include="..\Ghastly\Box2D\Common\b2Math.cpp">
+      <Filter>Ghastly\Box2D</Filter>
     </ClCompile>
-    <ClCompile Include="..\Render\Texture.cpp">
-      <Filter>Render</Filter>
+    <ClCompile Include="..\Ghastly\Box2D\Common\b2Settings.cpp">
+      <Filter>Ghastly\Box2D</Filter>
     </ClCompile>
-    <ClCompile Include="..\Render\Font.cpp">
-      <Filter>Render</Filter>
+    <ClCompile Include="..\Ghastly\Box2D\Common\b2StackAllocator.cpp">
+      <Filter>Ghastly\Box2D</Filter>
     </ClCompile>
-    <ClCompile Include="..\Resource\MaterialManager.cpp">
-      <Filter>Resource</Filter>
+    <ClCompile Include="..\Ghastly\Box2D\Common\b2Timer.cpp">
+      <Filter>Ghastly\Box2D</Filter>
     </ClCompile>
-    <ClCompile Include="..\Resource\TextureManager.cpp">
-      <Filter>Resource</Filter>
+    <ClCompile Include="..\Ghastly\Box2D\Dynamics\b2Body.cpp">
+      <Filter>Ghastly\Box2D</Filter>
     </ClCompile>
-    <ClCompile Include="..\Resource\ThreadedResourceManager.cpp">
-      <Filter>Resource</Filter>
+    <ClCompile Include="..\Ghastly\Box2D\Dynamics\b2ContactManager.cpp">
+      <Filter>Ghastly\Box2D</Filter>
     </ClCompile>
-    <ClCompile Include="..\Resource\TTFManager.cpp">
-      <Filter>Resource</Filter>
+    <ClCompile Include="..\Ghastly\Box2D\Dynamics\b2Fixture.cpp">
+      <Filter>Ghastly\Box2D</Filter>
     </ClCompile>
-    <ClCompile Include="..\Resource\WorldManager.cpp">
-      <Filter>Resource</Filter>
+    <ClCompile Include="..\Ghastly\Box2D\Dynamics\b2Island.cpp">
+      <Filter>Ghastly\Box2D</Filter>
     </ClCompile>
-    <ClCompile Include="..\Base\Vector2.cpp">
-      <Filter>Base</Filter>
+    <ClCompile Include="..\Ghastly\Box2D\Dynamics\b2World.cpp">
+      <Filter>Ghastly\Box2D</Filter>
     </ClCompile>
-    <ClCompile Include="..\Engine\PhysicsEngine.cpp">
-      <Filter>Engine</Filter>
+    <ClCompile Include="..\Ghastly\Box2D\Dynamics\b2WorldCallbacks.cpp">
+      <Filter>Ghastly\Box2D</Filter>
     </ClCompile>
-    <ClCompile Include="..\Engine\PhysicsController.cpp">
-      <Filter>Engine\Controllers</Filter>
+    <ClCompile Include="..\Ghastly\Box2D\Dynamics\Contacts\b2ChainAndCircleContact.cpp">
+      <Filter>Ghastly\Box2D</Filter>
     </ClCompile>
-    <ClCompile Include="..\Engine\Controller.cpp">
-      <Filter>Engine\Controllers</Filter>
+    <ClCompile Include="..\Ghastly\Box2D\Dynamics\Contacts\b2ChainAndPolygonContact.cpp">
+      <Filter>Ghastly\Box2D</Filter>
     </ClCompile>
-    <ClCompile Include="..\Box2D\Collision\b2BroadPhase.cpp">
-      <Filter>Box2D</Filter>
+    <ClCompile Include="..\Ghastly\Box2D\Dynamics\Contacts\b2CircleContact.cpp">
+      <Filter>Ghastly\Box2D</Filter>
     </ClCompile>
-    <ClCompile Include="..\Box2D\Collision\b2CollideCircle.cpp">
-      <Filter>Box2D</Filter>
+    <ClCompile Include="..\Ghastly\Box2D\Dynamics\Contacts\b2Contact.cpp">
+      <Filter>Ghastly\Box2D</Filter>
     </ClCompile>
-    <ClCompile Include="..\Box2D\Collision\b2CollideEdge.cpp">
-      <Filter>Box2D</Filter>
+    <ClCompile Include="..\Ghastly\Box2D\Dynamics\Contacts\b2ContactSolver.cpp">
+      <Filter>Ghastly\Box2D</Filter>
     </ClCompile>
-    <ClCompile Include="..\Box2D\Collision\b2CollidePolygon.cpp">
-      <Filter>Box2D</Filter>
+    <ClCompile Include="..\Ghastly\Box2D\Dynamics\Contacts\b2EdgeAndCircleContact.cpp">
+      <Filter>Ghastly\Box2D</Filter>
     </ClCompile>
-    <ClCompile Include="..\Box2D\Collision\b2Collision.cpp">
-      <Filter>Box2D</Filter>
+    <ClCompile Include="..\Ghastly\Box2D\Dynamics\Contacts\b2EdgeAndPolygonContact.cpp">
+      <Filter>Ghastly\Box2D</Filter>
     </ClCompile>
-    <ClCompile Include="..\Box2D\Collision\b2Distance.cpp">
-      <Filter>Box2D</Filter>
+    <ClCompile Include="..\Ghastly\Box2D\Dynamics\Contacts\b2PolygonAndCircleContact.cpp">
+      <Filter>Ghastly\Box2D</Filter>
     </ClCompile>
-    <ClCompile Include="..\Box2D\Collision\b2DynamicTree.cpp">
-      <Filter>Box2D</Filter>
+    <ClCompile Include="..\Ghastly\Box2D\Dynamics\Contacts\b2PolygonContact.cpp">
+      <Filter>Ghastly\Box2D</Filter>
     </ClCompile>
-    <ClCompile Include="..\Box2D\Collision\b2TimeOfImpact.cpp">
-      <Filter>Box2D</Filter>
+    <ClCompile Include="..\Ghastly\Box2D\Dynamics\Joints\b2DistanceJoint.cpp">
+      <Filter>Ghastly\Box2D</Filter>
     </ClCompile>
-    <ClCompile Include="..\Box2D\Collision\Shapes\b2ChainShape.cpp">
-      <Filter>Box2D</Filter>
+    <ClCompile Include="..\Ghastly\Box2D\Dynamics\Joints\b2FrictionJoint.cpp">
+      <Filter>Ghastly\Box2D</Filter>
     </ClCompile>
-    <ClCompile Include="..\Box2D\Collision\Shapes\b2CircleShape.cpp">
-      <Filter>Box2D</Filter>
+    <ClCompile Include="..\Ghastly\Box2D\Dynamics\Joints\b2GearJoint.cpp">
+      <Filter>Ghastly\Box2D</Filter>
     </ClCompile>
-    <ClCompile Include="..\Box2D\Collision\Shapes\b2EdgeShape.cpp">
-      <Filter>Box2D</Filter>
+    <ClCompile Include="..\Ghastly\Box2D\Dynamics\Joints\b2Joint.cpp">
+      <Filter>Ghastly\Box2D</Filter>
     </ClCompile>
-    <ClCompile Include="..\Box2D\Collision\Shapes\b2PolygonShape.cpp">
-      <Filter>Box2D</Filter>
+    <ClCompile Include="..\Ghastly\Box2D\Dynamics\Joints\b2MouseJoint.cpp">
+      <Filter>Ghastly\Box2D</Filter>
     </ClCompile>
-    <ClCompile Include="..\Box2D\Common\b2BlockAllocator.cpp">
-      <Filter>Box2D</Filter>
+    <ClCompile Include="..\Ghastly\Box2D\Dynamics\Joints\b2PrismaticJoint.cpp">
+      <Filter>Ghastly\Box2D</Filter>
     </ClCompile>
-    <ClCompile Include="..\Box2D\Common\b2Draw.cpp">
-      <Filter>Box2D</Filter>
+    <ClCompile Include="..\Ghastly\Box2D\Dynamics\Joints\b2PulleyJoint.cpp">
+      <Filter>Ghastly\Box2D</Filter>
     </ClCompile>
-    <ClCompile Include="..\Box2D\Common\b2Math.cpp">
-      <Filter>Box2D</Filter>
+    <ClCompile Include="..\Ghastly\Box2D\Dynamics\Joints\b2RevoluteJoint.cpp">
+      <Filter>Ghastly\Box2D</Filter>
     </ClCompile>
-    <ClCompile Include="..\Box2D\Common\b2Settings.cpp">
-      <Filter>Box2D</Filter>
+    <ClCompile Include="..\Ghastly\Box2D\Dynamics\Joints\b2RopeJoint.cpp">
+      <Filter>Ghastly\Box2D</Filter>
     </ClCompile>
-    <ClCompile Include="..\Box2D\Common\b2StackAllocator.cpp">
-      <Filter>Box2D</Filter>
+    <ClCompile Include="..\Ghastly\Box2D\Dynamics\Joints\b2WeldJoint.cpp">
+      <Filter>Ghastly\Box2D</Filter>
     </ClCompile>
-    <ClCompile Include="..\Box2D\Common\b2Timer.cpp">
-      <Filter>Box2D</Filter>
+    <ClCompile Include="..\Ghastly\Box2D\Dynamics\Joints\b2WheelJoint.cpp">
+      <Filter>Ghastly\Box2D</Filter>
     </ClCompile>
-    <ClCompile Include="..\Box2D\Dynamics\b2Body.cpp">
-      <Filter>Box2D</Filter>
+    <ClCompile Include="..\Ghastly\Box2D\Rope\b2Rope.cpp">
+      <Filter>Ghastly\Box2D</Filter>
     </ClCompile>
-    <ClCompile Include="..\Box2D\Dynamics\b2ContactManager.cpp">
-      <Filter>Box2D</Filter>
+    <ClCompile Include="..\Ghastly\Engine\Camera.cpp">
+      <Filter>Ghastly\Engine</Filter>
     </ClCompile>
-    <ClCompile Include="..\Box2D\Dynamics\b2Fixture.cpp">
-      <Filter>Box2D</Filter>
+    <ClCompile Include="..\Ghastly\Engine\ContactListener.cpp">
+      <Filter>Ghastly\Engine</Filter>
     </ClCompile>
-    <ClCompile Include="..\Box2D\Dynamics\b2Island.cpp">
-      <Filter>Box2D</Filter>
+    <ClCompile Include="..\Ghastly\Engine\Controller.cpp">
+      <Filter>Ghastly\Engine</Filter>
     </ClCompile>
-    <ClCompile Include="..\Box2D\Dynamics\b2World.cpp">
-      <Filter>Box2D</Filter>
+    <ClCompile Include="..\Ghastly\Engine\Core.cpp">
+      <Filter>Ghastly\Engine</Filter>
     </ClCompile>
-    <ClCompile Include="..\Box2D\Dynamics\b2WorldCallbacks.cpp">
-      <Filter>Box2D</Filter>
+    <ClCompile Include="..\Ghastly\Engine\Entity.cpp">
+      <Filter>Ghastly\Engine</Filter>
     </ClCompile>
-    <ClCompile Include="..\Box2D\Dynamics\Contacts\b2ChainAndCircleContact.cpp">
-      <Filter>Box2D</Filter>
+    <ClCompile Include="..\Ghastly\Engine\EventHandler.cpp">
+      <Filter>Ghastly\Engine</Filter>
     </ClCompile>
-    <ClCompile Include="..\Box2D\Dynamics\Contacts\b2ChainAndPolygonContact.cpp">
-      <Filter>Box2D</Filter>
+    <ClCompile Include="..\Ghastly\Engine\Frustum.cpp">
+      <Filter>Ghastly\Engine</Filter>
     </ClCompile>
-    <ClCompile Include="..\Box2D\Dynamics\Contacts\b2CircleContact.cpp">
-      <Filter>Box2D</Filter>
+    <ClCompile Include="..\Ghastly\Engine\IsoCamera.cpp">
+      <Filter>Ghastly\Engine</Filter>
     </ClCompile>
-    <ClCompile Include="..\Box2D\Dynamics\Contacts\b2Contact.cpp">
-      <Filter>Box2D</Filter>
+    <ClCompile Include="..\Ghastly\Engine\KeyboardListener.cpp">
+      <Filter>Ghastly\Engine</Filter>
     </ClCompile>
-    <ClCompile Include="..\Box2D\Dynamics\Contacts\b2ContactSolver.cpp">
-      <Filter>Box2D</Filter>
+    <ClCompile Include="..\Ghastly\Engine\Mob.cpp">
+      <Filter>Ghastly\Engine</Filter>
     </ClCompile>
-    <ClCompile Include="..\Box2D\Dynamics\Contacts\b2EdgeAndCircleContact.cpp">
-      <Filter>Box2D</Filter>
+    <ClCompile Include="..\Ghastly\Engine\OrthoCamera.cpp">
+      <Filter>Ghastly\Engine</Filter>
     </ClCompile>
-    <ClCompile Include="..\Box2D\Dynamics\Contacts\b2EdgeAndPolygonContact.cpp">
-      <Filter>Box2D</Filter>
+    <ClCompile Include="..\Ghastly\Engine\ParentState.cpp">
+      <Filter>Ghastly\Engine</Filter>
     </ClCompile>
-    <ClCompile Include="..\Box2D\Dynamics\Contacts\b2PolygonAndCircleContact.cpp">
-      <Filter>Box2D</Filter>
+    <ClCompile Include="..\Ghastly\Engine\PhysicsController.cpp">
+      <Filter>Ghastly\Engine</Filter>
     </ClCompile>
-    <ClCompile Include="..\Box2D\Dynamics\Contacts\b2PolygonContact.cpp">
-      <Filter>Box2D</Filter>
+    <ClCompile Include="..\Ghastly\Engine\PhysicsEngine.cpp">
+      <Filter>Ghastly\Engine</Filter>
     </ClCompile>
-    <ClCompile Include="..\Box2D\Dynamics\Joints\b2DistanceJoint.cpp">
-      <Filter>Box2D</Filter>
+    <ClCompile Include="..\Ghastly\Engine\SceneManager.cpp">
+      <Filter>Ghastly\Engine</Filter>
     </ClCompile>
-    <ClCompile Include="..\Box2D\Dynamics\Joints\b2FrictionJoint.cpp">
-      <Filter>Box2D</Filter>
+    <ClCompile Include="..\Ghastly\Engine\SceneNode.cpp">
+      <Filter>Ghastly\Engine</Filter>
     </ClCompile>
-    <ClCompile Include="..\Box2D\Dynamics\Joints\b2GearJoint.cpp">
-      <Filter>Box2D</Filter>
+    <ClCompile Include="..\Ghastly\Engine\State.cpp">
+      <Filter>Ghastly\Engine</Filter>
     </ClCompile>
-    <ClCompile Include="..\Box2D\Dynamics\Joints\b2Joint.cpp">
-      <Filter>Box2D</Filter>
+    <ClCompile Include="..\Ghastly\Engine\Window.cpp">
+      <Filter>Ghastly\Engine</Filter>
     </ClCompile>
-    <ClCompile Include="..\Box2D\Dynamics\Joints\b2MouseJoint.cpp">
-      <Filter>Box2D</Filter>
+    <ClCompile Include="..\Ghastly\Engine\WindowListener.cpp">
+      <Filter>Ghastly\Engine</Filter>
     </ClCompile>
-    <ClCompile Include="..\Box2D\Dynamics\Joints\b2PrismaticJoint.cpp">
-      <Filter>Box2D</Filter>
+    <ClCompile Include="..\Ghastly\Render\Font.cpp">
+      <Filter>Ghastly\Render</Filter>
     </ClCompile>
-    <ClCompile Include="..\Box2D\Dynamics\Joints\b2PulleyJoint.cpp">
-      <Filter>Box2D</Filter>
+    <ClCompile Include="..\Ghastly\Render\Material.cpp">
+      <Filter>Ghastly\Render</Filter>
     </ClCompile>
-    <ClCompile Include="..\Box2D\Dynamics\Joints\b2RevoluteJoint.cpp">
-      <Filter>Box2D</Filter>
+    <ClCompile Include="..\Ghastly\Render\Renderable.cpp">
+      <Filter>Ghastly\Render</Filter>
     </ClCompile>
-    <ClCompile Include="..\Box2D\Dynamics\Joints\b2RopeJoint.cpp">
-      <Filter>Box2D</Filter>
+    <ClCompile Include="..\Ghastly\Render\RenderContext.cpp">
+      <Filter>Ghastly\Render</Filter>
     </ClCompile>
-    <ClCompile Include="..\Box2D\Dynamics\Joints\b2WeldJoint.cpp">
-      <Filter>Box2D</Filter>
+    <ClCompile Include="..\Ghastly\Render\Texture.cpp">
+      <Filter>Ghastly\Render</Filter>
     </ClCompile>
-    <ClCompile Include="..\Box2D\Dynamics\Joints\b2WheelJoint.cpp">
-      <Filter>Box2D</Filter>
+    <ClCompile Include="..\Ghastly\Render\Viewport.cpp">
+      <Filter>Ghastly\Render</Filter>
     </ClCompile>
-    <ClCompile Include="..\Box2D\Rope\b2Rope.cpp">
-      <Filter>Box2D</Filter>
+    <ClCompile Include="..\Ghastly\Resource\MaterialManager.cpp">
+      <Filter>Ghastly\Resource</Filter>
     </ClCompile>
-    <ClCompile Include="..\GitM\Player.cpp">
-      <Filter>GitM\Game Objects</Filter>
+    <ClCompile Include="..\Ghastly\Resource\TextureManager.cpp">
+      <Filter>Ghastly\Resource</Filter>
     </ClCompile>
-    <ClCompile Include="..\GitM\World.cpp">
-      <Filter>GitM\Game Objects</Filter>
+    <ClCompile Include="..\Ghastly\Resource\ThreadedResourceManager.cpp">
+      <Filter>Ghastly\Resource</Filter>
     </ClCompile>
-    <ClCompile Include="..\GitM\Platform.cpp">
-      <Filter>GitM\Game Objects</Filter>
+    <ClCompile Include="..\Ghastly\Resource\TTFManager.cpp">
+      <Filter>Ghastly\Resource</Filter>
     </ClCompile>
-    <ClCompile Include="..\Engine\PlayerController.cpp">
-      <Filter>Engine\Controllers</Filter>
+    <ClCompile Include="..\Ghastly\Resource\WorldManager.cpp">
+      <Filter>Ghastly\Resource</Filter>
     </ClCompile>
-    <ClCompile Include="..\Engine\ContactListener.cpp">
-      <Filter>Engine\Event Handling</Filter>
+    <ClCompile Include="..\Game\main.cpp">
+      <Filter>Game</Filter>
     </ClCompile>
-    <ClCompile Include="..\GitM\DebugVolume.cpp">
-      <Filter>GitM\Game Objects</Filter>
+    <ClCompile Include="..\Game\Wall.cpp">
+      <Filter>Game\Game Objects</Filter>
     </ClCompile>
-    <ClCompile Include="..\GitM\Wall.cpp">
-      <Filter>GitM\Game Objects</Filter>
+    <ClCompile Include="..\Game\Player.cpp">
+      <Filter>Game\Game Objects</Filter>
     </ClCompile>
-    <ClCompile Include="..\Engine\Mob.cpp">
-      <Filter>Engine</Filter>
+    <ClCompile Include="..\Game\Platform.cpp">
+      <Filter>Game\Game Objects</Filter>
     </ClCompile>
-    <ClCompile Include="..\Base\FileSystem.cpp">
-      <Filter>Base</Filter>
+    <ClCompile Include="..\Game\DebugVolume.cpp">
+      <Filter>Game\Game Objects</Filter>
     </ClCompile>
-    <ClCompile Include="..\Engine\KeyboardListener.cpp">
-      <Filter>Engine\Event Handling</Filter>
+    <ClCompile Include="..\Game\GameState.cpp">
+      <Filter>Game\States</Filter>
     </ClCompile>
-    <ClCompile Include="..\Base\PropertyMap.cpp">
-      <Filter>Base</Filter>
+    <ClCompile Include="..\Game\LoadingState.cpp">
+      <Filter>Game\States</Filter>
     </ClCompile>
-    <ClCompile Include="..\Base\Vector3.cpp">
-      <Filter>Base</Filter>
+    <ClCompile Include="..\Game\PlayingState.cpp">
+      <Filter>Game\States</Filter>
     </ClCompile>
-    <ClCompile Include="..\Base\Vector4.cpp">
-      <Filter>Base</Filter>
+    <ClCompile Include="..\Game\StartingState.cpp">
+      <Filter>Game\States</Filter>
     </ClCompile>
-    <ClCompile Include="..\GitM\StartingState.cpp">
-      <Filter>GitM\States</Filter>
+    <ClCompile Include="..\Game\GhostCore.cpp">
+      <Filter>Game\Cores</Filter>
     </ClCompile>
-    <ClCompile Include="..\Base\AABB2.cpp">
-      <Filter>Base</Filter>
+    <ClCompile Include="..\Game\PlayerController.cpp">
+      <Filter>Game\Controllers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Ghastly\Engine\World.cpp">
+      <Filter>Ghastly\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\GhostWorld.cpp">
+      <Filter>Game\Game Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Ghastly\Engine\QuadTreeSceneManager.cpp">
+      <Filter>Ghastly\Engine</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\Engine\ParentState.h">
-      <Filter>Engine\State Management</Filter>
+    <ClInclude Include="..\Ghastly\Base\AABB2.h">
+      <Filter>Ghastly\Base</Filter>
     </ClInclude>
-    <ClInclude Include="..\Engine\Core.h">
-      <Filter>Engine\State Management</Filter>
+    <ClInclude Include="..\Ghastly\Base\AABB3.h">
+      <Filter>Ghastly\Base</Filter>
     </ClInclude>
-    <ClInclude Include="..\Engine\State.h">
-      <Filter>Engine\State Management</Filter>
+    <ClInclude Include="..\Ghastly\Base\Base.h">
+      <Filter>Ghastly\Base</Filter>
     </ClInclude>
-    <ClInclude Include="..\Engine\SceneManager.h">
-      <Filter>Engine\Scene Management</Filter>
+    <ClInclude Include="..\Ghastly\Base\Color.h">
+      <Filter>Ghastly\Base</Filter>
     </ClInclude>
-    <ClInclude Include="..\Engine\Entity.h">
-      <Filter>Engine\Scene Management</Filter>
+    <ClInclude Include="..\Ghastly\Base\FileSystem.h">
+      <Filter>Ghastly\Base</Filter>
     </ClInclude>
-    <ClInclude Include="..\Render\RenderContext.h">
-      <Filter>Render</Filter>
+    <ClInclude Include="..\Ghastly\Base\Log.h">
+      <Filter>Ghastly\Base</Filter>
     </ClInclude>
-    <ClInclude Include="..\GitM\QuadTreeSceneManager.h">
-      <Filter>GitM</Filter>
+    <ClInclude Include="..\Ghastly\Base\Matrix4.h">
+      <Filter>Ghastly\Base</Filter>
     </ClInclude>
-    <ClInclude Include="..\Base\Base.h">
-      <Filter>Base</Filter>
+    <ClInclude Include="..\Ghastly\Base\PropertyMap.h">
+      <Filter>Ghastly\Base</Filter>
     </ClInclude>
-    <ClInclude Include="..\Engine\SceneNode.h">
-      <Filter>Engine\Scene Management</Filter>
+    <ClInclude Include="..\Ghastly\Base\ResourcePool.h">
+      <Filter>Ghastly\Base</Filter>
     </ClInclude>
-    <ClInclude Include="..\Render\Renderable.h">
-      <Filter>Render</Filter>
+    <ClInclude Include="..\Ghastly\Base\Vector2.h">
+      <Filter>Ghastly\Base</Filter>
     </ClInclude>
-    <ClInclude Include="..\Base\Log.h">
-      <Filter>Base</Filter>
+    <ClInclude Include="..\Ghastly\Base\Vector3.h">
+      <Filter>Ghastly\Base</Filter>
     </ClInclude>
-    <ClInclude Include="..\GitM\GhostCore.h">
-      <Filter>GitM</Filter>
+    <ClInclude Include="..\Ghastly\Base\Vector4.h">
+      <Filter>Ghastly\Base</Filter>
     </ClInclude>
-    <ClInclude Include="..\GitM\GameState.h">
-      <Filter>GitM\States</Filter>
+    <ClInclude Include="..\Ghastly\Box2D\Collision\b2BroadPhase.h">
+      <Filter>Ghastly\Box2D</Filter>
     </ClInclude>
-    <ClInclude Include="..\GitM\LoadingState.h">
-      <Filter>GitM\States</Filter>
+    <ClInclude Include="..\Ghastly\Box2D\Collision\b2Collision.h">
+      <Filter>Ghastly\Box2D</Filter>
     </ClInclude>
-    <ClInclude Include="..\GitM\PlayingState.h">
-      <Filter>GitM\States</Filter>
+    <ClInclude Include="..\Ghastly\Box2D\Collision\b2Distance.h">
+      <Filter>Ghastly\Box2D</Filter>
     </ClInclude>
-    <ClInclude Include="..\Base\Vector2.h">
-      <Filter>Base</Filter>
+    <ClInclude Include="..\Ghastly\Box2D\Collision\b2DynamicTree.h">
+      <Filter>Ghastly\Box2D</Filter>
     </ClInclude>
-    <ClInclude Include="..\Engine\Window.h">
-      <Filter>Engine</Filter>
+    <ClInclude Include="..\Ghastly\Box2D\Collision\b2TimeOfImpact.h">
+      <Filter>Ghastly\Box2D</Filter>
     </ClInclude>
-    <ClInclude Include="..\Base\Matrix4.h">
-      <Filter>Base</Filter>
+    <ClInclude Include="..\Ghastly\Box2D\Collision\Shapes\b2ChainShape.h">
+      <Filter>Ghastly\Box2D</Filter>
     </ClInclude>
-    <ClInclude Include="..\Engine\Frustum.h">
-      <Filter>Engine</Filter>
+    <ClInclude Include="..\Ghastly\Box2D\Collision\Shapes\b2CircleShape.h">
+      <Filter>Ghastly\Box2D</Filter>
     </ClInclude>
-    <ClInclude Include="..\Render\Viewport.h">
-      <Filter>Render</Filter>
+    <ClInclude Include="..\Ghastly\Box2D\Collision\Shapes\b2EdgeShape.h">
+      <Filter>Ghastly\Box2D</Filter>
     </ClInclude>
-    <ClInclude Include="..\Engine\WindowListener.h">
-      <Filter>Engine\Event Handling</Filter>
+    <ClInclude Include="..\Ghastly\Box2D\Collision\Shapes\b2PolygonShape.h">
+      <Filter>Ghastly\Box2D</Filter>
     </ClInclude>
-    <ClInclude Include="..\Engine\EventHandler.h">
-      <Filter>Engine\Event Handling</Filter>
+    <ClInclude Include="..\Ghastly\Box2D\Collision\Shapes\b2Shape.h">
+      <Filter>Ghastly\Box2D</Filter>
     </ClInclude>
-    <ClInclude Include="..\Engine\Camera.h">
-      <Filter>Engine\Cameras</Filter>
+    <ClInclude Include="..\Ghastly\Box2D\Common\b2BlockAllocator.h">
+      <Filter>Ghastly\Box2D</Filter>
     </ClInclude>
-    <ClInclude Include="..\Engine\OrthoCamera.h">
-      <Filter>Engine\Cameras</Filter>
+    <ClInclude Include="..\Ghastly\Box2D\Common\b2Draw.h">
+      <Filter>Ghastly\Box2D</Filter>
     </ClInclude>
-    <ClInclude Include="..\Render\Material.h">
-      <Filter>Render</Filter>
+    <ClInclude Include="..\Ghastly\Box2D\Common\b2GrowableStack.h">
+      <Filter>Ghastly\Box2D</Filter>
     </ClInclude>
-    <ClInclude Include="..\Render\Texture.h">
-      <Filter>Render</Filter>
+    <ClInclude Include="..\Ghastly\Box2D\Common\b2Math.h">
+      <Filter>Ghastly\Box2D</Filter>
     </ClInclude>
-    <ClInclude Include="..\Render\Font.h">
-      <Filter>Render</Filter>
+    <ClInclude Include="..\Ghastly\Box2D\Common\b2Settings.h">
+      <Filter>Ghastly\Box2D</Filter>
     </ClInclude>
-    <ClInclude Include="..\Resource\MaterialManager.h">
-      <Filter>Resource</Filter>
+    <ClInclude Include="..\Ghastly\Box2D\Common\b2StackAllocator.h">
+      <Filter>Ghastly\Box2D</Filter>
     </ClInclude>
-    <ClInclude Include="..\Resource\ResourceManager.h">
-      <Filter>Resource</Filter>
+    <ClInclude Include="..\Ghastly\Box2D\Common\b2Timer.h">
+      <Filter>Ghastly\Box2D</Filter>
     </ClInclude>
-    <ClInclude Include="..\Resource\TextureManager.h">
-      <Filter>Resource</Filter>
+    <ClInclude Include="..\Ghastly\Box2D\Dynamics\b2Body.h">
+      <Filter>Ghastly\Box2D</Filter>
     </ClInclude>
-    <ClInclude Include="..\Resource\ThreadedResourceManager.h">
-      <Filter>Resource</Filter>
+    <ClInclude Include="..\Ghastly\Box2D\Dynamics\b2ContactManager.h">
+      <Filter>Ghastly\Box2D</Filter>
     </ClInclude>
-    <ClInclude Include="..\Resource\TTFManager.h">
-      <Filter>Resource</Filter>
+    <ClInclude Include="..\Ghastly\Box2D\Dynamics\b2Fixture.h">
+      <Filter>Ghastly\Box2D</Filter>
     </ClInclude>
-    <ClInclude Include="..\Resource\WorldManager.h">
-      <Filter>Resource</Filter>
+    <ClInclude Include="..\Ghastly\Box2D\Dynamics\b2Island.h">
+      <Filter>Ghastly\Box2D</Filter>
     </ClInclude>
-    <ClInclude Include="..\Engine\KeyboardListener.h">
-      <Filter>Engine\Event Handling</Filter>
+    <ClInclude Include="..\Ghastly\Box2D\Dynamics\b2TimeStep.h">
+      <Filter>Ghastly\Box2D</Filter>
     </ClInclude>
-    <ClInclude Include="..\Base\ResourcePool.h">
-      <Filter>Base</Filter>
+    <ClInclude Include="..\Ghastly\Box2D\Dynamics\b2World.h">
+      <Filter>Ghastly\Box2D</Filter>
     </ClInclude>
-    <ClInclude Include="..\Engine\PhysicsEngine.h">
-      <Filter>Engine</Filter>
+    <ClInclude Include="..\Ghastly\Box2D\Dynamics\b2WorldCallbacks.h">
+      <Filter>Ghastly\Box2D</Filter>
     </ClInclude>
-    <ClInclude Include="..\Engine\PhysicsController.h">
-      <Filter>Engine\Controllers</Filter>
+    <ClInclude Include="..\Ghastly\Box2D\Dynamics\Contacts\b2ChainAndCircleContact.h">
+      <Filter>Ghastly\Box2D</Filter>
     </ClInclude>
-    <ClInclude Include="..\Engine\Controller.h">
-      <Filter>Engine\Controllers</Filter>
+    <ClInclude Include="..\Ghastly\Box2D\Dynamics\Contacts\b2ChainAndPolygonContact.h">
+      <Filter>Ghastly\Box2D</Filter>
     </ClInclude>
-    <ClInclude Include="..\Box2D\Box2D.h">
-      <Filter>Box2D</Filter>
+    <ClInclude Include="..\Ghastly\Box2D\Dynamics\Contacts\b2CircleContact.h">
+      <Filter>Ghastly\Box2D</Filter>
     </ClInclude>
-    <ClInclude Include="..\Box2D\Collision\b2BroadPhase.h">
-      <Filter>Box2D</Filter>
+    <ClInclude Include="..\Ghastly\Box2D\Dynamics\Contacts\b2Contact.h">
+      <Filter>Ghastly\Box2D</Filter>
     </ClInclude>
-    <ClInclude Include="..\Box2D\Collision\b2Collision.h">
-      <Filter>Box2D</Filter>
+    <ClInclude Include="..\Ghastly\Box2D\Dynamics\Contacts\b2ContactSolver.h">
+      <Filter>Ghastly\Box2D</Filter>
     </ClInclude>
-    <ClInclude Include="..\Box2D\Collision\b2Distance.h">
-      <Filter>Box2D</Filter>
+    <ClInclude Include="..\Ghastly\Box2D\Dynamics\Contacts\b2EdgeAndCircleContact.h">
+      <Filter>Ghastly\Box2D</Filter>
     </ClInclude>
-    <ClInclude Include="..\Box2D\Collision\b2DynamicTree.h">
-      <Filter>Box2D</Filter>
+    <ClInclude Include="..\Ghastly\Box2D\Dynamics\Contacts\b2EdgeAndPolygonContact.h">
+      <Filter>Ghastly\Box2D</Filter>
     </ClInclude>
-    <ClInclude Include="..\Box2D\Collision\b2TimeOfImpact.h">
-      <Filter>Box2D</Filter>
+    <ClInclude Include="..\Ghastly\Box2D\Dynamics\Contacts\b2PolygonAndCircleContact.h">
+      <Filter>Ghastly\Box2D</Filter>
     </ClInclude>
-    <ClInclude Include="..\Box2D\Collision\Shapes\b2ChainShape.h">
-      <Filter>Box2D</Filter>
+    <ClInclude Include="..\Ghastly\Box2D\Dynamics\Contacts\b2PolygonContact.h">
+      <Filter>Ghastly\Box2D</Filter>
     </ClInclude>
-    <ClInclude Include="..\Box2D\Collision\Shapes\b2CircleShape.h">
-      <Filter>Box2D</Filter>
+    <ClInclude Include="..\Ghastly\Box2D\Dynamics\Joints\b2DistanceJoint.h">
+      <Filter>Ghastly\Box2D</Filter>
     </ClInclude>
-    <ClInclude Include="..\Box2D\Collision\Shapes\b2EdgeShape.h">
-      <Filter>Box2D</Filter>
+    <ClInclude Include="..\Ghastly\Box2D\Dynamics\Joints\b2FrictionJoint.h">
+      <Filter>Ghastly\Box2D</Filter>
     </ClInclude>
-    <ClInclude Include="..\Box2D\Collision\Shapes\b2PolygonShape.h">
-      <Filter>Box2D</Filter>
+    <ClInclude Include="..\Ghastly\Box2D\Dynamics\Joints\b2GearJoint.h">
+      <Filter>Ghastly\Box2D</Filter>
     </ClInclude>
-    <ClInclude Include="..\Box2D\Collision\Shapes\b2Shape.h">
-      <Filter>Box2D</Filter>
+    <ClInclude Include="..\Ghastly\Box2D\Dynamics\Joints\b2Joint.h">
+      <Filter>Ghastly\Box2D</Filter>
     </ClInclude>
-    <ClInclude Include="..\Box2D\Common\b2BlockAllocator.h">
-      <Filter>Box2D</Filter>
+    <ClInclude Include="..\Ghastly\Box2D\Dynamics\Joints\b2MouseJoint.h">
+      <Filter>Ghastly\Box2D</Filter>
     </ClInclude>
-    <ClInclude Include="..\Box2D\Common\b2Draw.h">
-      <Filter>Box2D</Filter>
+    <ClInclude Include="..\Ghastly\Box2D\Dynamics\Joints\b2PrismaticJoint.h">
+      <Filter>Ghastly\Box2D</Filter>
     </ClInclude>
-    <ClInclude Include="..\Box2D\Common\b2GrowableStack.h">
-      <Filter>Box2D</Filter>
+    <ClInclude Include="..\Ghastly\Box2D\Dynamics\Joints\b2PulleyJoint.h">
+      <Filter>Ghastly\Box2D</Filter>
     </ClInclude>
-    <ClInclude Include="..\Box2D\Common\b2Math.h">
-      <Filter>Box2D</Filter>
+    <ClInclude Include="..\Ghastly\Box2D\Dynamics\Joints\b2RevoluteJoint.h">
+      <Filter>Ghastly\Box2D</Filter>
     </ClInclude>
-    <ClInclude Include="..\Box2D\Common\b2Settings.h">
-      <Filter>Box2D</Filter>
+    <ClInclude Include="..\Ghastly\Box2D\Dynamics\Joints\b2RopeJoint.h">
+      <Filter>Ghastly\Box2D</Filter>
     </ClInclude>
-    <ClInclude Include="..\Box2D\Common\b2StackAllocator.h">
-      <Filter>Box2D</Filter>
+    <ClInclude Include="..\Ghastly\Box2D\Dynamics\Joints\b2WeldJoint.h">
+      <Filter>Ghastly\Box2D</Filter>
     </ClInclude>
-    <ClInclude Include="..\Box2D\Common\b2Timer.h">
-      <Filter>Box2D</Filter>
+    <ClInclude Include="..\Ghastly\Box2D\Dynamics\Joints\b2WheelJoint.h">
+      <Filter>Ghastly\Box2D</Filter>
     </ClInclude>
-    <ClInclude Include="..\Box2D\Dynamics\b2Body.h">
-      <Filter>Box2D</Filter>
+    <ClInclude Include="..\Ghastly\Box2D\Rope\b2Rope.h">
+      <Filter>Ghastly\Box2D</Filter>
     </ClInclude>
-    <ClInclude Include="..\Box2D\Dynamics\b2ContactManager.h">
-      <Filter>Box2D</Filter>
+    <ClInclude Include="..\Ghastly\Box2D\Box2D.h">
+      <Filter>Ghastly\Box2D</Filter>
     </ClInclude>
-    <ClInclude Include="..\Box2D\Dynamics\b2Fixture.h">
-      <Filter>Box2D</Filter>
+    <ClInclude Include="..\Ghastly\Engine\Camera.h">
+      <Filter>Ghastly\Engine</Filter>
     </ClInclude>
-    <ClInclude Include="..\Box2D\Dynamics\b2Island.h">
-      <Filter>Box2D</Filter>
+    <ClInclude Include="..\Ghastly\Engine\ContactListener.h">
+      <Filter>Ghastly\Engine</Filter>
     </ClInclude>
-    <ClInclude Include="..\Box2D\Dynamics\b2TimeStep.h">
-      <Filter>Box2D</Filter>
+    <ClInclude Include="..\Ghastly\Engine\Controller.h">
+      <Filter>Ghastly\Engine</Filter>
     </ClInclude>
-    <ClInclude Include="..\Box2D\Dynamics\b2World.h">
-      <Filter>Box2D</Filter>
+    <ClInclude Include="..\Ghastly\Engine\Core.h">
+      <Filter>Ghastly\Engine</Filter>
     </ClInclude>
-    <ClInclude Include="..\Box2D\Dynamics\b2WorldCallbacks.h">
-      <Filter>Box2D</Filter>
+    <ClInclude Include="..\Ghastly\Engine\Entity.h">
+      <Filter>Ghastly\Engine</Filter>
     </ClInclude>
-    <ClInclude Include="..\Box2D\Dynamics\Contacts\b2ChainAndCircleContact.h">
-      <Filter>Box2D</Filter>
+    <ClInclude Include="..\Ghastly\Engine\EventHandler.h">
+      <Filter>Ghastly\Engine</Filter>
     </ClInclude>
-    <ClInclude Include="..\Box2D\Dynamics\Contacts\b2ChainAndPolygonContact.h">
-      <Filter>Box2D</Filter>
+    <ClInclude Include="..\Ghastly\Engine\Frustum.h">
+      <Filter>Ghastly\Engine</Filter>
     </ClInclude>
-    <ClInclude Include="..\Box2D\Dynamics\Contacts\b2CircleContact.h">
-      <Filter>Box2D</Filter>
+    <ClInclude Include="..\Ghastly\Engine\IsoCamera.h">
+      <Filter>Ghastly\Engine</Filter>
     </ClInclude>
-    <ClInclude Include="..\Box2D\Dynamics\Contacts\b2Contact.h">
-      <Filter>Box2D</Filter>
+    <ClInclude Include="..\Ghastly\Engine\KeyboardListener.h">
+      <Filter>Ghastly\Engine</Filter>
     </ClInclude>
-    <ClInclude Include="..\Box2D\Dynamics\Contacts\b2ContactSolver.h">
-      <Filter>Box2D</Filter>
+    <ClInclude Include="..\Ghastly\Engine\Mob.h">
+      <Filter>Ghastly\Engine</Filter>
     </ClInclude>
-    <ClInclude Include="..\Box2D\Dynamics\Contacts\b2EdgeAndCircleContact.h">
-      <Filter>Box2D</Filter>
+    <ClInclude Include="..\Ghastly\Engine\OrthoCamera.h">
+      <Filter>Ghastly\Engine</Filter>
     </ClInclude>
-    <ClInclude Include="..\Box2D\Dynamics\Contacts\b2EdgeAndPolygonContact.h">
-      <Filter>Box2D</Filter>
+    <ClInclude Include="..\Ghastly\Engine\ParentState.h">
+      <Filter>Ghastly\Engine</Filter>
     </ClInclude>
-    <ClInclude Include="..\Box2D\Dynamics\Contacts\b2PolygonAndCircleContact.h">
-      <Filter>Box2D</Filter>
+    <ClInclude Include="..\Ghastly\Engine\PhysicsController.h">
+      <Filter>Ghastly\Engine</Filter>
     </ClInclude>
-    <ClInclude Include="..\Box2D\Dynamics\Contacts\b2PolygonContact.h">
-      <Filter>Box2D</Filter>
+    <ClInclude Include="..\Ghastly\Engine\PhysicsEngine.h">
+      <Filter>Ghastly\Engine</Filter>
     </ClInclude>
-    <ClInclude Include="..\Box2D\Dynamics\Joints\b2DistanceJoint.h">
-      <Filter>Box2D</Filter>
+    <ClInclude Include="..\Ghastly\Engine\SceneManager.h">
+      <Filter>Ghastly\Engine</Filter>
     </ClInclude>
-    <ClInclude Include="..\Box2D\Dynamics\Joints\b2FrictionJoint.h">
-      <Filter>Box2D</Filter>
+    <ClInclude Include="..\Ghastly\Engine\SceneNode.h">
+      <Filter>Ghastly\Engine</Filter>
     </ClInclude>
-    <ClInclude Include="..\Box2D\Dynamics\Joints\b2GearJoint.h">
-      <Filter>Box2D</Filter>
+    <ClInclude Include="..\Ghastly\Engine\State.h">
+      <Filter>Ghastly\Engine</Filter>
     </ClInclude>
-    <ClInclude Include="..\Box2D\Dynamics\Joints\b2Joint.h">
-      <Filter>Box2D</Filter>
+    <ClInclude Include="..\Ghastly\Engine\Window.h">
+      <Filter>Ghastly\Engine</Filter>
     </ClInclude>
-    <ClInclude Include="..\Box2D\Dynamics\Joints\b2MouseJoint.h">
-      <Filter>Box2D</Filter>
+    <ClInclude Include="..\Ghastly\Engine\WindowListener.h">
+      <Filter>Ghastly\Engine</Filter>
     </ClInclude>
-    <ClInclude Include="..\Box2D\Dynamics\Joints\b2PrismaticJoint.h">
-      <Filter>Box2D</Filter>
+    <ClInclude Include="..\Ghastly\Render\Font.h">
+      <Filter>Ghastly\Render</Filter>
     </ClInclude>
-    <ClInclude Include="..\Box2D\Dynamics\Joints\b2PulleyJoint.h">
-      <Filter>Box2D</Filter>
+    <ClInclude Include="..\Ghastly\Render\Material.h">
+      <Filter>Ghastly\Render</Filter>
     </ClInclude>
-    <ClInclude Include="..\Box2D\Dynamics\Joints\b2RevoluteJoint.h">
-      <Filter>Box2D</Filter>
+    <ClInclude Include="..\Ghastly\Render\Renderable.h">
+      <Filter>Ghastly\Render</Filter>
     </ClInclude>
-    <ClInclude Include="..\Box2D\Dynamics\Joints\b2RopeJoint.h">
-      <Filter>Box2D</Filter>
+    <ClInclude Include="..\Ghastly\Render\RenderContext.h">
+      <Filter>Ghastly\Render</Filter>
     </ClInclude>
-    <ClInclude Include="..\Box2D\Dynamics\Joints\b2WeldJoint.h">
-      <Filter>Box2D</Filter>
+    <ClInclude Include="..\Ghastly\Render\Texture.h">
+      <Filter>Ghastly\Render</Filter>
     </ClInclude>
-    <ClInclude Include="..\Box2D\Dynamics\Joints\b2WheelJoint.h">
-      <Filter>Box2D</Filter>
+    <ClInclude Include="..\Ghastly\Render\Viewport.h">
+      <Filter>Ghastly\Render</Filter>
     </ClInclude>
-    <ClInclude Include="..\Box2D\Rope\b2Rope.h">
-      <Filter>Box2D</Filter>
+    <ClInclude Include="..\Ghastly\Resource\MaterialManager.h">
+      <Filter>Ghastly\Resource</Filter>
     </ClInclude>
-    <ClInclude Include="..\GitM\Player.h">
-      <Filter>GitM\Game Objects</Filter>
+    <ClInclude Include="..\Ghastly\Resource\ResourceManager.h">
+      <Filter>Ghastly\Resource</Filter>
     </ClInclude>
-    <ClInclude Include="..\GitM\World.h">
-      <Filter>GitM\Game Objects</Filter>
+    <ClInclude Include="..\Ghastly\Resource\TextureManager.h">
+      <Filter>Ghastly\Resource</Filter>
     </ClInclude>
-    <ClInclude Include="..\GitM\Platform.h">
-      <Filter>GitM\Game Objects</Filter>
+    <ClInclude Include="..\Ghastly\Resource\ThreadedResourceManager.h">
+      <Filter>Ghastly\Resource</Filter>
     </ClInclude>
-    <ClInclude Include="..\Engine\PlayerController.h">
-      <Filter>Engine\Controllers</Filter>
+    <ClInclude Include="..\Ghastly\Resource\TTFManager.h">
+      <Filter>Ghastly\Resource</Filter>
     </ClInclude>
-    <ClInclude Include="..\Engine\ContactListener.h">
-      <Filter>Engine\Event Handling</Filter>
+    <ClInclude Include="..\Ghastly\Resource\WorldManager.h">
+      <Filter>Ghastly\Resource</Filter>
     </ClInclude>
-    <ClInclude Include="..\GitM\DebugVolume.h">
-      <Filter>GitM\Game Objects</Filter>
+    <ClInclude Include="..\Game\Wall.h">
+      <Filter>Game\Game Objects</Filter>
     </ClInclude>
-    <ClInclude Include="..\GitM\Wall.h">
-      <Filter>GitM\Game Objects</Filter>
+    <ClInclude Include="..\Game\Player.h">
+      <Filter>Game\Game Objects</Filter>
     </ClInclude>
-    <ClInclude Include="..\Engine\Mob.h">
-      <Filter>Engine</Filter>
+    <ClInclude Include="..\Game\Platform.h">
+      <Filter>Game\Game Objects</Filter>
     </ClInclude>
-    <ClInclude Include="..\Base\FileSystem.h">
-      <Filter>Base</Filter>
+    <ClInclude Include="..\Game\DebugVolume.h">
+      <Filter>Game\Game Objects</Filter>
     </ClInclude>
-    <ClInclude Include="..\Base\Color.h">
-      <Filter>Base</Filter>
+    <ClInclude Include="..\Game\GameState.h">
+      <Filter>Game\States</Filter>
     </ClInclude>
-    <ClInclude Include="..\Base\PropertyMap.h">
-      <Filter>Base</Filter>
+    <ClInclude Include="..\Game\LoadingState.h">
+      <Filter>Game\States</Filter>
     </ClInclude>
-    <ClInclude Include="..\Base\Vector3.h">
-      <Filter>Base</Filter>
+    <ClInclude Include="..\Game\PlayingState.h">
+      <Filter>Game\States</Filter>
     </ClInclude>
-    <ClInclude Include="..\Base\Vector4.h">
-      <Filter>Base</Filter>
+    <ClInclude Include="..\Game\StartingState.h">
+      <Filter>Game\States</Filter>
     </ClInclude>
-    <ClInclude Include="..\GitM\StartingState.h">
-      <Filter>GitM\States</Filter>
+    <ClInclude Include="..\Game\GhostCore.h">
+      <Filter>Game\Cores</Filter>
     </ClInclude>
-    <ClInclude Include="..\Base\AABB2.h">
-      <Filter>Base</Filter>
+    <ClInclude Include="..\Game\PlayerController.h">
+      <Filter>Game\Controllers</Filter>
     </ClInclude>
+    <ClInclude Include="..\Ghastly\Engine\World.h">
+      <Filter>Ghastly\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\GhostWorld.h">
+      <Filter>Game\Game Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Ghastly\Engine\QuadTreeSceneManager.h">
+      <Filter>Ghastly\Engine</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Ghastly\Box2D\Box2DConfig.cmake">
+      <Filter>Ghastly\Box2D</Filter>
+    </None>
+    <None Include="..\Ghastly\Box2D\CMakeLists.txt">
+      <Filter>Ghastly\Box2D</Filter>
+    </None>
   </ItemGroup>
 </Project>

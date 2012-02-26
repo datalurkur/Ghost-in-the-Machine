@@ -79,9 +79,6 @@
     <ClCompile Include="..\Game\SimpleCore.cpp">
       <Filter>Game\Cores</Filter>
     </ClCompile>
-    <ClCompile Include="..\Game\World.cpp">
-      <Filter>Game\Objects</Filter>
-    </ClCompile>
     <ClCompile Include="..\Ghastly\Base\AABB2.cpp">
       <Filter>Ghastly\Base</Filter>
     </ClCompile>
@@ -340,6 +337,9 @@
     <ClCompile Include="..\Game\Terrain.cpp">
       <Filter>Game\Objects</Filter>
     </ClCompile>
+    <ClCompile Include="..\Ghastly\Engine\World.cpp">
+      <Filter>Ghastly\Engine</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Game\QuadTreeSceneManager.h">
@@ -359,9 +359,6 @@
     </ClInclude>
     <ClInclude Include="..\Game\SimpleCore.h">
       <Filter>Game\Cores</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Game\World.h">
-      <Filter>Game\Objects</Filter>
     </ClInclude>
     <ClInclude Include="..\Ghastly\Base\Vector4.h">
       <Filter>Ghastly\Base</Filter>
@@ -635,6 +632,9 @@
     </ClInclude>
     <ClInclude Include="..\Game\Terrain.h">
       <Filter>Game\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Ghastly\Engine\World.h">
+      <Filter>Ghastly\Engine</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

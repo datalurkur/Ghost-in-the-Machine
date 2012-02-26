@@ -1,7 +1,7 @@
 #ifndef SLUGWORLD_H
 #define SLUGWORLD_H
 
-#include <Game/World.h>
+#include <Engine/World.h>
 #include <Game/Terrain.h>
 
 class SlugWorld: public World {

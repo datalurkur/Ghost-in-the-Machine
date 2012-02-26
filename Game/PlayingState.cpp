@@ -20,7 +20,7 @@ void PlayingState::render(RenderContext *renderContext) {
 
 void PlayingState::setup(va_list args) {
 	Info("Setting up PlayingState");
-    _world = va_arg(args, World*);
+    _world = va_arg(args, SlugWorld*);
 
     _camera = _world->createObject<IsoCamera>("MainCam");
     _core->getViewport()->registerCamera(_camera);

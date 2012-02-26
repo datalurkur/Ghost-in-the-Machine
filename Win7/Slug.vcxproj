@@ -81,7 +81,6 @@
     <ClCompile Include="..\Game\SlugWorld.cpp" />
     <ClCompile Include="..\Game\StartingState.cpp" />
     <ClCompile Include="..\Game\Terrain.cpp" />
-    <ClCompile Include="..\Game\World.cpp" />
     <ClCompile Include="..\Ghastly\Base\AABB2.cpp" />
     <ClCompile Include="..\Ghastly\Base\AABB3.cpp" />
     <ClCompile Include="..\Ghastly\Base\FileSystem.cpp" />
@@ -155,6 +154,7 @@
     <ClCompile Include="..\Ghastly\Engine\State.cpp" />
     <ClCompile Include="..\Ghastly\Engine\Window.cpp" />
     <ClCompile Include="..\Ghastly\Engine\WindowListener.cpp" />
+    <ClCompile Include="..\Ghastly\Engine\World.cpp" />
     <ClCompile Include="..\Ghastly\Render\Font.cpp" />
     <ClCompile Include="..\Ghastly\Render\Material.cpp" />
     <ClCompile Include="..\Ghastly\Render\Renderable.cpp" />
@@ -176,7 +176,6 @@
     <ClInclude Include="..\Game\SlugWorld.h" />
     <ClInclude Include="..\Game\StartingState.h" />
     <ClInclude Include="..\Game\Terrain.h" />
-    <ClInclude Include="..\Game\World.h" />
     <ClInclude Include="..\Ghastly\Base\AABB2.h" />
     <ClInclude Include="..\Ghastly\Base\AABB3.h" />
     <ClInclude Include="..\Ghastly\Base\Base.h" />
@@ -254,6 +253,7 @@
     <ClInclude Include="..\Ghastly\Engine\State.h" />
     <ClInclude Include="..\Ghastly\Engine\Window.h" />
     <ClInclude Include="..\Ghastly\Engine\WindowListener.h" />
+    <ClInclude Include="..\Ghastly\Engine\World.h" />
     <ClInclude Include="..\Ghastly\Render\Font.h" />
     <ClInclude Include="..\Ghastly\Render\Material.h" />
     <ClInclude Include="..\Ghastly\Render\Renderable.h" />

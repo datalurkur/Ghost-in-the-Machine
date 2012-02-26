@@ -2,7 +2,7 @@
 #define PLAYINGSTATE_H
 
 #include <Engine/State.h>
-#include <Game/World.h>
+#include <Game/SlugWorld.h>
 
 class PlayingState: public State {
 public:
@@ -20,7 +20,7 @@ protected:
     void teardown();
     
 private:
-    World *_world;
+    SlugWorld *_world;
     Camera *_camera;
 };
 

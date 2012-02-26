@@ -1,0 +1,3 @@
+[submodule "Ghastly"]
+	path = Ghastly
+	url = git@github.com:datalurkur/Ghastly.git

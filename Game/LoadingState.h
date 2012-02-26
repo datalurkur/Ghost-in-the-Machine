@@ -2,7 +2,7 @@
 #define LOADINGSTATE_H
 
 #include <Engine/State.h>
-#include <Game/World.h>
+#include <Game/SlugWorld.h>
 
 class LoadingState: public State {
 public:

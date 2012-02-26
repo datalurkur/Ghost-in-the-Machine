@@ -23,7 +23,8 @@ void LoadingState::render(RenderContext *renderContext) {
 void LoadingState::setup(va_list args) {
     Info("Setting up LoadingState");
 	std::string *map = va_arg(args, std::string*);
-    _world = WorldManager::Load(*map);
+	SlugWorld *slugWorld = new SlugWorld();
+    _world = WorldManager::Load(*map, slugWorld);
 }
 
 void LoadingState::teardown() {

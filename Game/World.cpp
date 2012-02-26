@@ -5,24 +5,19 @@
 #include <Render/RenderContext.h>
 
 World::World() {
-	_scene = new QuadTreeSceneManager();
+    _scene = new QuadTreeSceneManager();
     _physics = new PhysicsEngine();
-	_terrain = new Terrain(Vector2(17,17));
-
-	_scene->addNode(_terrain);
 }
 
 World::~World() {
-	// We don't need to delete the terrain, because the scene will delete it for us
-	delete _scene;
-
-	delete _physics;
+    delete _scene;
+    delete _physics;
 }
 
 void World::update(int elapsed) {
     EntityList::iterator itr;
     
-	// Tick the physics simulation
+    // Tick the physics simulation
     _physics->update(elapsed);
 
     // Update the entities (and their controllers)
@@ -35,9 +30,9 @@ void World::update(int elapsed) {
 }
 
 void World::render(Camera *camera, RenderContext *context) {
-	_scene->render(camera, context);
+    _scene->render(camera, context);
 }
 
 SceneManager* World::getScene() {
-	return _scene;
+    return _scene;
 }

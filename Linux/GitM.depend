@@ -919,3 +919,958 @@
 	<GitM/GhostCore.h>
 	<GitM/GameState.h>
 
+1330362031 source:/home/ajean/Ghost-in-the-Machine/Ghastly/Base/AABB2.cpp
+	<Base/AABB2.h>
+
+1330362031 /home/ajean/Ghost-in-the-Machine/Ghastly/Base/AABB2.h
+	<Base/Vector2.h>
+
+1330362031 /home/ajean/Ghost-in-the-Machine/Ghastly/Base/Vector2.h
+	<Base/Base.h>
+	<Base/Log.h>
+
+1330364583 /home/ajean/Ghost-in-the-Machine/Ghastly/Base/Base.h
+	<string>
+	<sstream>
+	<stdarg.h>
+	<stdlib.h>
+	<stdio.h>
+	<iostream>
+	<algorithm>
+	<cmath>
+	<stack>
+	<map>
+	<list>
+	<vector>
+	"SDL/SDL.h"
+	<assert.h>
+	<GL/gl.h>
+	<GL/glu.h>
+
+1330362031 /home/ajean/Ghost-in-the-Machine/Ghastly/Base/Log.h
+	<Base/Base.h>
+
+1330362031 source:/home/ajean/Ghost-in-the-Machine/Ghastly/Base/AABB3.cpp
+	<Base/AABB3.h>
+
+1330362031 /home/ajean/Ghost-in-the-Machine/Ghastly/Base/AABB3.h
+	<Base/Vector3.h>
+
+1330362031 /home/ajean/Ghost-in-the-Machine/Ghastly/Base/Vector3.h
+	<Base/Base.h>
+	<Base/Log.h>
+
+1330362031 source:/home/ajean/Ghost-in-the-Machine/Ghastly/Base/FileSystem.cpp
+	<Base/Log.h>
+	<Base/FileSystem.h>
+
+1330362031 /home/ajean/Ghost-in-the-Machine/Ghastly/Base/FileSystem.h
+	<Base/Base.h>
+	<io.h>
+	<direct.h>
+	<dirent.h>
+
+1330362031 source:/home/ajean/Ghost-in-the-Machine/Ghastly/Base/Log.cpp
+	<Base/Log.h>
+
+1330362031 source:/home/ajean/Ghost-in-the-Machine/Ghastly/Base/Matrix4.cpp
+	<Base/Matrix4.h>
+
+1330362031 /home/ajean/Ghost-in-the-Machine/Ghastly/Base/Matrix4.h
+	<Base/Base.h>
+
+1330362031 source:/home/ajean/Ghost-in-the-Machine/Ghastly/Base/PropertyMap.cpp
+	<Base/PropertyMap.h>
+	<Base/Vector4.h>
+
+1330362031 /home/ajean/Ghost-in-the-Machine/Ghastly/Base/PropertyMap.h
+	<Base/Base.h>
+
+1330362031 /home/ajean/Ghost-in-the-Machine/Ghastly/Base/Vector4.h
+	<Base/Base.h>
+	<Base/Log.h>
+
+1330362031 source:/home/ajean/Ghost-in-the-Machine/Ghastly/Base/Vector2.cpp
+	<Base/Vector2.h>
+
+1330362031 source:/home/ajean/Ghost-in-the-Machine/Ghastly/Base/Vector3.cpp
+	<Base/Vector3.h>
+
+1330362031 source:/home/ajean/Ghost-in-the-Machine/Ghastly/Base/Vector4.cpp
+	<Base/Vector4.h>
+
+1330362031 source:/home/ajean/Ghost-in-the-Machine/Ghastly/Box2D/Collision/Shapes/b2ChainShape.cpp
+	<Box2D/Collision/Shapes/b2ChainShape.h>
+	<Box2D/Collision/Shapes/b2EdgeShape.h>
+	<new>
+	<cstring>
+
+1330362031 /home/ajean/Ghost-in-the-Machine/Ghastly/Box2D/Collision/Shapes/b2ChainShape.h
+	<Box2D/Collision/Shapes/b2Shape.h>
+
+1330362031 /home/ajean/Ghost-in-the-Machine/Ghastly/Box2D/Collision/Shapes/b2Shape.h
+	<Box2D/Common/b2BlockAllocator.h>
+	<Box2D/Common/b2Math.h>
+	<Box2D/Collision/b2Collision.h>
+
+1330362031 /home/ajean/Ghost-in-the-Machine/Ghastly/Box2D/Common/b2BlockAllocator.h
+	<Box2D/Common/b2Settings.h>
+
+1330362031 /home/ajean/Ghost-in-the-Machine/Ghastly/Box2D/Common/b2Settings.h
+	<cassert>
+	<cmath>
+
+1330362031 /home/ajean/Ghost-in-the-Machine/Ghastly/Box2D/Common/b2Math.h
+	<Box2D/Common/b2Settings.h>
+	<cmath>
+	<cfloat>
+	<cstddef>
+	<limits>
+
+1330362031 /home/ajean/Ghost-in-the-Machine/Ghastly/Box2D/Collision/b2Collision.h
+	<Box2D/Common/b2Math.h>
+	<climits>
+
+1330362031 /home/ajean/Ghost-in-the-Machine/Ghastly/Box2D/Collision/Shapes/b2EdgeShape.h
+	<Box2D/Collision/Shapes/b2Shape.h>
+
+1330362031 source:/home/ajean/Ghost-in-the-Machine/Ghastly/Box2D/Collision/Shapes/b2CircleShape.cpp
+	<Box2D/Collision/Shapes/b2CircleShape.h>
+	<new>
+
+1330362031 /home/ajean/Ghost-in-the-Machine/Ghastly/Box2D/Collision/Shapes/b2CircleShape.h
+	<Box2D/Collision/Shapes/b2Shape.h>
+
+1330362031 source:/home/ajean/Ghost-in-the-Machine/Ghastly/Box2D/Collision/Shapes/b2EdgeShape.cpp
+	<Box2D/Collision/Shapes/b2EdgeShape.h>
+	<new>
+
+1330362031 source:/home/ajean/Ghost-in-the-Machine/Ghastly/Box2D/Collision/Shapes/b2PolygonShape.cpp
+	<Box2D/Collision/Shapes/b2PolygonShape.h>
+	<new>
+
+1330362031 /home/ajean/Ghost-in-the-Machine/Ghastly/Box2D/Collision/Shapes/b2PolygonShape.h
+	<Box2D/Collision/Shapes/b2Shape.h>
+
+1330362031 source:/home/ajean/Ghost-in-the-Machine/Ghastly/Box2D/Collision/b2BroadPhase.cpp
+	<Box2D/Collision/b2BroadPhase.h>
+	<cstring>
+
+1330362031 /home/ajean/Ghost-in-the-Machine/Ghastly/Box2D/Collision/b2BroadPhase.h
+	<Box2D/Common/b2Settings.h>
+	<Box2D/Collision/b2Collision.h>
+	<Box2D/Collision/b2DynamicTree.h>
+	<algorithm>
+
+1330362031 /home/ajean/Ghost-in-the-Machine/Ghastly/Box2D/Collision/b2DynamicTree.h
+	<Box2D/Collision/b2Collision.h>
+	<Box2D/Common/b2GrowableStack.h>
+
+1330362031 /home/ajean/Ghost-in-the-Machine/Ghastly/Box2D/Common/b2GrowableStack.h
+	<Box2D/Common/b2Settings.h>
+	<cstring>
+
+1330362031 source:/home/ajean/Ghost-in-the-Machine/Ghastly/Box2D/Collision/b2CollideCircle.cpp
+	<Box2D/Collision/b2Collision.h>
+	<Box2D/Collision/Shapes/b2CircleShape.h>
+	<Box2D/Collision/Shapes/b2PolygonShape.h>
+
+1330362031 source:/home/ajean/Ghost-in-the-Machine/Ghastly/Box2D/Collision/b2CollideEdge.cpp
+	<Box2D/Collision/b2Collision.h>
+	<Box2D/Collision/Shapes/b2CircleShape.h>
+	<Box2D/Collision/Shapes/b2EdgeShape.h>
+	<Box2D/Collision/Shapes/b2PolygonShape.h>
+
+1330362031 source:/home/ajean/Ghost-in-the-Machine/Ghastly/Box2D/Collision/b2CollidePolygon.cpp
+	<Box2D/Collision/b2Collision.h>
+	<Box2D/Collision/Shapes/b2PolygonShape.h>
+
+1330362031 source:/home/ajean/Ghost-in-the-Machine/Ghastly/Box2D/Collision/b2Collision.cpp
+	<Box2D/Collision/b2Collision.h>
+	<Box2D/Collision/b2Distance.h>
+
+1330362031 /home/ajean/Ghost-in-the-Machine/Ghastly/Box2D/Collision/b2Distance.h
+	<Box2D/Common/b2Math.h>
+
+1330362031 source:/home/ajean/Ghost-in-the-Machine/Ghastly/Box2D/Collision/b2Distance.cpp
+	<Box2D/Collision/b2Distance.h>
+	<Box2D/Collision/Shapes/b2CircleShape.h>
+	<Box2D/Collision/Shapes/b2EdgeShape.h>
+	<Box2D/Collision/Shapes/b2ChainShape.h>
+	<Box2D/Collision/Shapes/b2PolygonShape.h>
+
+1330362031 source:/home/ajean/Ghost-in-the-Machine/Ghastly/Box2D/Collision/b2DynamicTree.cpp
+	<Box2D/Collision/b2DynamicTree.h>
+	<cstring>
+	<cfloat>
+
+1330362031 source:/home/ajean/Ghost-in-the-Machine/Ghastly/Box2D/Collision/b2TimeOfImpact.cpp
+	<Box2D/Collision/b2Collision.h>
+	<Box2D/Collision/b2Distance.h>
+	<Box2D/Collision/b2TimeOfImpact.h>
+	<Box2D/Collision/Shapes/b2CircleShape.h>
+	<Box2D/Collision/Shapes/b2PolygonShape.h>
+	<cstdio>
+
+1330362031 /home/ajean/Ghost-in-the-Machine/Ghastly/Box2D/Collision/b2TimeOfImpact.h
+	<Box2D/Common/b2Math.h>
+	<Box2D/Collision/b2Distance.h>
+
+1330362031 source:/home/ajean/Ghost-in-the-Machine/Ghastly/Box2D/Common/b2BlockAllocator.cpp
+	<Box2D/Common/b2BlockAllocator.h>
+	<cstdlib>
+	<climits>
+	<cstring>
+	<memory>
+
+1330362031 source:/home/ajean/Ghost-in-the-Machine/Ghastly/Box2D/Common/b2Draw.cpp
+	<Box2D/Common/b2Draw.h>
+
+1330362031 /home/ajean/Ghost-in-the-Machine/Ghastly/Box2D/Common/b2Draw.h
+	<Box2D/Common/b2Math.h>
+
+1330362031 source:/home/ajean/Ghost-in-the-Machine/Ghastly/Box2D/Common/b2Math.cpp
+	<Box2D/Common/b2Math.h>
+
+1330362031 source:/home/ajean/Ghost-in-the-Machine/Ghastly/Box2D/Common/b2Settings.cpp
+	<Box2D/Common/b2Settings.h>
+	<cstdlib>
+	<cstdio>
+	<cstdarg>
+
+1330362031 source:/home/ajean/Ghost-in-the-Machine/Ghastly/Box2D/Common/b2StackAllocator.cpp
+	<Box2D/Common/b2StackAllocator.h>
+	<Box2D/Common/b2Math.h>
+
+1330362031 /home/ajean/Ghost-in-the-Machine/Ghastly/Box2D/Common/b2StackAllocator.h
+	<Box2D/Common/b2Settings.h>
+
+1330362031 source:/home/ajean/Ghost-in-the-Machine/Ghastly/Box2D/Common/b2Timer.cpp
+	<Box2D/Common/b2Timer.h>
+	<windows.h>
+	<sys/time.h>
+
+1330362031 /home/ajean/Ghost-in-the-Machine/Ghastly/Box2D/Common/b2Timer.h
+	<Box2D/Common/b2Settings.h>
+
+1330362031 source:/home/ajean/Ghost-in-the-Machine/Ghastly/Box2D/Dynamics/Contacts/b2ChainAndCircleContact.cpp
+	<Box2D/Dynamics/Contacts/b2ChainAndCircleContact.h>
+	<Box2D/Common/b2BlockAllocator.h>
+	<Box2D/Dynamics/b2Fixture.h>
+	<Box2D/Collision/Shapes/b2ChainShape.h>
+	<Box2D/Collision/Shapes/b2EdgeShape.h>
+	<new>
+
+1330362031 /home/ajean/Ghost-in-the-Machine/Ghastly/Box2D/Dynamics/Contacts/b2ChainAndCircleContact.h
+	<Box2D/Dynamics/Contacts/b2Contact.h>
+
+1330362031 /home/ajean/Ghost-in-the-Machine/Ghastly/Box2D/Dynamics/Contacts/b2Contact.h
+	<Box2D/Common/b2Math.h>
+	<Box2D/Collision/b2Collision.h>
+	<Box2D/Collision/Shapes/b2Shape.h>
+	<Box2D/Dynamics/b2Fixture.h>
+
+1330362031 /home/ajean/Ghost-in-the-Machine/Ghastly/Box2D/Dynamics/b2Fixture.h
+	<Box2D/Dynamics/b2Body.h>
+	<Box2D/Collision/b2Collision.h>
+	<Box2D/Collision/Shapes/b2Shape.h>
+
+1330362031 /home/ajean/Ghost-in-the-Machine/Ghastly/Box2D/Dynamics/b2Body.h
+	<Box2D/Common/b2Math.h>
+	<Box2D/Collision/Shapes/b2Shape.h>
+	<memory>
+
+1330362031 source:/home/ajean/Ghost-in-the-Machine/Ghastly/Box2D/Dynamics/Contacts/b2ChainAndPolygonContact.cpp
+	<Box2D/Dynamics/Contacts/b2ChainAndPolygonContact.h>
+	<Box2D/Common/b2BlockAllocator.h>
+	<Box2D/Dynamics/b2Fixture.h>
+	<Box2D/Collision/Shapes/b2ChainShape.h>
+	<Box2D/Collision/Shapes/b2EdgeShape.h>
+	<new>
+
+1330362031 /home/ajean/Ghost-in-the-Machine/Ghastly/Box2D/Dynamics/Contacts/b2ChainAndPolygonContact.h
+	<Box2D/Dynamics/Contacts/b2Contact.h>
+
+1330362031 source:/home/ajean/Ghost-in-the-Machine/Ghastly/Box2D/Dynamics/Contacts/b2CircleContact.cpp
+	<Box2D/Dynamics/Contacts/b2CircleContact.h>
+	<Box2D/Dynamics/b2Body.h>
+	<Box2D/Dynamics/b2Fixture.h>
+	<Box2D/Dynamics/b2WorldCallbacks.h>
+	<Box2D/Common/b2BlockAllocator.h>
+	<Box2D/Collision/b2TimeOfImpact.h>
+	<new>
+
+1330362031 /home/ajean/Ghost-in-the-Machine/Ghastly/Box2D/Dynamics/Contacts/b2CircleContact.h
+	<Box2D/Dynamics/Contacts/b2Contact.h>
+
+1330362031 /home/ajean/Ghost-in-the-Machine/Ghastly/Box2D/Dynamics/b2WorldCallbacks.h
+	<Box2D/Common/b2Settings.h>
+
+1330362031 source:/home/ajean/Ghost-in-the-Machine/Ghastly/Box2D/Dynamics/Contacts/b2Contact.cpp
+	<Box2D/Dynamics/Contacts/b2Contact.h>
+	<Box2D/Dynamics/Contacts/b2CircleContact.h>
+	<Box2D/Dynamics/Contacts/b2PolygonAndCircleContact.h>
+	<Box2D/Dynamics/Contacts/b2PolygonContact.h>
+	<Box2D/Dynamics/Contacts/b2EdgeAndCircleContact.h>
+	<Box2D/Dynamics/Contacts/b2EdgeAndPolygonContact.h>
+	<Box2D/Dynamics/Contacts/b2ChainAndCircleContact.h>
+	<Box2D/Dynamics/Contacts/b2ChainAndPolygonContact.h>
+	<Box2D/Dynamics/Contacts/b2ContactSolver.h>
+	<Box2D/Collision/b2Collision.h>
+	<Box2D/Collision/b2TimeOfImpact.h>
+	<Box2D/Collision/Shapes/b2Shape.h>
+	<Box2D/Common/b2BlockAllocator.h>
+	<Box2D/Dynamics/b2Body.h>
+	<Box2D/Dynamics/b2Fixture.h>
+	<Box2D/Dynamics/b2World.h>
+
+1330362031 /home/ajean/Ghost-in-the-Machine/Ghastly/Box2D/Dynamics/Contacts/b2PolygonAndCircleContact.h
+	<Box2D/Dynamics/Contacts/b2Contact.h>
+
+1330362031 /home/ajean/Ghost-in-the-Machine/Ghastly/Box2D/Dynamics/Contacts/b2PolygonContact.h
+	<Box2D/Dynamics/Contacts/b2Contact.h>
+
+1330362031 /home/ajean/Ghost-in-the-Machine/Ghastly/Box2D/Dynamics/Contacts/b2EdgeAndCircleContact.h
+	<Box2D/Dynamics/Contacts/b2Contact.h>
+
+1330362031 /home/ajean/Ghost-in-the-Machine/Ghastly/Box2D/Dynamics/Contacts/b2EdgeAndPolygonContact.h
+	<Box2D/Dynamics/Contacts/b2Contact.h>
+
+1330362031 /home/ajean/Ghost-in-the-Machine/Ghastly/Box2D/Dynamics/Contacts/b2ContactSolver.h
+	<Box2D/Common/b2Math.h>
+	<Box2D/Collision/b2Collision.h>
+	<Box2D/Dynamics/b2TimeStep.h>
+
+1330362031 /home/ajean/Ghost-in-the-Machine/Ghastly/Box2D/Dynamics/b2TimeStep.h
+	<Box2D/Common/b2Math.h>
+
+1330362031 /home/ajean/Ghost-in-the-Machine/Ghastly/Box2D/Dynamics/b2World.h
+	<Box2D/Common/b2Math.h>
+	<Box2D/Common/b2BlockAllocator.h>
+	<Box2D/Common/b2StackAllocator.h>
+	<Box2D/Dynamics/b2ContactManager.h>
+	<Box2D/Dynamics/b2WorldCallbacks.h>
+	<Box2D/Dynamics/b2TimeStep.h>
+
+1330362031 /home/ajean/Ghost-in-the-Machine/Ghastly/Box2D/Dynamics/b2ContactManager.h
+	<Box2D/Collision/b2BroadPhase.h>
+
+1330362031 source:/home/ajean/Ghost-in-the-Machine/Ghastly/Box2D/Dynamics/Contacts/b2ContactSolver.cpp
+	<Box2D/Dynamics/Contacts/b2ContactSolver.h>
+	<Box2D/Dynamics/Contacts/b2Contact.h>
+	<Box2D/Dynamics/b2Body.h>
+	<Box2D/Dynamics/b2Fixture.h>
+	<Box2D/Dynamics/b2World.h>
+	<Box2D/Common/b2StackAllocator.h>
+
+1330362031 source:/home/ajean/Ghost-in-the-Machine/Ghastly/Box2D/Dynamics/Contacts/b2EdgeAndCircleContact.cpp
+	<Box2D/Dynamics/Contacts/b2EdgeAndCircleContact.h>
+	<Box2D/Common/b2BlockAllocator.h>
+	<Box2D/Dynamics/b2Fixture.h>
+	<new>
+
+1330362031 source:/home/ajean/Ghost-in-the-Machine/Ghastly/Box2D/Dynamics/Contacts/b2EdgeAndPolygonContact.cpp
+	<Box2D/Dynamics/Contacts/b2EdgeAndPolygonContact.h>
+	<Box2D/Common/b2BlockAllocator.h>
+	<Box2D/Dynamics/b2Fixture.h>
+	<new>
+
+1330362031 source:/home/ajean/Ghost-in-the-Machine/Ghastly/Box2D/Dynamics/Contacts/b2PolygonAndCircleContact.cpp
+	<Box2D/Dynamics/Contacts/b2PolygonAndCircleContact.h>
+	<Box2D/Common/b2BlockAllocator.h>
+	<Box2D/Dynamics/b2Fixture.h>
+	<new>
+
+1330362031 source:/home/ajean/Ghost-in-the-Machine/Ghastly/Box2D/Dynamics/Contacts/b2PolygonContact.cpp
+	<Box2D/Dynamics/Contacts/b2PolygonContact.h>
+	<Box2D/Common/b2BlockAllocator.h>
+	<Box2D/Collision/b2TimeOfImpact.h>
+	<Box2D/Dynamics/b2Body.h>
+	<Box2D/Dynamics/b2Fixture.h>
+	<Box2D/Dynamics/b2WorldCallbacks.h>
+	<new>
+
+1330362031 source:/home/ajean/Ghost-in-the-Machine/Ghastly/Box2D/Dynamics/Joints/b2DistanceJoint.cpp
+	<Box2D/Dynamics/Joints/b2DistanceJoint.h>
+	<Box2D/Dynamics/b2Body.h>
+	<Box2D/Dynamics/b2TimeStep.h>
+
+1330362031 /home/ajean/Ghost-in-the-Machine/Ghastly/Box2D/Dynamics/Joints/b2DistanceJoint.h
+	<Box2D/Dynamics/Joints/b2Joint.h>
+
+1330362031 /home/ajean/Ghost-in-the-Machine/Ghastly/Box2D/Dynamics/Joints/b2Joint.h
+	<Box2D/Common/b2Math.h>
+
+1330362031 source:/home/ajean/Ghost-in-the-Machine/Ghastly/Box2D/Dynamics/Joints/b2FrictionJoint.cpp
+	<Box2D/Dynamics/Joints/b2FrictionJoint.h>
+	<Box2D/Dynamics/b2Body.h>
+	<Box2D/Dynamics/b2TimeStep.h>
+
+1330362031 /home/ajean/Ghost-in-the-Machine/Ghastly/Box2D/Dynamics/Joints/b2FrictionJoint.h
+	<Box2D/Dynamics/Joints/b2Joint.h>
+
+1330362031 source:/home/ajean/Ghost-in-the-Machine/Ghastly/Box2D/Dynamics/Joints/b2GearJoint.cpp
+	<Box2D/Dynamics/Joints/b2GearJoint.h>
+	<Box2D/Dynamics/Joints/b2RevoluteJoint.h>
+	<Box2D/Dynamics/Joints/b2PrismaticJoint.h>
+	<Box2D/Dynamics/b2Body.h>
+	<Box2D/Dynamics/b2TimeStep.h>
+
+1330362031 /home/ajean/Ghost-in-the-Machine/Ghastly/Box2D/Dynamics/Joints/b2GearJoint.h
+	<Box2D/Dynamics/Joints/b2Joint.h>
+
+1330362031 /home/ajean/Ghost-in-the-Machine/Ghastly/Box2D/Dynamics/Joints/b2RevoluteJoint.h
+	<Box2D/Dynamics/Joints/b2Joint.h>
+
+1330362031 /home/ajean/Ghost-in-the-Machine/Ghastly/Box2D/Dynamics/Joints/b2PrismaticJoint.h
+	<Box2D/Dynamics/Joints/b2Joint.h>
+
+1330362031 source:/home/ajean/Ghost-in-the-Machine/Ghastly/Box2D/Dynamics/Joints/b2Joint.cpp
+	<Box2D/Dynamics/Joints/b2Joint.h>
+	<Box2D/Dynamics/Joints/b2DistanceJoint.h>
+	<Box2D/Dynamics/Joints/b2WheelJoint.h>
+	<Box2D/Dynamics/Joints/b2MouseJoint.h>
+	<Box2D/Dynamics/Joints/b2RevoluteJoint.h>
+	<Box2D/Dynamics/Joints/b2PrismaticJoint.h>
+	<Box2D/Dynamics/Joints/b2PulleyJoint.h>
+	<Box2D/Dynamics/Joints/b2GearJoint.h>
+	<Box2D/Dynamics/Joints/b2WeldJoint.h>
+	<Box2D/Dynamics/Joints/b2FrictionJoint.h>
+	<Box2D/Dynamics/Joints/b2RopeJoint.h>
+	<Box2D/Dynamics/b2Body.h>
+	<Box2D/Dynamics/b2World.h>
+	<Box2D/Common/b2BlockAllocator.h>
+	<new>
+
+1330362031 /home/ajean/Ghost-in-the-Machine/Ghastly/Box2D/Dynamics/Joints/b2WheelJoint.h
+	<Box2D/Dynamics/Joints/b2Joint.h>
+
+1330362031 /home/ajean/Ghost-in-the-Machine/Ghastly/Box2D/Dynamics/Joints/b2MouseJoint.h
+	<Box2D/Dynamics/Joints/b2Joint.h>
+
+1330362031 /home/ajean/Ghost-in-the-Machine/Ghastly/Box2D/Dynamics/Joints/b2PulleyJoint.h
+	<Box2D/Dynamics/Joints/b2Joint.h>
+
+1330362031 /home/ajean/Ghost-in-the-Machine/Ghastly/Box2D/Dynamics/Joints/b2WeldJoint.h
+	<Box2D/Dynamics/Joints/b2Joint.h>
+
+1330362031 /home/ajean/Ghost-in-the-Machine/Ghastly/Box2D/Dynamics/Joints/b2RopeJoint.h
+	<Box2D/Dynamics/Joints/b2Joint.h>
+
+1330362031 source:/home/ajean/Ghost-in-the-Machine/Ghastly/Box2D/Dynamics/Joints/b2MouseJoint.cpp
+	<Box2D/Dynamics/Joints/b2MouseJoint.h>
+	<Box2D/Dynamics/b2Body.h>
+	<Box2D/Dynamics/b2TimeStep.h>
+
+1330362031 source:/home/ajean/Ghost-in-the-Machine/Ghastly/Box2D/Dynamics/Joints/b2PrismaticJoint.cpp
+	<Box2D/Dynamics/Joints/b2PrismaticJoint.h>
+	<Box2D/Dynamics/b2Body.h>
+	<Box2D/Dynamics/b2TimeStep.h>
+
+1330362031 source:/home/ajean/Ghost-in-the-Machine/Ghastly/Box2D/Dynamics/Joints/b2PulleyJoint.cpp
+	<Box2D/Dynamics/Joints/b2PulleyJoint.h>
+	<Box2D/Dynamics/b2Body.h>
+	<Box2D/Dynamics/b2TimeStep.h>
+
+1330362031 source:/home/ajean/Ghost-in-the-Machine/Ghastly/Box2D/Dynamics/Joints/b2RevoluteJoint.cpp
+	<Box2D/Dynamics/Joints/b2RevoluteJoint.h>
+	<Box2D/Dynamics/b2Body.h>
+	<Box2D/Dynamics/b2TimeStep.h>
+
+1330362031 source:/home/ajean/Ghost-in-the-Machine/Ghastly/Box2D/Dynamics/Joints/b2RopeJoint.cpp
+	<Box2D/Dynamics/Joints/b2RopeJoint.h>
+	<Box2D/Dynamics/b2Body.h>
+	<Box2D/Dynamics/b2TimeStep.h>
+
+1330362031 source:/home/ajean/Ghost-in-the-Machine/Ghastly/Box2D/Dynamics/Joints/b2WeldJoint.cpp
+	<Box2D/Dynamics/Joints/b2WeldJoint.h>
+	<Box2D/Dynamics/b2Body.h>
+	<Box2D/Dynamics/b2TimeStep.h>
+
+1330362031 source:/home/ajean/Ghost-in-the-Machine/Ghastly/Box2D/Dynamics/Joints/b2WheelJoint.cpp
+	<Box2D/Dynamics/Joints/b2WheelJoint.h>
+	<Box2D/Dynamics/b2Body.h>
+	<Box2D/Dynamics/b2TimeStep.h>
+
+1330362031 source:/home/ajean/Ghost-in-the-Machine/Ghastly/Box2D/Dynamics/b2Body.cpp
+	<Box2D/Dynamics/b2Body.h>
+	<Box2D/Dynamics/b2Fixture.h>
+	<Box2D/Dynamics/b2World.h>
+	<Box2D/Dynamics/Contacts/b2Contact.h>
+	<Box2D/Dynamics/Joints/b2Joint.h>
+
+1330362031 source:/home/ajean/Ghost-in-the-Machine/Ghastly/Box2D/Dynamics/b2ContactManager.cpp
+	<Box2D/Dynamics/b2ContactManager.h>
+	<Box2D/Dynamics/b2Body.h>
+	<Box2D/Dynamics/b2Fixture.h>
+	<Box2D/Dynamics/b2WorldCallbacks.h>
+	<Box2D/Dynamics/Contacts/b2Contact.h>
+
+1330362031 source:/home/ajean/Ghost-in-the-Machine/Ghastly/Box2D/Dynamics/b2Fixture.cpp
+	<Box2D/Dynamics/b2Fixture.h>
+	<Box2D/Dynamics/Contacts/b2Contact.h>
+	<Box2D/Dynamics/b2World.h>
+	<Box2D/Collision/Shapes/b2CircleShape.h>
+	<Box2D/Collision/Shapes/b2EdgeShape.h>
+	<Box2D/Collision/Shapes/b2PolygonShape.h>
+	<Box2D/Collision/Shapes/b2ChainShape.h>
+	<Box2D/Collision/b2BroadPhase.h>
+	<Box2D/Collision/b2Collision.h>
+	<Box2D/Common/b2BlockAllocator.h>
+
+1330362031 source:/home/ajean/Ghost-in-the-Machine/Ghastly/Box2D/Dynamics/b2Island.cpp
+	<Box2D/Collision/b2Distance.h>
+	<Box2D/Dynamics/b2Island.h>
+	<Box2D/Dynamics/b2Body.h>
+	<Box2D/Dynamics/b2Fixture.h>
+	<Box2D/Dynamics/b2World.h>
+	<Box2D/Dynamics/Contacts/b2Contact.h>
+	<Box2D/Dynamics/Contacts/b2ContactSolver.h>
+	<Box2D/Dynamics/Joints/b2Joint.h>
+	<Box2D/Common/b2StackAllocator.h>
+	<Box2D/Common/b2Timer.h>
+
+1330362031 /home/ajean/Ghost-in-the-Machine/Ghastly/Box2D/Dynamics/b2Island.h
+	<Box2D/Common/b2Math.h>
+	<Box2D/Dynamics/b2Body.h>
+	<Box2D/Dynamics/b2TimeStep.h>
+
+1330362031 source:/home/ajean/Ghost-in-the-Machine/Ghastly/Box2D/Dynamics/b2World.cpp
+	<Box2D/Dynamics/b2World.h>
+	<Box2D/Dynamics/b2Body.h>
+	<Box2D/Dynamics/b2Fixture.h>
+	<Box2D/Dynamics/b2Island.h>
+	<Box2D/Dynamics/Joints/b2PulleyJoint.h>
+	<Box2D/Dynamics/Contacts/b2Contact.h>
+	<Box2D/Dynamics/Contacts/b2ContactSolver.h>
+	<Box2D/Collision/b2Collision.h>
+	<Box2D/Collision/b2BroadPhase.h>
+	<Box2D/Collision/Shapes/b2CircleShape.h>
+	<Box2D/Collision/Shapes/b2EdgeShape.h>
+	<Box2D/Collision/Shapes/b2ChainShape.h>
+	<Box2D/Collision/Shapes/b2PolygonShape.h>
+	<Box2D/Collision/b2TimeOfImpact.h>
+	<Box2D/Common/b2Draw.h>
+	<Box2D/Common/b2Timer.h>
+	<new>
+
+1330362031 source:/home/ajean/Ghost-in-the-Machine/Ghastly/Box2D/Dynamics/b2WorldCallbacks.cpp
+	<Box2D/Dynamics/b2WorldCallbacks.h>
+	<Box2D/Dynamics/b2Fixture.h>
+
+1330362031 source:/home/ajean/Ghost-in-the-Machine/Ghastly/Box2D/Rope/b2Rope.cpp
+	<Box2D/Rope/b2Rope.h>
+	<Box2D/Common/b2Draw.h>
+
+1330362031 /home/ajean/Ghost-in-the-Machine/Ghastly/Box2D/Rope/b2Rope.h
+	<Box2D/Common/b2Math.h>
+
+1330362031 source:/home/ajean/Ghost-in-the-Machine/Ghastly/Engine/Camera.cpp
+	<Engine/Camera.h>
+
+1330362031 /home/ajean/Ghost-in-the-Machine/Ghastly/Engine/Camera.h
+	<Engine/Frustum.h>
+	<Engine/SceneNode.h>
+
+1330362031 /home/ajean/Ghost-in-the-Machine/Ghastly/Engine/Frustum.h
+	<Base/Base.h>
+	<Base/Matrix4.h>
+
+1330362031 /home/ajean/Ghost-in-the-Machine/Ghastly/Engine/SceneNode.h
+	<Base/Vector2.h>
+	<Base/AABB3.h>
+	<Engine/Frustum.h>
+	<Render/Renderable.h>
+
+1330362031 /home/ajean/Ghost-in-the-Machine/Ghastly/Render/Renderable.h
+	<Base/Base.h>
+	<Base/Vector2.h>
+	<Base/Matrix4.h>
+	<Render/Material.h>
+	<SDL/SDL_opengl.h>
+
+1330362031 /home/ajean/Ghost-in-the-Machine/Ghastly/Render/Material.h
+	<Render/Texture.h>
+	<Base/Color.h>
+
+1330362031 /home/ajean/Ghost-in-the-Machine/Ghastly/Render/Texture.h
+	<SDL/SDL_opengl.h>
+	<SDL/SDL_image.h>
+
+1330362031 /home/ajean/Ghost-in-the-Machine/Ghastly/Base/Color.h
+	<Base/Vector3.h>
+	<Base/Vector4.h>
+
+1330362031 source:/home/ajean/Ghost-in-the-Machine/Ghastly/Engine/ContactListener.cpp
+	<Engine/ContactListener.h>
+
+1330362031 /home/ajean/Ghost-in-the-Machine/Ghastly/Engine/ContactListener.h
+	<Base/Base.h>
+
+1330362031 source:/home/ajean/Ghost-in-the-Machine/Ghastly/Engine/Controller.cpp
+	<Engine/Controller.h>
+
+1330362031 /home/ajean/Ghost-in-the-Machine/Ghastly/Engine/Controller.h
+	<Base/Base.h>
+	<Engine/SceneNode.h>
+
+1330362031 source:/home/ajean/Ghost-in-the-Machine/Ghastly/Engine/Core.cpp
+	<Engine/Core.h>
+	<Base/Log.h>
+
+1330362031 /home/ajean/Ghost-in-the-Machine/Ghastly/Engine/Core.h
+	<Engine/ParentState.h>
+	<Engine/Window.h>
+	<Engine/EventHandler.h>
+	<Engine/WindowListener.h>
+	<Render/Viewport.h>
+
+1330362031 /home/ajean/Ghost-in-the-Machine/Ghastly/Engine/ParentState.h
+	<Engine/State.h>
+
+1330362031 /home/ajean/Ghost-in-the-Machine/Ghastly/Engine/State.h
+	<Base/Log.h>
+	<Engine/KeyboardListener.h>
+	<Render/RenderContext.h>
+
+1330362031 /home/ajean/Ghost-in-the-Machine/Ghastly/Engine/KeyboardListener.h
+
+1330362031 /home/ajean/Ghost-in-the-Machine/Ghastly/Render/RenderContext.h
+	<Render/Renderable.h>
+	<Render/Viewport.h>
+	<Base/Matrix4.h>
+
+1330362031 /home/ajean/Ghost-in-the-Machine/Ghastly/Render/Viewport.h
+	<Base/Base.h>
+	<Engine/Camera.h>
+
+1330362031 /home/ajean/Ghost-in-the-Machine/Ghastly/Engine/Window.h
+	<Base/Base.h>
+
+1330362031 /home/ajean/Ghost-in-the-Machine/Ghastly/Engine/EventHandler.h
+	<Base/Base.h>
+	<Engine/WindowListener.h>
+	<Engine/KeyboardListener.h>
+
+1330362031 /home/ajean/Ghost-in-the-Machine/Ghastly/Engine/WindowListener.h
+
+1330362031 source:/home/ajean/Ghost-in-the-Machine/Ghastly/Engine/Entity.cpp
+	<Engine/Entity.h>
+
+1330362031 /home/ajean/Ghost-in-the-Machine/Ghastly/Engine/Entity.h
+	<Engine/SceneNode.h>
+	<Engine/Controller.h>
+	<Engine/PhysicsController.h>
+
+1330362031 /home/ajean/Ghost-in-the-Machine/Ghastly/Engine/PhysicsController.h
+	<Box2D/Box2D.h>
+	<Engine/Controller.h>
+	<Engine/PhysicsEngine.h>
+
+1330362031 /home/ajean/Ghost-in-the-Machine/Ghastly/Box2D/Box2D.h
+	<Box2D/Common/b2Settings.h>
+	<Box2D/Common/b2Draw.h>
+	<Box2D/Common/b2Timer.h>
+	<Box2D/Collision/Shapes/b2CircleShape.h>
+	<Box2D/Collision/Shapes/b2EdgeShape.h>
+	<Box2D/Collision/Shapes/b2ChainShape.h>
+	<Box2D/Collision/Shapes/b2PolygonShape.h>
+	<Box2D/Collision/b2BroadPhase.h>
+	<Box2D/Collision/b2Distance.h>
+	<Box2D/Collision/b2DynamicTree.h>
+	<Box2D/Collision/b2TimeOfImpact.h>
+	<Box2D/Dynamics/b2Body.h>
+	<Box2D/Dynamics/b2Fixture.h>
+	<Box2D/Dynamics/b2WorldCallbacks.h>
+	<Box2D/Dynamics/b2TimeStep.h>
+	<Box2D/Dynamics/b2World.h>
+	<Box2D/Dynamics/Contacts/b2Contact.h>
+	<Box2D/Dynamics/Joints/b2DistanceJoint.h>
+	<Box2D/Dynamics/Joints/b2FrictionJoint.h>
+	<Box2D/Dynamics/Joints/b2GearJoint.h>
+	<Box2D/Dynamics/Joints/b2WheelJoint.h>
+	<Box2D/Dynamics/Joints/b2MouseJoint.h>
+	<Box2D/Dynamics/Joints/b2PrismaticJoint.h>
+	<Box2D/Dynamics/Joints/b2PulleyJoint.h>
+	<Box2D/Dynamics/Joints/b2RevoluteJoint.h>
+	<Box2D/Dynamics/Joints/b2RopeJoint.h>
+	<Box2D/Dynamics/Joints/b2WeldJoint.h>
+
+1330362031 /home/ajean/Ghost-in-the-Machine/Ghastly/Engine/PhysicsEngine.h
+	<Base/Vector2.h>
+	<Box2D/Box2D.h>
+	<Engine/ContactListener.h>
+
+1330362031 source:/home/ajean/Ghost-in-the-Machine/Ghastly/Engine/EventHandler.cpp
+	<Engine/EventHandler.h>
+
+1330362031 source:/home/ajean/Ghost-in-the-Machine/Ghastly/Engine/Frustum.cpp
+	<Engine/Frustum.h>
+	<Base/Matrix4.h>
+
+1330362031 source:/home/ajean/Ghost-in-the-Machine/Ghastly/Engine/IsoCamera.cpp
+	<Engine/IsoCamera.h>
+
+1330362031 /home/ajean/Ghost-in-the-Machine/Ghastly/Engine/IsoCamera.h
+	<Engine/Camera.h>
+
+1330362031 source:/home/ajean/Ghost-in-the-Machine/Ghastly/Engine/KeyboardListener.cpp
+	<Engine/KeyboardListener.h>
+
+1330362031 source:/home/ajean/Ghost-in-the-Machine/Ghastly/Engine/Mob.cpp
+	<Engine/Mob.h>
+
+1330362031 /home/ajean/Ghost-in-the-Machine/Ghastly/Engine/Mob.h
+	<Engine/Entity.h>
+
+1330362031 source:/home/ajean/Ghost-in-the-Machine/Ghastly/Engine/OrthoCamera.cpp
+	<Engine/OrthoCamera.h>
+
+1330362031 /home/ajean/Ghost-in-the-Machine/Ghastly/Engine/OrthoCamera.h
+	<Engine/Camera.h>
+
+1330362031 source:/home/ajean/Ghost-in-the-Machine/Ghastly/Engine/ParentState.cpp
+	<Engine/ParentState.h>
+
+1330362031 source:/home/ajean/Ghost-in-the-Machine/Ghastly/Engine/PhysicsController.cpp
+	<Base/Log.h>
+	<Engine/PhysicsController.h>
+
+1330362031 source:/home/ajean/Ghost-in-the-Machine/Ghastly/Engine/PhysicsEngine.cpp
+	<Engine/PhysicsEngine.h>
+
+1330362031 source:/home/ajean/Ghost-in-the-Machine/Ghastly/Engine/QuadTreeSceneManager.cpp
+	<Engine/QuadTreeSceneManager.h>
+
+1330362031 /home/ajean/Ghost-in-the-Machine/Ghastly/Engine/QuadTreeSceneManager.h
+	<Engine/SceneManager.h>
+
+1330362031 /home/ajean/Ghost-in-the-Machine/Ghastly/Engine/SceneManager.h
+	<Engine/SceneNode.h>
+
+1330362031 source:/home/ajean/Ghost-in-the-Machine/Ghastly/Engine/SceneManager.cpp
+	<Engine/SceneManager.h>
+	<Engine/Camera.h>
+	<Render/RenderContext.h>
+
+1330362031 source:/home/ajean/Ghost-in-the-Machine/Ghastly/Engine/SceneNode.cpp
+	<Base/Log.h>
+	<Engine/SceneNode.h>
+
+1330362031 source:/home/ajean/Ghost-in-the-Machine/Ghastly/Engine/State.cpp
+	<Engine/State.h>
+
+1330362031 source:/home/ajean/Ghost-in-the-Machine/Ghastly/Engine/Window.cpp
+	<Engine/Window.h>
+	<Base/Log.h>
+
+1330362031 source:/home/ajean/Ghost-in-the-Machine/Ghastly/Engine/WindowListener.cpp
+	<Engine/WindowListener.h>
+
+1330362031 source:/home/ajean/Ghost-in-the-Machine/Ghastly/Engine/World.cpp
+	<Engine/World.h>
+	<Base/Log.h>
+	<Render/RenderContext.h>
+
+1330362031 /home/ajean/Ghost-in-the-Machine/Ghastly/Engine/World.h
+	<Base/Base.h>
+	<Base/Matrix4.h>
+	<Engine/Entity.h>
+	<Engine/QuadTreeSceneManager.h>
+	<Engine/PhysicsEngine.h>
+
+1330362031 source:/home/ajean/Ghost-in-the-Machine/Ghastly/Render/Font.cpp
+	<Render/Font.h>
+
+1330362031 /home/ajean/Ghost-in-the-Machine/Ghastly/Render/Font.h
+	<Render/Texture.h>
+
+1330362031 source:/home/ajean/Ghost-in-the-Machine/Ghastly/Render/Material.cpp
+	<Render/Material.h>
+	<SDL/SDL_opengl.h>
+
+1330362031 source:/home/ajean/Ghost-in-the-Machine/Ghastly/Render/RenderContext.cpp
+	<Render/RenderContext.h>
+	<SDL/SDL_opengl.h>
+
+1330362031 source:/home/ajean/Ghost-in-the-Machine/Ghastly/Render/Renderable.cpp
+	<Render/Renderable.h>
+	<Base/Log.h>
+
+1330362031 source:/home/ajean/Ghost-in-the-Machine/Ghastly/Render/Texture.cpp
+	<Base/Base.h>
+	<Base/Log.h>
+	<Render/Texture.h>
+
+1330362031 source:/home/ajean/Ghost-in-the-Machine/Ghastly/Render/Viewport.cpp
+	<Render/Viewport.h>
+	<Resource/TextureManager.h>
+
+1330362031 /home/ajean/Ghost-in-the-Machine/Ghastly/Resource/TextureManager.h
+	<Render/Texture.h>
+	<Resource/ThreadedResourceManager.h>
+
+1330362031 /home/ajean/Ghost-in-the-Machine/Ghastly/Resource/ThreadedResourceManager.h
+	<Resource/ResourceManager.h>
+	<SDL/SDL_mutex.h>
+	<SDL/SDL_thread.h>
+
+1330363142 /home/ajean/Ghost-in-the-Machine/Ghastly/Resource/ResourceManager.h
+	<Base/Base.h>
+	<Base/Log.h>
+	<Base/FileSystem.h>
+
+1330362031 source:/home/ajean/Ghost-in-the-Machine/Ghastly/Resource/MaterialManager.cpp
+	<Base/Base.h>
+	<Base/PropertyMap.h>
+	<Resource/MaterialManager.h>
+	<Resource/TextureManager.h>
+
+1330362031 /home/ajean/Ghost-in-the-Machine/Ghastly/Resource/MaterialManager.h
+	<Render/Material.h>
+	<Resource/ResourceManager.h>
+
+1330362031 source:/home/ajean/Ghost-in-the-Machine/Ghastly/Resource/TTFManager.cpp
+	<Resource/TTFManager.h>
+
+1330362031 /home/ajean/Ghost-in-the-Machine/Ghastly/Resource/TTFManager.h
+	<Render/Font.h>
+	<Resource/ResourceManager.h>
+
+1330362031 source:/home/ajean/Ghost-in-the-Machine/Ghastly/Resource/TextureManager.cpp
+	<Resource/TextureManager.h>
+	<SDL/SDL_opengl.h>
+	<SDL/SDL_image.h>
+
+1330362031 source:/home/ajean/Ghost-in-the-Machine/Ghastly/Resource/ThreadedResourceManager.cpp
+	<Resource/ThreadedResourceManager.h>
+
+1330362031 source:/home/ajean/Ghost-in-the-Machine/Ghastly/Resource/WorldManager.cpp
+	<Resource/WorldManager.h>
+	<Base/Vector2.h>
+
+1330362031 /home/ajean/Ghost-in-the-Machine/Ghastly/Resource/WorldManager.h
+	<Engine/World.h>
+	<Resource/ThreadedResourceManager.h>
+
+1330364685 source:/home/ajean/Ghost-in-the-Machine/Game/DebugVolume.cpp
+	<Game/DebugVolume.h>
+	<Resource/MaterialManager.h>
+
+1330364685 /home/ajean/Ghost-in-the-Machine/Game/DebugVolume.h
+	<Engine/SceneNode.h>
+
+1330364611 source:/home/ajean/Ghost-in-the-Machine/Game/GameState.cpp
+	<Game/GameState.h>
+	<Game/LoadingState.h>
+
+1330364611 /home/ajean/Ghost-in-the-Machine/Game/GameState.h
+	<Engine/ParentState.h>
+
+1330364686 /home/ajean/Ghost-in-the-Machine/Game/LoadingState.h
+	<Engine/State.h>
+	<Game/GhostWorld.h>
+
+1330364685 /home/ajean/Ghost-in-the-Machine/Game/GhostWorld.h
+	<Engine/World.h>
+	<Game/Player.h>
+
+1330364686 /home/ajean/Ghost-in-the-Machine/Game/Player.h
+	<Engine/Mob.h>
+	<Game/PlayerController.h>
+
+1330364686 /home/ajean/Ghost-in-the-Machine/Game/PlayerController.h
+	<Engine/Controller.h>
+	<Engine/ContactListener.h>
+
+1330364685 source:/home/ajean/Ghost-in-the-Machine/Game/GhostCore.cpp
+	<Game/GhostCore.h>
+	<Game/StartingState.h>
+	<Resource/WorldManager.h>
+	<Resource/TTFManager.h>
+	<Resource/TextureManager.h>
+	<Resource/MaterialManager.h>
+
+1330364685 /home/ajean/Ghost-in-the-Machine/Game/GhostCore.h
+	<Engine/Core.h>
+
+1330364611 /home/ajean/Ghost-in-the-Machine/Game/StartingState.h
+	<Engine/State.h>
+
+1330364685 source:/home/ajean/Ghost-in-the-Machine/Game/GhostWorld.cpp
+	<Game/GhostWorld.h>
+	<Game/Platform.h>
+	<Game/Wall.h>
+
+1330364686 /home/ajean/Ghost-in-the-Machine/Game/Platform.h
+	<Engine/Entity.h>
+
+1330364686 /home/ajean/Ghost-in-the-Machine/Game/Wall.h
+	<Engine/Entity.h>
+
+1330364685 source:/home/ajean/Ghost-in-the-Machine/Game/LoadingState.cpp
+	<Engine/ParentState.h>
+	<Game/LoadingState.h>
+	<Game/PlayingState.h>
+	<Resource/WorldManager.h>
+
+1330364686 /home/ajean/Ghost-in-the-Machine/Game/PlayingState.h
+	<Engine/State.h>
+	<Game/GhostWorld.h>
+
+1330364686 source:/home/ajean/Ghost-in-the-Machine/Game/Platform.cpp
+	<Game/Platform.h>
+	<Engine/PhysicsEngine.h>
+	<Resource/MaterialManager.h>
+
+1330364686 source:/home/ajean/Ghost-in-the-Machine/Game/Player.cpp
+	<Game/Player.h>
+	<Game/DebugVolume.h>
+	<Engine/PhysicsEngine.h>
+	<Resource/MaterialManager.h>
+
+1330364686 source:/home/ajean/Ghost-in-the-Machine/Game/PlayerController.cpp
+	<Game/PlayerController.h>
+	<Game/Player.h>
+
+1330364686 source:/home/ajean/Ghost-in-the-Machine/Game/PlayingState.cpp
+	<Game/PlayingState.h>
+	<Resource/WorldManager.h>
+	<Engine/Core.h>
+	<Engine/OrthoCamera.h>
+
+1330364611 source:/home/ajean/Ghost-in-the-Machine/Game/StartingState.cpp
+	<Engine/ParentState.h>
+	<Resource/TextureManager.h>
+	<Resource/MaterialManager.h>
+	<Game/StartingState.h>
+	<Game/GameState.h>
+
+1330364686 source:/home/ajean/Ghost-in-the-Machine/Game/Wall.cpp
+	<Game/Wall.h>
+	<Engine/PhysicsEngine.h>
+	<Resource/MaterialManager.h>
+
+1330364686 source:/home/ajean/Ghost-in-the-Machine/Game/main.cpp
+	<Game/GhostCore.h>
+	<Game/GameState.h>
+
+1330364583 source:/home/ajean/Ghost-in-the-Machine/Ghastly/Network/NetAddress.cpp
+	<Network/NetAddress.h>
+	<Base/Base.h>
+
+1330365362 /home/ajean/Ghost-in-the-Machine/Ghastly/Network/NetAddress.h
+	<Network/Socket.h>
+
+1330365278 /home/ajean/Ghost-in-the-Machine/Ghastly/Network/Socket.h
+	<Base/Base.h>
+	<winsock2.h>
+	<ws2tcpip.h>
+	<sys/socket.h>
+	<netinet/in.h>
+	<fcntl.h>
+	<arpa/inet.h>
+
+1330364583 source:/home/ajean/Ghost-in-the-Machine/Ghastly/Network/Socket.cpp
+	<Network/Socket.h>
+

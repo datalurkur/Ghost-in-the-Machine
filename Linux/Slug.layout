@@ -1,4 +1,49 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
 	<ActiveTarget name="Debug" />
+	<File name="../Game/GameState.cpp" open="1" top="0" tabpos="14">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="../Game/GameState.h" open="1" top="0" tabpos="1">
+		<Cursor position="41" topLine="0" />
+	</File>
+	<File name="../Game/LoadingState.cpp" open="1" top="0" tabpos="11">
+		<Cursor position="0" topLine="4" />
+	</File>
+	<File name="../Game/SimpleCore.cpp" open="1" top="0" tabpos="13">
+		<Cursor position="0" topLine="16" />
+	</File>
+	<File name="../Game/SlugWorld.cpp" open="1" top="0" tabpos="9">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="../Game/StartingState.cpp" open="1" top="0" tabpos="10">
+		<Cursor position="0" topLine="12" />
+	</File>
+	<File name="../Game/main.cpp" open="1" top="0" tabpos="8">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="../Ghastly/Base/Base.h" open="1" top="0" tabpos="6">
+		<Cursor position="371" topLine="14" />
+	</File>
+	<File name="../Ghastly/Engine/Core.cpp" open="1" top="1" tabpos="15">
+		<Cursor position="0" topLine="18" />
+	</File>
+	<File name="../Ghastly/Engine/IsoCamera.cpp" open="1" top="0" tabpos="7">
+		<Cursor position="261" topLine="0" />
+	</File>
+	<File name="../Ghastly/Engine/QuadTreeSceneManager.cpp" open="1" top="0" tabpos="3">
+		<Cursor position="155" topLine="0" />
+	</File>
+	<File name="../Ghastly/Engine/QuadTreeSceneManager.h" open="1" top="0" tabpos="4">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="../Ghastly/Engine/Window.cpp" open="1" top="0" tabpos="12">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="../Ghastly/Resource/ResourceManager.h" open="1" top="0" tabpos="2">
+		<Cursor position="2064" topLine="62" />
+	</File>
+	<File name="../Ghastly/Resource/ThreadedResourceManager.h" open="1" top="0" tabpos="5">
+		<Cursor position="5846" topLine="231" />
+	</File>
 </CodeBlocks_layout_file>

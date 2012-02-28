@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_workspace_file>
+	<Workspace title="Workspace">
+		<Project filename="GitM.cbp" active="1" />
+		<Project filename="../Ghastly/Test/UDPSocketTests/UDPSocketTests.cbp" />
+		<Project filename="../Ghastly/Test/GhastlyProtocolTests/GhastlyProtocolTests.cbp" />
+	</Workspace>
+</CodeBlocks_workspace_file>

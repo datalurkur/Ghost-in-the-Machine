@@ -929,7 +929,7 @@
 	<Base/Base.h>
 	<Base/Log.h>
 
-1330384458 /home/ajean/Ghost-in-the-Machine/Ghastly/Base/Base.h
+1330392404 /home/ajean/Ghost-in-the-Machine/Ghastly/Base/Base.h
 	<string>
 	<sstream>
 	<stdarg.h>
@@ -1716,7 +1716,7 @@
 	<SDL/SDL_mutex.h>
 	<SDL/SDL_thread.h>
 
-1330363142 /home/ajean/Ghost-in-the-Machine/Ghastly/Resource/ResourceManager.h
+1330392404 /home/ajean/Ghost-in-the-Machine/Ghastly/Resource/ResourceManager.h
 	<Base/Base.h>
 	<Base/Log.h>
 	<Base/FileSystem.h>
@@ -1856,14 +1856,14 @@
 	<Game/GhostCore.h>
 	<Game/GameState.h>
 
-1330384667 source:/home/ajean/Ghost-in-the-Machine/Ghastly/Network/NetAddress.cpp
+1330392404 source:/home/ajean/Ghost-in-the-Machine/Ghastly/Network/NetAddress.cpp
 	<Network/NetAddress.h>
 	<Base/Base.h>
 
-1330384626 /home/ajean/Ghost-in-the-Machine/Ghastly/Network/NetAddress.h
+1330470155 /home/ajean/Ghost-in-the-Machine/Ghastly/Network/NetAddress.h
 	<Network/Socket.h>
 
-1330381679 /home/ajean/Ghost-in-the-Machine/Ghastly/Network/Socket.h
+1330392404 /home/ajean/Ghost-in-the-Machine/Ghastly/Network/Socket.h
 	<Base/Base.h>
 	<winsock2.h>
 	<ws2tcpip.h>
@@ -1889,7 +1889,11 @@
 	<Network/PacketBuffer.h>
 	<Network/UDPSocket.h>
 
-1330384761 /home/ajean/Ghost-in-the-Machine/Ghastly/Network/UDPSocket.h
+1330468269 /home/ajean/Ghost-in-the-Machine/Ghastly/Network/UDPSocket.h
 	<Network/Socket.h>
 	<Network/NetAddress.h>
+
+1330468280 source:/home/ajean/Ghost-in-the-Machine/Ghastly/Network/UDPSocket.cpp
+	<Network/UDPSocket.h>
+	<Base/Log.h>
 

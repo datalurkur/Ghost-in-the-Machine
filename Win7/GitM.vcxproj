@@ -53,7 +53,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>SDL_image.lib;SDL_ttf.lib;SDL.lib;SDLmain.lib;opengl32.lib;glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <SubSystem>Windows</SubSystem>
-      <AdditionalLibraryDirectories>C:\GitM\Win7\lib\sdl;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)lib/sdl;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -159,6 +159,12 @@
     <ClCompile Include="..\Ghastly\Engine\Window.cpp" />
     <ClCompile Include="..\Ghastly\Engine\WindowListener.cpp" />
     <ClCompile Include="..\Ghastly\Engine\World.cpp" />
+    <ClCompile Include="..\Ghastly\Network\NetAddress.cpp" />
+    <ClCompile Include="..\Ghastly\Network\NetInterface.cpp" />
+    <ClCompile Include="..\Ghastly\Network\PacketListener.cpp" />
+    <ClCompile Include="..\Ghastly\Network\Socket.cpp" />
+    <ClCompile Include="..\Ghastly\Network\UDPInterface.cpp" />
+    <ClCompile Include="..\Ghastly\Network\UDPSocket.cpp" />
     <ClCompile Include="..\Ghastly\Render\Font.cpp" />
     <ClCompile Include="..\Ghastly\Render\Material.cpp" />
     <ClCompile Include="..\Ghastly\Render\Renderable.cpp" />
@@ -262,6 +268,13 @@
     <ClInclude Include="..\Ghastly\Engine\Window.h" />
     <ClInclude Include="..\Ghastly\Engine\WindowListener.h" />
     <ClInclude Include="..\Ghastly\Engine\World.h" />
+    <ClInclude Include="..\Ghastly\Network\GhastlyProtocol.h" />
+    <ClInclude Include="..\Ghastly\Network\NetAddress.h" />
+    <ClInclude Include="..\Ghastly\Network\NetInterface.h" />
+    <ClInclude Include="..\Ghastly\Network\PacketListener.h" />
+    <ClInclude Include="..\Ghastly\Network\Socket.h" />
+    <ClInclude Include="..\Ghastly\Network\UDPInterface.h" />
+    <ClInclude Include="..\Ghastly\Network\UDPSocket.h" />
     <ClInclude Include="..\Ghastly\Render\Font.h" />
     <ClInclude Include="..\Ghastly\Render\Material.h" />
     <ClInclude Include="..\Ghastly\Render\Renderable.h" />

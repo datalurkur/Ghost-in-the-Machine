@@ -38,6 +38,9 @@
     <Filter Include="Game\Controllers">
       <UniqueIdentifier>{c5d07884-ca64-4c2d-86a8-3f5ef9138ce8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Ghastly\Network">
+      <UniqueIdentifier>{9172ae3f-e5d5-4782-9f81-e6ab73145f22}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\Ghastly\Base\AABB2.cpp">
@@ -333,6 +336,24 @@
     </ClCompile>
     <ClCompile Include="..\Ghastly\Engine\QuadTreeSceneManager.cpp">
       <Filter>Ghastly\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Ghastly\Network\NetAddress.cpp">
+      <Filter>Ghastly\Network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Ghastly\Network\Socket.cpp">
+      <Filter>Ghastly\Network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Ghastly\Network\UDPSocket.cpp">
+      <Filter>Ghastly\Network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Ghastly\Network\UDPInterface.cpp">
+      <Filter>Ghastly\Network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Ghastly\Network\NetInterface.cpp">
+      <Filter>Ghastly\Network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Ghastly\Network\PacketListener.cpp">
+      <Filter>Ghastly\Network</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -641,6 +662,27 @@
     </ClInclude>
     <ClInclude Include="..\Ghastly\Engine\QuadTreeSceneManager.h">
       <Filter>Ghastly\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Ghastly\Network\NetAddress.h">
+      <Filter>Ghastly\Network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Ghastly\Network\Socket.h">
+      <Filter>Ghastly\Network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Ghastly\Network\UDPSocket.h">
+      <Filter>Ghastly\Network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Ghastly\Network\UDPInterface.h">
+      <Filter>Ghastly\Network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Ghastly\Network\GhastlyProtocol.h">
+      <Filter>Ghastly\Network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Ghastly\Network\NetInterface.h">
+      <Filter>Ghastly\Network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Ghastly\Network\PacketListener.h">
+      <Filter>Ghastly\Network</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -4,7 +4,7 @@
 	<File name="../Ghastly/Base/Base.h" open="1" top="0" tabpos="1">
 		<Cursor position="310" topLine="0" />
 	</File>
-	<File name="../Ghastly/Base/Log.cpp" open="1" top="0" tabpos="1">
+	<File name="../Ghastly/Base/Log.cpp" open="1" top="0" tabpos="2">
 		<Cursor position="0" topLine="0" />
 	</File>
 	<File name="../Ghastly/Network/ConnectionBuffer.cpp" open="1" top="0" tabpos="0">
@@ -13,10 +13,16 @@
 	<File name="../Ghastly/Network/ConnectionBuffer.h" open="1" top="0" tabpos="6">
 		<Cursor position="1198" topLine="6" />
 	</File>
-	<File name="../Ghastly/Network/NetAddress.cpp" open="1" top="0" tabpos="2">
+	<File name="../Ghastly/Network/ConnectionProvider.cpp" open="1" top="0" tabpos="0">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="../Ghastly/Network/ConnectionProvider.h" open="1" top="0" tabpos="0">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="../Ghastly/Network/NetAddress.cpp" open="1" top="0" tabpos="3">
 		<Cursor position="174" topLine="1" />
 	</File>
-	<File name="../Ghastly/Network/NetAddress.h" open="1" top="0" tabpos="3">
+	<File name="../Ghastly/Network/NetAddress.h" open="1" top="0" tabpos="4">
 		<Cursor position="232" topLine="3" />
 	</File>
 	<File name="../Ghastly/Network/Packet.cpp" open="1" top="0" tabpos="0">
@@ -25,8 +31,26 @@
 	<File name="../Ghastly/Network/Socket.cpp" open="1" top="0" tabpos="4">
 		<Cursor position="0" topLine="0" />
 	</File>
+	<File name="../Ghastly/Network/Socket.h" open="1" top="0" tabpos="0">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="../Ghastly/Network/TCPBuffer.cpp" open="1" top="0" tabpos="0">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="../Ghastly/Network/TCPBuffer.h" open="1" top="0" tabpos="0">
+		<Cursor position="0" topLine="0" />
+	</File>
 	<File name="../Ghastly/Network/TCPSocket.cpp" open="1" top="0" tabpos="16">
 		<Cursor position="320" topLine="0" />
+	</File>
+	<File name="../Ghastly/Network/TCPSocket.h" open="1" top="0" tabpos="0">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="../Ghastly/Network/UDPBuffer.cpp" open="1" top="0" tabpos="0">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="../Ghastly/Network/UDPBuffer.h" open="1" top="0" tabpos="0">
+		<Cursor position="0" topLine="0" />
 	</File>
 	<File name="../Ghastly/Network/UDPSocket.cpp" open="1" top="0" tabpos="4">
 		<Cursor position="2325" topLine="0" />
@@ -34,7 +58,10 @@
 	<File name="../Ghastly/Network/UDPSocket.h" open="1" top="0" tabpos="5">
 		<Cursor position="530" topLine="0" />
 	</File>
-	<File name="../Ghastly/Resource/ThreadedResourceManager.h" open="1" top="0" tabpos="7">
+	<File name="../Ghastly/Resource/ResourceManager.h" open="1" top="0" tabpos="15">
+		<Cursor position="103" topLine="135" />
+	</File>
+	<File name="../Ghastly/Resource/ThreadedResourceManager.h" open="1" top="0" tabpos="8">
 		<Cursor position="0" topLine="113" />
 	</File>
 </CodeBlocks_layout_file>

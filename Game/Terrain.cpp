@@ -148,17 +148,17 @@ void Terrain::populateScene() {
 
 	bottomRenderable = new Renderable();
 	bottomRenderable->setVertexPointer(&verts[0], totalVerts, 3);
-	bottomRenderable->setIndexPointer(&bottomIndices[0], bottomIndices.size());
+	bottomRenderable->setIndexPointer(&bottomIndices[0], (int)bottomIndices.size());
 	bottomRenderable->setMaterial(MaterialManager::Get("grass"));
 	addRenderable(bottomRenderable);
 	topRenderable = new Renderable();
 	topRenderable->setVertexPointer(&verts[0], totalVerts, 3);
-	topRenderable->setIndexPointer(&topIndices[0], topIndices.size());
+	topRenderable->setIndexPointer(&topIndices[0], (int)topIndices.size());
 	topRenderable->setMaterial(MaterialManager::Get("roof"));
 	addRenderable(topRenderable);
 	wallRenderable = new Renderable();
 	wallRenderable->setVertexPointer(&verts[0], totalVerts, 3);
-	wallRenderable->setIndexPointer(&wallIndices[0], wallIndices.size());
+	wallRenderable->setIndexPointer(&wallIndices[0], (int)wallIndices.size());
 	wallRenderable->setMaterial(MaterialManager::Get("wall"));
 	addRenderable(wallRenderable);
 

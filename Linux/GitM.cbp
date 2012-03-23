@@ -66,6 +66,7 @@
 		<Unit filename="../Ghastly/Base/AABB2.h" />
 		<Unit filename="../Ghastly/Base/AABB3.cpp" />
 		<Unit filename="../Ghastly/Base/AABB3.h" />
+		<Unit filename="../Ghastly/Base/Assertion.h" />
 		<Unit filename="../Ghastly/Base/Base.h" />
 		<Unit filename="../Ghastly/Base/Color.h" />
 		<Unit filename="../Ghastly/Base/FileSystem.cpp" />
@@ -77,6 +78,8 @@
 		<Unit filename="../Ghastly/Base/PropertyMap.cpp" />
 		<Unit filename="../Ghastly/Base/PropertyMap.h" />
 		<Unit filename="../Ghastly/Base/ResourcePool.h" />
+		<Unit filename="../Ghastly/Base/Timestamp.cpp" />
+		<Unit filename="../Ghastly/Base/Timestamp.h" />
 		<Unit filename="../Ghastly/Base/Vector2.cpp" />
 		<Unit filename="../Ghastly/Base/Vector2.h" />
 		<Unit filename="../Ghastly/Base/Vector3.cpp" />
@@ -216,16 +219,26 @@
 		<Unit filename="../Ghastly/Engine/WindowListener.h" />
 		<Unit filename="../Ghastly/Engine/World.cpp" />
 		<Unit filename="../Ghastly/Engine/World.h" />
+		<Unit filename="../Ghastly/Network/ClientProvider.cpp" />
+		<Unit filename="../Ghastly/Network/ClientProvider.h" />
 		<Unit filename="../Ghastly/Network/ConnectionBuffer.cpp" />
 		<Unit filename="../Ghastly/Network/ConnectionBuffer.h" />
 		<Unit filename="../Ghastly/Network/ConnectionProvider.cpp" />
 		<Unit filename="../Ghastly/Network/ConnectionProvider.h" />
+		<Unit filename="../Ghastly/Network/ListenSocket.cpp" />
+		<Unit filename="../Ghastly/Network/ListenSocket.h" />
 		<Unit filename="../Ghastly/Network/NetAddress.cpp" />
 		<Unit filename="../Ghastly/Network/NetAddress.h" />
 		<Unit filename="../Ghastly/Network/Packet.cpp" />
 		<Unit filename="../Ghastly/Network/Packet.h" />
+		<Unit filename="../Ghastly/Network/ServerProvider.cpp" />
+		<Unit filename="../Ghastly/Network/ServerProvider.h" />
+		<Unit filename="../Ghastly/Network/SimpleUDPProvider.cpp" />
+		<Unit filename="../Ghastly/Network/SimpleUDPProvider.h" />
 		<Unit filename="../Ghastly/Network/Socket.cpp" />
 		<Unit filename="../Ghastly/Network/Socket.h" />
+		<Unit filename="../Ghastly/Network/SocketedUDPProvider.cpp" />
+		<Unit filename="../Ghastly/Network/SocketedUDPProvider.h" />
 		<Unit filename="../Ghastly/Network/TCPBuffer.cpp" />
 		<Unit filename="../Ghastly/Network/TCPBuffer.h" />
 		<Unit filename="../Ghastly/Network/TCPSocket.cpp" />
@@ -257,6 +270,7 @@
 		<Unit filename="../Ghastly/Resource/ThreadedResourceManager.h" />
 		<Unit filename="../Ghastly/Resource/WorldManager.cpp" />
 		<Unit filename="../Ghastly/Resource/WorldManager.h" />
+		<Unit filename="../Ghastly/Test/NetworkTests/NetworkTests.cpp" />
 		<Extensions>
 			<code_completion />
 			<debugger />

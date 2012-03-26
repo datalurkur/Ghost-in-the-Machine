@@ -360,6 +360,27 @@
     <ClCompile Include="..\Ghastly\Network\UDPSocket.cpp">
       <Filter>Ghastly\Network</Filter>
     </ClCompile>
+    <ClCompile Include="..\Ghastly\Network\ClientProvider.cpp">
+      <Filter>Ghastly\Network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Ghastly\Network\ListenSocket.cpp">
+      <Filter>Ghastly\Network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Ghastly\Network\MultiConnectionProvider.cpp">
+      <Filter>Ghastly\Network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Ghastly\Network\ServerProvider.cpp">
+      <Filter>Ghastly\Network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Ghastly\Network\SimpleUDPProvider.cpp">
+      <Filter>Ghastly\Network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Ghastly\Network\SocketedUDPProvider.cpp">
+      <Filter>Ghastly\Network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Ghastly\Base\Timestamp.cpp">
+      <Filter>Ghastly\Base</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Ghastly\Base\AABB2.h">
@@ -697,6 +718,27 @@
     </ClInclude>
     <ClInclude Include="..\Ghastly\Network\UDPSocket.h">
       <Filter>Ghastly\Network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Ghastly\Network\ClientProvider.h">
+      <Filter>Ghastly\Network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Ghastly\Network\ListenSocket.h">
+      <Filter>Ghastly\Network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Ghastly\Network\MultiConnectionProvider.h">
+      <Filter>Ghastly\Network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Ghastly\Network\ServerProvider.h">
+      <Filter>Ghastly\Network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Ghastly\Network\SimpleUDPProvider.h">
+      <Filter>Ghastly\Network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Ghastly\Network\SocketedUDPProvider.h">
+      <Filter>Ghastly\Network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Ghastly\Base\Timestamp.h">
+      <Filter>Ghastly\Base</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

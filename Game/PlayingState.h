@@ -3,6 +3,7 @@
 
 #include <Engine/State.h>
 #include <Game/GhostWorld.h>
+#include <UI/UIManager.h>
 
 class PlayingState: public State {
 public:
@@ -18,10 +19,12 @@ public:
 protected:
     void setup(va_list args);
     void teardown();
-    
+
 private:
     GhostWorld *_world;
     Camera *_camera;
+
+    UIManager *_ui;
 };
 
 #endif

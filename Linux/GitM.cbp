@@ -71,6 +71,8 @@
 		<Unit filename="../Ghastly/Base/Color.h" />
 		<Unit filename="../Ghastly/Base/FileSystem.cpp" />
 		<Unit filename="../Ghastly/Base/FileSystem.h" />
+		<Unit filename="../Ghastly/Base/IndexPool.cpp" />
+		<Unit filename="../Ghastly/Base/IndexPool.h" />
 		<Unit filename="../Ghastly/Base/Log.cpp" />
 		<Unit filename="../Ghastly/Base/Log.h" />
 		<Unit filename="../Ghastly/Base/Matrix4.cpp" />
@@ -223,10 +225,18 @@
 		<Unit filename="../Ghastly/Network/ClientProvider.h" />
 		<Unit filename="../Ghastly/Network/ConnectionBuffer.cpp" />
 		<Unit filename="../Ghastly/Network/ConnectionBuffer.h" />
-		<Unit filename="../Ghastly/Network/ConnectionProvider.cpp" />
 		<Unit filename="../Ghastly/Network/ConnectionProvider.h" />
+		<Unit filename="../Ghastly/Network/GhastlyClient.cpp" />
+		<Unit filename="../Ghastly/Network/GhastlyClient.h" />
+		<Unit filename="../Ghastly/Network/GhastlyHost.cpp" />
+		<Unit filename="../Ghastly/Network/GhastlyHost.h" />
+		<Unit filename="../Ghastly/Network/GhastlyProtocol.h" />
+		<Unit filename="../Ghastly/Network/GhastlyServer.cpp" />
+		<Unit filename="../Ghastly/Network/GhastlyServer.h" />
 		<Unit filename="../Ghastly/Network/ListenSocket.cpp" />
 		<Unit filename="../Ghastly/Network/ListenSocket.h" />
+		<Unit filename="../Ghastly/Network/MultiConnectionProvider.cpp" />
+		<Unit filename="../Ghastly/Network/MultiConnectionProvider.h" />
 		<Unit filename="../Ghastly/Network/NetAddress.cpp" />
 		<Unit filename="../Ghastly/Network/NetAddress.h" />
 		<Unit filename="../Ghastly/Network/Packet.cpp" />
@@ -270,7 +280,10 @@
 		<Unit filename="../Ghastly/Resource/ThreadedResourceManager.h" />
 		<Unit filename="../Ghastly/Resource/WorldManager.cpp" />
 		<Unit filename="../Ghastly/Resource/WorldManager.h" />
-		<Unit filename="../Ghastly/Test/NetworkTests/NetworkTests.cpp" />
+		<Unit filename="../Ghastly/UI/UIElement.cpp" />
+		<Unit filename="../Ghastly/UI/UIElement.h" />
+		<Unit filename="../Ghastly/UI/UIManager.cpp" />
+		<Unit filename="../Ghastly/UI/UIManager.h" />
 		<Extensions>
 			<code_completion />
 			<debugger />

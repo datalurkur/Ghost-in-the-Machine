@@ -11,10 +11,12 @@ PlayingState::~PlayingState() {
 
 void PlayingState::update(int elapsed) {
     _world->update(elapsed);
+    _ui->update();
 }
 
 void PlayingState::render(RenderContext *renderContext) {
 	_world->render(_camera, renderContext);
+	_ui->render(renderContext);
 }
 
 void PlayingState::setup(va_list args) {
@@ -26,11 +28,16 @@ void PlayingState::setup(va_list args) {
 
 	// Update the world once with no time to make sure the scene gets populated fully before rendering
 	_world->update(0);
+
+	// Set up the user interface
+	_ui = new UIManager();
 }
 
 void PlayingState::teardown() {
     Info("Tearing down PlayingState");
     WorldManager::Unload(_world);
+
+    delete _ui;
 }
 
 void PlayingState::keyDown(KeyboardEvent *event) {

@@ -163,9 +163,8 @@
     <ClCompile Include="..\Ghastly\Engine\World.cpp" />
     <ClCompile Include="..\Ghastly\Network\ClientProvider.cpp" />
     <ClCompile Include="..\Ghastly\Network\ConnectionBuffer.cpp" />
-    <ClCompile Include="..\Ghastly\Network\ConnectionProvider.cpp" />
     <ClCompile Include="..\Ghastly\Network\GhastlyClient.cpp" />
-    <ClCompile Include="..\Ghastly\Network\GhastlyProtocol.cpp" />
+    <ClCompile Include="..\Ghastly\Network\GhastlyHost.cpp" />
     <ClCompile Include="..\Ghastly\Network\GhastlyServer.cpp" />
     <ClCompile Include="..\Ghastly\Network\ListenSocket.cpp" />
     <ClCompile Include="..\Ghastly\Network\MultiConnectionProvider.cpp" />
@@ -190,6 +189,8 @@
     <ClCompile Include="..\Ghastly\Resource\ThreadedResourceManager.cpp" />
     <ClCompile Include="..\Ghastly\Resource\TTFManager.cpp" />
     <ClCompile Include="..\Ghastly\Resource\WorldManager.cpp" />
+    <ClCompile Include="..\Ghastly\UI\UIElement.cpp" />
+    <ClCompile Include="..\Ghastly\UI\UIManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Game\DebugVolume.h" />
@@ -279,6 +280,7 @@
     <ClInclude Include="..\Ghastly\Engine\PhysicsController.h" />
     <ClInclude Include="..\Ghastly\Engine\PhysicsEngine.h" />
     <ClInclude Include="..\Ghastly\Engine\QuadTreeSceneManager.h" />
+    <ClInclude Include="..\Ghastly\Engine\ResizeListener.h" />
     <ClInclude Include="..\Ghastly\Engine\SceneManager.h" />
     <ClInclude Include="..\Ghastly\Engine\SceneNode.h" />
     <ClInclude Include="..\Ghastly\Engine\State.h" />
@@ -289,6 +291,7 @@
     <ClInclude Include="..\Ghastly\Network\ConnectionBuffer.h" />
     <ClInclude Include="..\Ghastly\Network\ConnectionProvider.h" />
     <ClInclude Include="..\Ghastly\Network\GhastlyClient.h" />
+    <ClInclude Include="..\Ghastly\Network\GhastlyHost.h" />
     <ClInclude Include="..\Ghastly\Network\GhastlyProtocol.h" />
     <ClInclude Include="..\Ghastly\Network\GhastlyServer.h" />
     <ClInclude Include="..\Ghastly\Network\ListenSocket.h" />
@@ -315,6 +318,8 @@
     <ClInclude Include="..\Ghastly\Resource\ThreadedResourceManager.h" />
     <ClInclude Include="..\Ghastly\Resource\TTFManager.h" />
     <ClInclude Include="..\Ghastly\Resource\WorldManager.h" />
+    <ClInclude Include="..\Ghastly\UI\UIElement.h" />
+    <ClInclude Include="..\Ghastly\UI\UIManager.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\Ghastly\Box2D\Box2DConfig.cmake" />

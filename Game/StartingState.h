@@ -22,6 +22,7 @@ private:
         Start = 0,
         TextureLoading,
         MaterialLoading,
+		TTFLoading,
         Done
     };
     unsigned int _stage;

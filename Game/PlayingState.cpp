@@ -2,6 +2,7 @@
 #include <Resource/WorldManager.h>
 #include <Engine/Core.h>
 #include <Engine/OrthoCamera.h>
+#include <UI/UIElement.h>
 
 PlayingState::PlayingState() {
 }
@@ -21,16 +22,27 @@ void PlayingState::render(RenderContext *renderContext) {
 
 void PlayingState::setup(va_list args) {
 	Info("Setting up PlayingState");
+
+	// Create a world...
     _world = va_arg(args, GhostWorld*);
 
+	// And a camera with which to observe it
     _camera = _world->createObject<OrthoCamera>("MainCam");
-    _core->getViewport()->registerCamera(_camera);
-
-	// Update the world once with no time to make sure the scene gets populated fully before rendering
-	_world->update(0);
+    _core->getViewport()->registerResizeListener(_camera);
+	_camera->setZoom(0.1f);
 
 	// Set up the user interface
 	_ui = new UIManager();
+	// Note: I don't like that this has to be done manually
+	_core->getViewport()->registerResizeListener(_ui);
+
+	// DEBUG
+	// Add some test UIElements
+	_ui->addNode(UIElement::Box(Vector2(-0.5f, -0.5f), Vector2(1.0f, 1.0f), Color4(1.0f, 1.0f, 1.0f, 1.0f)));
+
+	// Update the world and UIManager once with no time to make sure the scene gets populated fully before rendering
+	_world->update(0);
+	_ui->update();
 }
 
 void PlayingState::teardown() {

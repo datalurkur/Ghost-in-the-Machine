@@ -49,6 +49,9 @@
     <Filter Include="Ghastly\Network\Providers">
       <UniqueIdentifier>{ec55952d-bc0c-489e-956a-11457f9c4280}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Ghastly\UI">
+      <UniqueIdentifier>{1056dcbf-6c96-4801-b4aa-718bf645cd91}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\Ghastly\Base\AABB2.cpp">
@@ -351,9 +354,6 @@
     <ClCompile Include="..\Ghastly\Network\GhastlyClient.cpp">
       <Filter>Ghastly\Network\Ghastly</Filter>
     </ClCompile>
-    <ClCompile Include="..\Ghastly\Network\GhastlyProtocol.cpp">
-      <Filter>Ghastly\Network\Ghastly</Filter>
-    </ClCompile>
     <ClCompile Include="..\Ghastly\Network\GhastlyServer.cpp">
       <Filter>Ghastly\Network\Ghastly</Filter>
     </ClCompile>
@@ -381,9 +381,6 @@
     <ClCompile Include="..\Ghastly\Network\ClientProvider.cpp">
       <Filter>Ghastly\Network\Providers</Filter>
     </ClCompile>
-    <ClCompile Include="..\Ghastly\Network\ConnectionProvider.cpp">
-      <Filter>Ghastly\Network\Providers</Filter>
-    </ClCompile>
     <ClCompile Include="..\Ghastly\Network\MultiConnectionProvider.cpp">
       <Filter>Ghastly\Network\Providers</Filter>
     </ClCompile>
@@ -404,6 +401,15 @@
     </ClCompile>
     <ClCompile Include="..\Ghastly\Base\IndexPool.cpp">
       <Filter>Ghastly\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Ghastly\UI\UIElement.cpp">
+      <Filter>Ghastly\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Ghastly\UI\UIManager.cpp">
+      <Filter>Ghastly\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Ghastly\Network\GhastlyHost.cpp">
+      <Filter>Ghastly\Network\Ghastly</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -775,6 +781,18 @@
     </ClInclude>
     <ClInclude Include="..\Ghastly\Base\IndexPool.h">
       <Filter>Ghastly\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Ghastly\UI\UIElement.h">
+      <Filter>Ghastly\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Ghastly\UI\UIManager.h">
+      <Filter>Ghastly\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Ghastly\Network\GhastlyHost.h">
+      <Filter>Ghastly\Network\Ghastly</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Ghastly\Engine\ResizeListener.h">
+      <Filter>Ghastly\Engine</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -108,7 +108,6 @@
 		E1A1816A1513E7B400EA9CDB /* World.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1A180B81513E7B400EA9CDB /* World.cpp */; };
 		E1A1816B1513E7B400EA9CDB /* ClientProvider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1A180BB1513E7B400EA9CDB /* ClientProvider.cpp */; };
 		E1A1816C1513E7B400EA9CDB /* ConnectionBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1A180BD1513E7B400EA9CDB /* ConnectionBuffer.cpp */; };
-		E1A1816D1513E7B400EA9CDB /* ConnectionProvider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1A180BF1513E7B400EA9CDB /* ConnectionProvider.cpp */; };
 		E1A1816E1513E7B400EA9CDB /* ListenSocket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1A180C11513E7B400EA9CDB /* ListenSocket.cpp */; };
 		E1A1816F1513E7B400EA9CDB /* NetAddress.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1A180C31513E7B400EA9CDB /* NetAddress.cpp */; };
 		E1A181701513E7B400EA9CDB /* Packet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1A180C51513E7B400EA9CDB /* Packet.cpp */; };
@@ -131,6 +130,13 @@
 		E1A181811513E7B400EA9CDB /* ThreadedResourceManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1A180EA1513E7B400EA9CDB /* ThreadedResourceManager.cpp */; };
 		E1A181821513E7B400EA9CDB /* TTFManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1A180EC1513E7B400EA9CDB /* TTFManager.cpp */; };
 		E1A181831513E7B400EA9CDB /* WorldManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1A180EE1513E7B400EA9CDB /* WorldManager.cpp */; };
+		E1A59663152659AD008B4E8B /* UIElement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1A59661152659AD008B4E8B /* UIElement.cpp */; };
+		E1A59666152659B4008B4E8B /* UIManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1A59664152659B4008B4E8B /* UIManager.cpp */; };
+		E1A59670152659D8008B4E8B /* GhastlyClient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1A59667152659D8008B4E8B /* GhastlyClient.cpp */; };
+		E1A59671152659D8008B4E8B /* GhastlyHost.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1A59669152659D8008B4E8B /* GhastlyHost.cpp */; };
+		E1A59672152659D8008B4E8B /* GhastlyServer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1A5966C152659D8008B4E8B /* GhastlyServer.cpp */; };
+		E1A59673152659D8008B4E8B /* MultiConnectionProvider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1A5966E152659D8008B4E8B /* MultiConnectionProvider.cpp */; };
+		E1A59676152659F3008B4E8B /* IndexPool.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1A59674152659F2008B4E8B /* IndexPool.cpp */; };
 		E1ED273C143CB59000D6FFBC /* SDL_image.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1ED273B143CB59000D6FFBC /* SDL_image.framework */; };
 /* End PBXBuildFile section */
 
@@ -348,7 +354,6 @@
 		E1A180BC1513E7B400EA9CDB /* ClientProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClientProvider.h; sourceTree = "<group>"; };
 		E1A180BD1513E7B400EA9CDB /* ConnectionBuffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ConnectionBuffer.cpp; sourceTree = "<group>"; };
 		E1A180BE1513E7B400EA9CDB /* ConnectionBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectionBuffer.h; sourceTree = "<group>"; };
-		E1A180BF1513E7B400EA9CDB /* ConnectionProvider.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ConnectionProvider.cpp; sourceTree = "<group>"; };
 		E1A180C01513E7B400EA9CDB /* ConnectionProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectionProvider.h; sourceTree = "<group>"; };
 		E1A180C11513E7B400EA9CDB /* ListenSocket.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ListenSocket.cpp; sourceTree = "<group>"; };
 		E1A180C21513E7B400EA9CDB /* ListenSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListenSocket.h; sourceTree = "<group>"; };
@@ -395,6 +400,21 @@
 		E1A180ED1513E7B400EA9CDB /* TTFManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTFManager.h; sourceTree = "<group>"; };
 		E1A180EE1513E7B400EA9CDB /* WorldManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WorldManager.cpp; sourceTree = "<group>"; };
 		E1A180EF1513E7B400EA9CDB /* WorldManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorldManager.h; sourceTree = "<group>"; };
+		E1A59661152659AD008B4E8B /* UIElement.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = UIElement.cpp; path = UI/UIElement.cpp; sourceTree = "<group>"; };
+		E1A59662152659AD008B4E8B /* UIElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIElement.h; path = UI/UIElement.h; sourceTree = "<group>"; };
+		E1A59664152659B4008B4E8B /* UIManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = UIManager.cpp; path = UI/UIManager.cpp; sourceTree = "<group>"; };
+		E1A59665152659B4008B4E8B /* UIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIManager.h; path = UI/UIManager.h; sourceTree = "<group>"; };
+		E1A59667152659D8008B4E8B /* GhastlyClient.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GhastlyClient.cpp; sourceTree = "<group>"; };
+		E1A59668152659D8008B4E8B /* GhastlyClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GhastlyClient.h; sourceTree = "<group>"; };
+		E1A59669152659D8008B4E8B /* GhastlyHost.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GhastlyHost.cpp; sourceTree = "<group>"; };
+		E1A5966A152659D8008B4E8B /* GhastlyHost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GhastlyHost.h; sourceTree = "<group>"; };
+		E1A5966B152659D8008B4E8B /* GhastlyProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GhastlyProtocol.h; sourceTree = "<group>"; };
+		E1A5966C152659D8008B4E8B /* GhastlyServer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GhastlyServer.cpp; sourceTree = "<group>"; };
+		E1A5966D152659D8008B4E8B /* GhastlyServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GhastlyServer.h; sourceTree = "<group>"; };
+		E1A5966E152659D8008B4E8B /* MultiConnectionProvider.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MultiConnectionProvider.cpp; sourceTree = "<group>"; };
+		E1A5966F152659D8008B4E8B /* MultiConnectionProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiConnectionProvider.h; sourceTree = "<group>"; };
+		E1A59674152659F2008B4E8B /* IndexPool.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IndexPool.cpp; sourceTree = "<group>"; };
+		E1A59675152659F2008B4E8B /* IndexPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndexPool.h; sourceTree = "<group>"; };
 		E1ED273B143CB59000D6FFBC /* SDL_image.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL_image.framework; path = Frameworks/SDL_image.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -491,6 +511,7 @@
 		E1A17FEB1513E7B400EA9CDB /* Ghastly */ = {
 			isa = PBXGroup;
 			children = (
+				E1A5966015265997008B4E8B /* UI */,
 				E1A180111513E7B400EA9CDB /* Base */,
 				E1A1802A1513E7B400EA9CDB /* Box2D */,
 				E1A1808F1513E7B400EA9CDB /* Engine */,
@@ -505,6 +526,8 @@
 		E1A180111513E7B400EA9CDB /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				E1A59674152659F2008B4E8B /* IndexPool.cpp */,
+				E1A59675152659F2008B4E8B /* IndexPool.h */,
 				E1A180121513E7B400EA9CDB /* AABB2.cpp */,
 				E1A180131513E7B400EA9CDB /* AABB2.h */,
 				E1A180141513E7B400EA9CDB /* AABB3.cpp */,
@@ -741,11 +764,19 @@
 		E1A180BA1513E7B400EA9CDB /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				E1A59667152659D8008B4E8B /* GhastlyClient.cpp */,
+				E1A59668152659D8008B4E8B /* GhastlyClient.h */,
+				E1A59669152659D8008B4E8B /* GhastlyHost.cpp */,
+				E1A5966A152659D8008B4E8B /* GhastlyHost.h */,
+				E1A5966B152659D8008B4E8B /* GhastlyProtocol.h */,
+				E1A5966C152659D8008B4E8B /* GhastlyServer.cpp */,
+				E1A5966D152659D8008B4E8B /* GhastlyServer.h */,
+				E1A5966E152659D8008B4E8B /* MultiConnectionProvider.cpp */,
+				E1A5966F152659D8008B4E8B /* MultiConnectionProvider.h */,
 				E1A180BB1513E7B400EA9CDB /* ClientProvider.cpp */,
 				E1A180BC1513E7B400EA9CDB /* ClientProvider.h */,
 				E1A180BD1513E7B400EA9CDB /* ConnectionBuffer.cpp */,
 				E1A180BE1513E7B400EA9CDB /* ConnectionBuffer.h */,
-				E1A180BF1513E7B400EA9CDB /* ConnectionProvider.cpp */,
 				E1A180C01513E7B400EA9CDB /* ConnectionProvider.h */,
 				E1A180C11513E7B400EA9CDB /* ListenSocket.cpp */,
 				E1A180C21513E7B400EA9CDB /* ListenSocket.h */,
@@ -808,6 +839,17 @@
 				E1A180EF1513E7B400EA9CDB /* WorldManager.h */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		E1A5966015265997008B4E8B /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				E1A59664152659B4008B4E8B /* UIManager.cpp */,
+				E1A59665152659B4008B4E8B /* UIManager.h */,
+				E1A59661152659AD008B4E8B /* UIElement.cpp */,
+				E1A59662152659AD008B4E8B /* UIElement.h */,
+			);
+			name = UI;
 			sourceTree = "<group>";
 		};
 		E1C4C916142A751A004E4ACD = {
@@ -975,7 +1017,6 @@
 				E1A1816A1513E7B400EA9CDB /* World.cpp in Sources */,
 				E1A1816B1513E7B400EA9CDB /* ClientProvider.cpp in Sources */,
 				E1A1816C1513E7B400EA9CDB /* ConnectionBuffer.cpp in Sources */,
-				E1A1816D1513E7B400EA9CDB /* ConnectionProvider.cpp in Sources */,
 				E1A1816E1513E7B400EA9CDB /* ListenSocket.cpp in Sources */,
 				E1A1816F1513E7B400EA9CDB /* NetAddress.cpp in Sources */,
 				E1A181701513E7B400EA9CDB /* Packet.cpp in Sources */,
@@ -998,6 +1039,13 @@
 				E1A181811513E7B400EA9CDB /* ThreadedResourceManager.cpp in Sources */,
 				E1A181821513E7B400EA9CDB /* TTFManager.cpp in Sources */,
 				E1A181831513E7B400EA9CDB /* WorldManager.cpp in Sources */,
+				E1A59663152659AD008B4E8B /* UIElement.cpp in Sources */,
+				E1A59666152659B4008B4E8B /* UIManager.cpp in Sources */,
+				E1A59670152659D8008B4E8B /* GhastlyClient.cpp in Sources */,
+				E1A59671152659D8008B4E8B /* GhastlyHost.cpp in Sources */,
+				E1A59672152659D8008B4E8B /* GhastlyServer.cpp in Sources */,
+				E1A59673152659D8008B4E8B /* MultiConnectionProvider.cpp in Sources */,
+				E1A59676152659F3008B4E8B /* IndexPool.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

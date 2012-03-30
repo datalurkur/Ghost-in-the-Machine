@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
 	<ActiveTarget name="Debug" />
-	<File name="../Game/GhostWorld.cpp" open="1" top="0" tabpos="19">
+	<File name="../Game/GhostWorld.cpp" open="1" top="0" tabpos="20">
+		<Cursor position="921" topLine="21" />
+	</File>
+	<File name="../Game/GhostWorld.h" open="1" top="0" tabpos="21">
 		<Cursor position="0" topLine="0" />
 	</File>
-	<File name="../Game/GhostWorld.h" open="1" top="0" tabpos="20">
+	<File name="../Game/LoadingState.cpp" open="1" top="0" tabpos="28">
 		<Cursor position="0" topLine="0" />
 	</File>
-	<File name="../Game/LoadingState.cpp" open="1" top="0" tabpos="27">
-		<Cursor position="0" topLine="5" />
+	<File name="../Game/Player.cpp" open="1" top="0" tabpos="32">
+		<Cursor position="2701" topLine="80" />
 	</File>
-	<File name="../Game/Player.cpp" open="1" top="0" tabpos="31">
-		<Cursor position="513" topLine="15" />
+	<File name="../Game/PlayingState.cpp" open="1" top="0" tabpos="19">
+		<Cursor position="974" topLine="18" />
 	</File>
-	<File name="../Game/PlayingState.cpp" open="1" top="0" tabpos="18">
-		<Cursor position="279" topLine="9" />
-	</File>
-	<File name="../Game/PlayingState.h" open="1" top="0" tabpos="28">
-		<Cursor position="496" topLine="1" />
+	<File name="../Game/PlayingState.h" open="1" top="0" tabpos="29">
+		<Cursor position="496" topLine="0" />
 	</File>
 	<File name="../Ghastly/Base/Base.h" open="1" top="0" tabpos="4">
 		<Cursor position="310" topLine="29" />
@@ -25,28 +25,52 @@
 	<File name="../Ghastly/Base/Log.cpp" open="1" top="0" tabpos="4">
 		<Cursor position="0" topLine="0" />
 	</File>
-	<File name="../Ghastly/Base/Timestamp.cpp" open="1" top="0" tabpos="15">
+	<File name="../Ghastly/Base/Timestamp.cpp" open="1" top="0" tabpos="16">
 		<Cursor position="117" topLine="0" />
 	</File>
-	<File name="../Ghastly/Base/Timestamp.h" open="1" top="0" tabpos="14">
+	<File name="../Ghastly/Base/Timestamp.h" open="1" top="0" tabpos="15">
 		<Cursor position="116" topLine="0" />
 	</File>
-	<File name="../Ghastly/Engine/SceneManager.cpp" open="1" top="0" tabpos="24">
+	<File name="../Ghastly/Engine/Camera.cpp" open="1" top="0" tabpos="42">
+		<Cursor position="179" topLine="0" />
+	</File>
+	<File name="../Ghastly/Engine/Camera.h" open="1" top="0" tabpos="41">
+		<Cursor position="109" topLine="0" />
+	</File>
+	<File name="../Ghastly/Engine/Core.cpp" open="1" top="0" tabpos="50">
+		<Cursor position="1135" topLine="0" />
+	</File>
+	<File name="../Ghastly/Engine/EventHandler.cpp" open="1" top="0" tabpos="49">
+		<Cursor position="319" topLine="0" />
+	</File>
+	<File name="../Ghastly/Engine/OrthoCamera.cpp" open="1" top="0" tabpos="44">
+		<Cursor position="652" topLine="0" />
+	</File>
+	<File name="../Ghastly/Engine/OrthoCamera.h" open="1" top="0" tabpos="43">
+		<Cursor position="294" topLine="0" />
+	</File>
+	<File name="../Ghastly/Engine/SceneManager.cpp" open="1" top="0" tabpos="25">
 		<Cursor position="0" topLine="0" />
 	</File>
-	<File name="../Ghastly/Engine/SceneManager.h" open="1" top="0" tabpos="23">
+	<File name="../Ghastly/Engine/SceneManager.h" open="1" top="0" tabpos="24">
 		<Cursor position="0" topLine="0" />
 	</File>
-	<File name="../Ghastly/Engine/State.cpp" open="1" top="0" tabpos="26">
+	<File name="../Ghastly/Engine/State.cpp" open="1" top="0" tabpos="27">
 		<Cursor position="0" topLine="0" />
 	</File>
-	<File name="../Ghastly/Engine/State.h" open="1" top="0" tabpos="25">
-		<Cursor position="0" topLine="3" />
-	</File>
-	<File name="../Ghastly/Engine/World.cpp" open="1" top="0" tabpos="21">
+	<File name="../Ghastly/Engine/State.h" open="1" top="0" tabpos="26">
 		<Cursor position="0" topLine="0" />
 	</File>
-	<File name="../Ghastly/Engine/World.h" open="1" top="0" tabpos="22">
+	<File name="../Ghastly/Engine/Window.cpp" open="1" top="0" tabpos="51">
+		<Cursor position="473" topLine="23" />
+	</File>
+	<File name="../Ghastly/Engine/Window.h" open="1" top="0" tabpos="54">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="../Ghastly/Engine/World.cpp" open="1" top="0" tabpos="22">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="../Ghastly/Engine/World.h" open="1" top="0" tabpos="23">
 		<Cursor position="0" topLine="6" />
 	</File>
 	<File name="../Ghastly/Network/ClientProvider.cpp" open="1" top="0" tabpos="0">
@@ -61,13 +85,13 @@
 	<File name="../Ghastly/Network/ConnectionProvider.h" open="1" top="0" tabpos="0">
 		<Cursor position="0" topLine="0" />
 	</File>
-	<File name="../Ghastly/Network/NetAddress.cpp" open="1" top="0" tabpos="12">
+	<File name="../Ghastly/Network/NetAddress.cpp" open="1" top="0" tabpos="13">
 		<Cursor position="174" topLine="1" />
 	</File>
 	<File name="../Ghastly/Network/NetAddress.h" open="1" top="0" tabpos="4">
 		<Cursor position="232" topLine="3" />
 	</File>
-	<File name="../Ghastly/Network/Packet.cpp" open="1" top="0" tabpos="16">
+	<File name="../Ghastly/Network/Packet.cpp" open="1" top="0" tabpos="17">
 		<Cursor position="425" topLine="0" />
 	</File>
 	<File name="../Ghastly/Network/Packet.h" open="1" top="0" tabpos="0">
@@ -76,64 +100,94 @@
 	<File name="../Ghastly/Network/SimpleUDPProvider.cpp" open="1" top="0" tabpos="0">
 		<Cursor position="0" topLine="0" />
 	</File>
-	<File name="../Ghastly/Network/Socket.cpp" open="1" top="0" tabpos="7">
+	<File name="../Ghastly/Network/Socket.cpp" open="1" top="0" tabpos="8">
 		<Cursor position="0" topLine="0" />
 	</File>
-	<File name="../Ghastly/Network/Socket.h" open="1" top="0" tabpos="0">
+	<File name="../Ghastly/Network/Socket.h" open="1" top="0" tabpos="1">
 		<Cursor position="0" topLine="0" />
 	</File>
-	<File name="../Ghastly/Network/SocketedUDPProvider.cpp" open="1" top="0" tabpos="1">
+	<File name="../Ghastly/Network/SocketedUDPProvider.cpp" open="1" top="0" tabpos="2">
 		<Cursor position="0" topLine="0" />
 	</File>
-	<File name="../Ghastly/Network/TCPBuffer.cpp" open="1" top="0" tabpos="2">
+	<File name="../Ghastly/Network/TCPBuffer.cpp" open="1" top="0" tabpos="3">
 		<Cursor position="0" topLine="0" />
 	</File>
-	<File name="../Ghastly/Network/TCPBuffer.h" open="1" top="0" tabpos="3">
+	<File name="../Ghastly/Network/TCPBuffer.h" open="1" top="0" tabpos="4">
 		<Cursor position="0" topLine="0" />
 	</File>
-	<File name="../Ghastly/Network/TCPSocket.cpp" open="1" top="0" tabpos="13">
+	<File name="../Ghastly/Network/TCPSocket.cpp" open="1" top="0" tabpos="14">
 		<Cursor position="320" topLine="0" />
 	</File>
-	<File name="../Ghastly/Network/TCPSocket.h" open="1" top="0" tabpos="4">
+	<File name="../Ghastly/Network/TCPSocket.h" open="1" top="0" tabpos="5">
 		<Cursor position="0" topLine="0" />
 	</File>
-	<File name="../Ghastly/Network/UDPBuffer.cpp" open="1" top="0" tabpos="5">
+	<File name="../Ghastly/Network/UDPBuffer.cpp" open="1" top="0" tabpos="6">
 		<Cursor position="0" topLine="0" />
 	</File>
-	<File name="../Ghastly/Network/UDPBuffer.h" open="1" top="0" tabpos="6">
+	<File name="../Ghastly/Network/UDPBuffer.h" open="1" top="0" tabpos="7">
 		<Cursor position="0" topLine="0" />
 	</File>
-	<File name="../Ghastly/Network/UDPSocket.cpp" open="1" top="0" tabpos="8">
+	<File name="../Ghastly/Network/UDPSocket.cpp" open="1" top="0" tabpos="9">
 		<Cursor position="765" topLine="0" />
 	</File>
-	<File name="../Ghastly/Network/UDPSocket.h" open="1" top="0" tabpos="9">
+	<File name="../Ghastly/Network/UDPSocket.h" open="1" top="0" tabpos="10">
 		<Cursor position="530" topLine="0" />
 	</File>
 	<File name="../Ghastly/Render/Font.cpp" open="1" top="0" tabpos="34">
-		<Cursor position="2881" topLine="63" />
+		<Cursor position="4214" topLine="111" />
 	</File>
 	<File name="../Ghastly/Render/Font.h" open="1" top="0" tabpos="35">
-		<Cursor position="238" topLine="1" />
+		<Cursor position="364" topLine="0" />
 	</File>
-	<File name="../Ghastly/Render/RenderContext.cpp" open="1" top="0" tabpos="17">
+	<File name="../Ghastly/Render/Material.cpp" open="1" top="0" tabpos="48">
+		<Cursor position="423" topLine="6" />
+	</File>
+	<File name="../Ghastly/Render/RenderContext.cpp" open="1" top="0" tabpos="18">
 		<Cursor position="0" topLine="0" />
 	</File>
-	<File name="../Ghastly/Resource/ResourceManager.h" open="1" top="0" tabpos="11">
+	<File name="../Ghastly/Render/Renderable.cpp" open="1" top="0" tabpos="53">
+		<Cursor position="2555" topLine="71" />
+	</File>
+	<File name="../Ghastly/Render/Renderable.h" open="1" top="0" tabpos="45">
+		<Cursor position="0" topLine="23" />
+	</File>
+	<File name="../Ghastly/Render/ResizeListener.h" open="1" top="0" tabpos="39">
+		<Cursor position="117" topLine="0" />
+	</File>
+	<File name="../Ghastly/Render/Texture.cpp" open="1" top="1" tabpos="52">
+		<Cursor position="1016" topLine="24" />
+	</File>
+	<File name="../Ghastly/Render/Texture.h" open="1" top="0" tabpos="55">
+		<Cursor position="259" topLine="2" />
+	</File>
+	<File name="../Ghastly/Render/Viewport.cpp" open="1" top="0" tabpos="40">
+		<Cursor position="250" topLine="0" />
+	</File>
+	<File name="../Ghastly/Render/Viewport.h" open="1" top="0" tabpos="38">
+		<Cursor position="78" topLine="0" />
+	</File>
+	<File name="../Ghastly/Resource/ResourceManager.h" open="1" top="0" tabpos="12">
 		<Cursor position="2092" topLine="61" />
 	</File>
-	<File name="../Ghastly/Resource/TTFManager.cpp" open="1" top="1" tabpos="36">
-		<Cursor position="176" topLine="0" />
+	<File name="../Ghastly/Resource/TTFManager.cpp" open="1" top="0" tabpos="36">
+		<Cursor position="3653" topLine="90" />
 	</File>
-	<File name="../Ghastly/Resource/TTFManager.h" open="1" top="0" tabpos="32">
-		<Cursor position="56" topLine="0" />
+	<File name="../Ghastly/Resource/TTFManager.h" open="1" top="0" tabpos="33">
+		<Cursor position="56" topLine="1" />
 	</File>
-	<File name="../Ghastly/Resource/ThreadedResourceManager.h" open="1" top="0" tabpos="10">
+	<File name="../Ghastly/Resource/ThreadedResourceManager.h" open="1" top="0" tabpos="11">
 		<Cursor position="0" topLine="0" />
 	</File>
-	<File name="../Ghastly/UI/UIManager.cpp" open="1" top="0" tabpos="30">
-		<Cursor position="142" topLine="0" />
+	<File name="../Ghastly/UI/UIElement.cpp" open="1" top="0" tabpos="47">
+		<Cursor position="1222" topLine="12" />
 	</File>
-	<File name="../Ghastly/UI/UIManager.h" open="1" top="0" tabpos="29">
-		<Cursor position="136" topLine="0" />
+	<File name="../Ghastly/UI/UIElement.h" open="1" top="0" tabpos="46">
+		<Cursor position="340" topLine="0" />
+	</File>
+	<File name="../Ghastly/UI/UIManager.cpp" open="1" top="0" tabpos="31">
+		<Cursor position="152" topLine="0" />
+	</File>
+	<File name="../Ghastly/UI/UIManager.h" open="1" top="0" tabpos="30">
+		<Cursor position="374" topLine="0" />
 	</File>
 </CodeBlocks_layout_file>

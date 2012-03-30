@@ -5,9 +5,11 @@
 		<Option title="GitM" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
+		<Option virtualFolders="Ghastly/Engine/;" />
 		<Build>
 			<Target title="Debug">
 				<Option output="bin/Debug/GitM" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="../" />
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
@@ -20,6 +22,7 @@
 			</Target>
 			<Target title="Release">
 				<Option output="bin/Release/GitM" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="../" />
 				<Option object_output="obj/Release/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
@@ -269,7 +272,10 @@
 		<Unit filename="../Ghastly/Render/RenderContext.h" />
 		<Unit filename="../Ghastly/Render/Renderable.cpp" />
 		<Unit filename="../Ghastly/Render/Renderable.h" />
-		<Unit filename="../Ghastly/Render/Texture.cpp" />
+		<Unit filename="../Ghastly/Render/ResizeListener.h" />
+		<Unit filename="../Ghastly/Render/Texture.cpp">
+			<Option virtualFolder="Ghastly/Engine/" />
+		</Unit>
 		<Unit filename="../Ghastly/Render/Texture.h" />
 		<Unit filename="../Ghastly/Render/Viewport.cpp" />
 		<Unit filename="../Ghastly/Render/Viewport.h" />

@@ -38,7 +38,8 @@ void PlayingState::setup(va_list args) {
 
 	// DEBUG
 	// Add some test UIElements
-	_ui->addNode(UIElement::Text(Vector2(-0.5f, -0.5f), "TEST Text!", "acknowledge.ttf"));
+	//_ui->addNode(UIElement::Text(Vector2(-0.5f, -0.5f), "TEST Text!", "acknowledge.ttf"));
+    _ui->addNode(UIElement::DebugFont("acknowledge.ttf"));
 
 	// Update the world and UIManager once with no time to make sure the scene gets populated fully before rendering
 	_world->update(0);

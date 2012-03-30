@@ -47,20 +47,20 @@ void Player::createPhysicsBody() {
     b2World *physicsWorld;
 	PhysicsEngine *engine;
 
-	engine = _physicsController->getEngine();  
+	engine = _physicsController->getEngine();
     physicsWorld = engine->getPhysicsWorld();
-  
+
     // Create the main body
     bDef.type = b2_dynamicBody;
     bDef.fixedRotation = true;
     bDef.position.Set(_position.x, _position.y);
     body = physicsWorld->CreateBody(&bDef);
 	body->SetUserData(this);
-    
+
     // Create the player fixture shape
     // The dimensions passed are the half-extents
     playerShape.SetAsBox(_dimensions.x / 2.0f, _dimensions.y / 2.0f);
-    
+
     // Create the player fixture
     playerDef.shape = &playerShape;
     playerDef.density = 1.0f;
@@ -90,14 +90,14 @@ PlayerController *Player::getPlayerController() const {
 Player* Player::DefaultPlayer() {
     Player *player = new Player("defaultPlayer");
     player->setDimensions(0.5f, 1.0f, 0.0f);
-    
+
     player->_maxSpeed = 6.0f;
     player->_accel = 0.02f;
     player->_jumpSpeed = 6.0f;
     player->_jumpSensorDimensions = Vector2(0.4f, 0.1f);
     player->_jumpSensorOffset = Vector2(0.0f, -0.5f);
 	player->_extraJumps = 1;
-    
+
     PlayerController *controller = player->addController<PlayerController,Player>(player);
     player->setPlayerController(controller);
 

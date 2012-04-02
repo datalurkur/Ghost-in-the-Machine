@@ -5,7 +5,6 @@
 		<Option title="GitM" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
-		<Option virtualFolders="Ghastly/Engine/;" />
 		<Build>
 			<Target title="Debug">
 				<Option output="bin/Debug/GitM" prefix_auto="1" extension_auto="1" />
@@ -266,6 +265,8 @@
 		<Unit filename="../Ghastly/Network/UDPSocket.h" />
 		<Unit filename="../Ghastly/Render/Font.cpp" />
 		<Unit filename="../Ghastly/Render/Font.h" />
+		<Unit filename="../Ghastly/Render/GLHelper.cpp" />
+		<Unit filename="../Ghastly/Render/GLHelper.h" />
 		<Unit filename="../Ghastly/Render/Material.cpp" />
 		<Unit filename="../Ghastly/Render/Material.h" />
 		<Unit filename="../Ghastly/Render/RenderContext.cpp" />
@@ -273,9 +274,7 @@
 		<Unit filename="../Ghastly/Render/Renderable.cpp" />
 		<Unit filename="../Ghastly/Render/Renderable.h" />
 		<Unit filename="../Ghastly/Render/ResizeListener.h" />
-		<Unit filename="../Ghastly/Render/Texture.cpp">
-			<Option virtualFolder="Ghastly/Engine/" />
-		</Unit>
+		<Unit filename="../Ghastly/Render/Texture.cpp" />
 		<Unit filename="../Ghastly/Render/Texture.h" />
 		<Unit filename="../Ghastly/Render/Viewport.cpp" />
 		<Unit filename="../Ghastly/Render/Viewport.h" />
@@ -290,6 +289,11 @@
 		<Unit filename="../Ghastly/Resource/ThreadedResourceManager.h" />
 		<Unit filename="../Ghastly/Resource/WorldManager.cpp" />
 		<Unit filename="../Ghastly/Resource/WorldManager.h" />
+		<Unit filename="../Ghastly/Test/NetworkTests/NetworkTests.cpp" />
+		<Unit filename="../Ghastly/UI/Text.cpp" />
+		<Unit filename="../Ghastly/UI/Text.h" />
+		<Unit filename="../Ghastly/UI/UIBox.cpp" />
+		<Unit filename="../Ghastly/UI/UIBox.h" />
 		<Unit filename="../Ghastly/UI/UIElement.cpp" />
 		<Unit filename="../Ghastly/UI/UIElement.h" />
 		<Unit filename="../Ghastly/UI/UIManager.cpp" />

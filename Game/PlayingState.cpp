@@ -3,6 +3,7 @@
 #include <Engine/Core.h>
 #include <Engine/OrthoCamera.h>
 #include <UI/UIElement.h>
+#include <UI/Text.h>
 
 PlayingState::PlayingState() {
 }
@@ -38,8 +39,7 @@ void PlayingState::setup(va_list args) {
 
 	// DEBUG
 	// Add some test UIElements
-	//_ui->addNode(UIElement::Text(Vector2(-0.5f, -0.5f), "TEST Text!", "acknowledge.ttf"));
-    _ui->addNode(UIElement::DebugFont("acknowledge.ttf"));
+    _ui->addElement(new Text("test_element", Vector2(0.1f, 0.1f), "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ", "acknowledge.ttf"));
 
 	// Update the world and UIManager once with no time to make sure the scene gets populated fully before rendering
 	_world->update(0);

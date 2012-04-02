@@ -12,7 +12,9 @@
 		18687B2E15179A2700494D7D /* SDL.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E152C64F1434C8E100D83C44 /* SDL.framework */; };
 		18687B3015179D6000494D7D /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18687B2F15179D6000494D7D /* OpenGL.framework */; };
 		18687B3215179D6900494D7D /* AGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18687B3115179D6900494D7D /* AGL.framework */; };
+		E12853EE15295EAE00BD8DFA /* Text.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E12853EC15295EAE00BD8DFA /* Text.cpp */; };
 		E146AA38143BAB6F00DA17E9 /* SDL_ttf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E146AA37143BAB6F00DA17E9 /* SDL_ttf.framework */; };
+		E1485E62152764D80032A401 /* GLHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1485E60152764D80032A401 /* GLHelper.cpp */; };
 		E152C6501434C8E100D83C44 /* SDL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E152C64F1434C8E100D83C44 /* SDL.framework */; };
 		E152C6541434C8F800D83C44 /* SDLMain.m in Sources */ = {isa = PBXBuildFile; fileRef = E152C6531434C8F800D83C44 /* SDLMain.m */; };
 		E15FA1EA142BDF1C00CC6CE2 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E13A3FF6142A79C700D7EA2A /* Cocoa.framework */; };
@@ -137,6 +139,7 @@
 		E1A59672152659D8008B4E8B /* GhastlyServer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1A5966C152659D8008B4E8B /* GhastlyServer.cpp */; };
 		E1A59673152659D8008B4E8B /* MultiConnectionProvider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1A5966E152659D8008B4E8B /* MultiConnectionProvider.cpp */; };
 		E1A59676152659F3008B4E8B /* IndexPool.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1A59674152659F2008B4E8B /* IndexPool.cpp */; };
+		E1A5967B15267A96008B4E8B /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1A5967A15267A96008B4E8B /* GLUT.framework */; };
 		E1ED273C143CB59000D6FFBC /* SDL_image.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1ED273B143CB59000D6FFBC /* SDL_image.framework */; };
 /* End PBXBuildFile section */
 
@@ -158,11 +161,15 @@
 /* Begin PBXFileReference section */
 		18687B2F15179D6000494D7D /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = ../../../../../System/Library/Frameworks/OpenGL.framework; sourceTree = "<group>"; };
 		18687B3115179D6900494D7D /* AGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AGL.framework; path = ../../../../../System/Library/Frameworks/AGL.framework; sourceTree = "<group>"; };
+		E12853EC15295EAE00BD8DFA /* Text.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Text.cpp; path = UI/Text.cpp; sourceTree = "<group>"; };
+		E12853ED15295EAE00BD8DFA /* Text.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Text.h; path = UI/Text.h; sourceTree = "<group>"; };
 		E13A3FF6142A79C700D7EA2A /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		E13A3FF9142A79C700D7EA2A /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		E13A3FFA142A79C700D7EA2A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		E13A3FFB142A79C700D7EA2A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E146AA37143BAB6F00DA17E9 /* SDL_ttf.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL_ttf.framework; path = Frameworks/SDL_ttf.framework; sourceTree = "<group>"; };
+		E1485E60152764D80032A401 /* GLHelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GLHelper.cpp; sourceTree = "<group>"; };
+		E1485E61152764D80032A401 /* GLHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLHelper.h; sourceTree = "<group>"; };
 		E152C64F1434C8E100D83C44 /* SDL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL.framework; path = Frameworks/SDL.framework; sourceTree = "<group>"; };
 		E152C6521434C8F800D83C44 /* SDLMain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDLMain.h; sourceTree = "<group>"; };
 		E152C6531434C8F800D83C44 /* SDLMain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDLMain.m; sourceTree = "<group>"; };
@@ -415,6 +422,7 @@
 		E1A5966F152659D8008B4E8B /* MultiConnectionProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiConnectionProvider.h; sourceTree = "<group>"; };
 		E1A59674152659F2008B4E8B /* IndexPool.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IndexPool.cpp; sourceTree = "<group>"; };
 		E1A59675152659F2008B4E8B /* IndexPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndexPool.h; sourceTree = "<group>"; };
+		E1A5967A15267A96008B4E8B /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = SDKs/MacOSX10.6.sdk/System/Library/Frameworks/GLUT.framework; sourceTree = DEVELOPER_DIR; };
 		E1ED273B143CB59000D6FFBC /* SDL_image.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL_image.framework; path = Frameworks/SDL_image.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -423,6 +431,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1A5967B15267A96008B4E8B /* GLUT.framework in Frameworks */,
 				E15FA1EA142BDF1C00CC6CE2 /* Cocoa.framework in Frameworks */,
 				E152C6501434C8E100D83C44 /* SDL.framework in Frameworks */,
 				E146AA38143BAB6F00DA17E9 /* SDL_ttf.framework in Frameworks */,
@@ -807,6 +816,8 @@
 		E1A180D71513E7B400EA9CDB /* Render */ = {
 			isa = PBXGroup;
 			children = (
+				E1485E60152764D80032A401 /* GLHelper.cpp */,
+				E1485E61152764D80032A401 /* GLHelper.h */,
 				E1A180D81513E7B400EA9CDB /* Font.cpp */,
 				E1A180D91513E7B400EA9CDB /* Font.h */,
 				E1A180DA1513E7B400EA9CDB /* Material.cpp */,
@@ -844,6 +855,8 @@
 		E1A5966015265997008B4E8B /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				E12853EC15295EAE00BD8DFA /* Text.cpp */,
+				E12853ED15295EAE00BD8DFA /* Text.h */,
 				E1A59664152659B4008B4E8B /* UIManager.cpp */,
 				E1A59665152659B4008B4E8B /* UIManager.h */,
 				E1A59661152659AD008B4E8B /* UIElement.cpp */,
@@ -855,6 +868,7 @@
 		E1C4C916142A751A004E4ACD = {
 			isa = PBXGroup;
 			children = (
+				E1A5967A15267A96008B4E8B /* GLUT.framework */,
 				E1A17FD21513E7B400EA9CDB /* Game */,
 				E1A17FEB1513E7B400EA9CDB /* Ghastly */,
 				E13A3FF5142A79C700D7EA2A /* Frameworks */,
@@ -1046,6 +1060,8 @@
 				E1A59672152659D8008B4E8B /* GhastlyServer.cpp in Sources */,
 				E1A59673152659D8008B4E8B /* MultiConnectionProvider.cpp in Sources */,
 				E1A59676152659F3008B4E8B /* IndexPool.cpp in Sources */,
+				E1485E62152764D80032A401 /* GLHelper.cpp in Sources */,
+				E12853EE15295EAE00BD8DFA /* Text.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

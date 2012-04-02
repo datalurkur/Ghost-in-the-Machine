@@ -4,6 +4,7 @@
 #include <Engine/OrthoCamera.h>
 #include <UI/UIElement.h>
 #include <UI/Text.h>
+#include <UI/UIBox.h>
 
 PlayingState::PlayingState() {
 }
@@ -40,6 +41,8 @@ void PlayingState::setup(va_list args) {
 	// DEBUG
 	// Add some test UIElements
     _ui->addElement(new Text("test_element", Vector2(0.1f, 0.1f), "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ", "acknowledge.ttf"));
+    _ui->addElement(new UIBox("test_box", Vector2(0.0f, 0.0f), Vector2(0.5f, 0.5f), "red"));
+    _ui->addElement(new UIBox("text_box_2", Vector2(0.5f, 0.5f), Vector2(0.5f, 0.5f), "green"));
 
 	// Update the world and UIManager once with no time to make sure the scene gets populated fully before rendering
 	_world->update(0);

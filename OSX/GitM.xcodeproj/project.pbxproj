@@ -13,6 +13,7 @@
 		18687B3015179D6000494D7D /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18687B2F15179D6000494D7D /* OpenGL.framework */; };
 		18687B3215179D6900494D7D /* AGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18687B3115179D6900494D7D /* AGL.framework */; };
 		E12853EE15295EAE00BD8DFA /* Text.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E12853EC15295EAE00BD8DFA /* Text.cpp */; };
+		E12853F615296AB600BD8DFA /* UIBox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E12853F415296AB600BD8DFA /* UIBox.cpp */; };
 		E146AA38143BAB6F00DA17E9 /* SDL_ttf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E146AA37143BAB6F00DA17E9 /* SDL_ttf.framework */; };
 		E1485E62152764D80032A401 /* GLHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1485E60152764D80032A401 /* GLHelper.cpp */; };
 		E152C6501434C8E100D83C44 /* SDL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E152C64F1434C8E100D83C44 /* SDL.framework */; };
@@ -163,6 +164,9 @@
 		18687B3115179D6900494D7D /* AGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AGL.framework; path = ../../../../../System/Library/Frameworks/AGL.framework; sourceTree = "<group>"; };
 		E12853EC15295EAE00BD8DFA /* Text.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Text.cpp; path = UI/Text.cpp; sourceTree = "<group>"; };
 		E12853ED15295EAE00BD8DFA /* Text.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Text.h; path = UI/Text.h; sourceTree = "<group>"; };
+		E12853F315296A7900BD8DFA /* ResizeListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResizeListener.h; sourceTree = "<group>"; };
+		E12853F415296AB600BD8DFA /* UIBox.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = UIBox.cpp; path = UI/UIBox.cpp; sourceTree = "<group>"; };
+		E12853F515296AB600BD8DFA /* UIBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIBox.h; path = UI/UIBox.h; sourceTree = "<group>"; };
 		E13A3FF6142A79C700D7EA2A /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		E13A3FF9142A79C700D7EA2A /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		E13A3FFA142A79C700D7EA2A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -816,6 +820,7 @@
 		E1A180D71513E7B400EA9CDB /* Render */ = {
 			isa = PBXGroup;
 			children = (
+				E12853F315296A7900BD8DFA /* ResizeListener.h */,
 				E1485E60152764D80032A401 /* GLHelper.cpp */,
 				E1485E61152764D80032A401 /* GLHelper.h */,
 				E1A180D81513E7B400EA9CDB /* Font.cpp */,
@@ -855,6 +860,8 @@
 		E1A5966015265997008B4E8B /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				E12853F415296AB600BD8DFA /* UIBox.cpp */,
+				E12853F515296AB600BD8DFA /* UIBox.h */,
 				E12853EC15295EAE00BD8DFA /* Text.cpp */,
 				E12853ED15295EAE00BD8DFA /* Text.h */,
 				E1A59664152659B4008B4E8B /* UIManager.cpp */,
@@ -1062,6 +1069,7 @@
 				E1A59676152659F3008B4E8B /* IndexPool.cpp in Sources */,
 				E1485E62152764D80032A401 /* GLHelper.cpp in Sources */,
 				E12853EE15295EAE00BD8DFA /* Text.cpp in Sources */,
+				E12853F615296AB600BD8DFA /* UIBox.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

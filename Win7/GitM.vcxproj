@@ -179,6 +179,7 @@
     <ClCompile Include="..\Ghastly\Network\UDPBuffer.cpp" />
     <ClCompile Include="..\Ghastly\Network\UDPSocket.cpp" />
     <ClCompile Include="..\Ghastly\Render\Font.cpp" />
+    <ClCompile Include="..\Ghastly\Render\GLHelper.cpp" />
     <ClCompile Include="..\Ghastly\Render\Material.cpp" />
     <ClCompile Include="..\Ghastly\Render\Renderable.cpp" />
     <ClCompile Include="..\Ghastly\Render\RenderContext.cpp" />
@@ -189,6 +190,8 @@
     <ClCompile Include="..\Ghastly\Resource\ThreadedResourceManager.cpp" />
     <ClCompile Include="..\Ghastly\Resource\TTFManager.cpp" />
     <ClCompile Include="..\Ghastly\Resource\WorldManager.cpp" />
+    <ClCompile Include="..\Ghastly\UI\Text.cpp" />
+    <ClCompile Include="..\Ghastly\UI\UIBox.cpp" />
     <ClCompile Include="..\Ghastly\UI\UIElement.cpp" />
     <ClCompile Include="..\Ghastly\UI\UIManager.cpp" />
   </ItemGroup>
@@ -307,6 +310,7 @@
     <ClInclude Include="..\Ghastly\Network\UDPBuffer.h" />
     <ClInclude Include="..\Ghastly\Network\UDPSocket.h" />
     <ClInclude Include="..\Ghastly\Render\Font.h" />
+    <ClInclude Include="..\Ghastly\Render\GLHelper.h" />
     <ClInclude Include="..\Ghastly\Render\Material.h" />
     <ClInclude Include="..\Ghastly\Render\Renderable.h" />
     <ClInclude Include="..\Ghastly\Render\RenderContext.h" />
@@ -318,6 +322,8 @@
     <ClInclude Include="..\Ghastly\Resource\ThreadedResourceManager.h" />
     <ClInclude Include="..\Ghastly\Resource\TTFManager.h" />
     <ClInclude Include="..\Ghastly\Resource\WorldManager.h" />
+    <ClInclude Include="..\Ghastly\UI\Text.h" />
+    <ClInclude Include="..\Ghastly\UI\UIBox.h" />
     <ClInclude Include="..\Ghastly\UI\UIElement.h" />
     <ClInclude Include="..\Ghastly\UI\UIManager.h" />
   </ItemGroup>

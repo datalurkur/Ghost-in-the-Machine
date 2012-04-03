@@ -411,6 +411,15 @@
     <ClCompile Include="..\Ghastly\Network\GhastlyHost.cpp">
       <Filter>Ghastly\Network\Ghastly</Filter>
     </ClCompile>
+    <ClCompile Include="..\Ghastly\UI\Text.cpp">
+      <Filter>Ghastly\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Ghastly\UI\UIBox.cpp">
+      <Filter>Ghastly\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Ghastly\Render\GLHelper.cpp">
+      <Filter>Ghastly\Render</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Ghastly\Base\AABB2.h">
@@ -793,6 +802,15 @@
     </ClInclude>
     <ClInclude Include="..\Ghastly\Engine\ResizeListener.h">
       <Filter>Ghastly\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Ghastly\UI\Text.h">
+      <Filter>Ghastly\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Ghastly\UI\UIBox.h">
+      <Filter>Ghastly\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Ghastly\Render\GLHelper.h">
+      <Filter>Ghastly\Render</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

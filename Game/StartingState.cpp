@@ -13,7 +13,7 @@ StartingState::StartingState() {
 StartingState::~StartingState() {
 }
 
-void StartingState::update(int elapsed) {
+bool StartingState::update(int elapsed) {
     switch(_stage) {
         case Start: {
             Info("Start stage done");
@@ -40,13 +40,15 @@ void StartingState::update(int elapsed) {
         case Done: {
             Info("StartingState is done entirely");
             // FIXME - Move this into a menustate
-            std::string world = "herp_derp_im_a_world";
-            _parent->setState(new GameState(), &world);
+            _parent->popState();
         }
     };
+
+    return true;
 }
 
-void StartingState::render(RenderContext *renderContext) {
+bool StartingState::render(RenderContext *renderContext) {
+    return true;
 }
 
 void StartingState::setup(va_list args) {

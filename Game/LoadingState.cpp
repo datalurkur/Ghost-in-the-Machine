@@ -11,13 +11,16 @@ LoadingState::LoadingState() {
 LoadingState::~LoadingState() {
 }
 
-void LoadingState::update(int elapsed) {
+bool LoadingState::update(int elapsed) {
     if(WorldManager::IsDone(_world)) {
         _parent->setState(new PlayingState(), _world);
     }
+
+    return true;
 }
 
-void LoadingState::render(RenderContext *renderContext) {
+bool LoadingState::render(RenderContext *renderContext) {
+    return true;
 }
 
 void LoadingState::setup(va_list args) {

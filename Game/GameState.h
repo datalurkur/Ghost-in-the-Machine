@@ -4,6 +4,8 @@
 #include <Engine/ParentState.h>
 
 class Camera;
+class GhostWorld;
+class UIManager;
 
 class GameState: public ParentState {
 public:
@@ -12,6 +14,12 @@ public:
 
     void setup(va_list args);
     void teardown();
+
+    bool update(int elapsed);
+
+private:
+    GhostWorld *_world;
+    UIManager *_ui;
 };
 
 #endif

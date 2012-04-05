@@ -420,6 +420,12 @@
     <ClCompile Include="..\Ghastly\Render\GLHelper.cpp">
       <Filter>Ghastly\Render</Filter>
     </ClCompile>
+    <ClCompile Include="..\Game\MenuState.cpp">
+      <Filter>Game\States</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Ghastly\UI\UIButton.cpp">
+      <Filter>Ghastly\UI</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Ghastly\Base\AABB2.h">
@@ -811,6 +817,12 @@
     </ClInclude>
     <ClInclude Include="..\Ghastly\Render\GLHelper.h">
       <Filter>Ghastly\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\MenuState.h">
+      <Filter>Game\States</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Ghastly\UI\UIButton.h">
+      <Filter>Ghastly\UI</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

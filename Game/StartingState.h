@@ -8,8 +8,8 @@ public:
     StartingState();
     virtual ~StartingState();
 
-    void update(int elapsed);
-    void render(RenderContext *renderContext);
+    bool update(int elapsed);
+    bool render(RenderContext *renderContext);
 
 protected:
     void setup(va_list args);

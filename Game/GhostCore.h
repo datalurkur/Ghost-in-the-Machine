@@ -8,10 +8,22 @@ public:
     GhostCore();
     virtual ~GhostCore();
     
-    void keyDown(KeyboardEvent *event);
+    bool keyDown(KeyboardEvent *event);
     
     void setup();
     void teardown();
+
+    bool update(int elapsed);
+
+private:
+    enum {
+        Starting = 0,
+        Established,
+        Running
+    };
+
+private:
+    int _state;
 };
 
 #endif

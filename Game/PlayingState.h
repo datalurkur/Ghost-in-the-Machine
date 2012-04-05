@@ -2,19 +2,21 @@
 #define PLAYINGSTATE_H
 
 #include <Engine/State.h>
-#include <Game/GhostWorld.h>
-#include <UI/UIManager.h>
+
+class Camera;
+class GhostWorld;
+class UIManager;
 
 class PlayingState: public State {
 public:
     PlayingState();
     virtual ~PlayingState();
 
-    void keyDown(KeyboardEvent *event);
-    void keyUp(KeyboardEvent *event);
+    bool keyDown(KeyboardEvent *event);
+    bool keyUp(KeyboardEvent *event);
 
-    void update(int elapsed);
-    void render(RenderContext *renderContext);
+    bool update(int elapsed);
+    bool render(RenderContext *renderContext);
 
 protected:
     void setup(va_list args);

@@ -78,6 +78,7 @@
     <ClCompile Include="..\Game\GhostWorld.cpp" />
     <ClCompile Include="..\Game\LoadingState.cpp" />
     <ClCompile Include="..\Game\main.cpp" />
+    <ClCompile Include="..\Game\MenuState.cpp" />
     <ClCompile Include="..\Game\Platform.cpp" />
     <ClCompile Include="..\Game\Player.cpp" />
     <ClCompile Include="..\Game\PlayerController.cpp" />
@@ -192,6 +193,7 @@
     <ClCompile Include="..\Ghastly\Resource\WorldManager.cpp" />
     <ClCompile Include="..\Ghastly\UI\Text.cpp" />
     <ClCompile Include="..\Ghastly\UI\UIBox.cpp" />
+    <ClCompile Include="..\Ghastly\UI\UIButton.cpp" />
     <ClCompile Include="..\Ghastly\UI\UIElement.cpp" />
     <ClCompile Include="..\Ghastly\UI\UIManager.cpp" />
   </ItemGroup>
@@ -201,6 +203,7 @@
     <ClInclude Include="..\Game\GhostCore.h" />
     <ClInclude Include="..\Game\GhostWorld.h" />
     <ClInclude Include="..\Game\LoadingState.h" />
+    <ClInclude Include="..\Game\MenuState.h" />
     <ClInclude Include="..\Game\Platform.h" />
     <ClInclude Include="..\Game\Player.h" />
     <ClInclude Include="..\Game\PlayerController.h" />
@@ -324,6 +327,7 @@
     <ClInclude Include="..\Ghastly\Resource\WorldManager.h" />
     <ClInclude Include="..\Ghastly\UI\Text.h" />
     <ClInclude Include="..\Ghastly\UI\UIBox.h" />
+    <ClInclude Include="..\Ghastly\UI\UIButton.h" />
     <ClInclude Include="..\Ghastly\UI\UIElement.h" />
     <ClInclude Include="..\Ghastly\UI\UIManager.h" />
   </ItemGroup>

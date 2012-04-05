@@ -1,7 +1,13 @@
 #include <Game/PlayingState.h>
+#include <Game/GhostWorld.h>
+
 #include <Resource/WorldManager.h>
+
+#include <Engine/Camera.h>
 #include <Engine/Core.h>
 #include <Engine/OrthoCamera.h>
+
+#include <UI/UIManager.h>
 #include <UI/UIElement.h>
 #include <UI/Text.h>
 #include <UI/UIBox.h>
@@ -12,20 +18,24 @@ PlayingState::PlayingState() {
 PlayingState::~PlayingState() {
 }
 
-void PlayingState::update(int elapsed) {
+bool PlayingState::update(int elapsed) {
     _world->update(elapsed);
     _ui->update();
+
+    return true;
 }
 
-void PlayingState::render(RenderContext *renderContext) {
+bool PlayingState::render(RenderContext *renderContext) {
 	_world->render(_camera, renderContext);
 	_ui->render(renderContext);
+
+    return true;
 }
 
 void PlayingState::setup(va_list args) {
 	Info("Setting up PlayingState");
 
-	// Create a world...
+	// Get the world from the varargs
     _world = va_arg(args, GhostWorld*);
 
 	// And a camera with which to observe it
@@ -33,20 +43,8 @@ void PlayingState::setup(va_list args) {
     _core->getViewport()->registerResizeListener(_camera);
 	_camera->setZoom(0.1f);
 
-	// Set up the user interface
-	_ui = new UIManager();
-	// Note: I don't like that this has to be done manually
-	_core->getViewport()->registerResizeListener(_ui);
-
-	// DEBUG
-	// Add some test UIElements
-    _ui->addElement(new Text("test_element", Vector2(0.0f, 0.0f), Vector2(0.5f, 0.05f), "This is some really verbose test text which, if all goes according to plan, should wrap. Then, when it reaches the end of the line following, should wrap again, until it runs out of room to do so.  The end.", "acknowledge.ttf"));
-    _ui->addElement(new UIBox("test_box", Vector2(0.0f, 0.0f), Vector2(0.5f, 0.5f), "red", 0.01f, "blue"));
-    _ui->addElement(new UIBox("text_box_2", Vector2(0.5f, 0.5f), Vector2(0.5f, 0.5f), "green"));
-
-	// Update the world and UIManager once with no time to make sure the scene gets populated fully before rendering
-	_world->update(0);
-	_ui->update();
+    // Get the UI from the varargs
+    _ui = va_arg(args, UIManager*);
 }
 
 void PlayingState::teardown() {
@@ -56,7 +54,7 @@ void PlayingState::teardown() {
     delete _ui;
 }
 
-void PlayingState::keyDown(KeyboardEvent *event) {
+bool PlayingState::keyDown(KeyboardEvent *event) {
     switch(event->key()) {
         case KeyboardEvent::KEY_a: {
 			PlayerController *p = _world->getPlayer()->getPlayerController();
@@ -72,10 +70,14 @@ void PlayingState::keyDown(KeyboardEvent *event) {
         } break;
         case KeyboardEvent::KEY_s: {
         } break;
+        default:
+            return false;
     };
+
+    return true;
 }
 
-void PlayingState::keyUp(KeyboardEvent *event) {
+bool PlayingState::keyUp(KeyboardEvent *event) {
 	switch(event->key()) {
         case KeyboardEvent::KEY_a: {
 			PlayerController *p = _world->getPlayer()->getPlayerController();
@@ -89,5 +91,9 @@ void PlayingState::keyUp(KeyboardEvent *event) {
 				p->setMovementDirection(PlayerController::None);
 			}
         } break;
+        default:
+            return false;
     };
+
+    return true;
 }

@@ -63,8 +63,8 @@ Objects=$(IntermediateDirectory)/Contacts_b2Contact$(ObjectSuffix) $(Intermediat
 	$(IntermediateDirectory)/Engine_Entity$(ObjectSuffix) $(IntermediateDirectory)/Engine_Mob$(ObjectSuffix) $(IntermediateDirectory)/Engine_EventHandler$(ObjectSuffix) $(IntermediateDirectory)/Engine_SceneManager$(ObjectSuffix) $(IntermediateDirectory)/Engine_ContactListener$(ObjectSuffix) $(IntermediateDirectory)/Engine_State$(ObjectSuffix) $(IntermediateDirectory)/Engine_World$(ObjectSuffix) $(IntermediateDirectory)/Engine_ParentState$(ObjectSuffix) $(IntermediateDirectory)/Engine_SceneNode$(ObjectSuffix) $(IntermediateDirectory)/Engine_PhysicsEngine$(ObjectSuffix) \
 	$(IntermediateDirectory)/Engine_Camera$(ObjectSuffix) $(IntermediateDirectory)/Engine_Core$(ObjectSuffix) $(IntermediateDirectory)/Engine_Window$(ObjectSuffix) $(IntermediateDirectory)/Engine_Frustum$(ObjectSuffix) $(IntermediateDirectory)/Engine_OrthoCamera$(ObjectSuffix) $(IntermediateDirectory)/Engine_Controller$(ObjectSuffix) $(IntermediateDirectory)/Engine_KeyboardListener$(ObjectSuffix) $(IntermediateDirectory)/Engine_WindowListener$(ObjectSuffix) $(IntermediateDirectory)/Engine_QuadTreeSceneManager$(ObjectSuffix) $(IntermediateDirectory)/Engine_IsoCamera$(ObjectSuffix) \
 	$(IntermediateDirectory)/Engine_PhysicsController$(ObjectSuffix) $(IntermediateDirectory)/Resource_WorldManager$(ObjectSuffix) $(IntermediateDirectory)/Resource_TextureManager$(ObjectSuffix) $(IntermediateDirectory)/Resource_ThreadedResourceManager$(ObjectSuffix) $(IntermediateDirectory)/Resource_TTFManager$(ObjectSuffix) $(IntermediateDirectory)/Resource_MaterialManager$(ObjectSuffix) $(IntermediateDirectory)/UI_UIElement$(ObjectSuffix) $(IntermediateDirectory)/UI_UIBox$(ObjectSuffix) $(IntermediateDirectory)/UI_UIManager$(ObjectSuffix) $(IntermediateDirectory)/UI_Text$(ObjectSuffix) \
-	$(IntermediateDirectory)/Game_main$(ObjectSuffix) $(IntermediateDirectory)/Game_PlayingState$(ObjectSuffix) $(IntermediateDirectory)/Game_GhostCore$(ObjectSuffix) $(IntermediateDirectory)/Game_Player$(ObjectSuffix) $(IntermediateDirectory)/Game_DebugVolume$(ObjectSuffix) $(IntermediateDirectory)/Game_GameState$(ObjectSuffix) $(IntermediateDirectory)/Game_LoadingState$(ObjectSuffix) $(IntermediateDirectory)/Game_PlayerController$(ObjectSuffix) $(IntermediateDirectory)/Game_Platform$(ObjectSuffix) $(IntermediateDirectory)/Game_GhostWorld$(ObjectSuffix) \
-	$(IntermediateDirectory)/Game_Wall$(ObjectSuffix) $(IntermediateDirectory)/Game_StartingState$(ObjectSuffix) $(IntermediateDirectory)/Game_MenuState$(ObjectSuffix) 
+	$(IntermediateDirectory)/UI_UIButton$(ObjectSuffix) $(IntermediateDirectory)/Game_main$(ObjectSuffix) $(IntermediateDirectory)/Game_PlayingState$(ObjectSuffix) $(IntermediateDirectory)/Game_GhostCore$(ObjectSuffix) $(IntermediateDirectory)/Game_Player$(ObjectSuffix) $(IntermediateDirectory)/Game_DebugVolume$(ObjectSuffix) $(IntermediateDirectory)/Game_GameState$(ObjectSuffix) $(IntermediateDirectory)/Game_LoadingState$(ObjectSuffix) $(IntermediateDirectory)/Game_PlayerController$(ObjectSuffix) $(IntermediateDirectory)/Game_Platform$(ObjectSuffix) \
+	$(IntermediateDirectory)/Game_GhostWorld$(ObjectSuffix) $(IntermediateDirectory)/Game_Wall$(ObjectSuffix) $(IntermediateDirectory)/Game_StartingState$(ObjectSuffix) $(IntermediateDirectory)/Game_MenuState$(ObjectSuffix) 
 
 ##
 ## Main Build Targets 
@@ -967,6 +967,14 @@ $(IntermediateDirectory)/UI_Text$(DependSuffix): ../Ghastly/UI/Text.cpp
 $(IntermediateDirectory)/UI_Text$(PreprocessSuffix): ../Ghastly/UI/Text.cpp
 	@$(CompilerName) $(CmpOptions) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/UI_Text$(PreprocessSuffix) "/home/ajean/Ghost-in-the-Machine/Ghastly/UI/Text.cpp"
 
+$(IntermediateDirectory)/UI_UIButton$(ObjectSuffix): ../Ghastly/UI/UIButton.cpp $(IntermediateDirectory)/UI_UIButton$(DependSuffix)
+	$(CompilerName) $(IncludePCH) $(SourceSwitch) "/home/ajean/Ghost-in-the-Machine/Ghastly/UI/UIButton.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/UI_UIButton$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/UI_UIButton$(DependSuffix): ../Ghastly/UI/UIButton.cpp
+	@$(CompilerName) $(CmpOptions) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/UI_UIButton$(ObjectSuffix) -MF$(IntermediateDirectory)/UI_UIButton$(DependSuffix) -MM "/home/ajean/Ghost-in-the-Machine/Ghastly/UI/UIButton.cpp"
+
+$(IntermediateDirectory)/UI_UIButton$(PreprocessSuffix): ../Ghastly/UI/UIButton.cpp
+	@$(CompilerName) $(CmpOptions) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/UI_UIButton$(PreprocessSuffix) "/home/ajean/Ghost-in-the-Machine/Ghastly/UI/UIButton.cpp"
+
 $(IntermediateDirectory)/Game_main$(ObjectSuffix): ../Game/main.cpp $(IntermediateDirectory)/Game_main$(DependSuffix)
 	$(CompilerName) $(IncludePCH) $(SourceSwitch) "/home/ajean/Ghost-in-the-Machine/Game/main.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/Game_main$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/Game_main$(DependSuffix): ../Game/main.cpp
@@ -1407,6 +1415,9 @@ clean:
 	$(RM) $(IntermediateDirectory)/UI_Text$(ObjectSuffix)
 	$(RM) $(IntermediateDirectory)/UI_Text$(DependSuffix)
 	$(RM) $(IntermediateDirectory)/UI_Text$(PreprocessSuffix)
+	$(RM) $(IntermediateDirectory)/UI_UIButton$(ObjectSuffix)
+	$(RM) $(IntermediateDirectory)/UI_UIButton$(DependSuffix)
+	$(RM) $(IntermediateDirectory)/UI_UIButton$(PreprocessSuffix)
 	$(RM) $(IntermediateDirectory)/Game_main$(ObjectSuffix)
 	$(RM) $(IntermediateDirectory)/Game_main$(DependSuffix)
 	$(RM) $(IntermediateDirectory)/Game_main$(PreprocessSuffix)

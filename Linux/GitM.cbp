@@ -289,7 +289,6 @@
 		<Unit filename="../Ghastly/Resource/ThreadedResourceManager.h" />
 		<Unit filename="../Ghastly/Resource/WorldManager.cpp" />
 		<Unit filename="../Ghastly/Resource/WorldManager.h" />
-		<Unit filename="../Ghastly/Test/NetworkTests/NetworkTests.cpp" />
 		<Unit filename="../Ghastly/UI/Text.cpp" />
 		<Unit filename="../Ghastly/UI/Text.h" />
 		<Unit filename="../Ghastly/UI/UIBox.cpp" />

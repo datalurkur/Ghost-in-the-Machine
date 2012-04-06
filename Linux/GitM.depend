@@ -1687,10 +1687,10 @@
 	<Engine/QuadTreeSceneManager.h>
 	<Engine/PhysicsEngine.h>
 
-1333397412 source:/home/ajean/Ghost-in-the-Machine/Ghastly/Render/Font.cpp
+1333468241 source:/home/ajean/Ghost-in-the-Machine/Ghastly/Render/Font.cpp
 	<Render/Font.h>
 
-1333122210 /home/ajean/Ghost-in-the-Machine/Ghastly/Render/Font.h
+1333468241 /home/ajean/Ghost-in-the-Machine/Ghastly/Render/Font.h
 	<Base/Vector2.h>
 	<Render/Material.h>
 	<Render/Renderable.h>
@@ -1704,7 +1704,7 @@
 	<SDL/SDL_opengl.h>
 	<Render/GLHelper.h>
 
-1333405249 source:/home/ajean/Ghost-in-the-Machine/Ghastly/Render/Renderable.cpp
+1333468241 source:/home/ajean/Ghost-in-the-Machine/Ghastly/Render/Renderable.cpp
 	<Render/Renderable.h>
 	<Render/GLHelper.h>
 	<Base/Log.h>
@@ -1747,7 +1747,7 @@
 	<Render/Material.h>
 	<Resource/ResourceManager.h>
 
-1333397412 source:/home/ajean/Ghost-in-the-Machine/Ghastly/Resource/TTFManager.cpp
+1333468241 source:/home/ajean/Ghost-in-the-Machine/Ghastly/Resource/TTFManager.cpp
 	<Resource/TTFManager.h>
 	<Resource/TextureManager.h>
 	<Base/Base.h>
@@ -1819,7 +1819,7 @@
 1332947983 /home/ajean/Ghost-in-the-Machine/Game/StartingState.h
 	<Engine/State.h>
 
-1333122477 source:/home/ajean/Ghost-in-the-Machine/Game/GhostWorld.cpp
+1333483410 source:/home/ajean/Ghost-in-the-Machine/Game/GhostWorld.cpp
 	<Game/GhostWorld.h>
 	<Game/Platform.h>
 	<Game/Wall.h>
@@ -1856,7 +1856,7 @@
 	<Game/PlayerController.h>
 	<Game/Player.h>
 
-1333404250 source:/home/ajean/Ghost-in-the-Machine/Game/PlayingState.cpp
+1333466651 source:/home/ajean/Ghost-in-the-Machine/Game/PlayingState.cpp
 	<Game/PlayingState.h>
 	<Resource/WorldManager.h>
 	<Engine/Core.h>
@@ -2074,16 +2074,16 @@
 	<Engine/OrthoCamera.h>
 	<UI/UIElement.h>
 
-1333397412 source:/home/ajean/Ghost-in-the-Machine/Ghastly/UI/UIElement.cpp
+1333468241 source:/home/ajean/Ghost-in-the-Machine/Ghastly/UI/UIElement.cpp
 	<UI/UIElement.h>
 	<Resource/MaterialManager.h>
 	<Resource/TTFManager.h>
 	<Render/Font.h>
 
-1333397412 /home/ajean/Ghost-in-the-Machine/Ghastly/UI/UIElement.h
+1333468241 /home/ajean/Ghost-in-the-Machine/Ghastly/UI/UIElement.h
 	<Engine/SceneNode.h>
 
-1333397412 source:/home/ajean/Ghost-in-the-Machine/Ghastly/UI/UIManager.cpp
+1333468241 source:/home/ajean/Ghost-in-the-Machine/Ghastly/UI/UIManager.cpp
 	<UI/UIManager.h>
 	<Engine/OrthoCamera.h>
 
@@ -2103,8 +2103,9 @@
 	<Base/Assertion.h>
 	<Base/Log.h>
 
-1333402076 /home/ajean/Ghost-in-the-Machine/Ghastly/UI/Text.h
+1333468241 /home/ajean/Ghost-in-the-Machine/Ghastly/UI/Text.h
 	<UI/UIElement.h>
+	<Render/Font.h>
 
 1333403778 /home/ajean/Ghost-in-the-Machine/Ghastly/UI/UIBox.h
 	<UI/UIElement.h>
@@ -2115,12 +2116,12 @@
 
 1333397412 /home/ajean/Ghost-in-the-Machine/Ghastly/Render/GLHelper.h
 
-1333402105 source:/home/ajean/Ghost-in-the-Machine/Ghastly/UI/Text.cpp
+1333468241 source:/home/ajean/Ghost-in-the-Machine/Ghastly/UI/Text.cpp
 	<UI/Text.h>
 	<UI/UIManager.h>
 	<Resource/TTFManager.h>
 
-1333405759 source:/home/ajean/Ghost-in-the-Machine/Ghastly/UI/UIBox.cpp
+1333468241 source:/home/ajean/Ghost-in-the-Machine/Ghastly/UI/UIBox.cpp
 	<UI/UIBox.h>
 	<Resource/MaterialManager.h>
 

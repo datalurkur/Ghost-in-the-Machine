@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeLite_Project Name="GitM" InternalType="Console">
+  <Plugins>
+    <Plugin Name="qmake">
+      <![CDATA[00010001N0005Debug000000000000]]>
+    </Plugin>
+  </Plugins>
+  <VirtualDirectory Name="Ghastly">
+    <VirtualDirectory Name="Box2D">
+      <VirtualDirectory Name="Dynamics">
+        <VirtualDirectory Name="Contacts">
+          <File Name="../Ghastly/Box2D/Dynamics/Contacts/b2EdgeAndCircleContact.h"/>
+          <File Name="../Ghastly/Box2D/Dynamics/Contacts/b2Contact.cpp"/>
+          <File Name="../Ghastly/Box2D/Dynamics/Contacts/b2EdgeAndPolygonContact.cpp"/>
+          <File Name="../Ghastly/Box2D/Dynamics/Contacts/b2PolygonAndCircleContact.cpp"/>
+          <File Name="../Ghastly/Box2D/Dynamics/Contacts/b2PolygonAndCircleContact.h"/>
+          <File Name="../Ghastly/Box2D/Dynamics/Contacts/b2ChainAndCircleContact.cpp"/>
+          <File Name="../Ghastly/Box2D/Dynamics/Contacts/b2CircleContact.h"/>
+          <File Name="../Ghastly/Box2D/Dynamics/Contacts/b2PolygonContact.cpp"/>
+          <File Name="../Ghastly/Box2D/Dynamics/Contacts/b2ChainAndPolygonContact.h"/>
+          <File Name="../Ghastly/Box2D/Dynamics/Contacts/b2ChainAndPolygonContact.cpp"/>
+          <File Name="../Ghastly/Box2D/Dynamics/Contacts/b2EdgeAndPolygonContact.h"/>
+          <File Name="../Ghastly/Box2D/Dynamics/Contacts/b2PolygonContact.h"/>
+          <File Name="../Ghastly/Box2D/Dynamics/Contacts/b2EdgeAndCircleContact.cpp"/>
+          <File Name="../Ghastly/Box2D/Dynamics/Contacts/b2Contact.h"/>
+          <File Name="../Ghastly/Box2D/Dynamics/Contacts/b2ContactSolver.h"/>
+          <File Name="../Ghastly/Box2D/Dynamics/Contacts/b2ChainAndCircleContact.h"/>
+          <File Name="../Ghastly/Box2D/Dynamics/Contacts/b2CircleContact.cpp"/>
+          <File Name="../Ghastly/Box2D/Dynamics/Contacts/b2ContactSolver.cpp"/>
+        </VirtualDirectory>
+        <VirtualDirectory Name="Joints">
+          <File Name="../Ghastly/Box2D/Dynamics/Joints/b2RopeJoint.h"/>
+          <File Name="../Ghastly/Box2D/Dynamics/Joints/b2GearJoint.h"/>
+          <File Name="../Ghastly/Box2D/Dynamics/Joints/b2DistanceJoint.h"/>
+          <File Name="../Ghastly/Box2D/Dynamics/Joints/b2PulleyJoint.h"/>
+          <File Name="../Ghastly/Box2D/Dynamics/Joints/b2FrictionJoint.cpp"/>
+          <File Name="../Ghastly/Box2D/Dynamics/Joints/b2PrismaticJoint.h"/>
+          <File Name="../Ghastly/Box2D/Dynamics/Joints/b2WeldJoint.cpp"/>
+          <File Name="../Ghastly/Box2D/Dynamics/Joints/b2RevoluteJoint.cpp"/>
+          <File Name="../Ghastly/Box2D/Dynamics/Joints/b2GearJoint.cpp"/>
+          <File Name="../Ghastly/Box2D/Dynamics/Joints/b2RopeJoint.cpp"/>
+          <File Name="../Ghastly/Box2D/Dynamics/Joints/b2MouseJoint.h"/>
+          <File Name="../Ghastly/Box2D/Dynamics/Joints/b2RevoluteJoint.h"/>
+          <File Name="../Ghastly/Box2D/Dynamics/Joints/b2PulleyJoint.cpp"/>
+          <File Name="../Ghastly/Box2D/Dynamics/Joints/b2WheelJoint.h"/>
+          <File Name="../Ghastly/Box2D/Dynamics/Joints/b2Joint.cpp"/>
+          <File Name="../Ghastly/Box2D/Dynamics/Joints/b2WeldJoint.h"/>
+          <File Name="../Ghastly/Box2D/Dynamics/Joints/b2PrismaticJoint.cpp"/>
+          <File Name="../Ghastly/Box2D/Dynamics/Joints/b2WheelJoint.cpp"/>
+          <File Name="../Ghastly/Box2D/Dynamics/Joints/b2DistanceJoint.cpp"/>
+          <File Name="../Ghastly/Box2D/Dynamics/Joints/b2FrictionJoint.h"/>
+          <File Name="../Ghastly/Box2D/Dynamics/Joints/b2Joint.h"/>
+          <File Name="../Ghastly/Box2D/Dynamics/Joints/b2MouseJoint.cpp"/>
+        </VirtualDirectory>
+        <File Name="../Ghastly/Box2D/Dynamics/b2ContactManager.cpp"/>
+        <File Name="../Ghastly/Box2D/Dynamics/b2Island.cpp"/>
+        <File Name="../Ghastly/Box2D/Dynamics/b2ContactManager.h"/>
+        <File Name="../Ghastly/Box2D/Dynamics/b2Island.h"/>
+        <File Name="../Ghastly/Box2D/Dynamics/b2Body.h"/>
+        <File Name="../Ghastly/Box2D/Dynamics/b2Fixture.h"/>
+        <File Name="../Ghastly/Box2D/Dynamics/b2TimeStep.h"/>
+        <File Name="../Ghastly/Box2D/Dynamics/b2World.h"/>
+        <File Name="../Ghastly/Box2D/Dynamics/b2World.cpp"/>
+        <File Name="../Ghastly/Box2D/Dynamics/b2WorldCallbacks.h"/>
+        <File Name="../Ghastly/Box2D/Dynamics/b2Fixture.cpp"/>
+        <File Name="../Ghastly/Box2D/Dynamics/b2WorldCallbacks.cpp"/>
+        <File Name="../Ghastly/Box2D/Dynamics/b2Body.cpp"/>
+      </VirtualDirectory>
+      <VirtualDirectory Name="Collision">
+        <VirtualDirectory Name="Shapes">
+          <File Name="../Ghastly/Box2D/Collision/Shapes/b2PolygonShape.cpp"/>
+          <File Name="../Ghastly/Box2D/Collision/Shapes/b2CircleShape.h"/>
+          <File Name="../Ghastly/Box2D/Collision/Shapes/b2Shape.h"/>
+          <File Name="../Ghastly/Box2D/Collision/Shapes/b2EdgeShape.cpp"/>
+          <File Name="../Ghastly/Box2D/Collision/Shapes/b2ChainShape.cpp"/>
+          <File Name="../Ghastly/Box2D/Collision/Shapes/b2PolygonShape.h"/>
+          <File Name="../Ghastly/Box2D/Collision/Shapes/b2ChainShape.h"/>
+          <File Name="../Ghastly/Box2D/Collision/Shapes/b2CircleShape.cpp"/>
+          <File Name="../Ghastly/Box2D/Collision/Shapes/b2EdgeShape.h"/>
+        </VirtualDirectory>
+        <File Name="../Ghastly/Box2D/Collision/b2Collision.h"/>
+        <File Name="../Ghastly/Box2D/Collision/b2BroadPhase.h"/>
+        <File Name="../Ghastly/Box2D/Collision/b2DynamicTree.h"/>
+        <File Name="../Ghastly/Box2D/Collision/b2Collision.cpp"/>
+        <File Name="../Ghastly/Box2D/Collision/b2TimeOfImpact.cpp"/>
+        <File Name="../Ghastly/Box2D/Collision/b2CollidePolygon.cpp"/>
+        <File Name="../Ghastly/Box2D/Collision/b2Distance.h"/>
+        <File Name="../Ghastly/Box2D/Collision/b2BroadPhase.cpp"/>
+        <File Name="../Ghastly/Box2D/Collision/b2CollideCircle.cpp"/>
+        <File Name="../Ghastly/Box2D/Collision/b2TimeOfImpact.h"/>
+        <File Name="../Ghastly/Box2D/Collision/b2Distance.cpp"/>
+        <File Name="../Ghastly/Box2D/Collision/b2DynamicTree.cpp"/>
+        <File Name="../Ghastly/Box2D/Collision/b2CollideEdge.cpp"/>
+      </VirtualDirectory>
+      <VirtualDirectory Name="Common">
+        <File Name="../Ghastly/Box2D/Common/b2StackAllocator.h"/>
+        <File Name="../Ghastly/Box2D/Common/b2Math.h"/>
+        <File Name="../Ghastly/Box2D/Common/b2Timer.cpp"/>
+        <File Name="../Ghastly/Box2D/Common/b2Settings.cpp"/>
+        <File Name="../Ghastly/Box2D/Common/b2Settings.h"/>
+        <File Name="../Ghastly/Box2D/Common/b2Timer.h"/>
+        <File Name="../Ghastly/Box2D/Common/b2Math.cpp"/>
+        <File Name="../Ghastly/Box2D/Common/b2Draw.h"/>
+        <File Name="../Ghastly/Box2D/Common/b2GrowableStack.h"/>
+        <File Name="../Ghastly/Box2D/Common/b2StackAllocator.cpp"/>
+        <File Name="../Ghastly/Box2D/Common/b2Draw.cpp"/>
+        <File Name="../Ghastly/Box2D/Common/b2BlockAllocator.h"/>
+        <File Name="../Ghastly/Box2D/Common/b2BlockAllocator.cpp"/>
+      </VirtualDirectory>
+      <VirtualDirectory Name="Rope">
+        <File Name="../Ghastly/Box2D/Rope/b2Rope.h"/>
+        <File Name="../Ghastly/Box2D/Rope/b2Rope.cpp"/>
+      </VirtualDirectory>
+      <File Name="../Ghastly/Box2D/Box2D.h"/>
+    </VirtualDirectory>
+    <VirtualDirectory Name="Render">
+      <File Name="../Ghastly/Render/Material.h"/>
+      <File Name="../Ghastly/Render/Font.cpp"/>
+      <File Name="../Ghastly/Render/GLHelper.h"/>
+      <File Name="../Ghastly/Render/Texture.h"/>
+      <File Name="../Ghastly/Render/Viewport.cpp"/>
+      <File Name="../Ghastly/Render/Font.h"/>
+      <File Name="../Ghastly/Render/Texture.cpp"/>
+      <File Name="../Ghastly/Render/RenderContext.cpp"/>
+      <File Name="../Ghastly/Render/ResizeListener.h"/>
+      <File Name="../Ghastly/Render/GLHelper.cpp"/>
+      <File Name="../Ghastly/Render/Material.cpp"/>
+      <File Name="../Ghastly/Render/RenderContext.h"/>
+      <File Name="../Ghastly/Render/Renderable.cpp"/>
+      <File Name="../Ghastly/Render/Viewport.h"/>
+      <File Name="../Ghastly/Render/Renderable.h"/>
+    </VirtualDirectory>
+    <VirtualDirectory Name="Network">
+      <File Name="../Ghastly/Network/SocketedUDPProvider.h"/>
+      <File Name="../Ghastly/Network/TCPBuffer.h"/>
+      <File Name="../Ghastly/Network/UDPBuffer.h"/>
+      <File Name="../Ghastly/Network/NetAddress.h"/>
+      <File Name="../Ghastly/Network/Socket.cpp"/>
+      <File Name="../Ghastly/Network/SimpleUDPProvider.cpp"/>
+      <File Name="../Ghastly/Network/ConnectionBuffer.cpp"/>
+      <File Name="../Ghastly/Network/ClientProvider.cpp"/>
+      <File Name="../Ghastly/Network/ListenSocket.cpp"/>
+      <File Name="../Ghastly/Network/SimpleUDPProvider.h"/>
+      <File Name="../Ghastly/Network/TCPSocket.cpp"/>
+      <File Name="../Ghastly/Network/ServerProvider.cpp"/>
+      <File Name="../Ghastly/Network/MultiConnectionProvider.h"/>
+      <File Name="../Ghastly/Network/TCPBuffer.cpp"/>
+      <File Name="../Ghastly/Network/Packet.h"/>
+      <File Name="../Ghastly/Network/ClientProvider.h"/>
+      <File Name="../Ghastly/Network/GhastlyHost.h"/>
+      <File Name="../Ghastly/Network/SocketedUDPProvider.cpp"/>
+      <File Name="../Ghastly/Network/NetAddress.cpp"/>
+      <File Name="../Ghastly/Network/GhastlyHost.cpp"/>
+      <File Name="../Ghastly/Network/GhastlyProtocol.h"/>
+      <File Name="../Ghastly/Network/UDPBuffer.cpp"/>
+      <File Name="../Ghastly/Network/UDPSocket.h"/>
+      <File Name="../Ghastly/Network/ConnectionProvider.h"/>
+      <File Name="../Ghastly/Network/MultiConnectionProvider.cpp"/>
+      <File Name="../Ghastly/Network/GhastlyClient.h"/>
+      <File Name="../Ghastly/Network/Packet.cpp"/>
+      <File Name="../Ghastly/Network/ListenSocket.h"/>
+      <File Name="../Ghastly/Network/ConnectionBuffer.h"/>
+      <File Name="../Ghastly/Network/ServerProvider.h"/>
+      <File Name="../Ghastly/Network/TCPSocket.h"/>
+      <File Name="../Ghastly/Network/GhastlyClient.cpp"/>
+      <File Name="../Ghastly/Network/GhastlyServer.cpp"/>
+      <File Name="../Ghastly/Network/Socket.h"/>
+      <File Name="../Ghastly/Network/UDPSocket.cpp"/>
+      <File Name="../Ghastly/Network/GhastlyServer.h"/>
+    </VirtualDirectory>
+    <VirtualDirectory Name="Base">
+      <File Name="../Ghastly/Base/Vector3.h"/>
+      <File Name="../Ghastly/Base/Vector2.cpp"/>
+      <File Name="../Ghastly/Base/AABB3.cpp"/>
+      <File Name="../Ghastly/Base/Matrix4.cpp"/>
+      <File Name="../Ghastly/Base/ResourcePool.h"/>
+      <File Name="../Ghastly/Base/Matrix4.h"/>
+      <File Name="../Ghastly/Base/FileSystem.cpp"/>
+      <File Name="../Ghastly/Base/Assertion.h"/>
+      <File Name="../Ghastly/Base/Base.h"/>
+      <File Name="../Ghastly/Base/IndexPool.h"/>
+      <File Name="../Ghastly/Base/FileSystem.h"/>
+      <File Name="../Ghastly/Base/Color.h"/>
+      <File Name="../Ghastly/Base/Vector3.cpp"/>
+      <File Name="../Ghastly/Base/Timestamp.cpp"/>
+      <File Name="../Ghastly/Base/AABB2.h"/>
+      <File Name="../Ghastly/Base/PropertyMap.h"/>
+      <File Name="../Ghastly/Base/Log.h"/>
+      <File Name="../Ghastly/Base/Vector4.cpp"/>
+      <File Name="../Ghastly/Base/PropertyMap.cpp"/>
+      <File Name="../Ghastly/Base/AABB2.cpp"/>
+      <File Name="../Ghastly/Base/Log.cpp"/>
+      <File Name="../Ghastly/Base/Timestamp.h"/>
+      <File Name="../Ghastly/Base/Vector4.h"/>
+      <File Name="../Ghastly/Base/Vector2.h"/>
+      <File Name="../Ghastly/Base/AABB3.h"/>
+      <File Name="../Ghastly/Base/IndexPool.cpp"/>
+    </VirtualDirectory>
+    <VirtualDirectory Name="Engine">
+      <File Name="../Ghastly/Engine/Entity.cpp"/>
+      <File Name="../Ghastly/Engine/SceneNode.h"/>
+      <File Name="../Ghastly/Engine/Mob.cpp"/>
+      <File Name="../Ghastly/Engine/EventHandler.cpp"/>
+      <File Name="../Ghastly/Engine/SceneManager.cpp"/>
+      <File Name="../Ghastly/Engine/State.h"/>
+      <File Name="../Ghastly/Engine/ContactListener.cpp"/>
+      <File Name="../Ghastly/Engine/PhysicsEngine.h"/>
+      <File Name="../Ghastly/Engine/Controller.h"/>
+      <File Name="../Ghastly/Engine/State.cpp"/>
+      <File Name="../Ghastly/Engine/World.cpp"/>
+      <File Name="../Ghastly/Engine/ParentState.cpp"/>
+      <File Name="../Ghastly/Engine/SceneNode.cpp"/>
+      <File Name="../Ghastly/Engine/PhysicsEngine.cpp"/>
+      <File Name="../Ghastly/Engine/Camera.h"/>
+      <File Name="../Ghastly/Engine/Camera.cpp"/>
+      <File Name="../Ghastly/Engine/Core.cpp"/>
+      <File Name="../Ghastly/Engine/OrthoCamera.h"/>
+      <File Name="../Ghastly/Engine/Window.h"/>
+      <File Name="../Ghastly/Engine/Mob.h"/>
+      <File Name="../Ghastly/Engine/Window.cpp"/>
+      <File Name="../Ghastly/Engine/Frustum.cpp"/>
+      <File Name="../Ghastly/Engine/OrthoCamera.cpp"/>
+      <File Name="../Ghastly/Engine/ParentState.h"/>
+      <File Name="../Ghastly/Engine/Core.h"/>
+      <File Name="../Ghastly/Engine/Controller.cpp"/>
+      <File Name="../Ghastly/Engine/World.h"/>
+      <File Name="../Ghastly/Engine/KeyboardListener.cpp"/>
+      <File Name="../Ghastly/Engine/WindowListener.h"/>
+      <File Name="../Ghastly/Engine/Entity.h"/>
+      <File Name="../Ghastly/Engine/EventHandler.h"/>
+      <File Name="../Ghastly/Engine/WindowListener.cpp"/>
+      <File Name="../Ghastly/Engine/QuadTreeSceneManager.cpp"/>
+      <File Name="../Ghastly/Engine/SceneManager.h"/>
+      <File Name="../Ghastly/Engine/IsoCamera.cpp"/>
+      <File Name="../Ghastly/Engine/PhysicsController.h"/>
+      <File Name="../Ghastly/Engine/Frustum.h"/>
+      <File Name="../Ghastly/Engine/KeyboardListener.h"/>
+      <File Name="../Ghastly/Engine/ContactListener.h"/>
+      <File Name="../Ghastly/Engine/QuadTreeSceneManager.h"/>
+      <File Name="../Ghastly/Engine/IsoCamera.h"/>
+      <File Name="../Ghastly/Engine/PhysicsController.cpp"/>
+    </VirtualDirectory>
+    <VirtualDirectory Name="Resource">
+      <File Name="../Ghastly/Resource/WorldManager.cpp"/>
+      <File Name="../Ghastly/Resource/TTFManager.h"/>
+      <File Name="../Ghastly/Resource/TextureManager.cpp"/>
+      <File Name="../Ghastly/Resource/WorldManager.h"/>
+      <File Name="../Ghastly/Resource/ResourceManager.h"/>
+      <File Name="../Ghastly/Resource/TextureManager.h"/>
+      <File Name="../Ghastly/Resource/ThreadedResourceManager.cpp"/>
+      <File Name="../Ghastly/Resource/MaterialManager.h"/>
+      <File Name="../Ghastly/Resource/TTFManager.cpp"/>
+      <File Name="../Ghastly/Resource/ThreadedResourceManager.h"/>
+      <File Name="../Ghastly/Resource/MaterialManager.cpp"/>
+    </VirtualDirectory>
+    <VirtualDirectory Name="UI">
+      <File Name="../Ghastly/UI/Text.h"/>
+      <File Name="../Ghastly/UI/UIElement.h"/>
+      <File Name="../Ghastly/UI/UIElement.cpp"/>
+      <File Name="../Ghastly/UI/UIBox.cpp"/>
+      <File Name="../Ghastly/UI/UIManager.h"/>
+      <File Name="../Ghastly/UI/UIManager.cpp"/>
+      <File Name="../Ghastly/UI/UIBox.h"/>
+      <File Name="../Ghastly/UI/Text.cpp"/>
+    </VirtualDirectory>
+  </VirtualDirectory>
+  <Description/>
+  <Dependencies/>
+  <VirtualDirectory Name="Game">
+    <File Name="../Game/main.cpp"/>
+    <File Name="../Game/DebugVolume.h"/>
+    <File Name="../Game/PlayingState.cpp"/>
+    <File Name="../Game/Player.h"/>
+    <File Name="../Game/PlayerController.h"/>
+    <File Name="../Game/GhostCore.cpp"/>
+    <File Name="../Game/Player.cpp"/>
+    <File Name="../Game/StartingState.h"/>
+    <File Name="../Game/DebugVolume.cpp"/>
+    <File Name="../Game/GhostWorld.h"/>
+    <File Name="../Game/GameState.cpp"/>
+    <File Name="../Game/LoadingState.cpp"/>
+    <File Name="../Game/GhostCore.h"/>
+    <File Name="../Game/Platform.h"/>
+    <File Name="../Game/PlayerController.cpp"/>
+    <File Name="../Game/Platform.cpp"/>
+    <File Name="../Game/Wall.h"/>
+    <File Name="../Game/GhostWorld.cpp"/>
+    <File Name="../Game/Wall.cpp"/>
+    <File Name="../Game/LoadingState.h"/>
+    <File Name="../Game/StartingState.cpp"/>
+    <File Name="../Game/GameState.h"/>
+    <File Name="../Game/PlayingState.h"/>
+    <File Name="../Game/MenuState.cpp"/>
+    <File Name="../Game/MenuState.h"/>
+  </VirtualDirectory>
+  <Settings Type="Executable">
+    <GlobalSettings>
+      <Compiler Options="" C_Options="">
+        <IncludePath Value="."/>
+      </Compiler>
+      <Linker Options="">
+        <LibraryPath Value="."/>
+      </Linker>
+      <ResourceCompiler Options=""/>
+    </GlobalSettings>
+    <Configuration Name="Debug" CompilerType="gnu g++" DebuggerType="GNU gdb debugger" Type="Executable" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
+      <Compiler Options="-g;-O0;-Wall" C_Options="-g;-O0;-Wall" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" UseDifferentPCHFlags="no" PCHFlags="">
+        <IncludePath Value="../"/>
+        <IncludePath Value="../Ghastly"/>
+      </Compiler>
+      <Linker Options="" Required="yes">
+        <Library Value="GL"/>
+        <Library Value="GLU"/>
+        <Library Value="SDL"/>
+        <Library Value="SDL_image"/>
+        <Library Value="SDL_ttf"/>
+      </Linker>
+      <ResourceCompiler Options="" Required="no"/>
+      <General OutputFile="../$(ProjectName)" IntermediateDirectory="./Debug" Command="./$(ProjectName)" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="../" PauseExecWhenProcTerminates="yes"/>
+      <Environment EnvVarSetName="&lt;Use Defaults&gt;" DbgSetName="&lt;Use Defaults&gt;">
+        <![CDATA[]]>
+      </Environment>
+      <Debugger IsRemote="no" RemoteHostName="" RemoteHostPort="" DebuggerPath="">
+        <PostConnectCommands/>
+        <StartupCommands/>
+      </Debugger>
+      <PreBuild/>
+      <PostBuild/>
+      <CustomBuild Enabled="no">
+        <RebuildCommand/>
+        <CleanCommand/>
+        <BuildCommand/>
+        <PreprocessFileCommand/>
+        <SingleFileCommand/>
+        <MakefileGenerationCommand/>
+        <ThirdPartyToolName>None</ThirdPartyToolName>
+        <WorkingDirectory/>
+      </CustomBuild>
+      <AdditionalRules>
+        <CustomPostBuild/>
+        <CustomPreBuild/>
+      </AdditionalRules>
+      <Completion>
+        <ClangCmpFlags/>
+        <ClangPP/>
+        <SearchPaths/>
+      </Completion>
+    </Configuration>
+    <Configuration Name="Release" CompilerType="gnu g++" DebuggerType="GNU gdb debugger" Type="" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
+      <Compiler Options="-O2;-Wall" C_Options="-O2;-Wall" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" UseDifferentPCHFlags="no" PCHFlags="">
+        <IncludePath Value="."/>
+      </Compiler>
+      <Linker Options="" Required="yes"/>
+      <ResourceCompiler Options="" Required="no"/>
+      <General OutputFile="$(IntermediateDirectory)/$(ProjectName)" IntermediateDirectory="./Release" Command="./$(ProjectName)" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="$(IntermediateDirectory)" PauseExecWhenProcTerminates="yes"/>
+      <Environment EnvVarSetName="&lt;Use Defaults&gt;" DbgSetName="&lt;Use Defaults&gt;">
+        <![CDATA[
+      
+      
+      
+      
+      ]]>
+      </Environment>
+      <Debugger IsRemote="no" RemoteHostName="" RemoteHostPort="" DebuggerPath="">
+        <PostConnectCommands/>
+        <StartupCommands/>
+      </Debugger>
+      <PreBuild/>
+      <PostBuild/>
+      <CustomBuild Enabled="no">
+        <RebuildCommand/>
+        <CleanCommand/>
+        <BuildCommand/>
+        <PreprocessFileCommand/>
+        <SingleFileCommand/>
+        <MakefileGenerationCommand/>
+        <ThirdPartyToolName>None</ThirdPartyToolName>
+        <WorkingDirectory/>
+      </CustomBuild>
+      <AdditionalRules>
+        <CustomPostBuild/>
+        <CustomPreBuild/>
+      </AdditionalRules>
+      <Completion>
+        <ClangCmpFlags/>
+        <ClangPP/>
+        <SearchPaths/>
+      </Completion>
+    </Configuration>
+  </Settings>
+</CodeLite_Project>

@@ -2,6 +2,8 @@
 #include <Game/MenuState.h>
 #include <UI/UIManager.h>
 #include <UI/UIBox.h>
+#include <UI/Text.h>
+#include <UI/UIButton.h>
 
 MenuState::MenuState() {
 }
@@ -30,7 +32,11 @@ void MenuState::setup(va_list args) {
     // Background box
     _ui->addElement(new UIBox("background", Vector2(0.3f, 0.2f), Vector2(0.4f, 0.6f), "gray", 0.005f, "black"));
 
+    // Title text
+    _ui->addElement(new Text("title", Vector2(0.3f, 0.64f), Vector2(0.4f, 0.16f), "Ghost in the Machine", "title", Font::CENTER));
 
+    // Buttons
+    _ui->addElement(new UIButton("new_game_button", Vector2(0.32f, 0.56f), Vector2(0.36f, 0.06f), "gray", 0.005f, "black"));
 }
 
 void MenuState::teardown() {

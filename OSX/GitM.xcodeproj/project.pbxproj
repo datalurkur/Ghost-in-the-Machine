@@ -19,6 +19,8 @@
 		E152C6501434C8E100D83C44 /* SDL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E152C64F1434C8E100D83C44 /* SDL.framework */; };
 		E152C6541434C8F800D83C44 /* SDLMain.m in Sources */ = {isa = PBXBuildFile; fileRef = E152C6531434C8F800D83C44 /* SDLMain.m */; };
 		E15FA1EA142BDF1C00CC6CE2 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E13A3FF6142A79C700D7EA2A /* Cocoa.framework */; };
+		E188644B152E6E6A00FCD6F0 /* MenuState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1886449152E6E6A00FCD6F0 /* MenuState.cpp */; };
+		E188644F152E6E7B00FCD6F0 /* UIButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E188644D152E6E7B00FCD6F0 /* UIButton.cpp */; };
 		E1A180F91513E7B400EA9CDB /* DebugVolume.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1A17FD31513E7B400EA9CDB /* DebugVolume.cpp */; };
 		E1A180FA1513E7B400EA9CDB /* GameState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1A17FD51513E7B400EA9CDB /* GameState.cpp */; };
 		E1A180FB1513E7B400EA9CDB /* GhostCore.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1A17FD71513E7B400EA9CDB /* GhostCore.cpp */; };
@@ -178,6 +180,10 @@
 		E152C6521434C8F800D83C44 /* SDLMain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDLMain.h; sourceTree = "<group>"; };
 		E152C6531434C8F800D83C44 /* SDLMain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDLMain.m; sourceTree = "<group>"; };
 		E15FA1E8142BDF1C00CC6CE2 /* GitM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitM.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1886449152E6E6A00FCD6F0 /* MenuState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MenuState.cpp; sourceTree = "<group>"; };
+		E188644A152E6E6A00FCD6F0 /* MenuState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuState.h; sourceTree = "<group>"; };
+		E188644D152E6E7B00FCD6F0 /* UIButton.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = UIButton.cpp; path = UI/UIButton.cpp; sourceTree = "<group>"; };
+		E188644E152E6E7B00FCD6F0 /* UIButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIButton.h; path = UI/UIButton.h; sourceTree = "<group>"; };
 		E1A17FD31513E7B400EA9CDB /* DebugVolume.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DebugVolume.cpp; sourceTree = "<group>"; };
 		E1A17FD41513E7B400EA9CDB /* DebugVolume.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugVolume.h; sourceTree = "<group>"; };
 		E1A17FD51513E7B400EA9CDB /* GameState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameState.cpp; sourceTree = "<group>"; };
@@ -492,6 +498,8 @@
 		E1A17FD21513E7B400EA9CDB /* Game */ = {
 			isa = PBXGroup;
 			children = (
+				E1886449152E6E6A00FCD6F0 /* MenuState.cpp */,
+				E188644A152E6E6A00FCD6F0 /* MenuState.h */,
 				E1A17FD31513E7B400EA9CDB /* DebugVolume.cpp */,
 				E1A17FD41513E7B400EA9CDB /* DebugVolume.h */,
 				E1A17FD51513E7B400EA9CDB /* GameState.cpp */,
@@ -860,6 +868,8 @@
 		E1A5966015265997008B4E8B /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				E188644D152E6E7B00FCD6F0 /* UIButton.cpp */,
+				E188644E152E6E7B00FCD6F0 /* UIButton.h */,
 				E12853F415296AB600BD8DFA /* UIBox.cpp */,
 				E12853F515296AB600BD8DFA /* UIBox.h */,
 				E12853EC15295EAE00BD8DFA /* Text.cpp */,
@@ -1070,6 +1080,8 @@
 				E1485E62152764D80032A401 /* GLHelper.cpp in Sources */,
 				E12853EE15295EAE00BD8DFA /* Text.cpp in Sources */,
 				E12853F615296AB600BD8DFA /* UIBox.cpp in Sources */,
+				E188644B152E6E6A00FCD6F0 /* MenuState.cpp in Sources */,
+				E188644F152E6E7B00FCD6F0 /* UIButton.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

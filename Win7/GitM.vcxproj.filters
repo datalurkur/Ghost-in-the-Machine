@@ -426,6 +426,9 @@
     <ClCompile Include="..\Ghastly\UI\UIButton.cpp">
       <Filter>Ghastly\UI</Filter>
     </ClCompile>
+    <ClCompile Include="..\Ghastly\Base\Debug.cpp">
+      <Filter>Ghastly\Base</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Ghastly\Base\AABB2.h">
@@ -823,6 +826,9 @@
     </ClInclude>
     <ClInclude Include="..\Ghastly\UI\UIButton.h">
       <Filter>Ghastly\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Ghastly\Base\Debug.h">
+      <Filter>Ghastly\Base</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

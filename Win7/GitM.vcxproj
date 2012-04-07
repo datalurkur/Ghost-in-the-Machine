@@ -87,6 +87,7 @@
     <ClCompile Include="..\Game\Wall.cpp" />
     <ClCompile Include="..\Ghastly\Base\AABB2.cpp" />
     <ClCompile Include="..\Ghastly\Base\AABB3.cpp" />
+    <ClCompile Include="..\Ghastly\Base\Debug.cpp" />
     <ClCompile Include="..\Ghastly\Base\FileSystem.cpp" />
     <ClCompile Include="..\Ghastly\Base\IndexPool.cpp" />
     <ClCompile Include="..\Ghastly\Base\Log.cpp" />
@@ -215,6 +216,7 @@
     <ClInclude Include="..\Ghastly\Base\Assertion.h" />
     <ClInclude Include="..\Ghastly\Base\Base.h" />
     <ClInclude Include="..\Ghastly\Base\Color.h" />
+    <ClInclude Include="..\Ghastly\Base\Debug.h" />
     <ClInclude Include="..\Ghastly\Base\FileSystem.h" />
     <ClInclude Include="..\Ghastly\Base\IndexPool.h" />
     <ClInclude Include="..\Ghastly\Base\Log.h" />

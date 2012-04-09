@@ -1,6 +1,6 @@
 #include <Game/Platform.h>
 #include <Engine/PhysicsEngine.h>
-#include <Resource/MaterialManager.h>
+#include <Resource/ShaderManager.h>
 
 const std::string Platform::NodeType = "Platform";
 
@@ -13,7 +13,7 @@ Platform::Platform(const std::string &name):
 Platform::~Platform() {}
 
 void Platform::recreateRenderables() {
-    addRenderable(Renderable::Sprite(Vector2(_position.x, _position.y), Vector2(_dimensions.x, _dimensions.y), 0, MaterialManager::Get("platform")));
+    addRenderable(Renderable::Sprite(Vector2(_position.x, _position.y), Vector2(_dimensions.x, _dimensions.y), 0, ShaderManager::Get("platform")));
 }
 
 void Platform::setupPhysics(PhysicsEngine *physics) {

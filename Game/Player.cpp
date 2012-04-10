@@ -1,7 +1,7 @@
 #include <Game/Player.h>
 #include <Game/DebugVolume.h>
 #include <Engine/PhysicsEngine.h>
-#include <Resource/ShaderManager.h>
+#include <Resource/MaterialManager.h>
 
 const std::string Player::NodeType = "Player";
 
@@ -19,7 +19,7 @@ Player::~Player() {
 
 void Player::recreateRenderables() {
     clearRenderables();
-    addRenderable(Renderable::Sprite(Vector2(_position.x, _position.y), Vector2(_dimensions.x, _dimensions.y), 0, ShaderManager::Get("player")));
+    addRenderable(Renderable::Sprite(Vector2(_position.x, _position.y), Vector2(_dimensions.x, _dimensions.y), 0, MaterialManager::Get("player")));
 
 	// Debug
     deleteChild("jumpSensor");

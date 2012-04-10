@@ -10,6 +10,7 @@ GhostWorld::~GhostWorld() {
 }
 
 void GhostWorld::load(const std::string &name) {
+/*
     _player = Player::DefaultPlayer(); //new Player("herpus");
     _player->setPosition(0.5f, 2.0f, 0.0f);
     addEntity(_player);
@@ -18,7 +19,7 @@ void GhostWorld::load(const std::string &name) {
     platform->setPosition(0.0f, -2.0f, 0.0f);
     platform->setDimensions(5.0f, 1.0f, 0.0f);
     addEntity(platform);
-/*
+
     platform = new Platform("platform02");
     platform->setPosition(-4.5, 2.5, 0.0);
     platform->setDimensions(1, 5);
@@ -41,7 +42,8 @@ void GhostWorld::load(const std::string &name) {
 
     wallSegment->setVerts(verts, 6);
     wallSegment->recreateRenderables();
-    addEntity(wallSegment);*/
+    addEntity(wallSegment);
+*/
 }
 
 Player* GhostWorld::getPlayer() {

@@ -1,0 +1,9 @@
+varying vec3 normal;
+
+void main() {
+    gl_Position = gl_ModelViewProjectionMatrix * gl_Vertex;
+
+    normal = gl_NormalMatrix * gl_Normal;
+
+    vec4 modelview = gl_ModelViewMatrix * gl_Vertex;
+}

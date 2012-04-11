@@ -13,7 +13,7 @@ CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=Andrew Jean
-Date                   :=04/06/2012
+Date                   :=04/11/2012
 CodeLitePath           :="/home/ajean/.codelite"
 LinkerName             :=g++
 ArchiveTool            :=ar rcus
@@ -31,7 +31,7 @@ SourceSwitch           :=-c
 CompilerName           :=g++
 C_CompilerName         :=gcc
 OutputFile             :=../$(ProjectName)
-Preprocessors          :=
+Preprocessors          :=$(PreprocessorSwitch)GL_GLEXT_PROTOTYPES 
 ObjectSwitch           :=-o 
 ArchiveOutputSwitch    := 
 PreprocessOnlySwitch   :=-E 
@@ -57,14 +57,15 @@ Objects=$(IntermediateDirectory)/Contacts_b2Contact$(ObjectSuffix) $(Intermediat
 	$(IntermediateDirectory)/Dynamics_b2ContactManager$(ObjectSuffix) $(IntermediateDirectory)/Dynamics_b2Island$(ObjectSuffix) $(IntermediateDirectory)/Dynamics_b2World$(ObjectSuffix) $(IntermediateDirectory)/Dynamics_b2Fixture$(ObjectSuffix) $(IntermediateDirectory)/Dynamics_b2WorldCallbacks$(ObjectSuffix) $(IntermediateDirectory)/Dynamics_b2Body$(ObjectSuffix) $(IntermediateDirectory)/Shapes_b2PolygonShape$(ObjectSuffix) $(IntermediateDirectory)/Shapes_b2EdgeShape$(ObjectSuffix) $(IntermediateDirectory)/Shapes_b2ChainShape$(ObjectSuffix) $(IntermediateDirectory)/Shapes_b2CircleShape$(ObjectSuffix) \
 	$(IntermediateDirectory)/Collision_b2Collision$(ObjectSuffix) $(IntermediateDirectory)/Collision_b2TimeOfImpact$(ObjectSuffix) $(IntermediateDirectory)/Collision_b2CollidePolygon$(ObjectSuffix) $(IntermediateDirectory)/Collision_b2BroadPhase$(ObjectSuffix) $(IntermediateDirectory)/Collision_b2CollideCircle$(ObjectSuffix) $(IntermediateDirectory)/Collision_b2Distance$(ObjectSuffix) $(IntermediateDirectory)/Collision_b2DynamicTree$(ObjectSuffix) $(IntermediateDirectory)/Collision_b2CollideEdge$(ObjectSuffix) $(IntermediateDirectory)/Common_b2Timer$(ObjectSuffix) $(IntermediateDirectory)/Common_b2Settings$(ObjectSuffix) \
 	$(IntermediateDirectory)/Common_b2Math$(ObjectSuffix) $(IntermediateDirectory)/Common_b2StackAllocator$(ObjectSuffix) $(IntermediateDirectory)/Common_b2Draw$(ObjectSuffix) $(IntermediateDirectory)/Common_b2BlockAllocator$(ObjectSuffix) $(IntermediateDirectory)/Rope_b2Rope$(ObjectSuffix) $(IntermediateDirectory)/Render_Font$(ObjectSuffix) $(IntermediateDirectory)/Render_Viewport$(ObjectSuffix) $(IntermediateDirectory)/Render_Texture$(ObjectSuffix) $(IntermediateDirectory)/Render_RenderContext$(ObjectSuffix) $(IntermediateDirectory)/Render_GLHelper$(ObjectSuffix) \
-	$(IntermediateDirectory)/Render_Material$(ObjectSuffix) $(IntermediateDirectory)/Render_Renderable$(ObjectSuffix) $(IntermediateDirectory)/Network_Socket$(ObjectSuffix) $(IntermediateDirectory)/Network_SimpleUDPProvider$(ObjectSuffix) $(IntermediateDirectory)/Network_ConnectionBuffer$(ObjectSuffix) $(IntermediateDirectory)/Network_ClientProvider$(ObjectSuffix) $(IntermediateDirectory)/Network_ListenSocket$(ObjectSuffix) $(IntermediateDirectory)/Network_TCPSocket$(ObjectSuffix) $(IntermediateDirectory)/Network_ServerProvider$(ObjectSuffix) $(IntermediateDirectory)/Network_TCPBuffer$(ObjectSuffix) \
-	$(IntermediateDirectory)/Network_SocketedUDPProvider$(ObjectSuffix) $(IntermediateDirectory)/Network_NetAddress$(ObjectSuffix) $(IntermediateDirectory)/Network_GhastlyHost$(ObjectSuffix) $(IntermediateDirectory)/Network_UDPBuffer$(ObjectSuffix) $(IntermediateDirectory)/Network_MultiConnectionProvider$(ObjectSuffix) $(IntermediateDirectory)/Network_Packet$(ObjectSuffix) $(IntermediateDirectory)/Network_GhastlyClient$(ObjectSuffix) $(IntermediateDirectory)/Network_GhastlyServer$(ObjectSuffix) $(IntermediateDirectory)/Network_UDPSocket$(ObjectSuffix) $(IntermediateDirectory)/Base_Vector2$(ObjectSuffix) \
-	$(IntermediateDirectory)/Base_AABB3$(ObjectSuffix) $(IntermediateDirectory)/Base_Matrix4$(ObjectSuffix) $(IntermediateDirectory)/Base_FileSystem$(ObjectSuffix) $(IntermediateDirectory)/Base_Vector3$(ObjectSuffix) $(IntermediateDirectory)/Base_Timestamp$(ObjectSuffix) $(IntermediateDirectory)/Base_Vector4$(ObjectSuffix) $(IntermediateDirectory)/Base_PropertyMap$(ObjectSuffix) $(IntermediateDirectory)/Base_AABB2$(ObjectSuffix) $(IntermediateDirectory)/Base_Log$(ObjectSuffix) $(IntermediateDirectory)/Base_IndexPool$(ObjectSuffix) \
-	$(IntermediateDirectory)/Engine_Entity$(ObjectSuffix) $(IntermediateDirectory)/Engine_Mob$(ObjectSuffix) $(IntermediateDirectory)/Engine_EventHandler$(ObjectSuffix) $(IntermediateDirectory)/Engine_SceneManager$(ObjectSuffix) $(IntermediateDirectory)/Engine_ContactListener$(ObjectSuffix) $(IntermediateDirectory)/Engine_State$(ObjectSuffix) $(IntermediateDirectory)/Engine_World$(ObjectSuffix) $(IntermediateDirectory)/Engine_ParentState$(ObjectSuffix) $(IntermediateDirectory)/Engine_SceneNode$(ObjectSuffix) $(IntermediateDirectory)/Engine_PhysicsEngine$(ObjectSuffix) \
-	$(IntermediateDirectory)/Engine_Camera$(ObjectSuffix) $(IntermediateDirectory)/Engine_Core$(ObjectSuffix) $(IntermediateDirectory)/Engine_Window$(ObjectSuffix) $(IntermediateDirectory)/Engine_Frustum$(ObjectSuffix) $(IntermediateDirectory)/Engine_OrthoCamera$(ObjectSuffix) $(IntermediateDirectory)/Engine_Controller$(ObjectSuffix) $(IntermediateDirectory)/Engine_KeyboardListener$(ObjectSuffix) $(IntermediateDirectory)/Engine_WindowListener$(ObjectSuffix) $(IntermediateDirectory)/Engine_QuadTreeSceneManager$(ObjectSuffix) $(IntermediateDirectory)/Engine_IsoCamera$(ObjectSuffix) \
-	$(IntermediateDirectory)/Engine_PhysicsController$(ObjectSuffix) $(IntermediateDirectory)/Resource_WorldManager$(ObjectSuffix) $(IntermediateDirectory)/Resource_TextureManager$(ObjectSuffix) $(IntermediateDirectory)/Resource_ThreadedResourceManager$(ObjectSuffix) $(IntermediateDirectory)/Resource_TTFManager$(ObjectSuffix) $(IntermediateDirectory)/Resource_MaterialManager$(ObjectSuffix) $(IntermediateDirectory)/UI_UIElement$(ObjectSuffix) $(IntermediateDirectory)/UI_UIBox$(ObjectSuffix) $(IntermediateDirectory)/UI_UIManager$(ObjectSuffix) $(IntermediateDirectory)/UI_Text$(ObjectSuffix) \
-	$(IntermediateDirectory)/UI_UIButton$(ObjectSuffix) $(IntermediateDirectory)/Game_main$(ObjectSuffix) $(IntermediateDirectory)/Game_PlayingState$(ObjectSuffix) $(IntermediateDirectory)/Game_GhostCore$(ObjectSuffix) $(IntermediateDirectory)/Game_Player$(ObjectSuffix) $(IntermediateDirectory)/Game_DebugVolume$(ObjectSuffix) $(IntermediateDirectory)/Game_GameState$(ObjectSuffix) $(IntermediateDirectory)/Game_LoadingState$(ObjectSuffix) $(IntermediateDirectory)/Game_PlayerController$(ObjectSuffix) $(IntermediateDirectory)/Game_Platform$(ObjectSuffix) \
-	$(IntermediateDirectory)/Game_GhostWorld$(ObjectSuffix) $(IntermediateDirectory)/Game_Wall$(ObjectSuffix) $(IntermediateDirectory)/Game_StartingState$(ObjectSuffix) $(IntermediateDirectory)/Game_MenuState$(ObjectSuffix) 
+	$(IntermediateDirectory)/Render_Material$(ObjectSuffix) $(IntermediateDirectory)/Render_Renderable$(ObjectSuffix) $(IntermediateDirectory)/Render_BufferState$(ObjectSuffix) $(IntermediateDirectory)/Render_Shader$(ObjectSuffix) $(IntermediateDirectory)/Render_ShaderParameter$(ObjectSuffix) $(IntermediateDirectory)/Render_UniformBuffer$(ObjectSuffix) $(IntermediateDirectory)/Render_TextureParameter$(ObjectSuffix) $(IntermediateDirectory)/Render_ColorParameter$(ObjectSuffix) $(IntermediateDirectory)/Network_Socket$(ObjectSuffix) $(IntermediateDirectory)/Network_SimpleUDPProvider$(ObjectSuffix) \
+	$(IntermediateDirectory)/Network_ConnectionBuffer$(ObjectSuffix) $(IntermediateDirectory)/Network_ClientProvider$(ObjectSuffix) $(IntermediateDirectory)/Network_ListenSocket$(ObjectSuffix) $(IntermediateDirectory)/Network_TCPSocket$(ObjectSuffix) $(IntermediateDirectory)/Network_ServerProvider$(ObjectSuffix) $(IntermediateDirectory)/Network_TCPBuffer$(ObjectSuffix) $(IntermediateDirectory)/Network_SocketedUDPProvider$(ObjectSuffix) $(IntermediateDirectory)/Network_NetAddress$(ObjectSuffix) $(IntermediateDirectory)/Network_GhastlyHost$(ObjectSuffix) $(IntermediateDirectory)/Network_UDPBuffer$(ObjectSuffix) \
+	$(IntermediateDirectory)/Network_MultiConnectionProvider$(ObjectSuffix) $(IntermediateDirectory)/Network_Packet$(ObjectSuffix) $(IntermediateDirectory)/Network_GhastlyClient$(ObjectSuffix) $(IntermediateDirectory)/Network_GhastlyServer$(ObjectSuffix) $(IntermediateDirectory)/Network_UDPSocket$(ObjectSuffix) $(IntermediateDirectory)/Base_Vector2$(ObjectSuffix) $(IntermediateDirectory)/Base_AABB3$(ObjectSuffix) $(IntermediateDirectory)/Base_Matrix4$(ObjectSuffix) $(IntermediateDirectory)/Base_FileSystem$(ObjectSuffix) $(IntermediateDirectory)/Base_Vector3$(ObjectSuffix) \
+	$(IntermediateDirectory)/Base_Timestamp$(ObjectSuffix) $(IntermediateDirectory)/Base_Vector4$(ObjectSuffix) $(IntermediateDirectory)/Base_PropertyMap$(ObjectSuffix) $(IntermediateDirectory)/Base_AABB2$(ObjectSuffix) $(IntermediateDirectory)/Base_Log$(ObjectSuffix) $(IntermediateDirectory)/Base_IndexPool$(ObjectSuffix) $(IntermediateDirectory)/Engine_Entity$(ObjectSuffix) $(IntermediateDirectory)/Engine_Mob$(ObjectSuffix) $(IntermediateDirectory)/Engine_EventHandler$(ObjectSuffix) $(IntermediateDirectory)/Engine_SceneManager$(ObjectSuffix) \
+	$(IntermediateDirectory)/Engine_ContactListener$(ObjectSuffix) $(IntermediateDirectory)/Engine_State$(ObjectSuffix) $(IntermediateDirectory)/Engine_World$(ObjectSuffix) $(IntermediateDirectory)/Engine_ParentState$(ObjectSuffix) $(IntermediateDirectory)/Engine_SceneNode$(ObjectSuffix) $(IntermediateDirectory)/Engine_PhysicsEngine$(ObjectSuffix) $(IntermediateDirectory)/Engine_Camera$(ObjectSuffix) $(IntermediateDirectory)/Engine_Core$(ObjectSuffix) $(IntermediateDirectory)/Engine_Window$(ObjectSuffix) $(IntermediateDirectory)/Engine_Frustum$(ObjectSuffix) \
+	$(IntermediateDirectory)/Engine_OrthoCamera$(ObjectSuffix) $(IntermediateDirectory)/Engine_Controller$(ObjectSuffix) $(IntermediateDirectory)/Engine_KeyboardListener$(ObjectSuffix) $(IntermediateDirectory)/Engine_WindowListener$(ObjectSuffix) $(IntermediateDirectory)/Engine_QuadTreeSceneManager$(ObjectSuffix) $(IntermediateDirectory)/Engine_IsoCamera$(ObjectSuffix) $(IntermediateDirectory)/Engine_PhysicsController$(ObjectSuffix) $(IntermediateDirectory)/Resource_WorldManager$(ObjectSuffix) $(IntermediateDirectory)/Resource_TextureManager$(ObjectSuffix) $(IntermediateDirectory)/Resource_ThreadedResourceManager$(ObjectSuffix) \
+	$(IntermediateDirectory)/Resource_TTFManager$(ObjectSuffix) $(IntermediateDirectory)/Resource_MaterialManager$(ObjectSuffix) $(IntermediateDirectory)/UI_UIElement$(ObjectSuffix) $(IntermediateDirectory)/UI_UIBox$(ObjectSuffix) $(IntermediateDirectory)/UI_UIManager$(ObjectSuffix) $(IntermediateDirectory)/UI_Text$(ObjectSuffix) $(IntermediateDirectory)/UI_UIButton$(ObjectSuffix) $(IntermediateDirectory)/Game_main$(ObjectSuffix) $(IntermediateDirectory)/Game_PlayingState$(ObjectSuffix) $(IntermediateDirectory)/Game_GhostCore$(ObjectSuffix) \
+	$(IntermediateDirectory)/Game_Player$(ObjectSuffix) $(IntermediateDirectory)/Game_DebugVolume$(ObjectSuffix) $(IntermediateDirectory)/Game_GameState$(ObjectSuffix) $(IntermediateDirectory)/Game_LoadingState$(ObjectSuffix) $(IntermediateDirectory)/Game_PlayerController$(ObjectSuffix) $(IntermediateDirectory)/Game_Platform$(ObjectSuffix) $(IntermediateDirectory)/Game_GhostWorld$(ObjectSuffix) $(IntermediateDirectory)/Game_Wall$(ObjectSuffix) $(IntermediateDirectory)/Game_StartingState$(ObjectSuffix) $(IntermediateDirectory)/Game_MenuState$(ObjectSuffix) \
+	
 
 ##
 ## Main Build Targets 
@@ -502,6 +503,54 @@ $(IntermediateDirectory)/Render_Renderable$(DependSuffix): ../Ghastly/Render/Ren
 
 $(IntermediateDirectory)/Render_Renderable$(PreprocessSuffix): ../Ghastly/Render/Renderable.cpp
 	@$(CompilerName) $(CmpOptions) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Render_Renderable$(PreprocessSuffix) "/home/ajean/Ghost-in-the-Machine/Ghastly/Render/Renderable.cpp"
+
+$(IntermediateDirectory)/Render_BufferState$(ObjectSuffix): ../Ghastly/Render/BufferState.cpp $(IntermediateDirectory)/Render_BufferState$(DependSuffix)
+	$(CompilerName) $(IncludePCH) $(SourceSwitch) "/home/ajean/Ghost-in-the-Machine/Ghastly/Render/BufferState.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/Render_BufferState$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/Render_BufferState$(DependSuffix): ../Ghastly/Render/BufferState.cpp
+	@$(CompilerName) $(CmpOptions) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/Render_BufferState$(ObjectSuffix) -MF$(IntermediateDirectory)/Render_BufferState$(DependSuffix) -MM "/home/ajean/Ghost-in-the-Machine/Ghastly/Render/BufferState.cpp"
+
+$(IntermediateDirectory)/Render_BufferState$(PreprocessSuffix): ../Ghastly/Render/BufferState.cpp
+	@$(CompilerName) $(CmpOptions) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Render_BufferState$(PreprocessSuffix) "/home/ajean/Ghost-in-the-Machine/Ghastly/Render/BufferState.cpp"
+
+$(IntermediateDirectory)/Render_Shader$(ObjectSuffix): ../Ghastly/Render/Shader.cpp $(IntermediateDirectory)/Render_Shader$(DependSuffix)
+	$(CompilerName) $(IncludePCH) $(SourceSwitch) "/home/ajean/Ghost-in-the-Machine/Ghastly/Render/Shader.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/Render_Shader$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/Render_Shader$(DependSuffix): ../Ghastly/Render/Shader.cpp
+	@$(CompilerName) $(CmpOptions) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/Render_Shader$(ObjectSuffix) -MF$(IntermediateDirectory)/Render_Shader$(DependSuffix) -MM "/home/ajean/Ghost-in-the-Machine/Ghastly/Render/Shader.cpp"
+
+$(IntermediateDirectory)/Render_Shader$(PreprocessSuffix): ../Ghastly/Render/Shader.cpp
+	@$(CompilerName) $(CmpOptions) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Render_Shader$(PreprocessSuffix) "/home/ajean/Ghost-in-the-Machine/Ghastly/Render/Shader.cpp"
+
+$(IntermediateDirectory)/Render_ShaderParameter$(ObjectSuffix): ../Ghastly/Render/ShaderParameter.cpp $(IntermediateDirectory)/Render_ShaderParameter$(DependSuffix)
+	$(CompilerName) $(IncludePCH) $(SourceSwitch) "/home/ajean/Ghost-in-the-Machine/Ghastly/Render/ShaderParameter.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/Render_ShaderParameter$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/Render_ShaderParameter$(DependSuffix): ../Ghastly/Render/ShaderParameter.cpp
+	@$(CompilerName) $(CmpOptions) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/Render_ShaderParameter$(ObjectSuffix) -MF$(IntermediateDirectory)/Render_ShaderParameter$(DependSuffix) -MM "/home/ajean/Ghost-in-the-Machine/Ghastly/Render/ShaderParameter.cpp"
+
+$(IntermediateDirectory)/Render_ShaderParameter$(PreprocessSuffix): ../Ghastly/Render/ShaderParameter.cpp
+	@$(CompilerName) $(CmpOptions) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Render_ShaderParameter$(PreprocessSuffix) "/home/ajean/Ghost-in-the-Machine/Ghastly/Render/ShaderParameter.cpp"
+
+$(IntermediateDirectory)/Render_UniformBuffer$(ObjectSuffix): ../Ghastly/Render/UniformBuffer.cpp $(IntermediateDirectory)/Render_UniformBuffer$(DependSuffix)
+	$(CompilerName) $(IncludePCH) $(SourceSwitch) "/home/ajean/Ghost-in-the-Machine/Ghastly/Render/UniformBuffer.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/Render_UniformBuffer$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/Render_UniformBuffer$(DependSuffix): ../Ghastly/Render/UniformBuffer.cpp
+	@$(CompilerName) $(CmpOptions) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/Render_UniformBuffer$(ObjectSuffix) -MF$(IntermediateDirectory)/Render_UniformBuffer$(DependSuffix) -MM "/home/ajean/Ghost-in-the-Machine/Ghastly/Render/UniformBuffer.cpp"
+
+$(IntermediateDirectory)/Render_UniformBuffer$(PreprocessSuffix): ../Ghastly/Render/UniformBuffer.cpp
+	@$(CompilerName) $(CmpOptions) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Render_UniformBuffer$(PreprocessSuffix) "/home/ajean/Ghost-in-the-Machine/Ghastly/Render/UniformBuffer.cpp"
+
+$(IntermediateDirectory)/Render_TextureParameter$(ObjectSuffix): ../Ghastly/Render/TextureParameter.cpp $(IntermediateDirectory)/Render_TextureParameter$(DependSuffix)
+	$(CompilerName) $(IncludePCH) $(SourceSwitch) "/home/ajean/Ghost-in-the-Machine/Ghastly/Render/TextureParameter.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/Render_TextureParameter$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/Render_TextureParameter$(DependSuffix): ../Ghastly/Render/TextureParameter.cpp
+	@$(CompilerName) $(CmpOptions) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/Render_TextureParameter$(ObjectSuffix) -MF$(IntermediateDirectory)/Render_TextureParameter$(DependSuffix) -MM "/home/ajean/Ghost-in-the-Machine/Ghastly/Render/TextureParameter.cpp"
+
+$(IntermediateDirectory)/Render_TextureParameter$(PreprocessSuffix): ../Ghastly/Render/TextureParameter.cpp
+	@$(CompilerName) $(CmpOptions) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Render_TextureParameter$(PreprocessSuffix) "/home/ajean/Ghost-in-the-Machine/Ghastly/Render/TextureParameter.cpp"
+
+$(IntermediateDirectory)/Render_ColorParameter$(ObjectSuffix): ../Ghastly/Render/ColorParameter.cpp $(IntermediateDirectory)/Render_ColorParameter$(DependSuffix)
+	$(CompilerName) $(IncludePCH) $(SourceSwitch) "/home/ajean/Ghost-in-the-Machine/Ghastly/Render/ColorParameter.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/Render_ColorParameter$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/Render_ColorParameter$(DependSuffix): ../Ghastly/Render/ColorParameter.cpp
+	@$(CompilerName) $(CmpOptions) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/Render_ColorParameter$(ObjectSuffix) -MF$(IntermediateDirectory)/Render_ColorParameter$(DependSuffix) -MM "/home/ajean/Ghost-in-the-Machine/Ghastly/Render/ColorParameter.cpp"
+
+$(IntermediateDirectory)/Render_ColorParameter$(PreprocessSuffix): ../Ghastly/Render/ColorParameter.cpp
+	@$(CompilerName) $(CmpOptions) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Render_ColorParameter$(PreprocessSuffix) "/home/ajean/Ghost-in-the-Machine/Ghastly/Render/ColorParameter.cpp"
 
 $(IntermediateDirectory)/Network_Socket$(ObjectSuffix): ../Ghastly/Network/Socket.cpp $(IntermediateDirectory)/Network_Socket$(DependSuffix)
 	$(CompilerName) $(IncludePCH) $(SourceSwitch) "/home/ajean/Ghost-in-the-Machine/Ghastly/Network/Socket.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/Network_Socket$(ObjectSuffix) $(IncludePath)
@@ -1241,6 +1290,24 @@ clean:
 	$(RM) $(IntermediateDirectory)/Render_Renderable$(ObjectSuffix)
 	$(RM) $(IntermediateDirectory)/Render_Renderable$(DependSuffix)
 	$(RM) $(IntermediateDirectory)/Render_Renderable$(PreprocessSuffix)
+	$(RM) $(IntermediateDirectory)/Render_BufferState$(ObjectSuffix)
+	$(RM) $(IntermediateDirectory)/Render_BufferState$(DependSuffix)
+	$(RM) $(IntermediateDirectory)/Render_BufferState$(PreprocessSuffix)
+	$(RM) $(IntermediateDirectory)/Render_Shader$(ObjectSuffix)
+	$(RM) $(IntermediateDirectory)/Render_Shader$(DependSuffix)
+	$(RM) $(IntermediateDirectory)/Render_Shader$(PreprocessSuffix)
+	$(RM) $(IntermediateDirectory)/Render_ShaderParameter$(ObjectSuffix)
+	$(RM) $(IntermediateDirectory)/Render_ShaderParameter$(DependSuffix)
+	$(RM) $(IntermediateDirectory)/Render_ShaderParameter$(PreprocessSuffix)
+	$(RM) $(IntermediateDirectory)/Render_UniformBuffer$(ObjectSuffix)
+	$(RM) $(IntermediateDirectory)/Render_UniformBuffer$(DependSuffix)
+	$(RM) $(IntermediateDirectory)/Render_UniformBuffer$(PreprocessSuffix)
+	$(RM) $(IntermediateDirectory)/Render_TextureParameter$(ObjectSuffix)
+	$(RM) $(IntermediateDirectory)/Render_TextureParameter$(DependSuffix)
+	$(RM) $(IntermediateDirectory)/Render_TextureParameter$(PreprocessSuffix)
+	$(RM) $(IntermediateDirectory)/Render_ColorParameter$(ObjectSuffix)
+	$(RM) $(IntermediateDirectory)/Render_ColorParameter$(DependSuffix)
+	$(RM) $(IntermediateDirectory)/Render_ColorParameter$(PreprocessSuffix)
 	$(RM) $(IntermediateDirectory)/Network_Socket$(ObjectSuffix)
 	$(RM) $(IntermediateDirectory)/Network_Socket$(DependSuffix)
 	$(RM) $(IntermediateDirectory)/Network_Socket$(PreprocessSuffix)

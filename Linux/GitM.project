@@ -129,6 +129,19 @@
       <File Name="../Ghastly/Render/Renderable.cpp"/>
       <File Name="../Ghastly/Render/Viewport.h"/>
       <File Name="../Ghastly/Render/Renderable.h"/>
+      <File Name="../Ghastly/Render/BufferState.cpp"/>
+      <File Name="../Ghastly/Render/BufferState.h"/>
+      <File Name="../Ghastly/Render/GenericRenderState.h"/>
+      <File Name="../Ghastly/Render/Shader.cpp"/>
+      <File Name="../Ghastly/Render/Shader.h"/>
+      <File Name="../Ghastly/Render/ShaderParameter.cpp"/>
+      <File Name="../Ghastly/Render/ShaderParameter.h"/>
+      <File Name="../Ghastly/Render/UniformBuffer.cpp"/>
+      <File Name="../Ghastly/Render/UniformBuffer.h"/>
+      <File Name="../Ghastly/Render/TextureParameter.cpp"/>
+      <File Name="../Ghastly/Render/TextureParameter.h"/>
+      <File Name="../Ghastly/Render/ColorParameter.cpp"/>
+      <File Name="../Ghastly/Render/ColorParameter.h"/>
     </VirtualDirectory>
     <VirtualDirectory Name="Network">
       <File Name="../Ghastly/Network/SocketedUDPProvider.h"/>
@@ -309,6 +322,7 @@
       <Compiler Options="-g;-O0;-Wall" C_Options="-g;-O0;-Wall" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" UseDifferentPCHFlags="no" PCHFlags="">
         <IncludePath Value="../"/>
         <IncludePath Value="../Ghastly"/>
+        <Preprocessor Value="GL_GLEXT_PROTOTYPES"/>
       </Compiler>
       <Linker Options="" Required="yes">
         <Library Value="GL"/>
@@ -320,8 +334,7 @@
       <ResourceCompiler Options="" Required="no"/>
       <General OutputFile="../$(ProjectName)" IntermediateDirectory="./Debug" Command="./$(ProjectName)" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="../" PauseExecWhenProcTerminates="yes"/>
       <Environment EnvVarSetName="&lt;Use Defaults&gt;" DbgSetName="&lt;Use Defaults&gt;">
-        <![CDATA[
-      ]]>
+        <![CDATA[]]>
       </Environment>
       <Debugger IsRemote="no" RemoteHostName="" RemoteHostPort="" DebuggerPath="">
         <PostConnectCommands/>
@@ -358,6 +371,8 @@
       <General OutputFile="$(IntermediateDirectory)/$(ProjectName)" IntermediateDirectory="./Release" Command="./$(ProjectName)" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="$(IntermediateDirectory)" PauseExecWhenProcTerminates="yes"/>
       <Environment EnvVarSetName="&lt;Use Defaults&gt;" DbgSetName="&lt;Use Defaults&gt;">
         <![CDATA[
+      
+      
       
       
       

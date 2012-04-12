@@ -5,6 +5,7 @@
 #include <Resource/WorldManager.h>
 #include <Resource/TTFManager.h>
 #include <Resource/TextureManager.h>
+#include <Resource/ShaderManager.h>
 #include <Resource/MaterialManager.h>
 
 GhostCore::GhostCore(): _state(Starting) {
@@ -19,6 +20,7 @@ void GhostCore::setup() {
     WorldManager::Setup();
     TTFManager::Setup();
     TextureManager::Setup();
+    ShaderManager::Setup();
     MaterialManager::Setup();
 }
 
@@ -28,6 +30,7 @@ void GhostCore::teardown() {
     WorldManager::Teardown();
     TTFManager::Teardown();
     TextureManager::Teardown();
+    ShaderManager::Teardown();
     MaterialManager::Teardown();
 }
 

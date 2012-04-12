@@ -1,2 +1,3 @@
+uniform_block DefaultBlock
 vertex default
 fragment default

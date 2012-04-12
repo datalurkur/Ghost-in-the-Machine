@@ -1,6 +1,7 @@
 #include <Engine/ParentState.h>
 
 #include <Resource/TextureManager.h>
+#include <Resource/ShaderManager.h>
 #include <Resource/MaterialManager.h>
 #include <Resource/TTFManager.h>
 
@@ -22,6 +23,12 @@ bool StartingState::update(int elapsed) {
         case TextureLoading: {
             if((_left = TextureManager::LoadNextFromPath_r(_progress)) == 0) {
                 Info("Texture loading stage done");
+                incrementStage();
+            }
+        } break;
+        case ShaderLoading: {
+            if((_left = ShaderManager::LoadNextFromPath_r(_progress)) == 0) {
+                Info("Shader loading stage done");
                 incrementStage();
             }
         } break;

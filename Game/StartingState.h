@@ -21,6 +21,7 @@ private:
     enum Stage {
         Start = 0,
         TextureLoading,
+        ShaderLoading,
         MaterialLoading,
 		TTFLoading,
         Done

@@ -16,6 +16,9 @@
 		E1074E5B1533871600790B48 /* ShaderManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1074E591533871600790B48 /* ShaderManager.cpp */; };
 		E1074E5D1533876A00790B48 /* Shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1074E5C1533876A00790B48 /* Shader.cpp */; };
 		E1074E601533C5AA00790B48 /* ShaderParameter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1074E5E1533C5AA00790B48 /* ShaderParameter.cpp */; };
+		E10FA652153735320071ADE8 /* ColorParameter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E10FA64C153735320071ADE8 /* ColorParameter.cpp */; };
+		E10FA653153735320071ADE8 /* TextureParameter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E10FA64E153735320071ADE8 /* TextureParameter.cpp */; };
+		E10FA654153735320071ADE8 /* UniformBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E10FA650153735320071ADE8 /* UniformBuffer.cpp */; };
 		E12853EE15295EAE00BD8DFA /* Text.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E12853EC15295EAE00BD8DFA /* Text.cpp */; };
 		E12853F615296AB600BD8DFA /* UIBox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E12853F415296AB600BD8DFA /* UIBox.cpp */; };
 		E146AA38143BAB6F00DA17E9 /* SDL_ttf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E146AA37143BAB6F00DA17E9 /* SDL_ttf.framework */; };
@@ -177,6 +180,12 @@
 		E1074E5C1533876A00790B48 /* Shader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Shader.cpp; sourceTree = "<group>"; };
 		E1074E5E1533C5AA00790B48 /* ShaderParameter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ShaderParameter.cpp; sourceTree = "<group>"; };
 		E1074E5F1533C5AA00790B48 /* ShaderParameter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShaderParameter.h; sourceTree = "<group>"; };
+		E10FA64C153735320071ADE8 /* ColorParameter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ColorParameter.cpp; sourceTree = "<group>"; };
+		E10FA64D153735320071ADE8 /* ColorParameter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorParameter.h; sourceTree = "<group>"; };
+		E10FA64E153735320071ADE8 /* TextureParameter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TextureParameter.cpp; sourceTree = "<group>"; };
+		E10FA64F153735320071ADE8 /* TextureParameter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextureParameter.h; sourceTree = "<group>"; };
+		E10FA650153735320071ADE8 /* UniformBuffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UniformBuffer.cpp; sourceTree = "<group>"; };
+		E10FA651153735320071ADE8 /* UniformBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UniformBuffer.h; sourceTree = "<group>"; };
 		E12853EC15295EAE00BD8DFA /* Text.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Text.cpp; path = UI/Text.cpp; sourceTree = "<group>"; };
 		E12853ED15295EAE00BD8DFA /* Text.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Text.h; path = UI/Text.h; sourceTree = "<group>"; };
 		E12853F315296A7900BD8DFA /* ResizeListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResizeListener.h; sourceTree = "<group>"; };
@@ -841,6 +850,12 @@
 		E1A180D71513E7B400EA9CDB /* Render */ = {
 			isa = PBXGroup;
 			children = (
+				E10FA64C153735320071ADE8 /* ColorParameter.cpp */,
+				E10FA64D153735320071ADE8 /* ColorParameter.h */,
+				E10FA64E153735320071ADE8 /* TextureParameter.cpp */,
+				E10FA64F153735320071ADE8 /* TextureParameter.h */,
+				E10FA650153735320071ADE8 /* UniformBuffer.cpp */,
+				E10FA651153735320071ADE8 /* UniformBuffer.h */,
 				E1074E5E1533C5AA00790B48 /* ShaderParameter.cpp */,
 				E1074E5F1533C5AA00790B48 /* ShaderParameter.h */,
 				E1074E5C1533876A00790B48 /* Shader.cpp */,
@@ -1108,6 +1123,9 @@
 				E1074E5B1533871600790B48 /* ShaderManager.cpp in Sources */,
 				E1074E5D1533876A00790B48 /* Shader.cpp in Sources */,
 				E1074E601533C5AA00790B48 /* ShaderParameter.cpp in Sources */,
+				E10FA652153735320071ADE8 /* ColorParameter.cpp in Sources */,
+				E10FA653153735320071ADE8 /* TextureParameter.cpp in Sources */,
+				E10FA654153735320071ADE8 /* UniformBuffer.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1139,6 +1157,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "$(SRCROOT)/../**";
 				INFOPLIST_FILE = "../Game/GitM-Info.plist";
+				LIBRARY_SEARCH_PATHS = "";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1169,6 +1188,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "$(SRCROOT)/../**";
 				INFOPLIST_FILE = "../Game/GitM-Info.plist";
+				LIBRARY_SEARCH_PATHS = "";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;

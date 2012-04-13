@@ -1,23 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Session Name="/home/ajean/Ghost-in-the-Machine/Linux/GitM.workspace">
-  <int Value="14" Name="m_selectedTab"/>
+  <int Value="13" Name="m_selectedTab"/>
   <wxString Value="/home/ajean/Ghost-in-the-Machine/Linux/GitM.workspace" Name="m_workspaceName"/>
   <TabInfoArray Name="TabInfoArray">
     <TabInfo>
-      <wxString Value="/home/ajean/Ghost-in-the-Machine/Ghastly/Render/Shader.cpp" Name="FileName"/>
-      <int Value="74" Name="FirstVisibleLine"/>
-      <int Value="89" Name="CurrentLine"/>
-      <wxArrayString Name="Bookmarks"/>
-    </TabInfo>
-    <TabInfo>
       <wxString Value="/home/ajean/Ghost-in-the-Machine/Ghastly/Base/Base.h" Name="FileName"/>
-      <int Value="36" Name="FirstVisibleLine"/>
+      <int Value="54" Name="FirstVisibleLine"/>
       <int Value="54" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
     </TabInfo>
     <TabInfo>
       <wxString Value="/home/ajean/Ghost-in-the-Machine/Ghastly/Render/Font.cpp" Name="FileName"/>
-      <int Value="0" Name="FirstVisibleLine"/>
+      <int Value="5" Name="FirstVisibleLine"/>
       <int Value="5" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
     </TabInfo>
@@ -35,13 +29,13 @@
     </TabInfo>
     <TabInfo>
       <wxString Value="/home/ajean/Ghost-in-the-Machine/Ghastly/Render/UniformBuffer.h" Name="FileName"/>
-      <int Value="4" Name="FirstVisibleLine"/>
+      <int Value="0" Name="FirstVisibleLine"/>
       <int Value="25" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
     </TabInfo>
     <TabInfo>
       <wxString Value="/home/ajean/Ghost-in-the-Machine/Ghastly/Render/UniformBuffer.cpp" Name="FileName"/>
-      <int Value="105" Name="FirstVisibleLine"/>
+      <int Value="88" Name="FirstVisibleLine"/>
       <int Value="136" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
     </TabInfo>
@@ -53,7 +47,7 @@
     </TabInfo>
     <TabInfo>
       <wxString Value="/home/ajean/Ghost-in-the-Machine/Ghastly/Resource/TTFManager.cpp" Name="FileName"/>
-      <int Value="129" Name="FirstVisibleLine"/>
+      <int Value="128" Name="FirstVisibleLine"/>
       <int Value="146" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
     </TabInfo>
@@ -83,34 +77,24 @@
     </TabInfo>
     <TabInfo>
       <wxString Value="/home/ajean/Ghost-in-the-Machine/Ghastly/Render/Material.cpp" Name="FileName"/>
-      <int Value="1" Name="FirstVisibleLine"/>
-      <int Value="21" Name="CurrentLine"/>
+      <int Value="29" Name="FirstVisibleLine"/>
+      <int Value="46" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
     </TabInfo>
     <TabInfo>
       <wxString Value="/home/ajean/Ghost-in-the-Machine/Ghastly/Resource/MaterialManager.cpp" Name="FileName"/>
-      <int Value="14" Name="FirstVisibleLine"/>
-      <int Value="36" Name="CurrentLine"/>
+      <int Value="19" Name="FirstVisibleLine"/>
+      <int Value="41" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks"/>
+    </TabInfo>
+    <TabInfo>
+      <wxString Value="/home/ajean/Ghost-in-the-Machine/Ghastly/Engine/Window.cpp" Name="FileName"/>
+      <int Value="23" Name="FirstVisibleLine"/>
+      <int Value="33" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
     </TabInfo>
   </TabInfoArray>
   <SerializedObject Name="m_breakpoints">
-    <long Value="1" Name="Count"/>
-    <SerializedObject Name="Breakpoint0">
-      <wxString Value="/home/ajean/Ghost-in-the-Machine/Ghastly/Engine/Window.cpp" Name="file"/>
-      <int Value="34" Name="lineno"/>
-      <wxString Value="" Name="function_name"/>
-      <wxString Value="" Name="memory_address"/>
-      <int Value="1" Name="bp_type"/>
-      <int Value="0" Name="watchpoint_type"/>
-      <wxString Value="" Name="watchpt_data"/>
-      <CData Name="commandlist"/>
-      <bool Value="0" Name="regex"/>
-      <bool Value="0" Name="is_temp"/>
-      <bool Value="1" Name="is_enabled"/>
-      <int Value="0" Name="ignore_number"/>
-      <wxString Value="" Name="conditions"/>
-      <int Value="0" Name="origin"/>
-    </SerializedObject>
+    <long Value="0" Name="Count"/>
   </SerializedObject>
 </Session>

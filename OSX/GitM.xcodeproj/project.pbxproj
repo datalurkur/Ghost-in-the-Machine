@@ -10,8 +10,6 @@
 		18687B2C15179A2300494D7D /* SDL_image.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E1ED273B143CB59000D6FFBC /* SDL_image.framework */; };
 		18687B2D15179A2500494D7D /* SDL_ttf.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E146AA37143BAB6F00DA17E9 /* SDL_ttf.framework */; };
 		18687B2E15179A2700494D7D /* SDL.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E152C64F1434C8E100D83C44 /* SDL.framework */; };
-		18687B3015179D6000494D7D /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18687B2F15179D6000494D7D /* OpenGL.framework */; };
-		18687B3215179D6900494D7D /* AGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18687B3115179D6900494D7D /* AGL.framework */; };
 		E1074E571533870800790B48 /* BufferState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1074E531533870700790B48 /* BufferState.cpp */; };
 		E1074E5B1533871600790B48 /* ShaderManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1074E591533871600790B48 /* ShaderManager.cpp */; };
 		E1074E5D1533876A00790B48 /* Shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1074E5C1533876A00790B48 /* Shader.cpp */; };
@@ -23,6 +21,11 @@
 		E12853F615296AB600BD8DFA /* UIBox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E12853F415296AB600BD8DFA /* UIBox.cpp */; };
 		E146AA38143BAB6F00DA17E9 /* SDL_ttf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E146AA37143BAB6F00DA17E9 /* SDL_ttf.framework */; };
 		E1485E62152764D80032A401 /* GLHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1485E60152764D80032A401 /* GLHelper.cpp */; };
+		E151E54715387BFA003959D2 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E151E54615387BFA003959D2 /* OpenGL.framework */; };
+		E151E54D15387E7F003959D2 /* GenericRenderState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E151E54C15387E7F003959D2 /* GenericRenderState.cpp */; };
+		E151E5511538B91E003959D2 /* AGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E151E5501538B91E003959D2 /* AGL.framework */; };
+		E151E5541538C1C4003959D2 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E151E54815387C01003959D2 /* GLUT.framework */; };
+		E151E5641538C5CA003959D2 /* libGLEW.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E151E5631538C5CA003959D2 /* libGLEW.a */; };
 		E152C6501434C8E100D83C44 /* SDL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E152C64F1434C8E100D83C44 /* SDL.framework */; };
 		E152C6541434C8F800D83C44 /* SDLMain.m in Sources */ = {isa = PBXBuildFile; fileRef = E152C6531434C8F800D83C44 /* SDLMain.m */; };
 		E15FA1EA142BDF1C00CC6CE2 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E13A3FF6142A79C700D7EA2A /* Cocoa.framework */; };
@@ -149,7 +152,6 @@
 		E1A59672152659D8008B4E8B /* GhastlyServer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1A5966C152659D8008B4E8B /* GhastlyServer.cpp */; };
 		E1A59673152659D8008B4E8B /* MultiConnectionProvider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1A5966E152659D8008B4E8B /* MultiConnectionProvider.cpp */; };
 		E1A59676152659F3008B4E8B /* IndexPool.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1A59674152659F2008B4E8B /* IndexPool.cpp */; };
-		E1A5967B15267A96008B4E8B /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1A5967A15267A96008B4E8B /* GLUT.framework */; };
 		E1ED273C143CB59000D6FFBC /* SDL_image.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1ED273B143CB59000D6FFBC /* SDL_image.framework */; };
 /* End PBXBuildFile section */
 
@@ -169,8 +171,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		18687B2F15179D6000494D7D /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = ../../../../../System/Library/Frameworks/OpenGL.framework; sourceTree = "<group>"; };
-		18687B3115179D6900494D7D /* AGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AGL.framework; path = ../../../../../System/Library/Frameworks/AGL.framework; sourceTree = "<group>"; };
 		E1074E531533870700790B48 /* BufferState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BufferState.cpp; sourceTree = "<group>"; };
 		E1074E541533870700790B48 /* BufferState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BufferState.h; sourceTree = "<group>"; };
 		E1074E551533870700790B48 /* GenericRenderState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GenericRenderState.h; sourceTree = "<group>"; };
@@ -198,6 +198,22 @@
 		E146AA37143BAB6F00DA17E9 /* SDL_ttf.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL_ttf.framework; path = Frameworks/SDL_ttf.framework; sourceTree = "<group>"; };
 		E1485E60152764D80032A401 /* GLHelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GLHelper.cpp; sourceTree = "<group>"; };
 		E1485E61152764D80032A401 /* GLHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLHelper.h; sourceTree = "<group>"; };
+		E151E54615387BFA003959D2 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/OpenGL.framework; sourceTree = DEVELOPER_DIR; };
+		E151E54815387C01003959D2 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/GLUT.framework; sourceTree = DEVELOPER_DIR; };
+		E151E54C15387E7F003959D2 /* GenericRenderState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GenericRenderState.cpp; sourceTree = "<group>"; };
+		E151E5501538B91E003959D2 /* AGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AGL.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/AGL.framework; sourceTree = DEVELOPER_DIR; };
+		E151E5571538C1D3003959D2 /* glew.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = glew.h; sourceTree = "<group>"; };
+		E151E5581538C1D3003959D2 /* glxew.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = glxew.h; sourceTree = "<group>"; };
+		E151E5591538C1D3003959D2 /* wglew.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = wglew.h; sourceTree = "<group>"; };
+		E151E55A1538C1D3003959D2 /* libGLEW.1.7.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libGLEW.1.7.0.dylib; sourceTree = "<group>"; };
+		E151E55B1538C1D3003959D2 /* libGLEW.1.7.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libGLEW.1.7.dylib; sourceTree = "<group>"; };
+		E151E55C1538C1D3003959D2 /* libGLEW.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGLEW.a; sourceTree = "<group>"; };
+		E151E55D1538C1D3003959D2 /* libGLEW.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libGLEW.dylib; sourceTree = "<group>"; };
+		E151E55E1538C1D3003959D2 /* libGLEWmx.1.7.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libGLEWmx.1.7.0.dylib; sourceTree = "<group>"; };
+		E151E55F1538C1D3003959D2 /* libGLEWmx.1.7.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libGLEWmx.1.7.dylib; sourceTree = "<group>"; };
+		E151E5601538C1D3003959D2 /* libGLEWmx.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGLEWmx.a; sourceTree = "<group>"; };
+		E151E5611538C1D3003959D2 /* libGLEWmx.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libGLEWmx.dylib; sourceTree = "<group>"; };
+		E151E5631538C5CA003959D2 /* libGLEW.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGLEW.a; path = /usr/lib/libGLEW.a; sourceTree = "<absolute>"; };
 		E152C64F1434C8E100D83C44 /* SDL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL.framework; path = Frameworks/SDL.framework; sourceTree = "<group>"; };
 		E152C6521434C8F800D83C44 /* SDLMain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDLMain.h; sourceTree = "<group>"; };
 		E152C6531434C8F800D83C44 /* SDLMain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDLMain.m; sourceTree = "<group>"; };
@@ -454,7 +470,6 @@
 		E1A5966F152659D8008B4E8B /* MultiConnectionProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiConnectionProvider.h; sourceTree = "<group>"; };
 		E1A59674152659F2008B4E8B /* IndexPool.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IndexPool.cpp; sourceTree = "<group>"; };
 		E1A59675152659F2008B4E8B /* IndexPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndexPool.h; sourceTree = "<group>"; };
-		E1A5967A15267A96008B4E8B /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = SDKs/MacOSX10.6.sdk/System/Library/Frameworks/GLUT.framework; sourceTree = DEVELOPER_DIR; };
 		E1ED273B143CB59000D6FFBC /* SDL_image.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL_image.framework; path = Frameworks/SDL_image.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -463,13 +478,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1A5967B15267A96008B4E8B /* GLUT.framework in Frameworks */,
+				E151E5641538C5CA003959D2 /* libGLEW.a in Frameworks */,
+				E151E5541538C1C4003959D2 /* GLUT.framework in Frameworks */,
+				E151E5511538B91E003959D2 /* AGL.framework in Frameworks */,
+				E151E54715387BFA003959D2 /* OpenGL.framework in Frameworks */,
 				E15FA1EA142BDF1C00CC6CE2 /* Cocoa.framework in Frameworks */,
 				E152C6501434C8E100D83C44 /* SDL.framework in Frameworks */,
 				E146AA38143BAB6F00DA17E9 /* SDL_ttf.framework in Frameworks */,
 				E1ED273C143CB59000D6FFBC /* SDL_image.framework in Frameworks */,
-				18687B3015179D6000494D7D /* OpenGL.framework in Frameworks */,
-				18687B3215179D6900494D7D /* AGL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -487,8 +503,10 @@
 		E13A3FF5142A79C700D7EA2A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				18687B3115179D6900494D7D /* AGL.framework */,
-				18687B2F15179D6000494D7D /* OpenGL.framework */,
+				E151E5631538C5CA003959D2 /* libGLEW.a */,
+				E151E5501538B91E003959D2 /* AGL.framework */,
+				E151E54815387C01003959D2 /* GLUT.framework */,
+				E151E54615387BFA003959D2 /* OpenGL.framework */,
 				E1ED273B143CB59000D6FFBC /* SDL_image.framework */,
 				E146AA37143BAB6F00DA17E9 /* SDL_ttf.framework */,
 				E152C64F1434C8E100D83C44 /* SDL.framework */,
@@ -506,6 +524,32 @@
 				E13A3FFB142A79C700D7EA2A /* Foundation.framework */,
 			);
 			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		E151E5551538C1D3003959D2 /* GLEW */ = {
+			isa = PBXGroup;
+			children = (
+				E151E5561538C1D3003959D2 /* GL */,
+				E151E55A1538C1D3003959D2 /* libGLEW.1.7.0.dylib */,
+				E151E55B1538C1D3003959D2 /* libGLEW.1.7.dylib */,
+				E151E55C1538C1D3003959D2 /* libGLEW.a */,
+				E151E55D1538C1D3003959D2 /* libGLEW.dylib */,
+				E151E55E1538C1D3003959D2 /* libGLEWmx.1.7.0.dylib */,
+				E151E55F1538C1D3003959D2 /* libGLEWmx.1.7.dylib */,
+				E151E5601538C1D3003959D2 /* libGLEWmx.a */,
+				E151E5611538C1D3003959D2 /* libGLEWmx.dylib */,
+			);
+			path = GLEW;
+			sourceTree = "<group>";
+		};
+		E151E5561538C1D3003959D2 /* GL */ = {
+			isa = PBXGroup;
+			children = (
+				E151E5571538C1D3003959D2 /* glew.h */,
+				E151E5581538C1D3003959D2 /* glxew.h */,
+				E151E5591538C1D3003959D2 /* wglew.h */,
+			);
+			path = GL;
 			sourceTree = "<group>";
 		};
 		E152C6511434C8F800D83C44 /* SDL */ = {
@@ -850,6 +894,7 @@
 		E1A180D71513E7B400EA9CDB /* Render */ = {
 			isa = PBXGroup;
 			children = (
+				E151E54C15387E7F003959D2 /* GenericRenderState.cpp */,
 				E10FA64C153735320071ADE8 /* ColorParameter.cpp */,
 				E10FA64D153735320071ADE8 /* ColorParameter.h */,
 				E10FA64E153735320071ADE8 /* TextureParameter.cpp */,
@@ -922,7 +967,7 @@
 		E1C4C916142A751A004E4ACD = {
 			isa = PBXGroup;
 			children = (
-				E1A5967A15267A96008B4E8B /* GLUT.framework */,
+				E151E5551538C1D3003959D2 /* GLEW */,
 				E1A17FD21513E7B400EA9CDB /* Game */,
 				E1A17FEB1513E7B400EA9CDB /* Ghastly */,
 				E13A3FF5142A79C700D7EA2A /* Frameworks */,
@@ -1126,6 +1171,7 @@
 				E10FA652153735320071ADE8 /* ColorParameter.cpp in Sources */,
 				E10FA653153735320071ADE8 /* TextureParameter.cpp in Sources */,
 				E10FA654153735320071ADE8 /* UniformBuffer.cpp in Sources */,
+				E151E54D15387E7F003959D2 /* GenericRenderState.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1155,10 +1201,16 @@
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = "$(SRCROOT)/../**";
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../**",
+					"$(SRCROOT)/GLEW",
+				);
 				INFOPLIST_FILE = "../Game/GitM-Info.plist";
-				LIBRARY_SEARCH_PATHS = "";
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				LIBRARY_SEARCH_PATHS = (
+					"$(SRCROOT)/GLEW",
+					"$(inherited)",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
@@ -1186,10 +1238,16 @@
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = "$(SRCROOT)/../**";
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../**",
+					"$(SRCROOT)/GLEW",
+				);
 				INFOPLIST_FILE = "../Game/GitM-Info.plist";
-				LIBRARY_SEARCH_PATHS = "";
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				LIBRARY_SEARCH_PATHS = (
+					"$(SRCROOT)/GLEW",
+					"$(inherited)",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				WRAPPER_EXTENSION = app;

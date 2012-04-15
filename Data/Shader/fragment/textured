@@ -17,7 +17,4 @@ void main() {
     frag_color = color;
 
     frag_color *= tex_color;
-
-    // DEBUG
-    frag_color = vec4(frag_texcoord[1], frag_texcoord[0], tex_color[0], 1);
 }

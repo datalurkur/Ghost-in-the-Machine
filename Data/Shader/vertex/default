@@ -1,4 +1,4 @@
-#version 150 compatibility
+#version 150
 
 uniform transform {
     mat4 projection_matrix;
@@ -17,8 +17,6 @@ void main() {
     frag_texcoord = texcoord;
     frag_eye = (modelview_matrix * position).xyz;
 
-    // Deprecated way of doing things
-    //gl_Position = gl_ProjectionMatrix * gl_ModelViewMatrix * position;
     gl_Position = projection_matrix * modelview_matrix * position;
 
     // Later on, this is where light position comes into play

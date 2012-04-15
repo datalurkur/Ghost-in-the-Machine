@@ -1,10 +1,14 @@
-#extension GL_ARB_uniform_buffer_object : enable
+#version 150
 
-uniform default_block {
+uniform input_block {
     vec4 color;
-    sampler2D texture;
 };
 
+in vec3 frag_normal;
+in vec3 frag_eye;
+
+out vec4 frag_color;
+
 void main() {
-    gl_FragColor = color;
+    frag_color = color;
 }

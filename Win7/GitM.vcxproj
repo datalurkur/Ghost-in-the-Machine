@@ -52,9 +52,9 @@
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>SDL_image.lib;SDL_ttf.lib;SDL.lib;SDLmain.lib;opengl32.lib;glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>glew32.lib;SDL_image.lib;SDL_ttf.lib;SDL.lib;SDLmain.lib;opengl32.lib;glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <SubSystem>Windows</SubSystem>
-      <AdditionalLibraryDirectories>$(SolutionDir)lib/sdl;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)lib/;$(SolutionDir)lib/sdl;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -184,6 +184,7 @@
     <ClCompile Include="..\Ghastly\Render\BufferState.cpp" />
     <ClCompile Include="..\Ghastly\Render\ColorParameter.cpp" />
     <ClCompile Include="..\Ghastly\Render\Font.cpp" />
+    <ClCompile Include="..\Ghastly\Render\GenericRenderState.cpp" />
     <ClCompile Include="..\Ghastly\Render\GLHelper.cpp" />
     <ClCompile Include="..\Ghastly\Render\Material.cpp" />
     <ClCompile Include="..\Ghastly\Render\Renderable.cpp" />
@@ -195,6 +196,7 @@
     <ClCompile Include="..\Ghastly\Render\UniformBuffer.cpp" />
     <ClCompile Include="..\Ghastly\Render\Viewport.cpp" />
     <ClCompile Include="..\Ghastly\Resource\MaterialManager.cpp" />
+    <ClCompile Include="..\Ghastly\Resource\ShaderManager.cpp" />
     <ClCompile Include="..\Ghastly\Resource\TextureManager.cpp" />
     <ClCompile Include="..\Ghastly\Resource\ThreadedResourceManager.cpp" />
     <ClCompile Include="..\Ghastly\Resource\TTFManager.cpp" />
@@ -338,6 +340,7 @@
     <ClInclude Include="..\Ghastly\Render\Viewport.h" />
     <ClInclude Include="..\Ghastly\Resource\MaterialManager.h" />
     <ClInclude Include="..\Ghastly\Resource\ResourceManager.h" />
+    <ClInclude Include="..\Ghastly\Resource\ShaderManager.h" />
     <ClInclude Include="..\Ghastly\Resource\TextureManager.h" />
     <ClInclude Include="..\Ghastly\Resource\ThreadedResourceManager.h" />
     <ClInclude Include="..\Ghastly\Resource\TTFManager.h" />

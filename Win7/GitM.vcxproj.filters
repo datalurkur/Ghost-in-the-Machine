@@ -447,6 +447,12 @@
     <ClCompile Include="..\Ghastly\Render\UniformBuffer.cpp">
       <Filter>Ghastly\Render</Filter>
     </ClCompile>
+    <ClCompile Include="..\Ghastly\Resource\ShaderManager.cpp">
+      <Filter>Ghastly\Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Ghastly\Render\GenericRenderState.cpp">
+      <Filter>Ghastly\Render</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Ghastly\Base\AABB2.h">
@@ -871,6 +877,9 @@
     </ClInclude>
     <ClInclude Include="..\Ghastly\Render\UniformBuffer.h">
       <Filter>Ghastly\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Ghastly\Resource\ShaderManager.h">
+      <Filter>Ghastly\Resource</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

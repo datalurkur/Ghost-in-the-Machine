@@ -1,4 +1,4 @@
-#version 150
+#version 150 compatibility
 
 uniform transform {
     mat4 projection_matrix;
@@ -9,15 +9,19 @@ in vec4 position;
 in vec3 normal;
 in vec2 texcoord;
 
-out vec2 frag_texcoord;
 out vec3 frag_normal;
 out vec3 frag_eye;
+out vec2 frag_texcoord;
 
 void main() {
     frag_texcoord = texcoord;
     frag_eye = (modelview_matrix * position).xyz;
+
+    // Deprecated way of doing things
+    //gl_Position = gl_ProjectionMatrix * gl_ModelViewMatrix * position;
     gl_Position = projection_matrix * modelview_matrix * position;
 
     // Later on, this is where light position comes into play
     frag_normal = normalize(frag_eye);
+
 }

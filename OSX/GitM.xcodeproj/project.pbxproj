@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		18687B2C15179A2300494D7D /* SDL_image.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E1ED273B143CB59000D6FFBC /* SDL_image.framework */; };
-		18687B2D15179A2500494D7D /* SDL_ttf.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E146AA37143BAB6F00DA17E9 /* SDL_ttf.framework */; };
-		18687B2E15179A2700494D7D /* SDL.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E152C64F1434C8E100D83C44 /* SDL.framework */; };
 		E1074E571533870800790B48 /* BufferState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1074E531533870700790B48 /* BufferState.cpp */; };
 		E1074E5B1533871600790B48 /* ShaderManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1074E591533871600790B48 /* ShaderManager.cpp */; };
 		E1074E5D1533876A00790B48 /* Shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1074E5C1533876A00790B48 /* Shader.cpp */; };
@@ -19,15 +16,12 @@
 		E10FA654153735320071ADE8 /* UniformBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E10FA650153735320071ADE8 /* UniformBuffer.cpp */; };
 		E12853EE15295EAE00BD8DFA /* Text.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E12853EC15295EAE00BD8DFA /* Text.cpp */; };
 		E12853F615296AB600BD8DFA /* UIBox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E12853F415296AB600BD8DFA /* UIBox.cpp */; };
-		E146AA38143BAB6F00DA17E9 /* SDL_ttf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E146AA37143BAB6F00DA17E9 /* SDL_ttf.framework */; };
 		E1485E62152764D80032A401 /* GLHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1485E60152764D80032A401 /* GLHelper.cpp */; };
 		E151E54715387BFA003959D2 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E151E54615387BFA003959D2 /* OpenGL.framework */; };
 		E151E54D15387E7F003959D2 /* GenericRenderState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E151E54C15387E7F003959D2 /* GenericRenderState.cpp */; };
 		E151E5511538B91E003959D2 /* AGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E151E5501538B91E003959D2 /* AGL.framework */; };
 		E151E5541538C1C4003959D2 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E151E54815387C01003959D2 /* GLUT.framework */; };
 		E151E5641538C5CA003959D2 /* libGLEW.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E151E5631538C5CA003959D2 /* libGLEW.a */; };
-		E152C6501434C8E100D83C44 /* SDL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E152C64F1434C8E100D83C44 /* SDL.framework */; };
-		E152C6541434C8F800D83C44 /* SDLMain.m in Sources */ = {isa = PBXBuildFile; fileRef = E152C6531434C8F800D83C44 /* SDLMain.m */; };
 		E15FA1EA142BDF1C00CC6CE2 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E13A3FF6142A79C700D7EA2A /* Cocoa.framework */; };
 		E188644B152E6E6A00FCD6F0 /* MenuState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1886449152E6E6A00FCD6F0 /* MenuState.cpp */; };
 		E188644F152E6E7B00FCD6F0 /* UIButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E188644D152E6E7B00FCD6F0 /* UIButton.cpp */; };
@@ -152,7 +146,9 @@
 		E1A59672152659D8008B4E8B /* GhastlyServer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1A5966C152659D8008B4E8B /* GhastlyServer.cpp */; };
 		E1A59673152659D8008B4E8B /* MultiConnectionProvider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1A5966E152659D8008B4E8B /* MultiConnectionProvider.cpp */; };
 		E1A59676152659F3008B4E8B /* IndexPool.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1A59674152659F2008B4E8B /* IndexPool.cpp */; };
-		E1ED273C143CB59000D6FFBC /* SDL_image.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1ED273B143CB59000D6FFBC /* SDL_image.framework */; };
+		E1DA5403153E0B2D0062DC28 /* libSDL2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E1DA5402153E0B2D0062DC28 /* libSDL2.a */; };
+		E1DA540A153E0D990062DC28 /* libSDL2_image.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E1DA5408153E0D990062DC28 /* libSDL2_image.a */; };
+		E1DA540B153E0D990062DC28 /* libSDL2_ttf.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E1DA5409153E0D990062DC28 /* libSDL2_ttf.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -162,9 +158,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				18687B2C15179A2300494D7D /* SDL_image.framework in CopyFiles */,
-				18687B2D15179A2500494D7D /* SDL_ttf.framework in CopyFiles */,
-				18687B2E15179A2700494D7D /* SDL.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,7 +188,6 @@
 		E13A3FF9142A79C700D7EA2A /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		E13A3FFA142A79C700D7EA2A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		E13A3FFB142A79C700D7EA2A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		E146AA37143BAB6F00DA17E9 /* SDL_ttf.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL_ttf.framework; path = Frameworks/SDL_ttf.framework; sourceTree = "<group>"; };
 		E1485E60152764D80032A401 /* GLHelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GLHelper.cpp; sourceTree = "<group>"; };
 		E1485E61152764D80032A401 /* GLHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLHelper.h; sourceTree = "<group>"; };
 		E151E54615387BFA003959D2 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/OpenGL.framework; sourceTree = DEVELOPER_DIR; };
@@ -214,9 +206,6 @@
 		E151E5601538C1D3003959D2 /* libGLEWmx.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGLEWmx.a; sourceTree = "<group>"; };
 		E151E5611538C1D3003959D2 /* libGLEWmx.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libGLEWmx.dylib; sourceTree = "<group>"; };
 		E151E5631538C5CA003959D2 /* libGLEW.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGLEW.a; path = /usr/lib/libGLEW.a; sourceTree = "<absolute>"; };
-		E152C64F1434C8E100D83C44 /* SDL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL.framework; path = Frameworks/SDL.framework; sourceTree = "<group>"; };
-		E152C6521434C8F800D83C44 /* SDLMain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDLMain.h; sourceTree = "<group>"; };
-		E152C6531434C8F800D83C44 /* SDLMain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDLMain.m; sourceTree = "<group>"; };
 		E15FA1E8142BDF1C00CC6CE2 /* GitM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1886449152E6E6A00FCD6F0 /* MenuState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MenuState.cpp; sourceTree = "<group>"; };
 		E188644A152E6E6A00FCD6F0 /* MenuState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuState.h; sourceTree = "<group>"; };
@@ -470,7 +459,9 @@
 		E1A5966F152659D8008B4E8B /* MultiConnectionProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiConnectionProvider.h; sourceTree = "<group>"; };
 		E1A59674152659F2008B4E8B /* IndexPool.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IndexPool.cpp; sourceTree = "<group>"; };
 		E1A59675152659F2008B4E8B /* IndexPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndexPool.h; sourceTree = "<group>"; };
-		E1ED273B143CB59000D6FFBC /* SDL_image.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL_image.framework; path = Frameworks/SDL_image.framework; sourceTree = "<group>"; };
+		E1DA5402153E0B2D0062DC28 /* libSDL2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSDL2.a; path = lib/SDL/libSDL2.a; sourceTree = "<group>"; };
+		E1DA5408153E0D990062DC28 /* libSDL2_image.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSDL2_image.a; path = lib/SDL/libSDL2_image.a; sourceTree = "<group>"; };
+		E1DA5409153E0D990062DC28 /* libSDL2_ttf.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSDL2_ttf.a; path = lib/SDL/libSDL2_ttf.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -478,14 +469,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1DA540A153E0D990062DC28 /* libSDL2_image.a in Frameworks */,
+				E1DA540B153E0D990062DC28 /* libSDL2_ttf.a in Frameworks */,
+				E1DA5403153E0B2D0062DC28 /* libSDL2.a in Frameworks */,
 				E151E5641538C5CA003959D2 /* libGLEW.a in Frameworks */,
 				E151E5541538C1C4003959D2 /* GLUT.framework in Frameworks */,
 				E151E5511538B91E003959D2 /* AGL.framework in Frameworks */,
 				E151E54715387BFA003959D2 /* OpenGL.framework in Frameworks */,
 				E15FA1EA142BDF1C00CC6CE2 /* Cocoa.framework in Frameworks */,
-				E152C6501434C8E100D83C44 /* SDL.framework in Frameworks */,
-				E146AA38143BAB6F00DA17E9 /* SDL_ttf.framework in Frameworks */,
-				E1ED273C143CB59000D6FFBC /* SDL_image.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -504,12 +495,10 @@
 			isa = PBXGroup;
 			children = (
 				E151E5631538C5CA003959D2 /* libGLEW.a */,
+				E1DA5402153E0B2D0062DC28 /* libSDL2.a */,
 				E151E5501538B91E003959D2 /* AGL.framework */,
 				E151E54815387C01003959D2 /* GLUT.framework */,
 				E151E54615387BFA003959D2 /* OpenGL.framework */,
-				E1ED273B143CB59000D6FFBC /* SDL_image.framework */,
-				E146AA37143BAB6F00DA17E9 /* SDL_ttf.framework */,
-				E152C64F1434C8E100D83C44 /* SDL.framework */,
 				E13A3FF6142A79C700D7EA2A /* Cocoa.framework */,
 				E13A3FF8142A79C700D7EA2A /* Other Frameworks */,
 			);
@@ -550,15 +539,6 @@
 				E151E5591538C1D3003959D2 /* wglew.h */,
 			);
 			path = GL;
-			sourceTree = "<group>";
-		};
-		E152C6511434C8F800D83C44 /* SDL */ = {
-			isa = PBXGroup;
-			children = (
-				E152C6521434C8F800D83C44 /* SDLMain.h */,
-				E152C6531434C8F800D83C44 /* SDLMain.m */,
-			);
-			path = SDL;
 			sourceTree = "<group>";
 		};
 		E1A17FD21513E7B400EA9CDB /* Game */ = {
@@ -967,11 +947,12 @@
 		E1C4C916142A751A004E4ACD = {
 			isa = PBXGroup;
 			children = (
+				E1DA5408153E0D990062DC28 /* libSDL2_image.a */,
+				E1DA5409153E0D990062DC28 /* libSDL2_ttf.a */,
 				E151E5551538C1D3003959D2 /* GLEW */,
 				E1A17FD21513E7B400EA9CDB /* Game */,
 				E1A17FEB1513E7B400EA9CDB /* Ghastly */,
 				E13A3FF5142A79C700D7EA2A /* Frameworks */,
-				E152C6511434C8F800D83C44 /* SDL */,
 				E13A3FF3142A79C700D7EA2A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -1039,7 +1020,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E152C6541434C8F800D83C44 /* SDLMain.m in Sources */,
 				E1A180F91513E7B400EA9CDB /* DebugVolume.cpp in Sources */,
 				E1A180FA1513E7B400EA9CDB /* GameState.cpp in Sources */,
 				E1A180FB1513E7B400EA9CDB /* GhostCore.cpp in Sources */,
@@ -1202,13 +1182,15 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
-					"$(SRCROOT)/../**",
-					"$(SRCROOT)/GLEW",
+					"$(SRCROOT)/../Ghastly",
+					"$(SRCROOT)/..",
+					"$(SRCROOT)/include",
 				);
 				INFOPLIST_FILE = "../Game/GitM-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
-					"$(SRCROOT)/GLEW",
+					"$(SRCROOT)/lib/GLEW",
 					"$(inherited)",
+					"$(SRCROOT)/lib/SDL",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1239,13 +1221,15 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
-					"$(SRCROOT)/../**",
-					"$(SRCROOT)/GLEW",
+					"$(SRCROOT)/../Ghastly",
+					"$(SRCROOT)/..",
+					"$(SRCROOT)/include",
 				);
 				INFOPLIST_FILE = "../Game/GitM-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
-					"$(SRCROOT)/GLEW",
+					"$(SRCROOT)/lib/GLEW",
 					"$(inherited)",
+					"$(SRCROOT)/lib/SDL",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = "$(TARGET_NAME)";

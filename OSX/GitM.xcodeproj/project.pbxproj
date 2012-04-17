@@ -146,9 +146,9 @@
 		E1A59672152659D8008B4E8B /* GhastlyServer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1A5966C152659D8008B4E8B /* GhastlyServer.cpp */; };
 		E1A59673152659D8008B4E8B /* MultiConnectionProvider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1A5966E152659D8008B4E8B /* MultiConnectionProvider.cpp */; };
 		E1A59676152659F3008B4E8B /* IndexPool.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1A59674152659F2008B4E8B /* IndexPool.cpp */; };
-		E1DA5403153E0B2D0062DC28 /* libSDL2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E1DA5402153E0B2D0062DC28 /* libSDL2.a */; };
-		E1DA540A153E0D990062DC28 /* libSDL2_image.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E1DA5408153E0D990062DC28 /* libSDL2_image.a */; };
-		E1DA540B153E0D990062DC28 /* libSDL2_ttf.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E1DA5409153E0D990062DC28 /* libSDL2_ttf.a */; };
+		E1B095C7153E2EAF003FA3AA /* SDL2_ttf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1B095C5153E2EAF003FA3AA /* SDL2_ttf.framework */; };
+		E1B095C8153E2EAF003FA3AA /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1B095C6153E2EAF003FA3AA /* SDL2.framework */; };
+		E1E5460E153E344200055BB7 /* SDL2_image.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1E5460D153E344200055BB7 /* SDL2_image.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -459,9 +459,9 @@
 		E1A5966F152659D8008B4E8B /* MultiConnectionProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiConnectionProvider.h; sourceTree = "<group>"; };
 		E1A59674152659F2008B4E8B /* IndexPool.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IndexPool.cpp; sourceTree = "<group>"; };
 		E1A59675152659F2008B4E8B /* IndexPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndexPool.h; sourceTree = "<group>"; };
-		E1DA5402153E0B2D0062DC28 /* libSDL2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSDL2.a; path = lib/SDL/libSDL2.a; sourceTree = "<group>"; };
-		E1DA5408153E0D990062DC28 /* libSDL2_image.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSDL2_image.a; path = lib/SDL/libSDL2_image.a; sourceTree = "<group>"; };
-		E1DA5409153E0D990062DC28 /* libSDL2_ttf.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSDL2_ttf.a; path = lib/SDL/libSDL2_ttf.a; sourceTree = "<group>"; };
+		E1B095C5153E2EAF003FA3AA /* SDL2_ttf.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_ttf.framework; path = Frameworks/SDL2_ttf.framework; sourceTree = "<group>"; };
+		E1B095C6153E2EAF003FA3AA /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = Frameworks/SDL2.framework; sourceTree = "<group>"; };
+		E1E5460D153E344200055BB7 /* SDL2_image.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_image.framework; path = Frameworks/SDL2_image.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -469,9 +469,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1DA540A153E0D990062DC28 /* libSDL2_image.a in Frameworks */,
-				E1DA540B153E0D990062DC28 /* libSDL2_ttf.a in Frameworks */,
-				E1DA5403153E0B2D0062DC28 /* libSDL2.a in Frameworks */,
+				E1E5460E153E344200055BB7 /* SDL2_image.framework in Frameworks */,
+				E1B095C7153E2EAF003FA3AA /* SDL2_ttf.framework in Frameworks */,
+				E1B095C8153E2EAF003FA3AA /* SDL2.framework in Frameworks */,
 				E151E5641538C5CA003959D2 /* libGLEW.a in Frameworks */,
 				E151E5541538C1C4003959D2 /* GLUT.framework in Frameworks */,
 				E151E5511538B91E003959D2 /* AGL.framework in Frameworks */,
@@ -495,7 +495,9 @@
 			isa = PBXGroup;
 			children = (
 				E151E5631538C5CA003959D2 /* libGLEW.a */,
-				E1DA5402153E0B2D0062DC28 /* libSDL2.a */,
+				E1E5460D153E344200055BB7 /* SDL2_image.framework */,
+				E1B095C5153E2EAF003FA3AA /* SDL2_ttf.framework */,
+				E1B095C6153E2EAF003FA3AA /* SDL2.framework */,
 				E151E5501538B91E003959D2 /* AGL.framework */,
 				E151E54815387C01003959D2 /* GLUT.framework */,
 				E151E54615387BFA003959D2 /* OpenGL.framework */,
@@ -947,8 +949,6 @@
 		E1C4C916142A751A004E4ACD = {
 			isa = PBXGroup;
 			children = (
-				E1DA5408153E0D990062DC28 /* libSDL2_image.a */,
-				E1DA5409153E0D990062DC28 /* libSDL2_ttf.a */,
 				E151E5551538C1D3003959D2 /* GLEW */,
 				E1A17FD21513E7B400EA9CDB /* Game */,
 				E1A17FEB1513E7B400EA9CDB /* Ghastly */,
@@ -1190,7 +1190,6 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(SRCROOT)/lib/GLEW",
 					"$(inherited)",
-					"$(SRCROOT)/lib/SDL",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1229,7 +1228,6 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(SRCROOT)/lib/GLEW",
 					"$(inherited)",
-					"$(SRCROOT)/lib/SDL",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = "$(TARGET_NAME)";

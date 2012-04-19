@@ -11,7 +11,6 @@
 #include <Render/GLHelper.h>
 
 GhostCore::GhostCore(): _state(Starting) {
-    CheckGLErrors();
     setup();
 }
 
@@ -20,18 +19,14 @@ GhostCore::~GhostCore() {
 }
 
 void GhostCore::setup() {
-    CheckGLErrors();
     WorldManager::Setup();
     TTFManager::Setup();
     TextureManager::Setup();
     ShaderManager::Setup();
     MaterialManager::Setup();
-    CheckGLErrors();
 }
 
 void GhostCore::teardown() {
-    //Core::teardown();
-
     WorldManager::Teardown();
     TTFManager::Teardown();
     TextureManager::Teardown();

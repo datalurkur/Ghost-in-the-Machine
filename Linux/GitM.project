@@ -129,9 +129,6 @@
       <File Name="../Ghastly/Render/Renderable.cpp"/>
       <File Name="../Ghastly/Render/Viewport.h"/>
       <File Name="../Ghastly/Render/Renderable.h"/>
-      <File Name="../Ghastly/Render/BufferState.cpp"/>
-      <File Name="../Ghastly/Render/BufferState.h"/>
-      <File Name="../Ghastly/Render/GenericRenderState.h"/>
       <File Name="../Ghastly/Render/Shader.cpp"/>
       <File Name="../Ghastly/Render/Shader.h"/>
       <File Name="../Ghastly/Render/ShaderParameter.cpp"/>
@@ -142,7 +139,6 @@
       <File Name="../Ghastly/Render/TextureParameter.h"/>
       <File Name="../Ghastly/Render/ColorParameter.cpp"/>
       <File Name="../Ghastly/Render/ColorParameter.h"/>
-      <File Name="../Ghastly/Render/GenericRenderState.cpp"/>
     </VirtualDirectory>
     <VirtualDirectory Name="Network">
       <File Name="../Ghastly/Network/SocketedUDPProvider.h"/>
@@ -209,6 +205,8 @@
       <File Name="../Ghastly/Base/Vector2.h"/>
       <File Name="../Ghastly/Base/AABB3.h"/>
       <File Name="../Ghastly/Base/IndexPool.cpp"/>
+      <File Name="../Ghastly/Base/SDLHelper.cpp"/>
+      <File Name="../Ghastly/Base/SDLHelper.h"/>
     </VirtualDirectory>
     <VirtualDirectory Name="Engine">
       <File Name="../Ghastly/Engine/Entity.cpp"/>
@@ -325,17 +323,20 @@
       <Compiler Options="-g;-O0;-Wall" C_Options="-g;-O0;-Wall" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" UseDifferentPCHFlags="no" PCHFlags="">
         <IncludePath Value="../"/>
         <IncludePath Value="../Ghastly"/>
-        <IncludePath Value="glew-1.7.0/include"/>
+        <IncludePath Value="include"/>
         <Preprocessor Value="GL_GLEXT_PROTOTYPES"/>
       </Compiler>
       <Linker Options="" Required="yes">
-        <LibraryPath Value="glew-1.7.0/lib"/>
+        <LibraryPath Value="lib/GLEW"/>
+        <LibraryPath Value="lib/SDL"/>
         <Library Value="GL"/>
         <Library Value="GLU"/>
-        <Library Value="SDL"/>
-        <Library Value="SDL_image"/>
-        <Library Value="SDL_ttf"/>
         <Library Value="GLEW"/>
+        <Library Value="pthread"/>
+        <Library Value="freetype"/>
+        <Library Value="SDL2"/>
+        <Library Value="SDL2_image"/>
+        <Library Value="SDL2_ttf"/>
       </Linker>
       <ResourceCompiler Options="" Required="no"/>
       <General OutputFile="../$(ProjectName)" IntermediateDirectory="./Debug" Command="./$(ProjectName)" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="../" PauseExecWhenProcTerminates="yes"/>
@@ -377,6 +378,7 @@
       <General OutputFile="$(IntermediateDirectory)/$(ProjectName)" IntermediateDirectory="./Release" Command="./$(ProjectName)" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="$(IntermediateDirectory)" PauseExecWhenProcTerminates="yes"/>
       <Environment EnvVarSetName="&lt;Use Defaults&gt;" DbgSetName="&lt;Use Defaults&gt;">
         <![CDATA[
+      
       
       
       

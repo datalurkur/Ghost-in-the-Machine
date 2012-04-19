@@ -1,10 +1,10 @@
 #version 150
 
-uniform sampler2D texture0;
-
 uniform input_block {
     vec4 color;
 };
+
+uniform sampler2D texture0;
 
 in vec3 frag_normal;
 in vec3 frag_eye;

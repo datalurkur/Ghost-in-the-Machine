@@ -56,19 +56,19 @@ void PlayingState::teardown() {
 
 bool PlayingState::keyDown(KeyboardEvent *event) {
     switch(event->key()) {
-        case KeyboardEvent::KEY_a: {
+        case SDLK_a: {
 			PlayerController *p = _world->getPlayer()->getPlayerController();
             p->setMovementDirection(PlayerController::Left);
         } break;
-        case KeyboardEvent::KEY_d: {
+        case SDLK_d: {
 			PlayerController *p = _world->getPlayer()->getPlayerController();
             p->setMovementDirection(PlayerController::Right);
         } break;
-        case KeyboardEvent::KEY_w: {
+        case SDLK_w: {
 			PlayerController *p = _world->getPlayer()->getPlayerController();
             p->jump();
         } break;
-        case KeyboardEvent::KEY_s: {
+        case SDLK_s: {
         } break;
         default:
             return false;
@@ -79,13 +79,13 @@ bool PlayingState::keyDown(KeyboardEvent *event) {
 
 bool PlayingState::keyUp(KeyboardEvent *event) {
 	switch(event->key()) {
-        case KeyboardEvent::KEY_a: {
+        case SDLK_a: {
 			PlayerController *p = _world->getPlayer()->getPlayerController();
 			if(p->getMovementDirection() == PlayerController::Left) {
 				p->setMovementDirection(PlayerController::None);
 			}
         } break;
-        case KeyboardEvent::KEY_d: {
+        case SDLK_d: {
 			PlayerController *p = _world->getPlayer()->getPlayerController();
 			if(p->getMovementDirection() == PlayerController::Right) {
 				p->setMovementDirection(PlayerController::None);

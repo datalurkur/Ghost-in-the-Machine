@@ -8,6 +8,9 @@
 #include <Game/StartingState.h>
 #include <Game/GameState.h>
 
+#include <Base/SDLHelper.h>
+#include <Render/GLHelper.h>
+
 StartingState::StartingState() {
 }
 
@@ -15,6 +18,8 @@ StartingState::~StartingState() {
 }
 
 bool StartingState::update(int elapsed) {
+    CheckSDLErrors();
+    CheckGLErrors();
     switch(_stage) {
         case Start: {
             Info("Start stage done");

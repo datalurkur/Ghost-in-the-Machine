@@ -8,7 +8,10 @@
 #include <Resource/ShaderManager.h>
 #include <Resource/MaterialManager.h>
 
+#include <Render/GLHelper.h>
+
 GhostCore::GhostCore(): _state(Starting) {
+    CheckGLErrors();
     setup();
 }
 
@@ -17,15 +20,17 @@ GhostCore::~GhostCore() {
 }
 
 void GhostCore::setup() {
+    CheckGLErrors();
     WorldManager::Setup();
     TTFManager::Setup();
     TextureManager::Setup();
     ShaderManager::Setup();
     MaterialManager::Setup();
+    CheckGLErrors();
 }
 
 void GhostCore::teardown() {
-    Core::teardown();
+    //Core::teardown();
 
     WorldManager::Teardown();
     TTFManager::Teardown();
@@ -36,7 +41,7 @@ void GhostCore::teardown() {
 
 bool GhostCore::keyDown(KeyboardEvent *event) {
     switch(event->key()) {
-        case KeyboardEvent::KEY_F1: {
+        case SDLK_F1: {
             stop();
         } break;
         default: {

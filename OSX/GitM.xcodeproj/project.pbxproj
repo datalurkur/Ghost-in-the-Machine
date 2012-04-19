@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E1074E571533870800790B48 /* BufferState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1074E531533870700790B48 /* BufferState.cpp */; };
 		E1074E5B1533871600790B48 /* ShaderManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1074E591533871600790B48 /* ShaderManager.cpp */; };
 		E1074E5D1533876A00790B48 /* Shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1074E5C1533876A00790B48 /* Shader.cpp */; };
 		E1074E601533C5AA00790B48 /* ShaderParameter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1074E5E1533C5AA00790B48 /* ShaderParameter.cpp */; };
@@ -16,9 +15,9 @@
 		E10FA654153735320071ADE8 /* UniformBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E10FA650153735320071ADE8 /* UniformBuffer.cpp */; };
 		E12853EE15295EAE00BD8DFA /* Text.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E12853EC15295EAE00BD8DFA /* Text.cpp */; };
 		E12853F615296AB600BD8DFA /* UIBox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E12853F415296AB600BD8DFA /* UIBox.cpp */; };
+		E1381161153E64AA0000ECEC /* SDLHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E138115F153E64AA0000ECEC /* SDLHelper.cpp */; };
 		E1485E62152764D80032A401 /* GLHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1485E60152764D80032A401 /* GLHelper.cpp */; };
 		E151E54715387BFA003959D2 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E151E54615387BFA003959D2 /* OpenGL.framework */; };
-		E151E54D15387E7F003959D2 /* GenericRenderState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E151E54C15387E7F003959D2 /* GenericRenderState.cpp */; };
 		E151E5511538B91E003959D2 /* AGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E151E5501538B91E003959D2 /* AGL.framework */; };
 		E151E5541538C1C4003959D2 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E151E54815387C01003959D2 /* GLUT.framework */; };
 		E151E5641538C5CA003959D2 /* libGLEW.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E151E5631538C5CA003959D2 /* libGLEW.a */; };
@@ -164,9 +163,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		E1074E531533870700790B48 /* BufferState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BufferState.cpp; sourceTree = "<group>"; };
-		E1074E541533870700790B48 /* BufferState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BufferState.h; sourceTree = "<group>"; };
-		E1074E551533870700790B48 /* GenericRenderState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GenericRenderState.h; sourceTree = "<group>"; };
 		E1074E561533870800790B48 /* Shader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shader.h; sourceTree = "<group>"; };
 		E1074E591533871600790B48 /* ShaderManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ShaderManager.cpp; sourceTree = "<group>"; };
 		E1074E5A1533871600790B48 /* ShaderManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShaderManager.h; sourceTree = "<group>"; };
@@ -184,6 +180,8 @@
 		E12853F315296A7900BD8DFA /* ResizeListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResizeListener.h; sourceTree = "<group>"; };
 		E12853F415296AB600BD8DFA /* UIBox.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = UIBox.cpp; path = UI/UIBox.cpp; sourceTree = "<group>"; };
 		E12853F515296AB600BD8DFA /* UIBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIBox.h; path = UI/UIBox.h; sourceTree = "<group>"; };
+		E138115F153E64AA0000ECEC /* SDLHelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SDLHelper.cpp; sourceTree = "<group>"; };
+		E1381160153E64AA0000ECEC /* SDLHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDLHelper.h; sourceTree = "<group>"; };
 		E13A3FF6142A79C700D7EA2A /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		E13A3FF9142A79C700D7EA2A /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		E13A3FFA142A79C700D7EA2A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -192,7 +190,6 @@
 		E1485E61152764D80032A401 /* GLHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLHelper.h; sourceTree = "<group>"; };
 		E151E54615387BFA003959D2 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/OpenGL.framework; sourceTree = DEVELOPER_DIR; };
 		E151E54815387C01003959D2 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/GLUT.framework; sourceTree = DEVELOPER_DIR; };
-		E151E54C15387E7F003959D2 /* GenericRenderState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GenericRenderState.cpp; sourceTree = "<group>"; };
 		E151E5501538B91E003959D2 /* AGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AGL.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/AGL.framework; sourceTree = DEVELOPER_DIR; };
 		E151E5571538C1D3003959D2 /* glew.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = glew.h; sourceTree = "<group>"; };
 		E151E5581538C1D3003959D2 /* glxew.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = glxew.h; sourceTree = "<group>"; };
@@ -595,6 +592,8 @@
 		E1A180111513E7B400EA9CDB /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				E138115F153E64AA0000ECEC /* SDLHelper.cpp */,
+				E1381160153E64AA0000ECEC /* SDLHelper.h */,
 				E1A59674152659F2008B4E8B /* IndexPool.cpp */,
 				E1A59675152659F2008B4E8B /* IndexPool.h */,
 				E1A180121513E7B400EA9CDB /* AABB2.cpp */,
@@ -876,7 +875,6 @@
 		E1A180D71513E7B400EA9CDB /* Render */ = {
 			isa = PBXGroup;
 			children = (
-				E151E54C15387E7F003959D2 /* GenericRenderState.cpp */,
 				E10FA64C153735320071ADE8 /* ColorParameter.cpp */,
 				E10FA64D153735320071ADE8 /* ColorParameter.h */,
 				E10FA64E153735320071ADE8 /* TextureParameter.cpp */,
@@ -886,9 +884,6 @@
 				E1074E5E1533C5AA00790B48 /* ShaderParameter.cpp */,
 				E1074E5F1533C5AA00790B48 /* ShaderParameter.h */,
 				E1074E5C1533876A00790B48 /* Shader.cpp */,
-				E1074E531533870700790B48 /* BufferState.cpp */,
-				E1074E541533870700790B48 /* BufferState.h */,
-				E1074E551533870700790B48 /* GenericRenderState.h */,
 				E1074E561533870800790B48 /* Shader.h */,
 				E12853F315296A7900BD8DFA /* ResizeListener.h */,
 				E1485E60152764D80032A401 /* GLHelper.cpp */,
@@ -1144,14 +1139,13 @@
 				E12853F615296AB600BD8DFA /* UIBox.cpp in Sources */,
 				E188644B152E6E6A00FCD6F0 /* MenuState.cpp in Sources */,
 				E188644F152E6E7B00FCD6F0 /* UIButton.cpp in Sources */,
-				E1074E571533870800790B48 /* BufferState.cpp in Sources */,
 				E1074E5B1533871600790B48 /* ShaderManager.cpp in Sources */,
 				E1074E5D1533876A00790B48 /* Shader.cpp in Sources */,
 				E1074E601533C5AA00790B48 /* ShaderParameter.cpp in Sources */,
 				E10FA652153735320071ADE8 /* ColorParameter.cpp in Sources */,
 				E10FA653153735320071ADE8 /* TextureParameter.cpp in Sources */,
 				E10FA654153735320071ADE8 /* UniformBuffer.cpp in Sources */,
-				E151E54D15387E7F003959D2 /* GenericRenderState.cpp in Sources */,
+				E1381161153E64AA0000ECEC /* SDLHelper.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -2,7 +2,7 @@
 
 uniform input_block {
     vec4 color;
-};
+} input;
 
 uniform sampler2D texture0;
 
@@ -14,7 +14,7 @@ out vec4 frag_color;
 
 void main() {
     vec4 tex_color = texture(texture0, frag_texcoord);
-    frag_color = color;
+    frag_color = input.color;
 
     frag_color.a *= tex_color.r;
 }

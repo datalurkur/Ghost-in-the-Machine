@@ -306,9 +306,6 @@
     <ClCompile Include="..\Ghastly\Resource\WorldManager.cpp">
       <Filter>Ghastly\Resource</Filter>
     </ClCompile>
-    <ClCompile Include="..\Game\main.cpp">
-      <Filter>Game</Filter>
-    </ClCompile>
     <ClCompile Include="..\Game\Wall.cpp">
       <Filter>Game\Game Objects</Filter>
     </ClCompile>
@@ -429,9 +426,6 @@
     <ClCompile Include="..\Ghastly\Base\Debug.cpp">
       <Filter>Ghastly\Base</Filter>
     </ClCompile>
-    <ClCompile Include="..\Ghastly\Render\BufferState.cpp">
-      <Filter>Ghastly\Render</Filter>
-    </ClCompile>
     <ClCompile Include="..\Ghastly\Render\ColorParameter.cpp">
       <Filter>Ghastly\Render</Filter>
     </ClCompile>
@@ -450,9 +444,10 @@
     <ClCompile Include="..\Ghastly\Resource\ShaderManager.cpp">
       <Filter>Ghastly\Resource</Filter>
     </ClCompile>
-    <ClCompile Include="..\Ghastly\Render\GenericRenderState.cpp">
-      <Filter>Ghastly\Render</Filter>
+    <ClCompile Include="..\Ghastly\Base\SDLHelper.cpp">
+      <Filter>Ghastly\Base</Filter>
     </ClCompile>
+    <ClCompile Include="..\Game\main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Ghastly\Base\AABB2.h">
@@ -854,13 +849,7 @@
     <ClInclude Include="..\Ghastly\Base\Debug.h">
       <Filter>Ghastly\Base</Filter>
     </ClInclude>
-    <ClInclude Include="..\Ghastly\Render\BufferState.h">
-      <Filter>Ghastly\Render</Filter>
-    </ClInclude>
     <ClInclude Include="..\Ghastly\Render\ColorParameter.h">
-      <Filter>Ghastly\Render</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Ghastly\Render\GenericRenderState.h">
       <Filter>Ghastly\Render</Filter>
     </ClInclude>
     <ClInclude Include="..\Ghastly\Render\ResizeListener.h">
@@ -880,6 +869,9 @@
     </ClInclude>
     <ClInclude Include="..\Ghastly\Resource\ShaderManager.h">
       <Filter>Ghastly\Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Ghastly\Base\SDLHelper.h">
+      <Filter>Ghastly\Base</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

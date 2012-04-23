@@ -1,1 +1,1 @@
-input.color color4 0.0 0.0 1.0 0.5
+frag_input.color color4 0.0 0.0 1.0 0.5

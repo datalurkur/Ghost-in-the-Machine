@@ -1,8 +1,8 @@
 #version 150
 
-uniform input {
+uniform frag_input {
     vec4 color;
-} inp;
+};
 
 in vec3 frag_normal;
 in vec3 frag_eye;
@@ -10,5 +10,5 @@ in vec3 frag_eye;
 out vec4 frag_color;
 
 void main() {
-    frag_color = inp.color;
+    frag_color = color;
 }

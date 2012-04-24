@@ -45,7 +45,7 @@ IncludePath            :=  $(IncludeSwitch). $(IncludeSwitch)../ $(IncludeSwitch
 IncludePCH             := 
 RcIncludePath          := 
 Libs                   := $(LibrarySwitch)GL $(LibrarySwitch)GLU $(LibrarySwitch)GLEW $(LibrarySwitch)pthread $(LibrarySwitch)freetype $(LibrarySwitch)SDL2 $(LibrarySwitch)SDL2_image $(LibrarySwitch)SDL2_ttf 
-LibPath                := $(LibraryPathSwitch). $(LibraryPathSwitch)lib/GLEW $(LibraryPathSwitch)lib/SDL 
+LibPath                := $(LibraryPathSwitch). $(LibraryPathSwitch)lib/SDL $(LibraryPathSwitch)lib/GLEW 
 
 
 ##

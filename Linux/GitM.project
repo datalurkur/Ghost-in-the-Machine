@@ -327,8 +327,8 @@
         <IncludePath Value="include/SDL2"/>
       </Compiler>
       <Linker Options="" Required="yes">
-        <LibraryPath Value="lib/GLEW"/>
         <LibraryPath Value="lib/SDL"/>
+        <LibraryPath Value="lib/GLEW"/>
         <Library Value="GL"/>
         <Library Value="GLU"/>
         <Library Value="GLEW"/>
@@ -378,6 +378,9 @@
       <General OutputFile="$(IntermediateDirectory)/$(ProjectName)" IntermediateDirectory="./Release" Command="./$(ProjectName)" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="$(IntermediateDirectory)" PauseExecWhenProcTerminates="yes"/>
       <Environment EnvVarSetName="&lt;Use Defaults&gt;" DbgSetName="&lt;Use Defaults&gt;">
         <![CDATA[
+      
+      
+      
       
       
       

@@ -3,7 +3,7 @@
 
 #include <Engine/SceneNode.h>
 
-class DebugVolume: public SceneNode {
+class DebugVolume: public SceneNode<float> {
 public:
 	static const std::string NodeType;
 

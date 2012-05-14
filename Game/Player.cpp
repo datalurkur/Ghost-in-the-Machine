@@ -19,13 +19,13 @@ Player::~Player() {
 
 void Player::recreateRenderables() {
     clearRenderables();
-    addRenderable(Renderable::Sprite(Vector2(_position.x, _position.y), Vector2(_dimensions.x, _dimensions.y), 0, MaterialManager::Get("player")));
+    addRenderable(Renderable::Sprite(Vector2<float>(_position.x, _position.y), Vector2<float>(_dimensions.x, _dimensions.y), MaterialManager::Get("player")));
 
 	// Debug
     deleteChild("jumpSensor");
 	DebugVolume *jumpVolume = new DebugVolume("jumpSensor");
-	jumpVolume->setPosition(_position.x + _jumpSensorOffset.x, _position.y + _jumpSensorOffset.y, 0.0f);
-	jumpVolume->setDimensions(_jumpSensorDimensions.x, _jumpSensorDimensions.y, 0.0f);
+	jumpVolume->setPosition(Vec3f(_position.x + _jumpSensorOffset.x, _position.y + _jumpSensorOffset.y, 0.0f));
+	jumpVolume->setDimensions(Vec3f(_jumpSensorDimensions.x, _jumpSensorDimensions.y, 0.0f));
 	addChild(jumpVolume);
 }
 
@@ -89,13 +89,13 @@ PlayerController *Player::getPlayerController() const {
 
 Player* Player::DefaultPlayer() {
     Player *player = new Player("defaultPlayer");
-    player->setDimensions(0.5f, 1.0f, 0.0f);
+    player->setDimensions(Vec3f(0.5f, 1.0f, 0.0f));
 
     player->_maxSpeed = 6.0f;
     player->_accel = 0.02f;
     player->_jumpSpeed = 6.0f;
-    player->_jumpSensorDimensions = Vector2(0.4f, 0.1f);
-    player->_jumpSensorOffset = Vector2(0.0f, -0.5f);
+    player->_jumpSensorDimensions = Vec2f(0.4f, 0.1f);
+    player->_jumpSensorOffset = Vec2f(0.0f, -0.5f);
 	player->_extraJumps = 1;
 
     PlayerController *controller = player->addController<PlayerController,Player>(player);

@@ -7,11 +7,11 @@ const std::string Wall::NodeType = "Wall";
 Wall::Wall(const std::string &name): Entity(name) {}
 Wall::~Wall() {}
 
-void Wall::addVert(const Vector2 &vert) {
+void Wall::addVert(const Vector2<float> &vert) {
     _verts.push_back(vert);
 }
 
-void Wall::setVerts(Vector2 *verts, unsigned int size) {
+void Wall::setVerts(Vector2<float> *verts, unsigned int size) {
     unsigned int i;
     _verts.resize(size);
     for(i = 0; i < size; i++) {
@@ -19,7 +19,7 @@ void Wall::setVerts(Vector2 *verts, unsigned int size) {
     }
 }
 
-void Wall::setVerts(const std::vector<Vector2> &verts) {
+void Wall::setVerts(const std::vector<Vector2<float> > &verts) {
     unsigned int i;
 
     _verts.resize(verts.size());

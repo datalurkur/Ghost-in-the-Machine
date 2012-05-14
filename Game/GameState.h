@@ -17,6 +17,9 @@ public:
 
     bool update(int elapsed);
 
+    bool mouseMoved(MouseMovedEvent *event);
+    bool mouseButton(MouseButtonEvent *event);
+
 private:
     GhostWorld *_world;
     UIManager *_ui;

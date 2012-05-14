@@ -54,12 +54,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\Ghastly\Base\AABB2.cpp">
-      <Filter>Ghastly\Base</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Ghastly\Base\AABB3.cpp">
-      <Filter>Ghastly\Base</Filter>
-    </ClCompile>
     <ClCompile Include="..\Ghastly\Base\FileSystem.cpp">
       <Filter>Ghastly\Base</Filter>
     </ClCompile>
@@ -70,12 +64,6 @@
       <Filter>Ghastly\Base</Filter>
     </ClCompile>
     <ClCompile Include="..\Ghastly\Base\PropertyMap.cpp">
-      <Filter>Ghastly\Base</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Ghastly\Base\Vector2.cpp">
-      <Filter>Ghastly\Base</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Ghastly\Base\Vector3.cpp">
       <Filter>Ghastly\Base</Filter>
     </ClCompile>
     <ClCompile Include="..\Ghastly\Base\Vector4.cpp">
@@ -261,9 +249,6 @@
     <ClCompile Include="..\Ghastly\Engine\SceneManager.cpp">
       <Filter>Ghastly\Engine</Filter>
     </ClCompile>
-    <ClCompile Include="..\Ghastly\Engine\SceneNode.cpp">
-      <Filter>Ghastly\Engine</Filter>
-    </ClCompile>
     <ClCompile Include="..\Ghastly\Engine\State.cpp">
       <Filter>Ghastly\Engine</Filter>
     </ClCompile>
@@ -408,9 +393,6 @@
     <ClCompile Include="..\Ghastly\Network\GhastlyHost.cpp">
       <Filter>Ghastly\Network\Ghastly</Filter>
     </ClCompile>
-    <ClCompile Include="..\Ghastly\UI\Text.cpp">
-      <Filter>Ghastly\UI</Filter>
-    </ClCompile>
     <ClCompile Include="..\Ghastly\UI\UIBox.cpp">
       <Filter>Ghastly\UI</Filter>
     </ClCompile>
@@ -448,6 +430,15 @@
       <Filter>Ghastly\Base</Filter>
     </ClCompile>
     <ClCompile Include="..\Game\main.cpp" />
+    <ClCompile Include="..\Ghastly\UI\UIText.cpp">
+      <Filter>Ghastly\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Ghastly\Engine\MouseListener.cpp">
+      <Filter>Ghastly\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Ghastly\UI\UICursor.cpp">
+      <Filter>Ghastly\UI</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Ghastly\Base\AABB2.h">
@@ -831,9 +822,6 @@
     <ClInclude Include="..\Ghastly\Engine\ResizeListener.h">
       <Filter>Ghastly\Engine</Filter>
     </ClInclude>
-    <ClInclude Include="..\Ghastly\UI\Text.h">
-      <Filter>Ghastly\UI</Filter>
-    </ClInclude>
     <ClInclude Include="..\Ghastly\UI\UIBox.h">
       <Filter>Ghastly\UI</Filter>
     </ClInclude>
@@ -872,6 +860,18 @@
     </ClInclude>
     <ClInclude Include="..\Ghastly\Base\SDLHelper.h">
       <Filter>Ghastly\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Ghastly\UI\UICursor.h">
+      <Filter>Ghastly\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Ghastly\UI\UIListener.h">
+      <Filter>Ghastly\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Ghastly\UI\UIText.h">
+      <Filter>Ghastly\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Ghastly\Engine\MouseListener.h">
+      <Filter>Ghastly\Engine</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

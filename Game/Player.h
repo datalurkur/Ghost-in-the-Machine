@@ -27,7 +27,7 @@ public:
 protected:
 	int _extraJumps;
     float _jumpSpeed;
-    Vector2 _jumpSensorDimensions, _jumpSensorOffset;
+    Vec2f _jumpSensorDimensions, _jumpSensorOffset;
 
 private:
 	PlayerController *_playerController;

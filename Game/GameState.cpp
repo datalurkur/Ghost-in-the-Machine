@@ -36,3 +36,11 @@ bool GameState::update(int elapsed) {
         return false;
     }
 }
+
+bool GameState::mouseMoved(MouseMovedEvent *event) {
+    return _ui->mouseMoved(event);
+}
+
+bool GameState::mouseButton(MouseButtonEvent *event) {
+    return _ui->mouseButton(event);
+}

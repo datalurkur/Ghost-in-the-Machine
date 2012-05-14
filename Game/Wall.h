@@ -11,9 +11,9 @@ public:
     Wall(const std::string &name);
     virtual ~Wall();
 
-    void addVert(const Vector2 &vert);
-    void setVerts(Vector2 *verts, unsigned int size);
-    void setVerts(const std::vector<Vector2> &verts);
+    void addVert(const Vector2<float> &vert);
+    void setVerts(Vector2<float> *verts, unsigned int size);
+    void setVerts(const std::vector<Vector2<float> > &verts);
 
     void recreateRenderables();
     
@@ -21,7 +21,7 @@ public:
     void createPhysicsBody();
 
 private:
-    std::vector<Vector2> _verts;
+    std::vector<Vector2<float> > _verts;
 };
 
 #endif

@@ -9,7 +9,7 @@
 
 #include <UI/UIManager.h>
 #include <UI/UIElement.h>
-#include <UI/Text.h>
+#include <UI/UIText.h>
 #include <UI/UIBox.h>
 
 PlayingState::PlayingState() {

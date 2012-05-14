@@ -13,7 +13,7 @@ Platform::Platform(const std::string &name):
 Platform::~Platform() {}
 
 void Platform::recreateRenderables() {
-    addRenderable(Renderable::Sprite(Vector2(_position.x, _position.y), Vector2(_dimensions.x, _dimensions.y), 0, MaterialManager::Get("platform")));
+    addRenderable(Renderable::Sprite(Vector2<float>(_position.x, _position.y), Vector2<float>(_dimensions.x, _dimensions.y), MaterialManager::Get("platform")));
 }
 
 void Platform::setupPhysics(PhysicsEngine *physics) {
@@ -24,5 +24,5 @@ void Platform::setupPhysics(PhysicsEngine *physics) {
 
 void Platform::createPhysicsBody() {
     PhysicsEngine *engine = _physicsController->getEngine();
-    _physicsController->setBody(engine->createStaticBox(Vector2(_position.x, _position.y), Vector2(_dimensions.x, _dimensions.y)));
+    _physicsController->setBody(engine->createStaticBox(Vector2<float>(_position.x, _position.y), Vector2<float>(_dimensions.x, _dimensions.y)));
 }

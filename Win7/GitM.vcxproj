@@ -90,8 +90,6 @@
     <ClCompile Include="..\Game\PlayingState.cpp" />
     <ClCompile Include="..\Game\StartingState.cpp" />
     <ClCompile Include="..\Game\Wall.cpp" />
-    <ClCompile Include="..\Ghastly\Base\AABB2.cpp" />
-    <ClCompile Include="..\Ghastly\Base\AABB3.cpp" />
     <ClCompile Include="..\Ghastly\Base\Debug.cpp" />
     <ClCompile Include="..\Ghastly\Base\FileSystem.cpp" />
     <ClCompile Include="..\Ghastly\Base\IndexPool.cpp" />
@@ -100,8 +98,6 @@
     <ClCompile Include="..\Ghastly\Base\PropertyMap.cpp" />
     <ClCompile Include="..\Ghastly\Base\SDLHelper.cpp" />
     <ClCompile Include="..\Ghastly\Base\Timestamp.cpp" />
-    <ClCompile Include="..\Ghastly\Base\Vector2.cpp" />
-    <ClCompile Include="..\Ghastly\Base\Vector3.cpp" />
     <ClCompile Include="..\Ghastly\Base\Vector4.cpp" />
     <ClCompile Include="..\Ghastly\Box2D\Collision\b2BroadPhase.cpp" />
     <ClCompile Include="..\Ghastly\Box2D\Collision\b2CollideCircle.cpp" />
@@ -158,13 +154,13 @@
     <ClCompile Include="..\Ghastly\Engine\IsoCamera.cpp" />
     <ClCompile Include="..\Ghastly\Engine\KeyboardListener.cpp" />
     <ClCompile Include="..\Ghastly\Engine\Mob.cpp" />
+    <ClCompile Include="..\Ghastly\Engine\MouseListener.cpp" />
     <ClCompile Include="..\Ghastly\Engine\OrthoCamera.cpp" />
     <ClCompile Include="..\Ghastly\Engine\ParentState.cpp" />
     <ClCompile Include="..\Ghastly\Engine\PhysicsController.cpp" />
     <ClCompile Include="..\Ghastly\Engine\PhysicsEngine.cpp" />
     <ClCompile Include="..\Ghastly\Engine\QuadTreeSceneManager.cpp" />
     <ClCompile Include="..\Ghastly\Engine\SceneManager.cpp" />
-    <ClCompile Include="..\Ghastly\Engine\SceneNode.cpp" />
     <ClCompile Include="..\Ghastly\Engine\State.cpp" />
     <ClCompile Include="..\Ghastly\Engine\Window.cpp" />
     <ClCompile Include="..\Ghastly\Engine\WindowListener.cpp" />
@@ -204,11 +200,12 @@
     <ClCompile Include="..\Ghastly\Resource\ThreadedResourceManager.cpp" />
     <ClCompile Include="..\Ghastly\Resource\TTFManager.cpp" />
     <ClCompile Include="..\Ghastly\Resource\WorldManager.cpp" />
-    <ClCompile Include="..\Ghastly\UI\Text.cpp" />
     <ClCompile Include="..\Ghastly\UI\UIBox.cpp" />
     <ClCompile Include="..\Ghastly\UI\UIButton.cpp" />
+    <ClCompile Include="..\Ghastly\UI\UICursor.cpp" />
     <ClCompile Include="..\Ghastly\UI\UIElement.cpp" />
     <ClCompile Include="..\Ghastly\UI\UIManager.cpp" />
+    <ClCompile Include="..\Ghastly\UI\UIText.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Game\DebugVolume.h" />
@@ -296,6 +293,7 @@
     <ClInclude Include="..\Ghastly\Engine\IsoCamera.h" />
     <ClInclude Include="..\Ghastly\Engine\KeyboardListener.h" />
     <ClInclude Include="..\Ghastly\Engine\Mob.h" />
+    <ClInclude Include="..\Ghastly\Engine\MouseListener.h" />
     <ClInclude Include="..\Ghastly\Engine\OrthoCamera.h" />
     <ClInclude Include="..\Ghastly\Engine\ParentState.h" />
     <ClInclude Include="..\Ghastly\Engine\PhysicsController.h" />
@@ -347,11 +345,13 @@
     <ClInclude Include="..\Ghastly\Resource\ThreadedResourceManager.h" />
     <ClInclude Include="..\Ghastly\Resource\TTFManager.h" />
     <ClInclude Include="..\Ghastly\Resource\WorldManager.h" />
-    <ClInclude Include="..\Ghastly\UI\Text.h" />
     <ClInclude Include="..\Ghastly\UI\UIBox.h" />
     <ClInclude Include="..\Ghastly\UI\UIButton.h" />
+    <ClInclude Include="..\Ghastly\UI\UICursor.h" />
     <ClInclude Include="..\Ghastly\UI\UIElement.h" />
+    <ClInclude Include="..\Ghastly\UI\UIListener.h" />
     <ClInclude Include="..\Ghastly\UI\UIManager.h" />
+    <ClInclude Include="..\Ghastly\UI\UIText.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\Ghastly\Box2D\Box2DConfig.cmake" />

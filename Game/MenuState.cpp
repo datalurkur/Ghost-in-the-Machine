@@ -36,7 +36,10 @@ void MenuState::setup(va_list args) {
     _ui->addElement(new UIText("title", Vec2f(0.3f, 0.64f), Vec2f(0.4f, 0.16f), "Ghost in the Machine", "title", Font::CENTER));
 
     // Buttons
-    _ui->addElement(new UIButton("new_game_button", Vec2f(0.32f, 0.56f), Vec2f(0.36f, 0.06f), "gray", 0.005f, "black"));
+    UIButton *newGameButton = new UIButton("new_game_button", Vec2f(0.32f, 0.56f), Vec2f(0.36f, 0.06f), "gray", 0.005f, "black");
+    // Setup button press callback
+    //newGameButton->
+    _ui->addElement(newGameButton);
 
     // Refresh cached values
     update(0);

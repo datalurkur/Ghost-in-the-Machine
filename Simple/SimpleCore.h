@@ -1,12 +1,12 @@
-#ifndef GHOSTCORE_H
-#define GHOSTCORE_H
+#ifndef SIMPLECORE_H
+#define SIMPLECORE_H
 
 #include <Engine/Core.h>
 
-class GhostCore: public Core {
+class SimpleCore: public Core {
 public:
-    GhostCore();
-    virtual ~GhostCore();
+    SimpleCore();
+    virtual ~SimpleCore();
     
     bool keyDown(KeyboardEvent *event);
     

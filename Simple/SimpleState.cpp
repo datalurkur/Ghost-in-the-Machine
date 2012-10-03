@@ -5,69 +5,85 @@
 #include <Resource/MaterialManager.h>
 #include <Resource/TTFManager.h>
 
-#include <Game/StartingState.h>
-#include <Game/GameState.h>
+#include <Simple/SimpleWorld.h>
+#include <Simple/SimpleState.h>
 
-StartingState::StartingState() {
+SimpleState::SimpleState() {
 }
 
-StartingState::~StartingState() {
+SimpleState::~SimpleState() {
 }
 
-bool StartingState::update(int elapsed) {
+bool SimpleState::update(int elapsed) {
     switch(_stage) {
-        case Start: {
+        case Start:
             Info("Start stage done");
             incrementStage();
-        } break;
-        case TextureLoading: {
+			break;
+
+        case TextureLoading:
             if((_left = TextureManager::LoadNextFromPath_r(_progress)) == 0) {
                 Info("Texture loading stage done");
                 incrementStage();
             }
-        } break;
-        case ShaderLoading: {
+			break;
+
+        case ShaderLoading:
             if((_left = ShaderManager::LoadNextFromPath_r(_progress)) == 0) {
                 Info("Shader loading stage done");
                 incrementStage();
             }
-        } break;
-        case MaterialLoading: {
+			break;
+
+        case MaterialLoading:
             if((_left = MaterialManager::LoadNextFromPath_r(_progress)) == 0) {
                 Info("Material loading stage done");
                 incrementStage();
             }
-        } break;
-		case TTFLoading: {
+			break;
+
+		case TTFLoading:
 			if((_left = TTFManager::LoadNextFromPath_r(_progress)) == 0) {
 				Info("TTF loading stage done");
 				incrementStage();
 			}
-		} break;
-        case Done: {
-            Info("StartingState is done entirely");
-            // FIXME - Move this into a menustate
-            _parent->popState();
-        }
+			break;
+
+		case WorldSetup:
+			_world = new SimpleWorld();
+			_world->update(0);
+			break;
+
+		case Running:
+			_world->update(elapsed);
+			break;
     };
 
     return true;
 }
 
-bool StartingState::render(RenderContext *renderContext) {
-    return true;
+bool SimpleState::render(RenderContext *renderContext) {
+	switch(_stage) {
+	case Running:
+		_world->render(renderContext);
+		break;
+	};
+
+	return true;
 }
 
-void StartingState::setup(va_list args) {
-    Info("Setting up StartingState");
+void SimpleState::setup(va_list args) {
+    Info("Setting up SimpleState");
     _stage = Start;
+	_world = 0;
 }
 
-void StartingState::teardown() {
-    Info("Tearing down StartingState");
+void SimpleState::teardown() {
+    Info("Tearing down SimpleState");
+	if(_world) { delete _world; }
 }
 
-void StartingState::incrementStage() {
+void SimpleState::incrementStage() {
     _stage++;
     _progress = 0;
 }

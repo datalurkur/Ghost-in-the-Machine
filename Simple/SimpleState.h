@@ -1,12 +1,14 @@
-#ifndef STARTINGSTATE_H
-#define STARTINGSTATE_H
+#ifndef SIMPLESTATE_H
+#define SIMPLESTATE_H
 
 #include <Engine/State.h>
 
-class StartingState: public State {
+class SimpleWorld;
+
+class SimpleState: public State {
 public:
-    StartingState();
-    virtual ~StartingState();
+    SimpleState();
+    virtual ~SimpleState();
 
     bool update(int elapsed);
     bool render(RenderContext *renderContext);
@@ -24,10 +26,11 @@ private:
         ShaderLoading,
         MaterialLoading,
 		TTFLoading,
-        Done
+		Running
     };
     unsigned int _stage;
     unsigned int _progress, _left;
+	SimpleWorld *_world;
 };
 
 #endif

@@ -1,6 +1,5 @@
-#include <Game/GhostCore.h>
-#include <Game/StartingState.h>
-#include <Game/GameState.h>
+#include <Simple/SimpleCore.h>
+#include <Simple/SimpleState.h>
 
 #include <Resource/WorldManager.h>
 #include <Resource/TTFManager.h>
@@ -10,15 +9,15 @@
 
 #include <Render/GLHelper.h>
 
-GhostCore::GhostCore(): _state(Starting) {
+SimpleCore::SimpleCore(): _state(Starting) {
     setup();
 }
 
-GhostCore::~GhostCore() {
+SimpleCore::~SimpleCore() {
     teardown();
 }
 
-void GhostCore::setup() {
+void SimpleCore::setup() {
     WorldManager::Setup();
     TTFManager::Setup();
     TextureManager::Setup();
@@ -26,7 +25,7 @@ void GhostCore::setup() {
     MaterialManager::Setup();
 }
 
-void GhostCore::teardown() {
+void SimpleCore::teardown() {
     WorldManager::Teardown();
     TTFManager::Teardown();
     TextureManager::Teardown();
@@ -34,7 +33,7 @@ void GhostCore::teardown() {
     MaterialManager::Teardown();
 }
 
-bool GhostCore::keyDown(KeyboardEvent *event) {
+bool SimpleCore::keyDown(KeyboardEvent *event) {
     switch(event->key()) {
         case SDLK_F1: {
             stop();
@@ -47,20 +46,16 @@ bool GhostCore::keyDown(KeyboardEvent *event) {
     return true;
 }
 
-bool GhostCore::update(int elapsed) {
+bool SimpleCore::update(int elapsed) {
     if(ParentState::update(elapsed)) { return true; }
 
     switch(_state) {
     case Starting:
         pushState(new StartingState());
-        _state = Established;
-        break;
-    case Established:
-        pushState(new GameState());
         _state = Running;
         break;
     case Running:
-        Info("GhostCore has no behavior for when GameState is popped!");
+        Info("SimpleCore has no behavior for when StartingState is popped!");
         break;
     default:
         return false;

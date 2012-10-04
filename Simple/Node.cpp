@@ -1,17 +1,15 @@
 #include <Simple/Node.h>
 #include <Resource/MaterialManager.h>
 
-const std::string Player::NodeType = "Node";
+const std::string Node::NodeType = "Node";
 
-#define VELOCITY_DAMPING 0.1
-#define TIME_SCALE 500
-#define SPRING_CONSTANT 0.2
-#define ATTRACTION_DISTANCE_SCALE 20
-#define REPULSION_DISTANCE_SCALE 40
+#define VELOCITY_DAMPING 0.1f
+#define TIME_SCALE 500.0f
+#define SPRING_CONSTANT 0.2f
+#define ATTRACTION_DISTANCE_SCALE 20.0f
+#define REPULSION_DISTANCE_SCALE 40.0f
 
-Node::Node(const std::string &name): Entity(name, NodeType): _velocity(0,0,0), _force(0,0,0), _weight(0) {
-    addController(new DefaultNodeController(this));
-}
+Node::Node(const std::string &name): Entity(name, NodeType), _velocity(0,0,0), _force(0,0,0), _weight(0) {}
 
 Node::~Node() {
   std::map<Node*,bool>::iterator itr;
@@ -24,7 +22,7 @@ void Node::update(int elapsed) {
   float time;
 
   time = ((float)elapsed / TIME_SCALE);
-  _velocity += (_force * time * (1.0 - VELOCITY_DAMPING));
+  _velocity += (_force * time * (1.0f - VELOCITY_DAMPING));
   SceneNode::moveRelative(_velocity * time);
   
   for(itr = _attractions.begin(); itr != _attractions.end(); itr++) { itr->second = false; }
@@ -49,52 +47,50 @@ void Node::computeForces() {
 }
 
 void Node::attract(Node *attractor) {
-  double distance, attraction_distance;
+  float distance, attraction_distance;
  
   _attractions[attractor] = true;
   
-  distance = SceneNode::getAbsolutePosition() - attractor->getAbsolutePosition();
-  attraction_distance = ATTRACTION_DISTANCE_SCALE * ((_weight + attractor->getWeight())/2.0);
+  distance = (SceneNode::getAbsolutePosition() - attractor->getAbsolutePosition()).length();
+  attraction_distance = ATTRACTION_DISTANCE_SCALE * ((_weight + attractor->getWeight())/2.0f);
   
-  double magnitude;
-  Vector3 normal;
+  float magnitude;
+  Vec3f normal;
 
   magnitude = SPRING_CONSTANT * (attraction_distance - distance);
   normal = (SceneNode::getAbsolutePosition() - attractor->getAbsolutePosition());
   normal.normalize();
 
   addForce(normal, magnitude);
-  normal.invert();
-  attractor->addForce(normal, magnitude);
+  attractor->addForce(-normal, magnitude);
 }
 
 void Node::repulse(Node * repulsor) {
-  double distance, repulsion_distance;
+  float distance, repulsion_distance;
   
   _repulsions[repulsor] = true;
   
-  distance = SceneNode::getAbsolutePosition() - repulsor->getAbsolutePosition();
-  repulsion_distance = REPULSION_DISTANCE_SCALE * ((_weight + repulsor->getWeight())/2.0);
+  distance = (SceneNode::getAbsolutePosition() - repulsor->getAbsolutePosition()).length();
+  repulsion_distance = REPULSION_DISTANCE_SCALE * ((_weight + repulsor->getWeight())/2.0f);
   
   // Past a certain distance, don't bother
   if(distance <= repulsion_distance) {
     // Determine spring force
-    double magnitude;
-    Vector3 normal;
+    float magnitude;
+    Vec3f normal;
     
     magnitude = SPRING_CONSTANT * (repulsion_distance - distance);
     normal = (SceneNode::getAbsolutePosition() - repulsor->getAbsolutePosition());
     normal.normalize();
    
     repulsor->addForce(normal, magnitude);
-    normal.invert();
-    addForce(normal, magnitude);
+    addForce(-normal, magnitude);
   }
 }
 
 int Node::getWeight() { return _weight; }
 
-void addForce(const Vec3f& normal, float magnitude) {
+void Node::addForce(const Vec3f& normal, float magnitude) {
   _force += (normal * magnitude);
 }
 

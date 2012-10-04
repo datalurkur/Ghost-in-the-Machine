@@ -1,4 +1,5 @@
 #include <Simple/SimpleWorld.h>
+#include <Simple/Node.h>
 
 SimpleWorld::SimpleWorld(): World() {
 }
@@ -31,7 +32,7 @@ void SimpleWorld::update(int elapsed) {
   EntityList::iterator itr;
   for(itr = _entities.begin(); itr != _entities.end(); itr++) {
     ASSERT(itr->second->getType() == "Node");
-    itr->second->computeForces();
+    ((Node*)itr->second)->computeForces();
   }
 	World::update(elapsed);
 }
@@ -40,21 +41,23 @@ Node* SimpleWorld::addNode(const std::string &name) {
   Node *newNode;
   EntityList::iterator itr;
 
-  newNode  = World::addEntity<Node>(name);
-  newNode->setPosition((float)rand()/RAND_MAX,(float)rand()/RAND_MAX,(float)rand()/RAND_MAX);
+  newNode  = World::createEntity<Node>(name);
+  newNode->setPosition(Vec3f((float)rand()/RAND_MAX,(float)rand()/RAND_MAX,(float)rand()/RAND_MAX));
   
   for(itr = _entities.begin(); itr != _entities.end(); itr++) {
     if(itr->second == newNode) { continue; }
     ASSERT(itr->second->getType() == "Node");
-    itr->second->addRepulsion(newNode);
-    newNode->addRepulsion(itr->second);
+    ((Node*)itr->second)->addRepulsion(newNode);
+    newNode->addRepulsion((Node*)itr->second);
   }
+
+  return newNode;
 }
 
 void SimpleWorld::linkNodes(const std::string &name1, const std::string &name2) {
   Node *node1, *node2;
-  node1 = _entities[name1];
-  node2 = _entities[name2];
+  node1 = (Node*)_entities[name1];
+  node2 = (Node*)_entities[name2];
   linkNodes(node1, node2);
 }
 

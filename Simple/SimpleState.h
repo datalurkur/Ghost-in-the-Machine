@@ -26,6 +26,7 @@ private:
         ShaderLoading,
         MaterialLoading,
 		TTFLoading,
+		WorldSetup,
 		Running
     };
     unsigned int _stage;

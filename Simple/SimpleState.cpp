@@ -51,6 +51,7 @@ bool SimpleState::update(int elapsed) {
 
 		case WorldSetup:
 			_world = new SimpleWorld();
+			// Create a camera
 			_world->update(0);
 			break;
 
@@ -65,7 +66,8 @@ bool SimpleState::update(int elapsed) {
 bool SimpleState::render(RenderContext *renderContext) {
 	switch(_stage) {
 	case Running:
-		_world->render(renderContext);
+		// Call this with a camera
+		//_world->render(_camera, renderContext);
 		break;
 	};
 

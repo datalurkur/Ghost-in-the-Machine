@@ -51,7 +51,7 @@ bool SimpleCore::update(int elapsed) {
 
     switch(_state) {
     case Starting:
-        pushState(new StartingState());
+        pushState(new SimpleState());
         _state = Running;
         break;
     case Running:

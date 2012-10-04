@@ -1,0 +1,2 @@
+shader line
+frag_input.color color4 1.0 0.0 0.0 0.5

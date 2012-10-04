@@ -1,0 +1,16 @@
+#version 150
+
+uniform transform {
+    mat4 projection_matrix;
+    mat4 modelview_matrix;
+};
+
+in vec4 position;
+
+out vec3 frag_eye;
+
+void main() {
+    frag_eye = (modelview_matrix * position).xyz;
+
+    gl_Position = projection_matrix * modelview_matrix * position;
+}

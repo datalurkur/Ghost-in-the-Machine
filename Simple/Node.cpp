@@ -96,14 +96,7 @@ void Node::addForce(const Vec3f& normal, float magnitude) {
 
 void Node::recreateRenderables() {
     clearRenderables();
-    /*addRenderable(Renderable::Sprite(Vector2<float>(_position.x, _position.y), Vector2<float>(_dimensions.x, _dimensions.y), MaterialManager::Get("player")));
-
-	// Debug
-    deleteChild("jumpSensor");
-	DebugVolume *jumpVolume = new DebugVolume("jumpSensor");
-	jumpVolume->setPosition(Vec3f(_position.x + _jumpSensorOffset.x, _position.y + _jumpSensorOffset.y, 0.0f));
-	jumpVolume->setDimensions(Vec3f(_jumpSensorDimensions.x, _jumpSensorDimensions.y, 0.0f));
-	addChild(jumpVolume);*/
+    addRenderable(Renderable::Sprite(Vector2<float>(_position.x, _position.y), Vector2<float>(_dimensions.x, _dimensions.y), MaterialManager::Get("node")));
 }
 
 void Node::addRepulsion(Node *repulsor) {
